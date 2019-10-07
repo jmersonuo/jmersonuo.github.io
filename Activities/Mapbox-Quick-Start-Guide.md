@@ -70,12 +70,13 @@ You will also need the coordinates for Portland, Oregon. You can use find the co
 var map = new mapboxgl.Map({
     container: 'map', // id of a div on your page, where the map will be inserted
     style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-    center: [lng, lat] // starting position [lng, lat] eg. [-122.6788, 45.5212]
+    center: [lng, lat], // starting position [lng, lat] eg. [-122.6788, 45.5212]
     zoom: 11 // starting zoom 
 });
 ```
 
-That’s it! You have a working Mapbox map now. Try changing it:
+That’s it! You have a working Mapbox map now. Open your `.html` file in a browser and take a look.
+Try changing it:
 1. Adjust the zoom level to see how this impacts the map. 
 2. Set the center coordinates to two other cities around the world. 
 
