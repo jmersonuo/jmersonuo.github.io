@@ -1,5 +1,7 @@
 ## Mapbox Quick Start Guide
 
+Please sign up for a mapbox account [here](https://account.mapbox.com/auth/signup/).
+
 This step-by-step guide will quickly get you started on Mapbox basics, including setting up a Mapbox map, working with markers, circles and popups and setting up events! All of the code below can be found in this handy [JSFiddle](https://jsfiddle.net/mjdanielson/9jh3bzc8/1/).
 
 Begin by copying the files for today's activity from the the "Class_Data" folder to your personal workspace on the "R" drive. Open and edit the file using a text editor, such as Brackets. 
