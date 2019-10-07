@@ -58,7 +58,7 @@ _To use any of Mapbox's tools, APIs, or SDKs, you'll need a Mapbox [access token
 Next, we’ll initialize the map and set its view to our chosen geographical coordinates and a zoom level.
 
 <p align="center">
-    <img src= "https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Mapbox-Quick-Start/Images/01_Portland.png">
+    <img src= "Images/01_Portland.png">
   </p>
  
 
@@ -98,7 +98,7 @@ var marker = new mapboxgl.Marker()
 ```
 
 <p align = "center">
-    <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Mapbox-Quick-Start/Images/Portland_Marker.png">
+    <img src="Images/Portland_Marker.png">
  </p>
 
 
@@ -113,7 +113,7 @@ var marker = new mapboxgl.Marker({color:'#42f569'})
 ### IV. Working with popups
 
 <p align = "center">
-	<img src ="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Mapbox-Quick-Start/Images/Portland_Markers.png">
+	<img src ="Images/Portland_Markers.png">
 </p>
 
 Popups are usually used when you want to attach some information to a particular object on a map. In Mapbox, you can [add a popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup) to your features with only a few lines of code! 
