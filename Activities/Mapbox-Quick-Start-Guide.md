@@ -136,7 +136,7 @@ First, you will need to initialize a pop-up variable. In the JavaScript section 
 
 ```
 var popup = new mapboxgl.Popup({ offset: 25 })
-.setText('Hello World. Welcome to Portland!');
+.setHTML('Hello World. Welcome to Portland!');
 ```
 
 Next add the `.setPopup` function to your existing marker variable:
@@ -172,6 +172,19 @@ Take a look at the [popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup) docu
         .setHTML('<h1>Hi Portland!</h1>')
         .addTo(map);
 ```
+
+Notice that you can put any HTML tags, as a single string element, within the `setHTML` functions. For example, you could add an [image](https://www.w3schools.com/html/html_images.asp) or a [hyperlink](https://www.w3schools.com/html/html_links.asp).
+Keep in mind, since you need to add a single string element, you'll have to carefully nest any quotation marks.
+
+```
+    var popup_layer_voodoo = new mapboxgl.Popup({
+          closeOnClick: true, anchor: 'top-left'
+        })
+        .setLngLat([-122.673308, 45.522675])
+        .setHTML('<a href="https://www.voodoodoughnut.com">voodoo donuts</a>')
+        .addTo(map);
+```
+
 
 ### Congratulations! You've completed the exercise! 
 
