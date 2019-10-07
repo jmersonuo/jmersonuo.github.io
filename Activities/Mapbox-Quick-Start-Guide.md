@@ -64,7 +64,7 @@ Next, we’ll initialize the map and set its view to our chosen geographical coo
 
 For this section of code, we will need a [style ID](https://docs.mapbox.com/help/glossary/style-id/).  A style ID is a unique identifier for each style associated with any Mapbox username. To use the Mapbox Styles API, you will need to know the style ID for the map style you are working with.
 
-You will also need the coordinates for Portland, Oregon. You can use find the coordinates for Portland placing a marker using http://geojson.io or by replacing the longitude field witih: -122.6788 and the latitude field with: 45.5212.
+In the code block below, you will need to replace the coordinates for the starting position. Try setting the coordinates for Portland, Oregon by replacing the longitude field witih: -122.6788 and the latitude field with: 45.5212. You can http://geojson.io to find the coordinates by placing a marker using.
 
 ```
 var map = new mapboxgl.Map({
@@ -76,6 +76,9 @@ var map = new mapboxgl.Map({
 ```
 
 That’s it! You have a working Mapbox map now. Open your `.html` file in a browser and take a look.
+
+No map? There is likely an error in your code. Open your browser's **Web Console** to look for error messages.
+
 Try changing it:
 1. Adjust the zoom level to see how this impacts the map. 
 2. Set the center coordinates to two other cities around the world. 
