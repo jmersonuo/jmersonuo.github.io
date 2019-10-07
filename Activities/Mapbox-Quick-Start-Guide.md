@@ -55,7 +55,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWpkYW5pZWxzb24iLCJhIjoiY2p2bzFlbnZ5MW5pbTN5c
 _To use any of Mapbox's tools, APIs, or SDKs, you'll need a Mapbox [access token](https://docs.mapbox.com/help/glossary/access-token/). Mapbox uses access tokens to associate API requests with your account. You can find your access tokens, create new ones, or delete existing ones on your [Access Tokens page](https://account.mapbox.com/access-tokens/) or programmatically using the [Mapbox Tokens API](https://docs.mapbox.com/api/accounts/#tokens)._
 
 
-Next, we’ll initialize the map and set its view to our chosen geographical coordinates and a zoom level.
+Next, we’ll initialize the map and set its view with specified coordinates and a zoom level.
 
 <p align="center">
     <img src= "Images/01_Portland.png">
@@ -93,7 +93,7 @@ When you have finished experimenting, make sure your code is set to Portland and
 
 Besides a basemap, you can easily add other things to your map, including markers and popups.
 
-Let’s [add a marker](https://docs.mapbox.com/mapbox-gl-js/api/#marker) to the same longitude/latitude that we centered our map on:
+Let’s adda marker to the same longitude/latitude that we centered our map on:
 
 ```
 var marker = new mapboxgl.Marker()
@@ -105,14 +105,24 @@ var marker = new mapboxgl.Marker()
     <img src="Images/Portland_Marker.png">
  </p>
 
+Take a look at the [API](https://docs.mapbox.com/mapbox-gl-js/api/#marker) to see what marker options are available.
 
-Let's change the color of our marker! The default color for the marker is '#3FB1CE' (this is the hex code for the blue marker). Add a color parameter to your code and set the hex color code! In this example, the color is set to '#42f469'. 
+Let's change the color of our marker! The default color for the marker is blue. Add a color parameter to your code and change the color! You can use the name of most common colors (`'red'`, `'blue'`, `'green'`) or enter a HEX colod code (`'#42f569'`) or rgb color (`'rgb(0,255,0)'`). We'll cover colors in more detail soon. Try a few different colors.
 
 ```
-var marker = new mapboxgl.Marker({color:'#42f569'})
+var marker = new mapboxgl.Marker({color:'red'})
   .setLngLat([-122.6788, 45.5212]) // starting position [lng, lat] 
   .addTo(map);
 ```
+
+Want to add antother marker? Create a second marker variable.
+
+```
+var marker2 = new mapboxgl.Marker({color:'red'})
+  .setLngLat([-122.69, 45.55]) // starting position [lng, lat] 
+  .addTo(map);
+```
+
 
 ### IV. Working with popups
 
@@ -122,14 +132,14 @@ var marker = new mapboxgl.Marker({color:'#42f569'})
 
 Popups are usually used when you want to attach some information to a particular object on a map. In Mapbox, you can [add a popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup) to your features with only a few lines of code! 
 
-First, you will need to initialize a pop-up variable. In the JavaScript section of your code, make sure you declare this variable before you declase the marker variable, which will use it: 
+First, you will need to initialize a pop-up variable. In the JavaScript section of your code, make sure you declare this variable **before** you declare the marker variable, which will use it: 
 
 ```
 var popup = new mapboxgl.Popup({ offset: 25 })
 .setText('Hello World. Welcome to Portland!');
 ```
 
-Next add the .setPopup function to your marker variable:
+Next add the `.setPopup` function to your existing marker variable:
 
 ```
 var marker = new mapboxgl.Marker()
@@ -137,9 +147,10 @@ var marker = new mapboxgl.Marker()
     .setPopup(popup) //add the popup to the marker 
     .addTo(map); // add the open marker to the map
 ```
+Once, you added the `.setPopup` function to your marker, refresh your map and click on the marker!
 
-You can also use popups as layers (when you need something more than attaching a popup to an object):
 
+You can also use popups as layers (when you need something more than attaching a popup to an object). Add this code block after your marker:
 
 ```
 var popup_layer = new mapboxgl.Popup({closeOnClick: false}) 
@@ -148,7 +159,7 @@ var popup_layer = new mapboxgl.Popup({closeOnClick: false})
 .addTo(map); //add this popup to the map!
 ```
 
-Try changing the close on click to 'true' and running your code. What happens when you click anywhere in the map? 
+Try changing the `closeOnClick` argument to 'true' and refresh your map. What happens when you click anywhere in the map? 
 
 Take a look at the [popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup) documentation to learn more about the parameters associated with Mapbox popups. Try adjusting one or more parameters - for instace, try changing the anchor position. 
 
