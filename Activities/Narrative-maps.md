@@ -20,7 +20,7 @@ Start with the file `Fixed-structure.html` in the R-Drive Assignments folder. On
       <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css' rel='stylesheet' />
 ```
 
-In the body, put a title ("Map 1:"), a div element with the id "map1" where you want your first map to be, and a line below the map:
+In the body, you'll add the [heading](https://www.w3schools.com/tags/tag_hn.asp) Map 1, a div element with the id "map1" where you want your first map to be, and a line or [horizonal rule](https://www.w3schools.com/tags/tag_hr.asp) below the map. Click the links to view the HMTL refernce for these tags:
 
 ```html
       <h1> Map 1: </h1>
@@ -54,7 +54,7 @@ Remember, you can find your access tokens, create new ones, or delete existing o
 Next, we’ll initialize the map and set its view with specified coordinates and a zoom level.
 
 <p align="center">
-    <img src= "Images/01_Portland.png">
+    <img src= "Images/02_Portland.jpg">
 </p>
  
 In the code block below, you will need to replace:
@@ -70,7 +70,7 @@ var map = new mapboxgl.Map({
 });
 ```
 
-Your map should be ready to take a look at. Open your `.html` file in a browser and take a look.
+*STOP: Your map should be ready to take a look at. Open your `.html` file in a browser and take a look.*
 No map? There is likely an error in your code. Open your browser's **Developer tools or Web Console** to look for error messages.
 Can you pan and zoom? Great.
 
@@ -90,7 +90,7 @@ Add the script:
               .addTo(map);
 ```
 <p align = "center">
-    <img src="Images/Portland_Marker.png">
+    <img src="Images/02_Portland_Marker.JPG">
  </p>
 
 
