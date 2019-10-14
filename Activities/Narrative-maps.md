@@ -52,10 +52,6 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWpkYW5pZWxzb24iLCJhIjoiY2p2bzFlbnZ5MW5pbTN5c
 Remember, you can find your access tokens, create new ones, or delete existing ones on your [Access Tokens page](https://account.mapbox.com/access-tokens/) or programmatically using the [Mapbox Tokens API](https://docs.mapbox.com/api/accounts/#tokens)._
 
 Next, we’ll initialize the map and set its view with specified coordinates and a zoom level.
-
-<p align="center">
-    <img src= "Images/02_Portland.JPG">
-</p>
  
 In the code block below, you will need to replace:
 1. the style URL:  'mapbox://styles/mapbox/streets-v11' check out the map [API](https://docs.mapbox.com/mapbox-gl-js/api/#map) to see review the style options 
@@ -70,13 +66,18 @@ var map = new mapboxgl.Map({
 });
 ```
 
-*STOP: Your map should be ready to take a look at. Open your `.html` file in a browser and take a look.*
-No map? There is likely an error in your code. Open your browser's **Developer tools or Web Console** to look for error messages.
-Can you pan and zoom? Great.
+<p align="center">
+    <img src= "Images/02_Portland.JPG">
+</p>
+
+**STOP:** Your map should be ready to take a look at. Open your `.html` file in a browser and take a look.
+No map? There is likely an error in your code. Open your browser's Developer tools or Web Console to look for error messages.
+
+Can you pan and zoom? Yes. Great. Now, let's take that ability away.
 
 ### III. Add a marker with a popup
 
-Like last time, let’s add a marker to the same longitude/latitude that we centered our map on. Remember you _can_ look at the [API](https://docs.mapbox.com/mapbox-gl-js/api/#marker) to see what marker options are available.
+Like last time, let’s add a marker to the same longitude/latitude that we centered our map on. Remember you can look at the [API](https://docs.mapbox.com/mapbox-gl-js/api/#marker) to see what marker options are available.
 
 Add the script:
 
@@ -92,7 +93,6 @@ Add the script:
 <p align = "center">
     <img src="Images/02_Portland_Marker.JPG">
  </p>
-
 
 ### IV. Remove the map interactivity
 
@@ -113,6 +113,52 @@ After the was initialized, add the following JavaScript code:
 ```
 
 Notice that each line starts with `map`, which is the variable name used when we initialized the map: `var map = new mapboxgl.Map(...`.
+
+**STOP:** Test it out. Can you pan and zoom anymore? Nope. Success!
+
+### V. Add a second map
+
+To add a second map to your page. You have to add a div to the structure of your page, inilize the second map, create another pop-up and marker, and disable the interactivity for the second map as well. We will use `map2` for both the div ID and the map object variable name. 
+
+Below the <HR>, add another heading and div:
+```html
+        <h1> Map 2:</h1>
+        <div id='map2'></div>
+```
+
+Below the other JavaScript, initialize the 2nd map:
+```javascript
+            // Then initialize the 2nd map
+            var map2 = new mapboxgl.Map({
+                container: 'map2', // id of a div on your page, where the map will be inserted
+                style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+                center: [-122.6588, 45.1212], // starting position [lng, lat] eg. [-122.6788, 45.5212]
+                zoom: 11 // starting zoom 
+            });
+```    
+Add a marker:
+```javascript
+            var popup2 = new mapboxgl.Popup()
+                .setText('This is my second point.');
+
+            var marker2 = new mapboxgl.Marker({color:'blue'})
+              .setLngLat([-122.6588, 45.1212]) // starting position [lng, lat] 
+              .setPopup(popup2) //add the popup to the marker 
+              .addTo(map2);
+```
+Disable the map interactivity here:
+```javascript        
+            // Disable drag and zoom handlers. 
+            map2.dragPan.disable();
+            map2.scrollZoom.disable();
+            map2.boxZoom.disable();
+            map2.dragRotate.disable();
+            map2.keyboard.disable();
+            map2.doubleClickZoom.disable();
+            map2.touchZoomRotate.disable();
+            map2.touchZoomRotate.disableRotation();
+```
+
 
 ## Congratulations! You've made a webpage with two static maps! _For your assignment, you'll have to add a third map._ 
 
