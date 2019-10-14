@@ -222,7 +222,7 @@ Right now we only set the center. I have options for the zoom and speed commente
          // add a 'Listener' to the div with the ID 'fly', that's the button.
        document.getElementById('fly').addEventListener('click', function () {
             map.flyTo({
-                center: [-97.70,30.30], // look up the value of the click counter in the flyLocations array.
+                center: [-97.70,30.30], //new center.
 //                zoom: 9,
 //                speed: 0.2
             });
@@ -240,7 +240,7 @@ Now scroll up in the API, there is another function called "jumpTo". Let's try c
          // add a 'Listener' to the div with the ID 'fly', that's the button.
        document.getElementById('fly').addEventListener('click', function () {
             map.jumpTo({
-                center: [-97.70,30.30], // look up the value of the click counter in the flyLocations array.
+                center: [-97.70,30.30], //new center.
 //                zoom: 9,
 //                speed: 0.2
             });
