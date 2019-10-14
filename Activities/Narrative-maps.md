@@ -2,7 +2,7 @@
 
 Today we are going to make two differnt types of maps. The first will be fixed in place. It can't be panned or zoomed by the user. The second will automatically fly-to predefined locations, guiding the user around.
 
-### A. FIXED MAP
+### A. FIXED MAPS
 
 ### 1. Preparing your fixed map page
 
@@ -12,7 +12,6 @@ Start with the file `Fixed-structure.html` in the R-Drive Assignments folder. On
 
 ```html
       <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js'></script>
-    
 ```
 * Include Mapbox CSS file __after__ Mapbox’s JavaScript:
 
@@ -161,9 +160,11 @@ Disable the map interactivity here:
             map2.touchZoomRotate.disable();
             map2.touchZoomRotate.disableRotation();
 ```
+<p align = "center">
+    <img src="Images/02_TwoMaps.JPG" height="80%">
+ </p>
 
-
-## Congratulations! You've made a webpage with two static maps! _For your assignment, you'll have to add a third map._ 
+**Congratulations! You've made a webpage with two static maps! _For your assignment, you'll have to add a third map._ **
 
 
 ### B. Fly-To Maps
