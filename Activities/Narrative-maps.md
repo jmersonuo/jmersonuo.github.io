@@ -54,7 +54,7 @@ Remember, you can find your access tokens, create new ones, or delete existing o
 Next, we’ll initialize the map and set its view with specified coordinates and a zoom level.
 
 <p align="center">
-    <img src= "Images/02_Portland.jpg">
+    <img src= "Images/02_Portland.JPG">
 </p>
  
 In the code block below, you will need to replace:
