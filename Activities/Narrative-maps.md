@@ -1,12 +1,12 @@
 ## Making Fixed and Fly-To Maps
 
-Today we are going to make two differnt types of maps. The first will be fixed in place. It can't be panned or zoomed by the user. The second will automatically fly-to predefined locations, guiding the user around.
+Today we are going to make two different types of maps. The first will be fixed in place. It can't be panned or zoomed by the user. The second will automatically fly-to predefined locations, guiding the user around.
 
 ### A. FIXED MAPS
 
 ### 1. Preparing your fixed map page
 
-Start with the file `Fixed-structure.html` in the R-Drive Assignments folder. Once again, you need to do the following preparation steps on your page (this time we are adding version 1.4.0):
+Start with the file `Fixed-structure.html` in the R-Drive Class_Data folder. Once again, you need to do the following preparation steps on your page (this time we are adding version 1.4.0):
 
 * Include Mapbox JavaScript file:
 
@@ -19,7 +19,7 @@ Start with the file `Fixed-structure.html` in the R-Drive Assignments folder. On
       <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css' rel='stylesheet' />
 ```
 
-In the body, you'll add the [heading](https://www.w3schools.com/tags/tag_hn.asp) Map 1, a div element with the id "map1" where you want your first map to be, and a line or [horizonal rule](https://www.w3schools.com/tags/tag_hr.asp) below the map. Click the links to view the HMTL refernce for these tags:
+In the body, you'll add the [heading](https://www.w3schools.com/tags/tag_hn.asp) Map 1, a div element with the id "map1" where you want your first map to be, and a line or [horizontal rule](https://www.w3schools.com/tags/tag_hr.asp) below the map. Click the links to view the HMTL reference for these tags:
 
 ```html
       <h1> Map 1: </h1>
@@ -117,7 +117,7 @@ Notice that each line starts with `map`, which is the variable name used when we
 
 ### V. Add a second map
 
-To add a second map to your page. You have to add a div to the structure of your page, use CSS to make sure the map has some height, inilize the second map, create another pop-up and marker, and disable the interactivity for the second map as well. We will use `map2` for both the div ID and the map object variable name. 
+To add a second map to your page. You have to add a div to the structure of your page, use CSS to make sure the map has some height, initialize the second map, create another pop-up and marker, and disable the interactivity for the second map as well. We will use `map2` for both the div ID and the map object variable name. 
 
 Below the `<HR>`, add another heading and div:
 ```html
@@ -164,7 +164,89 @@ Disable the map interactivity here:
     <img src="Images/02_TwoMaps.JPG" height="80%">
  </p>
 
-**Congratulations! You've made a webpage with two static maps! _For your assignment, you'll have to add a third map._ **
+**Congratulations!** You've made a webpage with two static maps! _For your assignment, you'll have to add a third map._
 
 
 ### B. Fly-To Maps
+
+### 1. Open the fly-to map page
+
+Let's start with the file `Activity2-Fixed-and-Fly-To-Maps\Fly-to-ONCE.html` in the R-Drive Class_Data folder. 
+Open it in a browser. Click on the button and watch as we fly from Los Angeles, CA to Austin, TX.
+
+Now open and examine the `Activity2-Fixed-and-Fly-To-Maps\Fly-to-ONCE.html` in your text editor.
+
+First, notice the usual code for our map:
+ - References to the Mapbox CSS and JS are included in the head.
+ - A DIV for the map
+ - CSS style defiens the map's size
+ - A mapbox access token is included
+ - The map is initialized
+ - A popup is initialized
+ - A marker, using the popup, is added to the map
+
+Notice the CSS that was used to style the button:
+```CSS
+        /* The CSS for the "Fly" button  */
+        #fly {
+            display: block; /* displays over the map */
+            position: relative; /* displays over the map */
+            margin: 0px auto; 
+            width: 50%;
+            height: 40px;
+            padding: 10px;
+            border: none;
+            border-radius: 3px; /* rounded corners */
+            font-size: 12px;
+            text-align: center;
+            font-weight: bold;
+            color: oldlace;
+            background: DarkRed;
+        }
+  ```
+  
+  Try changing the button with and color. Make button on 30% width. Make the button "forestgreen".
+  
+  
+ ### 2. Examine the flyto script
+ 
+ Look at the bottom of  the JavaScript section. 
+ 
+ First, we search the DOM for an element with the ID 'fly'. That's the button div!
+ We added a 'click' listener, so if you click it something happens.
+ 
+ In this case, we call the function flyTo on our map. Open  [flyTo in the Mapbox API](https://docs.mapbox.com/mapbox-gl-js/api/#map#flyto)  
+ 
+Notice there are multiple options we can set. Including: center, zoom, speed, curve.
+Right now we only set the center. I have options for the zoom and speed commented out.
+
+ ```javascript
+         // add a 'Listener' to the div with the ID 'fly', that's the button.
+       document.getElementById('fly').addEventListener('click', function () {
+            map.flyTo({
+                center: [-97.70,30.30], // look up the value of the click counter in the flyLocations array.
+//                zoom: 9,
+//                speed: 0.2
+            });
+        });
+```
+
+Try un-commenting the zoom option. See how that changed the effect. Try a few different values. You can see how the final zoom changes.
+Try un-commenting the speed option. See how that changed the effect. Try a few different values. You can see how the speed of the "fly" changes.
+
+Comment out the zoom and speed options.
+Now scroll up in the API, there is another function called "jumpTo". Let's try changing the function to "jumpTo" as below:
+
+
+ ```javascript
+         // add a 'Listener' to the div with the ID 'fly', that's the button.
+       document.getElementById('fly').addEventListener('click', function () {
+            map.jumpTo({
+                center: [-97.70,30.30], // look up the value of the click counter in the flyLocations array.
+//                zoom: 9,
+//                speed: 0.2
+            });
+        });
+```
+
+What was the difference? You'll have to explain the difference in your assignment.
