@@ -1,10 +1,12 @@
 ## Making Fixed and Fly-To Maps
 
-Today we are going to make two differnt types of map. The first will be fixed in place. It can't be panned or zoomed by the user. The second will automatically fly-to predefined locations, guiding the user around.
+Today we are going to make two differnt types of maps. The first will be fixed in place. It can't be panned or zoomed by the user. The second will automatically fly-to predefined locations, guiding the user around.
 
-### I. Preparing your page
+### A. FIXED MAP
 
-As usual, you need to do the following preparation steps on your page (this time we are adding version 1.4.0:
+### 1. Preparing your fixed map page
+
+Start with the file `Fixed-structure.html` in the R-Drive Assignments folder. As usual, you need to do the following preparation steps on your page (this time we are adding version 1.4.0):
 
 * Include Mapbox JavaScript file:
 
@@ -115,3 +117,5 @@ Notice that each line starts with `map`, which is the variable name used when we
 
 ### Congratulations! You've made a webpage with two static maps! For your assignment, you'll have to add a third map. 
 
+
+### B. Fly-To Maps
