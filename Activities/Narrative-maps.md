@@ -213,9 +213,7 @@ Notice the CSS that was used to style the button:
  Look at the bottom of  the JavaScript section. 
  
  First, we search the DOM for an element with the ID 'fly'. That's the button div!
- We added a 'click' listener, so if you click it something happens.
- 
- In this case, we call the function flyTo on our map. Open  [flyTo in the Mapbox API](https://docs.mapbox.com/mapbox-gl-js/api/#map#flyto)  
+ We added a 'click' listener, so if you click the div, something happens. In this case, we call the function "flyTo" on our map. Open [flyTo in the Mapbox API](https://docs.mapbox.com/mapbox-gl-js/api/#map#flyto).  
  
 Notice there are multiple options we can set. Including: center, zoom, speed, curve.
 Right now we only set the center. I have options for the zoom and speed commented out.
