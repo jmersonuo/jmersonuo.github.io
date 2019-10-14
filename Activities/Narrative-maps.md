@@ -6,7 +6,7 @@ Today we are going to make two differnt types of maps. The first will be fixed i
 
 ### 1. Preparing your fixed map page
 
-Start with the file `Fixed-structure.html` in the R-Drive Assignments folder. As usual, you need to do the following preparation steps on your page (this time we are adding version 1.4.0):
+Start with the file `Fixed-structure.html` in the R-Drive Assignments folder. Once again, you need to do the following preparation steps on your page (this time we are adding version 1.4.0):
 
 * Include Mapbox JavaScript file:
 
@@ -14,7 +14,6 @@ Start with the file `Fixed-structure.html` in the R-Drive Assignments folder. As
       <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js'></script>
     
 ```
-
 * Include Mapbox CSS file __after__ Mapbox’s JavaScript:
 
 ```html
@@ -24,19 +23,19 @@ Start with the file `Fixed-structure.html` in the R-Drive Assignments folder. As
 In the body, put a title ("Map 1:"), a div element with the id "map1" where you want your first map to be, and a line below the map:
 
 ```html
-<h1> Map 1: </h1>
-<div id='map1'></div>
-<hr>
+      <h1> Map 1: </h1>
+      <div id='map1'></div>
+      <hr>
 ```
 
-This time we will apply some CSS to specify the height and width of the map. This is particularly important for the map div, which *won't* show up on the page until you give it a height:
+This time we will apply some CSS to specify the height and width of the map. This is particularly important for the map div, which *won't* show up on the page until you give it a height. Notice the css class for the map matches the ID of the map DIV (map1):
 
 ```css
         body { margin:50px; padding:0; }
-        #map { position:relative; height:300px; width:50%;}
+        #map1 { position:relative; height:300px; width:50%;}
 ```
 
-This means the body div of your web page has a 50px margin around the edge, and the div with the ID "map", will be 300px tall, and will take 50% of the width of your browser page.
+This means the body div of your web page has a 50px margin around the edge, and the div with the ID "map1", will be 300px tall, and will take 50% of the width of your browser page.
 
 Now you’re ready to initialize the map and customize it.
 
@@ -64,7 +63,7 @@ In the code block below, you will need to replace:
 
 ```javascript
 var map = new mapboxgl.Map({
-    container: 'map', // id of a div on your page, where the map will be inserted
+    container: 'map1', // id of a div on your page, where the map will be inserted
     style: 'set-the-style-here', // the style URL 'mapbox://styles/mapbox/streets-v11' 
     center: [set-the-lng, set-the-lat], // starting position [lng, lat] eg. [-122.6788, 45.5212]
     zoom: 11 // starting zoom 
@@ -77,7 +76,7 @@ Can you pan and zoom? Great.
 
 ### III. Add a marker with a popup
 
-Like last time, let’s add a marker to the same longitude/latitude that we centered our map on. Remember you can look at the [API](https://docs.mapbox.com/mapbox-gl-js/api/#marker) to see what marker options are available.
+Like last time, let’s add a marker to the same longitude/latitude that we centered our map on. Remember you _can_ look at the [API](https://docs.mapbox.com/mapbox-gl-js/api/#marker) to see what marker options are available.
 
 Add the script:
 
@@ -98,7 +97,7 @@ Add the script:
 ### IV. Remove the map interactivity
 
 Let's look at the map API again, specifically at the [interaction handlers](https://docs.mapbox.com/mapbox-gl-js/api/#user%20interaction%20handlers)
-Map objects have several interactivity handlers. We are going to disable them all.
+Map objects have several interactivity handlers. We are going to disable them *all*.
 After the was initialized, add the following JavaScript code:
 
 ```javascript
@@ -115,7 +114,7 @@ After the was initialized, add the following JavaScript code:
 
 Notice that each line starts with `map`, which is the variable name used when we initialized the map: `var map = new mapboxgl.Map(...`.
 
-### Congratulations! You've made a webpage with two static maps! For your assignment, you'll have to add a third map. 
+## Congratulations! You've made a webpage with two static maps! _For your assignment, you'll have to add a third map._ 
 
 
 ### B. Fly-To Maps
