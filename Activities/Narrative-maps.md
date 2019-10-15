@@ -205,7 +205,7 @@ Notice the CSS that was used to style the button:
         }
   ```
   
-  Try changing the button with and color. Make button on 30% width. Make the button "forestgreen".
+  Try changing the button width and color: Make the button only 30% width. Make the button "forestgreen".
   
   
  ### 2. Examine the flyto script
