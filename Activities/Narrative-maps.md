@@ -249,4 +249,4 @@ Now scroll up in the API, there is another function called "jumpTo". Let's try c
 
 What was the difference? You'll have to explain the difference in your assignment.
 
-**Congratulations!** That is it for todays activity. Please proceed to the activity on canvas for details on what to turn in.
+**Congratulations!** That is it for today's activity. Please proceed to the assignment on canvas for details on what to turn in.
