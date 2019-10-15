@@ -38,7 +38,7 @@ This means the body div of your web page has a 50px margin around the edge, and 
 
 Now you’re ready to initialize the map and customize it.
 
-### II. Setting up the fixed map
+### 2. Setting up the fixed map
 
 Let’s create a map the centered on Portland with the Mapbox Streets style. Note: all the following code should be between script tags.
 
@@ -74,7 +74,7 @@ No map? There is likely an error in your code. Open your browser's Developer too
 
 Can you pan and zoom? Yes. Great. Now, let's take that ability away.
 
-### III. Add a marker with a popup
+### 3. Add a marker with a popup
 
 Like last time, let’s add a marker to the same longitude/latitude that we centered our map on. Remember you can look at the [API](https://docs.mapbox.com/mapbox-gl-js/api/#marker) to see what marker options are available.
 
@@ -96,7 +96,7 @@ It should look like this:
     <img src="Images/02_Portland_Marker.JPG">
  </p>
 
-### IV. Remove the map interactivity
+### 4. Remove the map interactivity
 
 Let's look at the map API again, specifically at the [interaction handlers](https://docs.mapbox.com/mapbox-gl-js/api/#user%20interaction%20handlers). Map objects have several interactivity handlers. We are going to disable them *all*.
 After the map was initialized, add the following JavaScript code:
@@ -117,7 +117,7 @@ Notice that each line starts with `map`, which is the variable name used when we
 
 **STOP:** Test it out. Can you pan and zoom anymore? Nope. Success!
 
-### V. Add a second map
+### 5. Add a second map
 
 To add a second map to your page. You have to add a div to the structure of your page, use CSS to make sure the map has some height, initialize the second map, create another pop-up and marker, and disable the interactivity for the second map as well. We will use `map2` for both the div ID and the map object variable name. 
 
