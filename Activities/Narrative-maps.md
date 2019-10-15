@@ -40,7 +40,7 @@ Now you’re ready to initialize the map and customize it.
 
 ### II. Setting up the fixed map
 
-Let’s create a map of the centered on Portland with the Mapbox Streets style. Note: all the following code should be between script tags.
+Let’s create a map the centered on Portland with the Mapbox Streets style. Note: all the following code should be between script tags.
 
 Add your access token. Without this, the mapbox code will not work. 
 
@@ -48,12 +48,12 @@ Add your access token. Without this, the mapbox code will not work.
 mapboxgl.accessToken = 'pk.eyJ1IjoibWpkYW5pZWxzb24iLCJhIjoiY2p2bzFlbnZ5MW5pbTN5cGJ2YWp2MW9vaiJ9.kAaZq3iyJwvrMLK7XDs_qw';
 ```
 
-Remember, you can find your access tokens, create new ones, or delete existing ones on your [Access Tokens page](https://account.mapbox.com/access-tokens/) or programmatically using the [Mapbox Tokens API](https://docs.mapbox.com/api/accounts/#tokens)._
+Remember, you can find your access tokens, create new ones, or delete existing ones on your [Access Tokens page](https://account.mapbox.com/access-tokens/) or programmatically using the [Mapbox Tokens API](https://docs.mapbox.com/api/accounts/#tokens).
 
 Next, we’ll initialize the map and set its view with specified coordinates and a zoom level.
  
 In the code block below, you will need to replace:
-1. the style URL:  'mapbox://styles/mapbox/streets-v11' check out the map [API](https://docs.mapbox.com/mapbox-gl-js/api/#map) to see review the style options 
+1. the style URL, using 'mapbox://styles/mapbox/streets-v11' or check out the map [API](https://docs.mapbox.com/mapbox-gl-js/api/#map) to see more style options 
 2. the coordinates for the starting position. Use Portland, Oregon: [-122.6788, 45.5212]
 
 ```javascript
@@ -89,15 +89,17 @@ Add the script:
               .setPopup(popup) //add the popup to the marker 
               .addTo(map);
 ```
+
+It should look like this:
+
 <p align = "center">
     <img src="Images/02_Portland_Marker.JPG">
  </p>
 
 ### IV. Remove the map interactivity
 
-Let's look at the map API again, specifically at the [interaction handlers](https://docs.mapbox.com/mapbox-gl-js/api/#user%20interaction%20handlers)
-Map objects have several interactivity handlers. We are going to disable them *all*.
-After the was initialized, add the following JavaScript code:
+Let's look at the map API again, specifically at the [interaction handlers](https://docs.mapbox.com/mapbox-gl-js/api/#user%20interaction%20handlers). Map objects have several interactivity handlers. We are going to disable them *all*.
+After the map was initialized, add the following JavaScript code:
 
 ```javascript
             // Disable drag and zoom handlers.
@@ -148,7 +150,7 @@ Add a marker:
               .setPopup(popup2) //add the popup to the marker 
               .addTo(map2);
 ```
-Disable the map interactivity here:
+Disable the map interactivity. Notice we are disabling interactivity on **map2**:
 ```javascript        
             // Disable drag and zoom handlers. 
             map2.dragPan.disable();
@@ -174,7 +176,7 @@ Disable the map interactivity here:
 Let's start with the file `Activity2-Fixed-and-Fly-To-Maps\Fly-to-ONCE.html` in the R-Drive Class_Data folder. 
 Open it in a browser. Click on the button and watch as we fly from Los Angeles, CA to Austin, TX.
 
-Now open and examine the `Activity2-Fixed-and-Fly-To-Maps\Fly-to-ONCE.html` in your text editor.
+Now open and examine `Activity2-Fixed-and-Fly-To-Maps\Fly-to-ONCE.html` in your text editor.
 
 First, notice the usual code for our map:
  - References to the Mapbox CSS and JS are included in the head.
@@ -250,3 +252,5 @@ Now scroll up in the API, there is another function called "jumpTo". Let's try c
 What was the difference? You'll have to explain the difference in your assignment.
 
 **Congratulations!** That is it for today's activity. Please proceed to the assignment on canvas for details on what to turn in.
+
+Once you have completed your assignment, open and examine `Activity2-Fixed-and-Fly-To-Maps\Fly-to-many.html` in your text editor and browser. This version uses an array to keep track of multiple locations that we can fly to when the button is clicked. Each click iterates through the lng/lat pairs in the array.
