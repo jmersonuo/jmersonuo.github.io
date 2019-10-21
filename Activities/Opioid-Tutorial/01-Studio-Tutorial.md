@@ -27,9 +27,9 @@ See `Class_Data\Activity3-Upload-and-Symboloize-Data\Data` or download from belo
 
 ### Uploading data to Studio
 
-To add the overdose data to a style in Mapbox Studio, you need to upload it to your account. Go to your [**Tilesets**](https://www.mapbox.com/studio/tilesets) [page](https://www.mapbox.com/studio/tilesets) in Mapbox Studio to upload your data.
+To add the overdose data to a style in Mapbox Studio, you need to upload it to your account. Login to Mapbox Studio, then go to your [**Tilesets page**](https://www.mapbox.com/studio/tilesets) to upload your data.
 
-On your Tilesets page, click the **New tileset** button. Select the zipped shapefile data containing your overdose data and upload it to your account. 
+On your Tilesets page, click the **New tileset** button. Select the geojson data containing your 2017 drug overdose rate by state and upload it to your account. This may take a moment or two. 
 
 <p align="center">
   <img src="Images/tilesets.png">
