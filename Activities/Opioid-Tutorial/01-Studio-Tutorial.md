@@ -35,13 +35,13 @@ On your Tilesets page, click the **New tileset** button. Select the geojson data
   <img src="Images/tilesets.png">
   </p>
 
-Next, upload your prescription drug county-level data. 
+(Next, upload your prescription drug county-level data. )
 
 ----------
 
 ### Create a new style 
 
-After you've uploaded your data, it's time to create a new style so you can put it on the map! Go to your [Styles page](https://www.mapbox.com/studio/). Click the **New style** button. Find the *Basic Template* style and click **Create**.
+After you've uploaded your data, it's time to create a new style so you can put it on the map! Go to your [Styles page](https://www.mapbox.com/studio/). Click the **New style** button. Find the *Basic* Template style and click **Customize Basic**.
 
 Excellent! Welcome to the Mapbox Studio style editor. This is where you will create your map style.
 
@@ -49,7 +49,7 @@ Excellent! Welcome to the Mapbox Studio style editor. This is where you will cre
   <img src="Images/basic_style.png">
   </p>
 
-Rename the style so that you can find it later. Click into the title field in the upper left side of the screen to change the title from Basic Template to ‘2017 Overdose and Opioid Data’.
+Let's rename the style so that it's more descriptive. Click on the text "Basic", it the title field in the upper left side of the screen, to change the title to ‘2017 Overdose and Opioid Data’.
 
 <p align="center">
   <img src = "Images/name-change.gif">
@@ -62,12 +62,12 @@ Rename the style so that you can find it later. Click into the title field in th
 
 ### Add a new layer
 
-To add and style your data, you will need to add a **new layer** to the map. At the top of the layer panel, click **+ Add layer** and select your overdose rate by state data layer that you just uploaded as a tileset. 
+To add and style your data, you will need to add a **new layer** to the map. At the top of the layer panel, click the **+** and select your overdose rate by state data layer that you just uploaded as a tileset. 
 
 
 <p align="center">
   <img src="Images/add-layer.png">
-  </p>
+</p>
 
 
 The editor is now showing your map in “x-ray mode.” X-ray mode shows all the data in the sources added to the style, regardless of whether there is a layer to style it.
@@ -95,8 +95,8 @@ Click the **Style** tab and the map will switch back to style mode displaying yo
 
 
 <p align="center">
-  <img src="Images/Screen%20Shot%202019-10-02%20at%209.08.30%20AM.png"
-       </p>
+  <img src="Images/Screen%20Shot%202019-10-02%20at%209.08.30%20AM.png>"
+</p>
 
 
 You can rename a layer by clicking on the name of the layer at the top of the panel. Rename your new layer overdose data. Next, add your prescription data to the map and rename the layer to **opioid prescriptions**.
