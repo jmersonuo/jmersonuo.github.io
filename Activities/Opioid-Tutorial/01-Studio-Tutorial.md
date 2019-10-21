@@ -1,4 +1,4 @@
-<img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/logo.png">
+<img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/logo.png" width="10%">
 
 
 <h2 align="center"> Mapping opioid-related prescriptions <br> and overdose rates in the U.S.<h2>
@@ -18,9 +18,9 @@ One way to show data distribution on a map is with a choropleth, a thematic map 
 
 ### Data
 
-- [2017 drug overdose rate by state](https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Data/overdose-data.geojson) - [Source: CDC](https://www.cdc.gov/drugoverdose/data/statedeaths/drug-overdose-death-2017.html) 
+- Download: [2017 drug overdose rate by state](https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Data/overdose-data.geojson) - Source: [CDC](https://www.cdc.gov/drugoverdose/data/statedeaths/drug-overdose-death-2017.html) 
 
-- [2017 opioid prescription rate by county](https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Data/prescription.mbtiles) - [Source: CDC](https://www.cdc.gov/drugoverdose/maps/rxcounty2017.html) 
+- Download: [2017 opioid prescription rate by county](https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Data/prescription.mbtiles) - Source: [CDC](https://www.cdc.gov/drugoverdose/maps/rxcounty2017.html) 
 
 ----------
 
@@ -31,7 +31,7 @@ To add the overdose data to a style in Mapbox Studio, you need to upload it to y
 On your Tilesets page, click the **New tileset** button. Select the zipped shapefile data containing your overdose data and upload it to your account. 
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/tilesets.png">
+  <img src="Images/tilesets.png">
   </p>
 
 Next, upload your prescription drug county-level data. 
@@ -45,13 +45,13 @@ After you've uploaded your data, it's time to create a new style so you can put 
 Excellent! Welcome to the Mapbox Studio style editor. This is where you will create your map style.
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/basic_style.png">
+  <img src="Images/basic_style.png">
   </p>
 
 Rename the style so that you can find it later. Click into the title field in the upper left side of the screen to change the title from Basic Template to ‘2017 Overdose and Opioid Data’.
 
 <p align="center">
-  <img src"https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/name-change.gif">
+  <img src"Images/name-change.gif">
   </p>
   
 
@@ -65,7 +65,7 @@ To add and style your data, you will need to add a **new layer** to the map. At 
 
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/add-layer.png">
+  <img src="Images/add-layer.png">
   </p>
 
 
@@ -78,7 +78,7 @@ The default Basic map view is not centered on the United States. Mapbox Studio r
 
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/xray1.png">
+  <img src="Images/xray1.png">
   </p>
 
 
@@ -88,7 +88,7 @@ Your new layer will be highlighted on the x-ray map.
 
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/xray2.png">
+  <img src="Images/xray2.png">
   </p>
 
 
@@ -97,7 +97,7 @@ Click the **Style** tab and the map will switch back to style mode displaying yo
 
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/Screen%20Shot%202019-10-02%20at%209.08.30%20AM.png"
+  <img src="Images/Screen%20Shot%202019-10-02%20at%209.08.30%20AM.png"
        </p>
 
 
@@ -111,7 +111,7 @@ Each layer in Studio can be styled individually by clicking on the name of the l
 
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/style_layer.png">
+  <img src="Images/style_layer.png">
   </p>
 
 
@@ -138,7 +138,7 @@ The rate of change is set to **Linear**. Click **Edit** and select **Step** inst
 
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/Screen%20Shot%202019-10-02%20at%209.21.19%20AM.png">
+  <img src="Images/Screen%20Shot%202019-10-02%20at%209.21.19%20AM.png">
   </p>
 
 
@@ -148,7 +148,7 @@ Now it's time to start adding stops and colors! You will create several stops to
 Change *overdose rate* of the next stop to 11, and change the color to **#f5c0ad**.  Click **Done**.
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/choroplet2.gif">
+  <img src="Images/choroplet2.gif">
   </p>
   
   
@@ -172,7 +172,7 @@ Give your states a fancy outline style to help your readers distinguish between 
 
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/Screen%20Shot%202019-10-02%20at%209.29.10%20AM.png">
+  <img src="Images/Screen%20Shot%202019-10-02%20at%209.29.10%20AM.png">
   </p>
 
 
@@ -185,7 +185,7 @@ Change the *1px stroke* style property to #FFF.
 Below is the CDC representation of prescribing rates in the US by county: 
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/cdc2.png">
+  <img src="Images/cdc2.png">
   </p>
 
 
@@ -211,7 +211,7 @@ If you want to recreate the color scheme from the CDC map, try using [HTML color
 
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/Screen%20Shot%202019-10-02%20at%2011.00.12%20AM.png"
+  <img src="Images/Screen%20Shot%202019-10-02%20at%2011.00.12%20AM.png"
        </p>
   
 
@@ -246,7 +246,7 @@ You should now be able to view your prescription drug data when zoomed in to the
 
 
 <p align='center'>
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/opacity.gif">
+  <img src="Images/opacity.gif">
 </p>
 
 
@@ -259,7 +259,7 @@ You should now be able to view your prescription drug data when zoomed in to the
 Now that you've got your map looking good, it's time to publish! Click the **Publish style** button at the top of the toolbar on the right side of the screen, then click **Publish** again on the next prompt.
 
 <p align='center'>
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/publish_styel.png">
+  <img src=Images/publish_styel.png">
 </p>
 
 Hooray! Your style is now published! If you go back to your Styles page, you will see your new style at the top of the list.
@@ -270,7 +270,7 @@ You can use your ‘Share URL’ to open your style in a new browser tab and sha
 ### Next steps
 
 
-Head to [part 2](https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/02-Interactivity.md) to learn how add interactive elements to your map and publish it to the web with Mapbox GL JS. 
+Head to [part 2](02-Interactivity.md) to learn how add interactive elements to your map and publish it to the web with Mapbox GL JS. 
 
 
 
