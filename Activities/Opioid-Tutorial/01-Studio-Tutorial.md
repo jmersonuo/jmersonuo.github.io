@@ -1,12 +1,11 @@
 <img src='Images/logo.png' width='10%'>
 
 
-<h2 align="center"> Mapping opioid-related prescriptions <br> and overdose rates in the U.S.<h2>
+<h2 align="center"> Mapping opioid-related prescriptions <br> and overdose rates in the U.S.</h2>
 <h3 align="center"> Part I: Creating custom styles and simple web maps</h3>
 
 <p>One way to show data distribution on a map is with a choropleth, a thematic map in which areas are shaded based on a particular value. In this guide, you will use Mapbox Studio and Mapbox GL JS to make a map of US states showing overdose rates by state and prescription drug rates by county. </p>
 
-## In this tutorial you will:
 ### In this tutorial you will:
 
 - [Create a style](https://www.mapbox.com/help/how-map-design-works/#how-map-styles-work) for a basemap for a dynamic, [interactive web map or app](https://www.mapbox.com/help/how-web-apps-work/)
