@@ -4,9 +4,7 @@
 <h2 align="center"> Mapping opioid-related prescriptions <br> and overdose rates in the U.S.</h2>
 <h3 align="center"> Part I: Creating custom styles and simple web maps</h3>
 
-<p>One way to show data distribution on a map is with a choropleth, a thematic map in which areas are shaded based on a particular value. In this guide, you will use Mapbox Studio and Mapbox GL JS to make a map of US states showing overdose rates by state and prescription drug rates by 
-  
-  . </p>
+<p>One way to show data distribution on a map is with a choropleth, a thematic map in which areas are shaded based on a particular value. In this guide, you will use Mapbox Studio and Mapbox GL JS to make a map of US states showing overdose rates by state and prescription drug rates. </p>
 
 ### In this tutorial you will:
 
@@ -212,7 +210,7 @@ If you want to recreate the color scheme from the CDC map, try using [HTML color
 
 
 <p align="center">
-  <img src="Images/Screen%20Shot%202019-10-02%20at%2011.00.12%20AM.png>"
+  <img src="Images/reorder.png>"
        </p>
   
 
