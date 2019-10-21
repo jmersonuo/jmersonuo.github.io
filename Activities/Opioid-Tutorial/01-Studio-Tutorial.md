@@ -129,7 +129,7 @@ We can use a similar color ramp here. (Or, you can explore [http://colorbrewer2.
 
 In the Mapbox Studio style editor, you can assign a color to each state based on its population density. Click the Style link in the opioid layer. Next, click **Style across data range**.
 
-Under *Choose a numeric data field to interpolate over a range*, select overdose_rate since you want to style each state according to its age-adjusted overdose rate for 2017.
+Under *Choose a numeric data field to interpolate over a range*, select **Rate** since you want to style each state according to its age-adjusted overdose rate for 2017.
 
 
 The rate of change is set to **Linear**. Click **Edit** and select **Step** instead. Click **Done**. Since you have set the rate of change to step, the colors for each range of density between stops will be uniform.
@@ -141,19 +141,18 @@ The rate of change is set to **Linear**. Click **Edit** and select **Step** inst
 
 
 
-Now it's time to start adding stops and colors! You will create several stops to break states up into groups with similar overdose rates. Click on **Edit** in the first overdose rate stop. The first stop is fixed at 8.1, based on the information in the data set you uploaded. Click on it and change the color to #**e9d3d3** (or your own color ramp). Click **Done**.
+Now it's time to start adding stops and colors! You will create several stops to break states up into groups with similar overdose rates. Click on **Edit** in the first overdose rate stop. The first stop is fixed at 0. Add a stop with the value 6.9, based on the legend from the map we are recreating. Click in the box next to the `#` and change the color to #**e9d3d3** (or your own color ramp). Click **Done**.
 
-Change *overdose rate* of the next stop to 11, and change the color to **#f5c0ad**.  Click **Done**.
+Add another stop, and change *overdose rate* of the next stop to 11, and change the color to **#f5c0ad**.  Click **Done**.
 
 <p align="center">
   <img src="Images/choroplet2.gif">
-  </p>
+</p>
   
   
 
 Click **+ Add another stop**. Change *overdose rate* to 13.5, and change the color to **#f0a184**. Click **Done**.
 Create the following additional stops:
-
 
 - 16:  #cc6f61
 - 18.5: #c44936
@@ -175,7 +174,7 @@ Give your states a fancy outline style to help your readers distinguish between 
 
 
 
-Change the *1px stroke* style property to #FFF.
+Change the *1px stroke* style property to white, which is #FFF.
 
 
 ### Style your prescription data layer
