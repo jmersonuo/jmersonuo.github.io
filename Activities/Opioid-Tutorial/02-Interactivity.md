@@ -1,4 +1,4 @@
-<img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/logo.png">
+<img src="Images/logo.png">
 
 <h2 align="center"> Mapping opioid-related prescriptions and overdose rates in the U.S. </h2>
 <h3 align="center"> Part II: Adding interactivity to web maps through GL-JS </h3>
@@ -44,7 +44,7 @@ For simplicity, we recommend that you change the editor layout settings in JSFid
 
 
 <p align="center">
-<img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/jsfiddle-tabs.gif">
+<img src="Images/jsfiddle-tabs.gif">
 </p>
 
 
@@ -94,7 +94,7 @@ var map = new mapboxgl.Map({
 
 
 <p align="center">
-<img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/changes_map1.png">
+<img src="Images/changes_map1.png">
 </p>
 
 
@@ -106,7 +106,7 @@ var map = new mapboxgl.Map({
  **You’ve just made a web map! Not too shabby!**
 
 <p align="center">
-<img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/fistbump.png">
+<img src="Images/fistbump.png">
 </p>
 
 
@@ -124,7 +124,7 @@ Now that we’ve initialized the webmap, let’s try to make some changes to our
 
 
 <p align="center">
-    <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/Screen%20Shot%202019-10-02%20at%2012.06.47%20PM.png">
+    <img src="Images/Screen%20Shot%202019-10-02%20at%2012.06.47%20PM.png">
     </p>
 
 ----------
@@ -135,20 +135,20 @@ Now that we’ve initialized the webmap, let’s try to make some changes to our
 
 
 <p align="center">
-    <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/mapstyle.png">
+    <img src="Images/mapstyle.png">
     </p>
 <br></br>
 <h3 align ="center"> OR </h3>
 <br></br>
 <p align="center">
-    <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/mapstyle.gif">
+    <img src="Images/mapstyle.gif">
     </p>
 
 
 - Edit the row with the style URL it in your code and run your changes. *(Which row to edit? Look for a row with something that looks similar to your style URL)*
 
 <p align="center">
-    <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/Screen%20Shot%202019-10-02%20at%2012.59.27%20PM.png">
+    <img src="Images/Screen%20Shot%202019-10-02%20at%2012.59.27%20PM.png">
     </p>
 
 ----------
@@ -276,26 +276,17 @@ Next, add the following code below your zoomThreshold variable but before your c
  Hit run to see your changes!
  
  <p align="center">
-    <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/Finished-map.gif">
+    <img src="Images/Finished-map.gif">
     </p>
 
 ----------
 
 ### Create your webpage
 
-
-*You’ve made a web map! But this is just serving the map directly from the code within JSFiddle, it isn’t a webpage yet… to do that we need some way to host a webpage. Today, let’s use Github Pages.*
-**Orientation to Github Pages** 
-
-1. (Create a Github account if you don’t have one)
-2. Set up a Github [repository](https://help.github.com/articles/create-a-repo/)
-    - Name it whatever you want
-    - Make it Public
-    - Click the box to ‘Initialize this repository with a README’
-![](https://lh3.googleusercontent.com/asCZvCmvq6bxNthgMEgDhmq1uQ1IwHqdLYOkGAKpoQT2yEhf_7e8Rsu5doIZ--mvDJ3Ru6h7Qf_rO95LEn9s7spGUnx2xLI7MleSAML0ra6fR1A6jpbx26qfKL9ksWsi74q1P9uC)
-
-3. **Create a new file** called index.html
-4. In the blank index.html file, paste in the entire code we built in JSFiddle
+1. Create a new folder for this map
+2. **Create a new file** called index.html
+3. In the blank index.html file, paste in the entire code we built in JSFiddle
+4. Push it to your webspace
 
 ```
 <!DOCTYPE html>
@@ -403,11 +394,7 @@ Next, add the following code below your zoomThreshold variable but before your c
 </html>
 ```
 
-5. [Enable Github Pages](https://pages.github.com/) (in repo Settings - the gear symbol in the upper right):
-6. Then wait a minute, then go to your Github page address (https://[YOUR GITHUB NAME].github.io/[YOUR REPO NAME]/) - you can find this by scrolling back to the Github Pages settings.
-7. (You might need to wait another minute if it doesn’t work right away)
-
-***Voila! Now you have a live website with a Mapbox map!*** 
+***Voila! Now you have a live website with your map!*** 
 
 <p align="center">
     <img src="https://media.giphy.com/media/Bj2UZgqqzUxwc/giphy.gif">
@@ -417,7 +404,7 @@ Next, add the following code below your zoomThreshold variable but before your c
 
 - Currently, the tab for your webpage in your browser says ‘Display a map’ - let’s give it a better title - can you see where in the code to change that?
 
-- Change it in your code, commit your changes in your Github index.html file, give it a minute, and check your webpage.
+- Change it in your code, and update your webpage.
 
 
 
