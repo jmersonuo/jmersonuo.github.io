@@ -1,4 +1,4 @@
-<img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/logo.png" width="10%">
+<img src="Images/logo.png" width="10%">
 
 
 <h2 align="center"> Mapping opioid-related prescriptions <br> and overdose rates in the U.S.<h2>
@@ -118,7 +118,7 @@ Each layer in Studio can be styled individually by clicking on the name of the l
 On the original CDC map, the data is styled based on the number of age-adjusted rates of drug overdose deaths by each state in 2017:
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/cdc.png">
+  <img src="Images/cdc.png">
   </p>
   
   
