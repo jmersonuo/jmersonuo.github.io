@@ -20,7 +20,7 @@
 
 Click on the source links to look examine the data.
 
-See `Class_Data\Activity3-Upload-and-Symboloize-Data\Data` or download from below
+See R Drive `Class_Data\Activity3-Upload-and-Symboloize-Data\Data` or download from below
 - Download: [2017 drug overdose rate by state](https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Data/overdose-data.geojson) - Source: [CDC](https://www.cdc.gov/drugoverdose/data/statedeaths/drug-overdose-death-2017.html) 
 
 - Download: [2017 opioid prescription rate by county](https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Data/prescription.mbtiles) - Source: [CDC](https://www.cdc.gov/drugoverdose/maps/rxcounty2017.html) 
@@ -206,11 +206,11 @@ If you want to recreate the color scheme from the CDC map, try using [HTML color
 ----------
 
 
-### Reorder your layers**
+### Reorder your layers
 
 
 <p align="center">
-  <img src="Images/Screen%20Shot%202019-10-02%20at%2011.00.12%20AM.png"
+  <img src="Images/Screen%20Shot%202019-10-02%20at%2011.00.12%20AM.png>"
        </p>
   
 
