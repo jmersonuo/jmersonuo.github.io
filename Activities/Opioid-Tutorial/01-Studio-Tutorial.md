@@ -4,7 +4,9 @@
 <h2 align="center"> Mapping opioid-related prescriptions <br> and overdose rates in the U.S.</h2>
 <h3 align="center"> Part I: Creating custom styles and simple web maps</h3>
 
-<p>One way to show data distribution on a map is with a choropleth, a thematic map in which areas are shaded based on a particular value. In this guide, you will use Mapbox Studio and Mapbox GL JS to make a map of US states showing overdose rates by state and prescription drug rates by county. </p>
+<p>One way to show data distribution on a map is with a choropleth, a thematic map in which areas are shaded based on a particular value. In this guide, you will use Mapbox Studio and Mapbox GL JS to make a map of US states showing overdose rates by state and prescription drug rates by 
+  
+  . </p>
 
 ### In this tutorial you will:
 
@@ -18,10 +20,12 @@
 
 ### Data
 
-See `Class_Data\Activity3-Upload-and-Symboloize-Data\Data` or download from below
-- Download: [2017 drug overdose rate by state](https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Data/overdose-data.geojson) - Source: [CDC](https://www.cdc.gov/drugoverdose/data/statedeaths/drug-overdose-death-2017.html) 
+Click on the source links to examine the data.
 
-- Download: [2017 opioid prescription rate by county](https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Data/prescription.mbtiles) - Source: [CDC](https://www.cdc.gov/drugoverdose/maps/rxcounty2017.html) 
+See R Drive `Class_Data\Activity3-Upload-and-Symboloize-Data\Data` 
+- overdose-data.geojson : 2017 drug overdose rate by state - Source: [CDC](https://www.cdc.gov/drugoverdose/data/statedeaths/drug-overdose-death-2017.html) 
+
+- perscription-data.zip : 2017 opioid prescription rate by county - Source: [CDC](https://www.cdc.gov/drugoverdose/maps/rxcounty2017.html) 
 
 ----------
 
@@ -35,13 +39,13 @@ On your Tilesets page, click the **New tileset** button. Select the geojson data
   <img src="Images/tilesets.png">
   </p>
 
-Next, upload your prescription drug county-level data. 
+Next, upload the prescription drug county-level data. Notice that you can upload a zipped shapefile or a geojson file.
 
 ----------
 
 ### Create a new style 
 
-After you've uploaded your data, it's time to create a new style so you can put it on the map! Go to your [Styles page](https://www.mapbox.com/studio/). Click the **New style** button. Find the *Basic Template* style and click **Create**.
+After you've uploaded your data, it's time to create a new style so you can put it on the map! Go to your [Styles page](https://www.mapbox.com/studio/). Click the **New style** button. Find the *Basic* Template style and click **Customize Basic**.
 
 Excellent! Welcome to the Mapbox Studio style editor. This is where you will create your map style.
 
@@ -49,7 +53,7 @@ Excellent! Welcome to the Mapbox Studio style editor. This is where you will cre
   <img src="Images/basic_style.png">
   </p>
 
-Rename the style so that you can find it later. Click into the title field in the upper left side of the screen to change the title from Basic Template to ‘2017 Overdose and Opioid Data’.
+Let's rename the style so that it's more descriptive. Click on the text "Basic", it the title field in the upper left side of the screen, to change the title to ‘2017 Overdose and Opioid Data’.
 
 <p align="center">
   <img src = "Images/name-change.gif">
@@ -62,12 +66,12 @@ Rename the style so that you can find it later. Click into the title field in th
 
 ### Add a new layer
 
-To add and style your data, you will need to add a **new layer** to the map. At the top of the layer panel, click **+ Add layer** and select your overdose rate by state data layer that you just uploaded as a tileset. 
+To add and style your data, you will need to add a **new layer** to the map. At the top of the layer panel, click the **+** and select your overdose rate by state data layer that you just uploaded as a tileset. 
 
 
 <p align="center">
   <img src="Images/add-layer.png">
-  </p>
+</p>
 
 
 The editor is now showing your map in “x-ray mode.” X-ray mode shows all the data in the sources added to the style, regardless of whether there is a layer to style it.
@@ -95,8 +99,8 @@ Click the **Style** tab and the map will switch back to style mode displaying yo
 
 
 <p align="center">
-  <img src="Images/Screen%20Shot%202019-10-02%20at%209.08.30%20AM.png"
-       </p>
+  <img src="Images/Screen Shot 2019-10-02 at 9.08.30 AM.png">
+</p>
 
 
 You can rename a layer by clicking on the name of the layer at the top of the panel. Rename your new layer overdose data. Next, add your prescription data to the map and rename the layer to **opioid prescriptions**.
@@ -129,7 +133,7 @@ We can use a similar color ramp here. (Or, you can explore [http://colorbrewer2.
 
 In the Mapbox Studio style editor, you can assign a color to each state based on its population density. Click the Style link in the opioid layer. Next, click **Style across data range**.
 
-Under *Choose a numeric data field to interpolate over a range*, select overdose_rate since you want to style each state according to its age-adjusted overdose rate for 2017.
+Under *Choose a numeric data field to interpolate over a range*, select **Rate** since you want to style each state according to its age-adjusted overdose rate for 2017.
 
 
 The rate of change is set to **Linear**. Click **Edit** and select **Step** instead. Click **Done**. Since you have set the rate of change to step, the colors for each range of density between stops will be uniform.
@@ -141,19 +145,18 @@ The rate of change is set to **Linear**. Click **Edit** and select **Step** inst
 
 
 
-Now it's time to start adding stops and colors! You will create several stops to break states up into groups with similar overdose rates. Click on **Edit** in the first overdose rate stop. The first stop is fixed at 8.1, based on the information in the data set you uploaded. Click on it and change the color to #**e9d3d3** (or your own color ramp). Click **Done**.
+Now it's time to start adding stops and colors! You will create several stops to break states up into groups with similar overdose rates. Click on **Edit** in the first overdose rate stop. The first stop is fixed at 0. Add a stop with the value 6.9, based on the legend from the map we are recreating. Click in the box next to the `#` and change the color to #**e9d3d3** (or your own color ramp). Click **Done**.
 
-Change *overdose rate* of the next stop to 11, and change the color to **#f5c0ad**.  Click **Done**.
+Add another stop, and change *overdose rate* of the next stop to 11, and change the color to **#f5c0ad**.  Click **Done**.
 
 <p align="center">
   <img src="Images/choroplet2.gif">
-  </p>
+</p>
   
   
 
 Click **+ Add another stop**. Change *overdose rate* to 13.5, and change the color to **#f0a184**. Click **Done**.
 Create the following additional stops:
-
 
 - 16:  #cc6f61
 - 18.5: #c44936
@@ -175,7 +178,7 @@ Give your states a fancy outline style to help your readers distinguish between 
 
 
 
-Change the *1px stroke* style property to #FFF.
+Change the *1px stroke* style property to white, which is #FFF.
 
 
 ### Style your prescription data layer
@@ -187,7 +190,7 @@ Below is the CDC representation of prescribing rates in the US by county:
   </p>
 
 
-Use the same binning techniques as seen on the CDC website to style your data using the prescription rate field, but feel free to change the colors! Remember to set the stroke color to #ffff and to change the rate of change to **step**. Set the opacity for this layer to 0.75
+Use the same binning techniques as seen on the CDC website to style your data. Using the prescription rate field which is **pers_rate**, but feel free to change the colors! Remember to set the stroke color to #fff and to change the rate of change to **step**. Set the opacity for this layer to 0.75
 
 If you want to recreate the color scheme from the CDC map, try using [HTML color picker.](https://imagecolorpicker.com/) or use the table below:
 
@@ -199,17 +202,17 @@ If you want to recreate the color scheme from the CDC map, try using [HTML color
 | 112.5      | #650511 |
 | 1000       | #FFFFF  |
 
-**Note: Remember that we set our ‘Null’ or missing data to 1000.**
+**Note: The mising data value is set to 1000.**
 
 
 ----------
 
 
-### Reorder your layers**
+### Reorder your layers
 
 
 <p align="center">
-  <img src="Images/Screen%20Shot%202019-10-02%20at%2011.00.12%20AM.png"
+  <img src="Images/Screen%20Shot%202019-10-02%20at%2011.00.12%20AM.png>"
        </p>
   
 
