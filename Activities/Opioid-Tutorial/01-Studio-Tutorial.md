@@ -6,7 +6,7 @@
 
 <p>One way to show data distribution on a map is with a choropleth, a thematic map in which areas are shaded based on a particular value. In this guide, you will use Mapbox Studio and Mapbox GL JS to make a map of US states showing overdose rates by state and prescription drug rates by county. </p>
 
-
+## In this tutorial you will:
 ### In this tutorial you will:
 
 - [Create a style](https://www.mapbox.com/help/how-map-design-works/#how-map-styles-work) for a basemap for a dynamic, [interactive web map or app](https://www.mapbox.com/help/how-web-apps-work/)
