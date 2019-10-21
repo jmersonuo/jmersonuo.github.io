@@ -196,9 +196,9 @@ If you want to recreate the color scheme from the CDC map, try using [HTML color
 |------------|---------|
 | 0          | #FFE9BD |
 | 57.2       | #FF8A73 |
-| 82.4       | #E1371  |
+| 82.4       | #E13719  |
 | 112.5      | #650511 |
-| 1000       | #FFFFF  |
+| 1000       | #FFFFFF  |
 
 **Note: The mising data value is set to 1000.**
 
