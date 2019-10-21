@@ -39,7 +39,7 @@ Next, upload your prescription drug county-level data.
 
 ----------
 
-### Create a new style** 
+### Create a new style 
 
 After you've uploaded your data, it's time to create a new style so you can put it on the map! Go to your [Styles page](https://www.mapbox.com/studio/). Click the **New style** button. Find the *Basic Template* style and click **Create**.
 
@@ -52,7 +52,7 @@ Excellent! Welcome to the Mapbox Studio style editor. This is where you will cre
 Rename the style so that you can find it later. Click into the title field in the upper left side of the screen to change the title from Basic Template to ‘2017 Overdose and Opioid Data’.
 
 <p align="center">
-  <img src"Images/name-change.gif">
+  <img src = "Images/name-change.gif">
   </p>
   
 
