@@ -1,4 +1,4 @@
-<img src="Images/logo.png">
+<img src='Images/logo.png' width='10%'>
 
 
 <h2 align="center"> Mapping opioid-related prescriptions <br> and overdose rates in the U.S.<h2>
@@ -83,15 +83,12 @@ The default Basic map view is not centered on the United States. Mapbox Studio r
   </p>
 
 
-
 Your new layer will be highlighted on the x-ray map.
-
 
 
 <p align="center">
   <img src="Images/xray2.png">
   </p>
-
 
 
 Click the **Style** tab and the map will switch back to style mode displaying your new layer. You will see the state data on the map with a default style (black with 100% opacity).
@@ -120,7 +117,7 @@ On the original CDC map, the data is styled based on the number of age-adjusted 
 
 <p align="center">
   <img src="Images/cdc.png">
-  </p>
+</p>
   
   
   
@@ -260,7 +257,7 @@ You should now be able to view your prescription drug data when zoomed in to the
 Now that you've got your map looking good, it's time to publish! Click the **Publish style** button at the top of the toolbar on the right side of the screen, then click **Publish** again on the next prompt.
 
 <p align='center'>
-  <img src=Images/publish_styel.png">
+  <img src="Images/publish_styel.png">
 </p>
 
 Hooray! Your style is now published! If you go back to your Styles page, you will see your new style at the top of the list.
