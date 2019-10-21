@@ -97,7 +97,7 @@ Click the **Style** tab and the map will switch back to style mode displaying yo
 
 
 <p align="center">
-  <img src="Images/Screen Shot 2019-10-02 at 9.08.30 AM.png>"
+  <img src="Images/Screen Shot 2019-10-02 at 9.08.30 AM.png">
 </p>
 
 
