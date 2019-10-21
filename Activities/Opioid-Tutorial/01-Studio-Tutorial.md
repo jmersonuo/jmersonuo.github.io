@@ -264,12 +264,14 @@ Now that you've got your map looking good, it's time to publish! Click the **Pub
 Hooray! Your style is now published! If you go back to your Styles page, you will see your new style at the top of the list.
 You can use your ‘Share URL’ to open your style in a new browser tab and share it with collaborators for review.
 
+
+
+
 ----------
 
-### Next steps
 
+### Explore the mapbox interface
 
-Head to [part 2](02-Interactivity.md) to learn how add interactive elements to your map and publish it to the web with Mapbox GL JS. 
-
+Now take some time to explore the [Mapbox Studio Manual](https://docs.mapbox.com/studio-manual/reference/styles/) for more information on the interface.
 
 
