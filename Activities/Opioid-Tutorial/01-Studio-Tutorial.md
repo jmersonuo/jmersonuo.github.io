@@ -4,7 +4,9 @@
 <h2 align="center"> Mapping opioid-related prescriptions <br> and overdose rates in the U.S.</h2>
 <h3 align="center"> Part I: Creating custom styles and simple web maps</h3>
 
-<p>One way to show data distribution on a map is with a choropleth, a thematic map in which areas are shaded based on a particular value. In this guide, you will use Mapbox Studio and Mapbox GL JS to make a map of US states showing overdose rates by state and prescription drug rates by county. </p>
+<p>One way to show data distribution on a map is with a choropleth, a thematic map in which areas are shaded based on a particular value. In this guide, you will use Mapbox Studio and Mapbox GL JS to make a map of US states showing overdose rates by state and prescription drug rates by 
+  
+  . </p>
 
 ### In this tutorial you will:
 
@@ -37,7 +39,7 @@ On your Tilesets page, click the **New tileset** button. Select the geojson data
   <img src="Images/tilesets.png">
   </p>
 
-(Next, upload your prescription drug county-level data. )
+Next, upload the prescription drug county-level data. Notice that you can upload a zipped shapefile or a geojson file.
 
 ----------
 
@@ -188,7 +190,7 @@ Below is the CDC representation of prescribing rates in the US by county:
   </p>
 
 
-Use the same binning techniques as seen on the CDC website to style your data using the prescription rate field, but feel free to change the colors! Remember to set the stroke color to #ffff and to change the rate of change to **step**. Set the opacity for this layer to 0.75
+Use the same binning techniques as seen on the CDC website to style your data. Using the prescription rate field which is **pers_rate**, but feel free to change the colors! Remember to set the stroke color to #fff and to change the rate of change to **step**. Set the opacity for this layer to 0.75
 
 If you want to recreate the color scheme from the CDC map, try using [HTML color picker.](https://imagecolorpicker.com/) or use the table below:
 
@@ -200,7 +202,7 @@ If you want to recreate the color scheme from the CDC map, try using [HTML color
 | 112.5      | #650511 |
 | 1000       | #FFFFF  |
 
-**Note: Remember that we set our ‘Null’ or missing data to 1000.**
+**Note: The mising data value is set to 1000.**
 
 
 ----------
