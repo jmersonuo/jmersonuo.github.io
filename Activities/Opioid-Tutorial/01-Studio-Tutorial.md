@@ -210,7 +210,7 @@ If you want to recreate the color scheme from the CDC map, try using [HTML color
 
 
 <p align="center">
-  <img src="Images/reorder.png>"
+  <img src="Images/reorder.png">
        </p>
   
 
