@@ -1,4 +1,4 @@
-<img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/logo.png">
+<img src="Images/logo.png">
 
 <h2 align="center"> Mapping renters vs owners in Portland </h2>
 <h3 align="center"> Part II: Adding interactivity to web maps through GL-JS </h3>
@@ -23,28 +23,6 @@ A few additional resources for Mapbox GL JS:
 ### Get started
 
 To create a web map, you'll need to have some familiarity with HTML, CSS, and JavaScript. If you are new to web maps, explore our [tutorials](https://docs.mapbox.com/help/tutorials/) and [documentation](https://docs.mapbox.com/help/how-mapbox-works/web-apps/) to help you get started.
-Here’s what you’ll need to get started:
-
-- [Github account](https://github.com/join)
-- [JSFiddle Text Editor](https://jsfiddle.net/)
-
-*This is a very beginner intro by a non-developer - there’s a lot more to learn about developing more complex web apps and sites, but we’re focusing just on a simple web map. For more complex projects and teams, you’ll want to learn more about version control and using Github properly, with pull requests etc.*
-
-----------
-
-
-### Orientation to your tools
-
-
-For this lesson, we will be using a program called JSFiddle. You can sign up for a free acount at: [https://jsfiddle.net/](https://jsfiddle.net/)
-JSFiddle is a simple tool for building and testing code for web development. We recommend using JSFiddle in a Chrome browser
-For simplicity, we recommend that you change the editor layout settings in JSFiddle to display by ‘tabs’
-
-
-<p align="center">
-<img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/jsfiddle-tabs.gif">
-</p>
-
 
 ----------
 
@@ -52,9 +30,9 @@ For simplicity, we recommend that you change the editor layout settings in JSFid
 ### Writing your first code
 
 
-To begin, we will be using a sample code created by the documentation team at Mapbox to initialize a simple web map in JSFiddle. 
+To begin, we will be using a sample code created by the documentation team at Mapbox to initialize a simple web map. 
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,14 +49,14 @@ To begin, we will be using a sample code created by the documentation team at Ma
 </head>
 <body>
 
-<div id='map'></div>
-<script>
-mapboxgl.accessToken = 'ACCESS TOKEN GOES HERE'; 
-var map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'STYLE URL GOES HERE', // stylesheet location
-});
-</script>
+  <div id='map'></div>
+  <script>
+    mapboxgl.accessToken = 'ACCESS TOKEN GOES HERE'; 
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'STYLE URL GOES HERE', // stylesheet location
+    });
+  </script>
 
 </body>
 </html>
@@ -91,25 +69,26 @@ Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/defi
 
 ### Adding your custom style
 
-**Style**: Mapbox GL JS permits URLs instead of literal data in several places, including data sources. To load the style that you created in the previous assignment, you need to go to go your Mapbox Studio account and find your Style URL ([how to find your Style URL](https://docs.mapbox.com/help/glossary/style-url/)):
+**Style**: Mapbox GL JS permits URLs instead of literal data in several places, including data sources. To load the style that you created in the part 1, you need to go to go your Mapbox Studio account and find your Style URL ([how to find your Style URL](https://docs.mapbox.com/help/glossary/style-url/)):
 
 
 <p align="center">
-    <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/mapstyle.png">
-    </p>
+    <img src="Images/mapstyle.png">
+</p>
 <br></br>
 <h3 align ="center"> OR </h3>
 <br></br>
 <p align="center">
-    <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/mapstyle.gif">
-    </p>
+    <img src="Images/mapstyle.gif">
+</p>
 
 
-- Copy and paste your style URL into your code and hit run to view your changes. *(Which row to edit? Look for a row with something that says something like 'STYLE URL GOES HERE')*
-
+- Copy and paste your style URL into your code. *(Look for a row with something that says something like 'STYLE URL GOES HERE')*
 <p align="center">
     <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Images/Initial_Map.png">
     </p>
+
+Now preview it in a browser to view your changes.
 
 ----------
 
@@ -119,9 +98,9 @@ Let’s try modifying the code to add a new element to the map. Currently, you c
 
 To get started, check out this code: [https://www.mapbox.com/mapbox-gl-js/example/navigation/](https://www.mapbox.com/mapbox-gl-js/example/navigation/)
 
-What part of the example is missing for your current code? Add the navigation control function ito your code below your map variable and click ‘Run’ when you have finished.  
+What part of the example is missing for your current code? The NavigationControl! Add the navigation control function into your code below your map variable and click ‘Run’ when you have finished.  
 
-```
+```javascript
 
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
@@ -132,21 +111,24 @@ map.addControl(new mapboxgl.NavigationControl());
 
 ### Adding a dynamic legend
 
-The following code adds the styling rules needed to add a legend to the map. 
+The following code adds the *styling rules* that will be style the 
+DOM objects that show the legend for the map. 
 
 Copy and paste the following just after the opening ``<style>`` tag in your code: 
 
-```
- p {
-        color: #CCC;
+```css
+      // stlye for paragraph tags
+      p {
+        color: 'grey'; 
       }
 
-      h4 {
-        color: #CCC;
+      // style for heading level 4 tags
+      h4 { 
+        color: 'grey';
         margin-left: 10px;
       }
 
-
+      // style for items with the class "LegendContainer"
       .LegendContainer {
         position: absolute;
         bottom: 20px;
@@ -159,6 +141,7 @@ Copy and paste the following just after the opening ``<style>`` tag in your code
         border-radius: 7px;
       }
 
+      // style for items with the class "descriptionPanel"
       .descriptionPanel {
         position: absolute;
         bottom: 65px;
@@ -172,11 +155,13 @@ Copy and paste the following just after the opening ``<style>`` tag in your code
         border-radius: 7px;
       }
 
+      // style for items with the class "descriptionPanel" when active
       .LegendContainer:active {
         width: 240px;
         height: 250px;
       }
 
+      // style for items with the class "legendItem"
       .legendItem {
         float: left;
         width: 50%;
@@ -184,6 +169,7 @@ Copy and paste the following just after the opening ``<style>`` tag in your code
         margin-bottom: 10px;
       }
 
+      // style for items with the class "colorBox"
       .colorBox {
         width: 20px;
         height: 20px;
@@ -192,12 +178,14 @@ Copy and paste the following just after the opening ``<style>`` tag in your code
         margin-left: 10px;
       }
 
+      // style for items with the class "layerDescription"
       .layerDescription {
         color: white;
         float: left;
         margin-left: 10px;
       }
 
+      // style for items with the class "chevron"
       .chevron {
         position: relative;
         margin-left: 45%;
@@ -209,7 +197,7 @@ Copy and paste the following just after the opening ``<style>`` tag in your code
 
 Next, we will need to add a container to display background information about our map and data sources. 
 
-```
+```html
      <div class="descriptionPanel" id="descriptionPanel" style="height: 320px;">
       <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
       <hr />
@@ -223,10 +211,12 @@ Next, we will need to add a container to display background information about ou
 
 Create a second container to help your users differentiate between the layer colors. 
 
-```
+color could be 'PaleTurquoise'
+
+```html
     <div class="LegendContainer">
       <div class="legendItem">
-        <div class="colorBox" style="background-color: hsl(185, 100%, 50%);"></div>
+        <div class="colorBox" style="background-color: 'hsl(185, 100%, 50%);'"></div>
         <div class="layerDescription">Owners</div>
       </div>
       <div class="legendItem">
@@ -236,12 +226,12 @@ Create a second container to help your users differentiate between the layer col
     </div>
   ```
 
-Once you’ve added the above elements to your script, hit ‘Run’ and see what happens. 
+Once you’ve added the above elements to your script, take a look at your changes in a browser! Blank? Check your bowser's console for errors.
 
 
-Next, let's add an interaction to our legend. The following variable and function will enable the user to show and hide the map description that we added in the last section. Copy and paste the code snippet after your map variable: 
+Next, let's add interaction to our legend. The following variable 'state' and function 'panelSelect' will enable the user to show and hide the map description that we added in the last section. Copy and paste the code snippet after your map variable: 
 
-```     
+```javascript
       var state = { panelOpen: true };
 
       function panelSelect(e){
@@ -258,194 +248,21 @@ Next, let's add an interaction to our legend. The following variable and functio
     
  ```     
  
- Hit run to see your changes!
+Take a look at your changes in a browser once again! Is it interactive?
+Yes? Nice.
  
- <p align="center">
-    <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Images/Screen%20Shot%202019-10-16%20at%202.25.29%20PM.png">
-    </p>
 
 ----------
 
 ### Create your webpage
 
-
-*You’ve made a web map! But this is just serving the map directly from the code within JSFiddle, it isn’t a webpage yet… to do that we need some way to host a webpage. Today, let’s use Github Pages.*
-**Orientation to Github Pages** 
-
-1. (Create a Github account if you don’t have one)
-2. Set up a Github [repository](https://help.github.com/articles/create-a-repo/)
-    - Name it whatever you want
-    - Make it Public
-    - Click the box to ‘Initialize this repository with a README’
-![](https://lh3.googleusercontent.com/asCZvCmvq6bxNthgMEgDhmq1uQ1IwHqdLYOkGAKpoQT2yEhf_7e8Rsu5doIZ--mvDJ3Ru6h7Qf_rO95LEn9s7spGUnx2xLI7MleSAML0ra6fR1A6jpbx26qfKL9ksWsi74q1P9uC)
-
-3. **Create a new file** called index.html
-4. In the blank index.html file, paste in the entire code we built in JSFiddle
-
-```
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset='utf-8' />
-    <title>Owners vs Renters Map</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
-
-      #map {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-      }
-
-      p {
-        color: #CCC;
-      }
-
-      h4 {
-        color: #CCC;
-        margin-left: 10px;
-      }
-
-
-      .LegendContainer {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        z-index: 2;
-        width: 300px;
-        height: 40px;
-        background: rgba(80, 80, 80, .75);
-        transition: width 2s, height 2s;
-        border-radius: 7px;
-      }
-
-      .descriptionPanel {
-        position: absolute;
-        bottom: 65px;
-        left: 20px;
-        z-index: 2;
-        width: 300px;
-        height: 40px;
-        background: rgba(80, 80, 80, .75);
-        transition: width 2s, height 2s;
-        overflow: hidden;
-        border-radius: 7px;
-      }
-
-      .LegendContainer:active {
-        width: 240px;
-        height: 250px;
-      }
-
-      .legendItem {
-        float: left;
-        width: 50%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-
-      .colorBox {
-        width: 20px;
-        height: 20px;
-        float: left;
-        border-radius: 10px;
-        margin-left: 10px;
-      }
-
-      .layerDescription {
-        color: white;
-        float: left;
-        margin-left: 10px;
-      }
-
-      .chevron {
-        position: relative;
-        margin-left: 45%;
-        font-size: x-large;
-        color: white;
-      }
-
-    </style>
-  </head>
-
-  <body>
-    <div class="descriptionPanel" id="descriptionPanel" style="height: 320px;">
-      <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
-      <hr />
-      <h4>WHAT AM I LOOKING AT?</h4><br />
-      <p style="margin-left: 10px; margin-right: 10px;">
-        This is a map showing every single person in the United States as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block, however within each block location is randomized. Points are colored based on number home owners versus renters on a block.
-      </p>
-    </div>
-
-    <div class="LegendContainer">
-      <div class="legendItem">
-        <div class="colorBox" style="background-color: hsl(185, 100%, 50%);"></div>
-        <div class="layerDescription">Owners</div>
-      </div>
-      <div class="legendItem">
-        <div class="colorBox" style="background-color: hsl(303, 100%, 50%);"></div>
-        <div class="layerDescription">Renters</div>
-      </div>
-    </div>
-
-
-    <div id='map'></div>
-    <script>
-      mapboxgl.accessToken = 'pk.eyJ1IjoibWpkYW5pZWxzb24iLCJhIjoiY2p2bzFlbnZ5MW5pbTN5cGJ2YWp2MW9vaiJ9.kAaZq3iyJwvrMLK7XDs_qw';
-      var map = new mapboxgl.Map({
-        container: 'map', // container id
-        style: 'mapbox://styles/mjdanielson/ck1tk2eh06dar1cnl4fcaudr1', // stylesheet location
-      });
-
-      map.addControl(new mapboxgl.NavigationControl());
-
-      var state = {
-        panelOpen: true
-      };
-
-      function panelSelect(e) {
-        if (state.panelOpen) {
-          document.getElementById('descriptionPanel').style.height = '26px';
-          document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-up";
-          state.panelOpen = false;
-        } else {
-          document.getElementById('descriptionPanel').style.height = '320px';
-          document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-down";
-          state.panelOpen = true;
-        }
-      }
-
-    </script>
-
-  </body>
-
-</html>
-
-```
-
-5. [Enable Github Pages](https://pages.github.com/) (in repo Settings - the gear symbol in the upper right):
-6. Then wait a minute, then go to your Github page address (https://[YOUR GITHUB NAME].github.io/[YOUR REPO NAME]/) - you can find this by scrolling back to the Github Pages settings.
-7. (You might need to wait another minute if it doesn’t work right away)
+Copy the file to your "Pages" webspace to see it working live.
 
 ***Voila! Now you have a live website with a Mapbox map!*** 
 
 <p align="center">
     <img src="https://media.giphy.com/media/Bj2UZgqqzUxwc/giphy.gif">
-    </p>
-
-**Polishing steps:**
-
-- Change it in your code, commit your changes in your Github index.html file, give it a minute, and check your webpage.
+</p>
 
 
 
