@@ -45,7 +45,7 @@ Next, upload your *owner* data to Mapbox.
 
 ----------
 
-### Create a new style** 
+### Create a new style 
 
 After you've uploaded your data, it's time to create a new "style" so you can put it on the map! Go to your [Styles page](https://www.mapbox.com/studio/). Click the **New style** button. Find the *Dark Template* style and click **Customize Dark**.
 
