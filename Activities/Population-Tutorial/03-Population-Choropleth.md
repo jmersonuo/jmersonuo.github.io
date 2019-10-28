@@ -1,4 +1,4 @@
-<img src="Images/logo.png">
+<img src="Images/logo.png" width = "150px">
 
 
 <h2 align="center"> Mapping renters vs owners in Portland </h2>
@@ -22,12 +22,12 @@ For this first exercise, we will be creating two choropleth maps that display 1)
 
 ### Get started
 
-To create a web map, you'll need to have some familiarity with HTML, CSS, and JavaScript. If you are new to web maps, explore our [tutorials](https://docs.mapbox.com/help/tutorials/) and [documentation](https://docs.mapbox.com/help/how-mapbox-works/web-apps/) to help you get started.
+To create a web map, you'll need to have some familiarity with HTML, CSS, and JavaScript. If you are new to web maps, explore the Mapbox [tutorials](https://docs.mapbox.com/help/tutorials/) and [documentation](https://docs.mapbox.com/help/how-mapbox-works/web-apps/) to help you get started.
 
 ----------
 
 ### Data
-
+Download the data below. If your browser open it, inspread of downloadig, right-click and use "save-data-as", to save it to your R-Drive space.
 - [Percentage of renters, owners and total population by block group 2017](Data/Owner-Renter-Pop.geojson) - [Source: US Census](https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml) 
 
 
