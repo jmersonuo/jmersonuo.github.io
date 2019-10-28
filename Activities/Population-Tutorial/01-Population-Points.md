@@ -1,4 +1,4 @@
-<img src="Images/logo.png">
+<img src="Images/logo.png" height = 150px>
 
 
 <h2 align="center"> Mapping renters vs owners in Portland </h2>
@@ -75,7 +75,7 @@ In the *New layer* panel, look in the list of *Data sources* for the **owner** s
 
 The default Basic map view is not centered on the United States. Mapbox Studio recognizes that the data you have uploaded is focused on a different location, so it displays the message *"This tileset isn't available from your map view."* Click **Go to data**, and the map view will refocus on the United States.
 
-Your new layer will be highlighted on the x-ray map. If it doesn't not ;look like the image below, you mauy need to change the "Type" to "Circle".
+Your new layer will be highlighted on the x-ray map. If it doesn't not ;look like the image below, you may need to change the "Type" to "Circle".
 
 <p align="center">
   <img src="Images/zray.png">
@@ -92,6 +92,8 @@ Click the **Style** tab and the map will switch back to style mode displaying yo
 
 You can rename the layer by clicking on the name of the layer at the top of the panel. 
 
+At this point you should have added both the renter-occupued and owner-occupied tilesets to your "Owners vs Renters" styles.
+
 ----------
 
 ### Symbolize or "style" the layer
@@ -101,10 +103,10 @@ Each layer in Studio can be styled individually by clicking on the name of the l
 In the Mapbox Studio style editor, you can assign a color to each of your layers. Click the Style link in the **renters** layer. Next, click **color** and change the hex color value to #cc00c2.
 
 <p align="center">
-  <src img="Images/Color-picker.png">
+  <img src="Images/Color-picker.png">
 </p>
   
- Next, clike the Style link in the **owners** layer and change the color value to a bright pink. 
+ Next, click the Style link in the **owners** layer and change the color value to a bright pink. 
 
 ----------
 
