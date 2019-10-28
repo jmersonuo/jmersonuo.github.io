@@ -1,4 +1,4 @@
-<img src="Images/logo.png" width=150px>
+<img src="Images/logo.png" width="150px">
 
 <h2 align="center"> Mapping renters vs owners in Portland </h2>
 <h3 align="center"> Part II: Adding interactivity to web maps through GL-JS </h3>
