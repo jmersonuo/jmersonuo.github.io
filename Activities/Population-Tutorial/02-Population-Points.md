@@ -199,7 +199,7 @@ This is CSS. Copy and paste the following just after the opening ``<style>`` tag
 
 ```
 
-Next, we will need to add a container to display background information about our map and data sources. Add a new DIV to your DOM by adding this code below the map DIV.
+Next, we will need to add a container to display background information about our map and data sources. Add a new DIV container to your DOM by adding this code below the map DIV container. Add a comment above this code explaining what it is.
 
 ```html
      <div class="descriptionPanel" id="descriptionPanel" style="height: 320px;">
@@ -213,14 +213,14 @@ Next, we will need to add a container to display background information about ou
 
 ```
 
-Create a second container to help your users differentiate between the layer colors. 
+Take a look at your map. See the new container!?
 
-color could be 'PaleTurquoise'
+Create a second container to help your users differentiate between the layer colors. Add a comment above this code explaining what it is.
 
 ```html
     <div class="LegendContainer">
       <div class="legendItem">
-        <div class="colorBox" style="background-color: 'hsl(185, 100%, 50%);'"></div>
+        <div class="colorBox" style="background-color: hsl(185, 100%, 50%);"></div>
         <div class="layerDescription">Owners</div>
       </div>
       <div class="legendItem">
@@ -230,7 +230,7 @@ color could be 'PaleTurquoise'
     </div>
   ```
 
-Once you’ve added the above elements to your script, take a look at your changes in a browser! Blank? Check your bowser's console for errors.
+Take a look at your changes! Blank? Check your bowser's console for errors.
 
 
 Next, let's add interaction to our legend. The following variable 'state' and function 'panelSelect' will enable the user to show and hide the map description that we added in the last section. Copy and paste the code snippet after your map variable: 
