@@ -47,16 +47,16 @@ Next, upload your *owner* data to Mapbox.
 
 ### Create a new style** 
 
-After you've uploaded your data, it's time to create a new "style" so you can put it on the map! Go to your [Styles page](https://www.mapbox.com/studio/). Click the **New style** button. Find the *Dark Template* style and click **Create**.
+After you've uploaded your data, it's time to create a new "style" so you can put it on the map! Go to your [Styles page](https://www.mapbox.com/studio/). Click the **New style** button. Find the *Dark Template* style and click **Customize Dark**.
 
 <p align="center">
   <img src="Images/Dark_style.png">
 </p>
 
-Rename the style so that you can find it later: click into the title field in the upper left side of the screen to change the title from Dark Template to ‘Renters vs Owners’.
+Rename the style so that you can find it later: click into the title field in the upper left side of the screen to change the title from "Dark" to ‘Renters vs Owners’.
 
 <p align="center">
-  <img src"Images/Name_Change-Generic.gif">
+  <img src="Images/Name_Change-Generic.gif">
 </p>
   
 
@@ -68,19 +68,19 @@ Rename the style so that you can find it later: click into the title field in th
 
 To add and symbolize your data, you will need to add a **new layer** to the map. At the top of the layer panel, click **+ Add layer** and select your **renter** layer that you just uploaded as a tileset. 
 
+The editor is now showing your map in “x-ray mode.” X-ray mode shows all the data in the sources added to the style, regardless of whether there is a layer to style it.
+
+In the *New layer* panel, look in the list of *Data sources* for the **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
+
+
+The default Basic map view is not centered on the United States. Mapbox Studio recognizes that the data you have uploaded is focused on a different location, so it displays the message *"This tileset isn't available from your map view."* Click **Go to data**, and the map view will refocus on the United States.
+
+Your new layer will be highlighted on the x-ray map. If it doesn't not ;look like the image below, you mauy need to change the "Type" to "Circle".
 
 <p align="center">
   <img src="Images/zray.png">
 </p>
 
-
-The editor is now showing your map in “x-ray mode.” X-ray mode shows all the data in the sources added to the style, regardless of whether there is a layer to style it.
-
-In the *New layer* panel, look in the list of *Data sources* for the **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
-
-The default Basic map view is not centered on the United States. Mapbox Studio recognizes that the data you have uploaded is focused on a different location, so it displays the message *"This tileset isn't available from your map view."* Click **Go to data**, and the map view will refocus on the United States.
-
-Your new layer will be highlighted on the x-ray map.
 
 Click the **Style** tab and the map will switch back to style mode displaying your new layer. You will see the state data on the map with a default style (black with 100% opacity).
 
