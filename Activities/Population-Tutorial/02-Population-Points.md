@@ -118,10 +118,10 @@ map.addControl(new mapboxgl.NavigationControl());
 The following code adds the *styling rules* that will be style the 
 DOM objects that show the legend for the map. 
 
-Copy and paste the following just after the opening ``<style>`` tag in your code: 
+This is CSS. Copy and paste the following just after the opening ``<style>`` tag in the `<head>` of your code: 
 
 ```css
-      /*  stlye for paragraph tags
+      /*  stlye for paragraph tags */
       p {
         color: 'grey'; 
       }
@@ -203,13 +203,13 @@ Next, we will need to add a container to display background information about ou
 
 ```html
      <div class="descriptionPanel" id="descriptionPanel" style="height: 320px;">
-      <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
-      <hr />
-      <h4>WHAT AM I LOOKING AT?</h4><br />
-      <p style="margin-left: 10px; margin-right: 10px;">
+        <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
+        <hr />
+        <h4>WHAT AM I LOOKING AT?</h4><br />
+        <p style="margin-left: 10px; margin-right: 10px;">
         This is a map showing every single person in the United States as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block, however within each block location is randomized. Points are colored based on number home owners versus renters on a block.
-      </p>
-    </div>
+        </p>
+     </div>
 
 ```
 
