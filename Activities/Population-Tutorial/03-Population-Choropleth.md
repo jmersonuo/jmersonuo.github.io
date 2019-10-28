@@ -27,7 +27,7 @@ To create a web map, you'll need to have some familiarity with HTML, CSS, and Ja
 ----------
 
 ### Data
-Download the data below. If your browser open it, inspread of downloadig, right-click and use "save-data-as", to save it to your R-Drive space.
+Download the data below. If your browser opens it, instead of downloading, right-click and use "save-data-as", to save it to your R-Drive space.
 - [Percentage of renters, owners and total population by block group 2017](Data/Owner-Renter-Pop.geojson) - [Source: US Census](https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml) 
 
 
