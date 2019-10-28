@@ -356,7 +356,7 @@ Preview your map in a browser to view your changes! You should see your vector l
 
 For the renter map, we want to create a choropleth map that displays the percentage of the Portland population that rents. In order to style by percentage of renters, you will need to style our data by the 'Rent' field. You will also need to change the 'fill-color' parameter of the layer you just added to your map. 
 
-Replace '#cb1515' with the following: 
+Replace `'#cb1515'` with the following: 
 
 ```javascript
    ["step",
