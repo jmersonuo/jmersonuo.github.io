@@ -1,4 +1,4 @@
-<img src="Images/logo.png">
+<img src="Images/logo.png" width=150px>
 
 <h2 align="center"> Mapping renters vs owners in Portland </h2>
 <h3 align="center"> Part II: Adding interactivity to web maps through GL-JS </h3>
@@ -30,7 +30,7 @@ To create a web map, you'll need to have some familiarity with HTML, CSS, and Ja
 ### Writing your first code
 
 
-To begin, we will be using a sample code created by the documentation team at Mapbox to initialize a simple web map. 
+To begin, we will be using a sample code created by the documentation team at Mapbox to initialize a simple web map. Create a new folder for this assignment on your *R-drive*. Create a new file called `index.html` and copy the code below.
 
 ```html
 <!DOCTYPE html>
@@ -71,17 +71,15 @@ Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/defi
 
 **Style**: Mapbox GL JS permits URLs instead of literal data in several places, including data sources. To load the style that you created in the part 1, you need to go to go your Mapbox Studio account and find your Style URL ([how to find your Style URL](https://docs.mapbox.com/help/glossary/style-url/)):
 
-
-<p align="center">
-    <img src="../Opioid-Tutorial/Images/mapstyle.png">
-</p>
-<br></br>
-<h3 align ="center"> OR </h3>
-<br></br>
 <p align="center">
     <img src="../Opioid-Tutorial/Images/mapstyle.gif">
 </p>
-
+<br>
+<h3 align ="center"> OR </h3>
+<br>
+<p align="center">
+    <img src="../Opioid-Tutorial/Images/mapstyle.png">
+</p>
 
 - Copy and paste your style URL into your code. *(Look for a row with something that says something like 'STYLE URL GOES HERE')*
 <p align="center">
