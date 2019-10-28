@@ -123,12 +123,12 @@ This is CSS. Copy and paste the following just after the opening ``<style>`` tag
 ```css
       /*  stlye for paragraph tags */
       p {
-        color: 'grey'; 
+        color: white; 
       }
 
       /* style for heading level 4 tags */
       h4 { 
-        color: 'grey';
+        color: white;
         margin-left: 10px;
       }
 
@@ -199,7 +199,7 @@ This is CSS. Copy and paste the following just after the opening ``<style>`` tag
 
 ```
 
-Next, we will need to add a container to display background information about our map and data sources. 
+Next, we will need to add a container to display background information about our map and data sources. Add a new DIV to your DOM by adding this code below the map DIV.
 
 ```html
      <div class="descriptionPanel" id="descriptionPanel" style="height: 320px;">
