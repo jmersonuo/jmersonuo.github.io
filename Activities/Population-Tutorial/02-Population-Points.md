@@ -73,19 +73,19 @@ Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/defi
 
 
 <p align="center">
-    <img src="Images/mapstyle.png">
+    <img src="../Opioid-Tutorial/Images/mapstyle.png">
 </p>
 <br></br>
 <h3 align ="center"> OR </h3>
 <br></br>
 <p align="center">
-    <img src="Images/mapstyle.gif">
+    <img src="../Opioid-Tutorial/Images/mapstyle.gif">
 </p>
 
 
 - Copy and paste your style URL into your code. *(Look for a row with something that says something like 'STYLE URL GOES HERE')*
 <p align="center">
-    <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Images/Initial_Map.png">
+    <img src="Images/Initial_Map.png">
     </p>
 
 Now preview it in a browser to view your changes.
