@@ -63,7 +63,7 @@ To begin, we will be using a sample code created by the documentation team at Ma
 ```
 
 
-Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/define-access-token/)in the section that says "ACCESS TOKEN GOES HERE" (get your access token from your Mapbox [‘Account’ page](https://account.mapbox.com/)).
+- Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/define-access-token/)in the section that says "ACCESS TOKEN GOES HERE" (get your access token from your Mapbox [‘Account’ page](https://account.mapbox.com/)).
 
 ----------
 
@@ -86,7 +86,7 @@ Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/defi
     <img src="Images/Initial_Map.png">
     </p>
 
-Now preview it in a browser to view your changes.
+Now preview it in a browser to view your changes. Is is blank? Did you add _your_ mapbox token and your style?
 
 ----------
 
@@ -96,7 +96,13 @@ Let’s try modifying the code to add a new element to the map. Currently, you c
 
 To get started, check out this code: [https://www.mapbox.com/mapbox-gl-js/example/navigation/](https://www.mapbox.com/mapbox-gl-js/example/navigation/)
 
-What part of the example is missing for your current code? The NavigationControl! Add the navigation control function into your code below your map variable and click ‘Run’ when you have finished.  
+What part of the example is missing for your current code? The NavigationControl! Add the navigation control function into your code below your map variable. This goes before the closing `</script>` tag. Pay attention to the whitespace as you add new code. Keep the whitespace neat!
+
+Preview it in the browser when you have finished. See the nav controls on the top right?
+
+Are you an advanced programmer? look in the API reference for [nagivgation control](https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol) to see how to move the control to the `top-left`.
+
+_Hint:_ The example in the documentation adds the control in two lines, whereas we had previously added it in one line. 
 
 ```javascript
 
