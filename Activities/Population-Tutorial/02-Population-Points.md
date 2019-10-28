@@ -121,18 +121,18 @@ DOM objects that show the legend for the map.
 Copy and paste the following just after the opening ``<style>`` tag in your code: 
 
 ```css
-      // stlye for paragraph tags
+      /*  stlye for paragraph tags
       p {
         color: 'grey'; 
       }
 
-      // style for heading level 4 tags
+      /* style for heading level 4 tags */
       h4 { 
         color: 'grey';
         margin-left: 10px;
       }
 
-      // style for items with the class "LegendContainer"
+      /*  style for items with the class "LegendContainer" */
       .LegendContainer {
         position: absolute;
         bottom: 20px;
@@ -145,7 +145,7 @@ Copy and paste the following just after the opening ``<style>`` tag in your code
         border-radius: 7px;
       }
 
-      // style for items with the class "descriptionPanel"
+      /*  style for items with the class "descriptionPanel" */
       .descriptionPanel {
         position: absolute;
         bottom: 65px;
@@ -159,13 +159,13 @@ Copy and paste the following just after the opening ``<style>`` tag in your code
         border-radius: 7px;
       }
 
-      // style for items with the class "descriptionPanel" when active
+      /*  style for items with the class "descriptionPanel" when active */
       .LegendContainer:active {
         width: 240px;
         height: 250px;
       }
 
-      // style for items with the class "legendItem"
+      /* style for items with the class "legendItem" */
       .legendItem {
         float: left;
         width: 50%;
@@ -173,7 +173,7 @@ Copy and paste the following just after the opening ``<style>`` tag in your code
         margin-bottom: 10px;
       }
 
-      // style for items with the class "colorBox"
+      /* style for items with the class "colorBox" */
       .colorBox {
         width: 20px;
         height: 20px;
@@ -182,14 +182,14 @@ Copy and paste the following just after the opening ``<style>`` tag in your code
         margin-left: 10px;
       }
 
-      // style for items with the class "layerDescription"
+      /* style for items with the class "layerDescription" */
       .layerDescription {
         color: white;
         float: left;
         margin-left: 10px;
       }
 
-      // style for items with the class "chevron"
+      /* style for items with the class "chevron" */
       .chevron {
         position: relative;
         margin-left: 45%;
