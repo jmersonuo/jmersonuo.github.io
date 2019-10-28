@@ -105,7 +105,6 @@ Are you an advanced programmer? look in the API reference for [nagivgation contr
 _Hint:_ The example in the documentation adds the control in two lines, whereas we had previously added it in one line. 
 
 ```javascript
-
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
 
@@ -214,26 +213,28 @@ Next, we will need to add a container to display background information about ou
 ```
 
 Take a look at your map. See the new container!?
-
+<br><br>
 Create a second container to help your users differentiate between the layer colors. Add a comment above this code explaining what it is.
 
 ```html
-    <div class="LegendContainer">
-      <div class="legendItem">
-        <div class="colorBox" style="background-color: hsl(185, 100%, 50%);"></div>
+  <div class="LegendContainer">
+    <div class="legendItem">
+        <div class="colorBox" style="background-color: #00d2e6;"></div>
         <div class="layerDescription">Owners</div>
-      </div>
-      <div class="legendItem">
-        <div class="colorBox" style="background-color: hsl(303, 100%, 50%);"></div>
-        <div class="layerDescription">Renters</div>
-      </div>
     </div>
+    <div class="legendItem">
+        <div class="colorBox" style="background-color: #cc00c2;"></div>
+     <div class="layerDescription">Renters</div>
+  </div>
   ```
-
+<br>
 Take a look at your changes! Blank? Check your bowser's console for errors.
 
+**Recap:** To create the legend, we added several DOM Objects using DIVs and Spans using HTML. The "style" of these objects was set using CSS. The CSS was used to make legend object float in front of the map. A legend could also be fixed above, below, or beside the map. The colors of the dots in the legend were hard coded to match the colors we used in the map in the HTML above. If you change the colors in your style, you'll _also_ have to change them in the legend.
 
-Next, let's add interaction to our legend. The following variable 'state' and function 'panelSelect' will enable the user to show and hide the map description that we added in the last section. Copy and paste the code snippet after your map variable: 
+<hr>
+<br>
+Next, let's add interaction to our legend. For this we need to add some JavaScript. The following variable 'state' and function 'panelSelect' will enable the user to show and hide the map description that we added in the last section. Copy and paste the code snippet after your map variable. Add a comment above to indicate what this is for (e.g. // legend interatcion).
 
 ```javascript
       var state = { panelOpen: true };
@@ -252,17 +253,19 @@ Next, let's add interaction to our legend. The following variable 'state' and fu
     
  ```     
  
-Take a look at your changes in a browser once again! Is it interactive?
+Take a look at your changes in a browser once again! Is it interactive? <br>
 Yes? Nice.
- 
+
 
 ----------
 
 ### Create your webpage
 
-Copy the file to your "Pages" webspace to see it working live.
+Copy the file to your "Pages" webspace to see it working live.  
 
 ***Voila! Now you have a live website with a Mapbox map!*** 
+
+If you don't follow how every line of code works, that's OK! At this point it is important to understand that you added several chunks for code. Some for the map, some for the legend, and some for interactivity. You could add your own data to a Mapbox Style, add that style to this map, make a few changes to the legend and you can make this interactive map your own!
 
 <p align="center">
     <img src="https://media.giphy.com/media/Bj2UZgqqzUxwc/giphy.gif">
