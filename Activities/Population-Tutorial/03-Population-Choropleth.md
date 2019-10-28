@@ -1,4 +1,4 @@
-<img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/logo.png">
+<img src="../Images/logo.png" width="150px">
 
 
 <h2 align="center"> Mapping renters vs owners in Portland </h2>
@@ -28,17 +28,12 @@ For this first exercise, we will be creating two choropleth maps that display 1)
 ### Get started
 
 To create a web map, you'll need to have some familiarity with HTML, CSS, and JavaScript. If you are new to web maps, explore our [tutorials](https://docs.mapbox.com/help/tutorials/) and [documentation](https://docs.mapbox.com/help/how-mapbox-works/web-apps/) to help you get started.
-Here’s what you’ll need to get started:
-
-- [Github account](https://github.com/join)
-- [JSFiddle Text Editor](https://jsfiddle.net/)
-- [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/)
-
-*This is a very beginner intro by a non-developer - there’s a lot more to learn about developing more complex web apps and sites, but we’re focusing just on a simple web map. For more complex projects and teams, you’ll want to learn more about version control and using Github properly, with pull requests etc.*
 
 ----------
 
 ### Data
+
+Download the data below. If your browser opens it, instead of downloading, right-click and use “save-data-as”, to save it to your R-Drive space.
 
 - [Percentage of renters, owners and total population by block group 2017](https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Data/Owner-Renter-Pop.geojson) - [Source: US Census](https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml) 
 
@@ -52,7 +47,7 @@ To add the percentage of renters vs owners data to Mapbox as a tileset, you need
 On your Tilesets page, click the **New tileset** button. Select the geojson data containing your renters and owners data and upload it to your account. 
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Opioid-Tutorial/Images/tilesets.png">
+  <img src="Images/tilesets.png">
   </p>
 
 
@@ -67,7 +62,7 @@ In the last few tutorials we used Studio to dynamically style all of our layers.
 
 To begin, we will be using a sample code created by the documentation team at Mapbox to initialize a web map in JSFiddle. 
 
-```HTML
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -122,7 +117,7 @@ body * {
 
 Notice that there are script and link tags referencing mapbox-gl-compare. This is the Mapbox GL JS [swipe map plugin](https://github.com/mapbox/mapbox-gl-compare).
 
-```
+```html
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.js'></script>
 <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css'
 ```
@@ -162,9 +157,9 @@ Now that we’ve initialized the webmap, let’s try to make some changes to our
 
 1. Locate the line of code that is telling the map where to center the view.
 2. Try changing the center location to the center of the US by picking a new coordinate using [http://geojson.io/](http://geojson.io/#map=2/20.0/0.0).
-3. Change the coordinates in your code and run your changes.
+3. Change the coordinates in your code and preview your changes.
 4. Change the zoom level to 10. 
-5. Click ‘Run’ to see the changes to your map. 
+5. Preview your map in a browser to view your changes.
 
 
 <p align="center">
@@ -202,7 +197,7 @@ var map = new mapboxgl.Compare(ownerMap, renterMap, {
 
 ```
 
-Hit run to see your changes. 
+Preview your map in a browser to view your changes.
 
 
 
@@ -253,7 +248,7 @@ Next, we will add our owner and renter data layer to the map using ownerMap.addL
 
 ```
 
-Before you hit 'run', you will need to make some changes to this code. 
+Before you preview your changes, you will need to make some changes to this code. 
 
 In your Mapbox account, navigate to your **Owner-Renter-Pops** tileset menu. 
 
@@ -277,7 +272,7 @@ Copy your tileset ID and add it to your code (be sure to keep the mapbox:// in y
 
 Next, copy and paste the name of your [source layer](https://docs.mapbox.com/help/glossary/source-layer/) into the code. 
 
-Hit **run** to see your changes! You should see your vector layer on your map. 
+Preview your map in a browser to view your changes! You should see your vector layer on your map. 
 
 
 <p align='center'>
@@ -308,7 +303,7 @@ Replace '#cb1515' with the following:
  
 This code is very similar to the process we used in Studio. We are filtering the data from our layer by the data range found in the 'Own' field. Each of the five steps is assigned a color and the fill-opacity is set to 0.7. 
 
-Hit run to see your changes 
+Preview your map in a browser to view your changes.
 
 <p align='center'>
   <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Images/owner_slide.png">
@@ -354,7 +349,7 @@ Copy your tileset ID and add it to your code (be sure to keep the mapbox:// in y
 
 Next, copy and paste the name of your [source layer](https://docs.mapbox.com/help/glossary/source-layer/) into the code. Your tileset ID and the source-layer name will be the same for both layers. 
 
-Hit **run** to see your changes! You should see your vector layer on your map. 
+Preview your map in a browser to view your changes! You should see your vector layer on your map. 
 
 
 ### Styling your second layer 
@@ -379,7 +374,7 @@ Replace '#cb1515' with the following:
                 
  ```
  
- Hit **run** to see your changes!
+Preview your map in a browser to view your changes.
  
 <p align="center">
 <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Images/slide.gif">
