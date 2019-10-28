@@ -12,7 +12,7 @@ The US Census makes owner/renter information readily available for census block 
 For this first exercise, we will be creating two choropleth maps that display 1) the percentage of owners, and 2) the percentage of renters in Portland, Oregon. 
 
 <p align="center">
-<img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Images/slide.gif">
+<img src="Images/slide.gif">
 </p>
   
 
@@ -138,7 +138,7 @@ var ownerMap = new mapboxgl.Map({
 ```
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Images/full-mapp.png">
+  <img src="Images/full-mapp.png">
   </p>
 
 
@@ -163,7 +163,7 @@ Now that we’ve initialized the webmap, let’s try to make some changes to our
 
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Images/Portland.png">
+  <img src="Images/Portland.png">
   </p>
 
 
@@ -202,7 +202,7 @@ Preview your map in a browser to view your changes.
 
 
 <p align="center">
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Images/compare1.png">
+  <img src="Images/compare1.png">
   </p>
 
 
@@ -254,7 +254,7 @@ In your Mapbox account, navigate to your **Owner-Renter-Pops** tileset menu.
 
 #### Tileset Menu 
 
-For each tilset, you can either click on the name of the tilset to go to its information page or click the button <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Images/Screen%20Shot%202019-10-25%20at%202.20.03%20PM.png"> for more options: 
+For each tilset, you can either click on the name of the tilset to go to its information page or click the button <img src="Images/Screen%20Shot%202019-10-25%20at%202.20.03%20PM.png"> for more options: 
 
 **Replace**
 Replace the current data in your tileset with new data. The tileset ID will stay the same and the new data will be reflected in all styles that reference this tileset.
@@ -276,7 +276,7 @@ Preview your map in a browser to view your changes! You should see your vector l
 
 
 <p align='center'>
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Images/Screen%20Shot%202019-10-25%20at%202.25.13%20PM.png">
+  <img src="Images/Screen%20Shot%202019-10-25%20at%202.25.13%20PM.png">
   </p>
   
 ### Data driven styling 
@@ -306,7 +306,7 @@ This code is very similar to the process we used in Studio. We are filtering the
 Preview your map in a browser to view your changes.
 
 <p align='center'>
-  <img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Images/owner_slide.png">
+  <img src="Images/owner_slide.png">
   </p>
   
 
@@ -377,7 +377,7 @@ Replace '#cb1515' with the following:
 Preview your map in a browser to view your changes.
  
 <p align="center">
-<img src="https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Images/slide.gif">
+<img src="Images/slide.gif">
 </p>
   
  
