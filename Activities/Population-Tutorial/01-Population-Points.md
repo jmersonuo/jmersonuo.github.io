@@ -214,7 +214,7 @@ You can use your ‘Share URL’ to open your style in a new browser tab and sha
 
 ### Next steps
 
-Head to [part 2](02-Population-Points.md) learn how add interactive elements to your map and publish it to the web with Mapbox GL JS. 
+Head to [part 2](02-Population-Points.md) to learn how add interactive elements to your map and publish it to the web with Mapbox GL JS. 
 
 
 
