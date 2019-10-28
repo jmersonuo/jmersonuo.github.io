@@ -92,7 +92,7 @@ Click the **Style** tab and the map will switch back to style mode displaying yo
 
 You can rename the layer by clicking on the name of the layer at the top of the panel. 
 
-At this point you should have added both the renter-occupued and owner-occupied tilesets to your "Owners vs Renters" styles.
+At this point you should have added both the renter-occupued and owner-occupied tilesets to your "Owners vs Renters" styles and both should have the "type" circle.
 
 ----------
 
@@ -100,19 +100,19 @@ At this point you should have added both the renter-occupued and owner-occupied 
 
 Each layer in Studio can be styled individually by clicking on the name of the layer in the Layer list. There are several layer types to choose from. Each layer type has a unique set of layer properties that can be specified. There are a few options for specifying property values. You can pick values individually, based on a data attribute, based on the zoom level, or the value of another property. For more information on layer types and their styling rules check out this [reference guide](https://docs.mapbox.com/studio-manual/reference/styles/).
 
-In the Mapbox Studio style editor, you can assign a color to each of your layers. Click the Style link in the **renters** layer. Next, click **color** and change the hex color value to #cc00c2.
+In the Mapbox Studio style editor, you can assign a color to each of your layers. Click the Style link in the **renters** layer. Next, click **color** and change the hex color value (after the '#') to #cc00c2 (bright blue).
 
 <p align="center">
   <img src="Images/Color-picker.png">
 </p>
   
- Next, click the Style link in the **owners** layer and change the color value to a bright pink. 
+ Next, click the Style link in the **owners** layer and change the hex color value (after the '#') to a  #00d2e6 (bright pink). 
 
 ----------
 
 ### Data driven style
 
-In the Mapbox Studio style editor, you can assign a radius size value to each layer based on its zoom level. Click the Style link in the **renters** layer. Next, click **Style across zoom range**.
+In the Mapbox Studio style editor, you can assign a radius size value to each layer based on its zoom level. Click the Style link in the **renters** layer. Next, click **Style across zoom range**. We'll talk more about why we do this during the upcoming Scale lecture.
 
 The rate of change is set to **Linear**. Click **Edit** and select **Exponential** instead. Click **Done**. Since you have set the rate of change to step, the colors for each range of density between stops will be uniform.
 
@@ -125,7 +125,7 @@ Change zoom value of the first stop to 12, and change the radius size to **1.5**
 </p>
   
   
-Click **+ Add another stop**. Assign the zoom level to 15, and change the radius size to **1.58**. Click **Done**. We'll talk more about why we do this during the upcoming Scale lecture.
+Click **+ Add another stop**. Assign the zoom level to 15, and change the radius size to **1.58**. Click **Done**. 
 Create the following additional stops:
 
 | Zoom Level | Value   |
@@ -204,7 +204,7 @@ To make your map match the example above, move your **settlement-label** to the 
 Now that you've got your map looking good, it's time to publish your "Style" so that it can be viewed on the web! Click the **Publish style** button at the top of the toolbar on the right side of the screen, then click **Publish** again on the next prompt.
 
 <p align='center'>
-  <img src="Images/publish_styel.png">
+  <img src="Images/publish_style.png">
 </p>
 
 Hooray! Your style is now published. If you go back to your Styles page, you will see your new style at the top of the list.
