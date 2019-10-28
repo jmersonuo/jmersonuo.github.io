@@ -75,7 +75,7 @@ In the *New layer* panel, look in the list of *Data sources* for the **owner** s
 
 The default Basic map view is not centered on the United States. Mapbox Studio recognizes that the data you have uploaded is focused on a different location, so it displays the message *"This tileset isn't available from your map view."* Click **Go to data**, and the map view will refocus on the United States.
 
-Your new layer will be highlighted on the x-ray map. If it doesn't not ;look like the image below, you may need to change the "Type" to "Circle".
+Your new layer will be highlighted on the x-ray map. If it doesn't look like the image below, you may need to change the "Type" to "Circle".
 
 <p align="center">
   <img src="Images/zray.png">
