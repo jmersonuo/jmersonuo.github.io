@@ -190,7 +190,7 @@ var renterMap = new mapboxgl.Map({
 
 Next, we need to enables users to compare our two maps by swiping left and right. Do this add the following code after your two map variables. Check out [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare) for more information about the mapbox-gl-compare plugin.
 
-```JavaScript 
+```javascript 
 
 var map = new mapboxgl.Compare(ownerMap, renterMap, {
 });
@@ -219,7 +219,7 @@ To make sure the rest of the code can execute, it needs to live in a callback fu
 
 For this exercise you will have two load events, one for your owner map and one for your renter map. 
 
-```JavaScript 
+```javascript 
 
 ownerMap.on('load', function() {
   // the rest of the owner data code will go in here
@@ -230,7 +230,7 @@ ownerMap.on('load', function() {
 Next, we will add our owner and renter data layer to the map using ownerMap.addLayer(). Remember that this goes inside of the load function. 
 
 
-```JavaScript
+```javascript
 
        ownerMap.addLayer({
          id: 'Owner Data',
@@ -285,7 +285,7 @@ You can assign a color to each block group based on its field and variables. For
 
 Replace '#cb1515' with the following: 
 
-```JavaScript
+```javascript
    ["step",
    ["get", "Own"],
    "hsl(225, 100%, 97%)",
@@ -316,7 +316,7 @@ Currently, we have only have information for homeowners displayed on our map. In
 
 First, add a second load event called renterMap (the renter variable will go inside of this function):
 
-```JavaScript 
+```javascript 
 
 renterMap.on('load', function() {
   // the rest of the renter data code will go in here
@@ -326,7 +326,7 @@ renterMap.on('load', function() {
 
 Next, add your renter data as a layer using .addLayer. 
 
-```JavaScript
+```javascript
        renterMap.addLayer({
          id: 'Renter Data',
          type: "fill",
@@ -358,7 +358,7 @@ For the renter map, we want to create a choropleth map that displays the percent
 
 Replace '#cb1515' with the following: 
 
-```JavaScript
+```javascript
    ["step",
    ["get", "Rent"],
    "hsl(225, 100%, 97%)",
