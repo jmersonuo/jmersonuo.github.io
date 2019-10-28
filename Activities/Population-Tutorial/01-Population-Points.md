@@ -100,13 +100,13 @@ At this point you should have added both the renter-occupued and owner-occupied 
 
 Each layer in Studio can be styled individually by clicking on the name of the layer in the Layer list. There are several layer types to choose from. Each layer type has a unique set of layer properties that can be specified. There are a few options for specifying property values. You can pick values individually, based on a data attribute, based on the zoom level, or the value of another property. For more information on layer types and their styling rules check out this [reference guide](https://docs.mapbox.com/studio-manual/reference/styles/).
 
-In the Mapbox Studio style editor, you can assign a color to each of your layers. Click the Style link in the **renters** layer. Next, click **color** and change the hex color value (after the '#') to #cc00c2 (bright blue).
+In the Mapbox Studio style editor, you can assign a color to each of your layers. Click the Style link in the **renters** layer. Next, click **color** and change the hex color value (after the '#') to #cc00c2 (bright pink).
 
 <p align="center">
   <img src="Images/Color-picker.png">
 </p>
   
- Next, click the Style link in the **owners** layer and change the hex color value (after the '#') to a  #00d2e6 (bright pink). 
+ Next, click the Style link in the **owners** layer and change the hex color value (after the '#') to a  #00d2e6 (bright blue). 
 
 ----------
 
