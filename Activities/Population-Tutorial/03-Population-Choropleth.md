@@ -35,7 +35,7 @@ To create a web map, you'll need to have some familiarity with HTML, CSS, and Ja
 
 Download the data below. If your browser opens it, instead of downloading, right-click and use “save-data-as”, to save it to your R-Drive space.
 
-- [Percentage of renters, owners and total population by block group 2017](https://github.com/mjdanielson/University-of-Oregon/blob/master/Labs/Population-Tutorial/Data/Owner-Renter-Pop.geojson) - [Source: US Census](https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml) 
+- [Percentage of renters, owners and total population by block group 2017](/Data/Owner-Renter-Pop.geojson) - [Source: US Census](https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml) 
 
 
 ----------
