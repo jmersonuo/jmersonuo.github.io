@@ -128,17 +128,17 @@ Go back to the top (Main Stage) and click the pencil to edit the section, click 
 In the map editor, you can customize the maps that used in your story.  
 ### 1. Change the basemap ###
 
-As a novice cartographer, select one of the 12 provided basemaps. For this demo, we are going to choose "Terrain with Labels", to emphasise the topography, while maintaining a neutral background that our data points will stand out on.  
+As a novice cartographer, select one of the 12 provided basemaps. For this demo, we are going to choose "Terrain with Labels", to emphasize the topography, while maintaining a neutral background that our data points will stand out on.  
 
 <img src="https://jmersonuo.github.io/StoryMaps/img/Basemaps.JPG" width ="334px">
 
-In the furutre, you could learn how to [customize](https://www.esri.com/arcgis-blog/products/developers/mapping/design-custom-basemaps-with-the-new-arcgis-vector-tile-style-editor/) basemaps.
+In the future, you could learn how to [customize](https://www.esri.com/arcgis-blog/products/developers/mapping/design-custom-basemaps-with-the-new-arcgis-vector-tile-style-editor/) basemaps.
 
 <img src="https://www.esri.com/arcgis-blog/wp-content/uploads/2018/05/vse-1920x1080.png" height ="250px">
 
 ### 2. Add data manually (add points from the novel) ###
 
-1. Click "Add" > "Add Map Notes". You can change the name of they layer. We are just going to leave it for now. The templates will give you different map symbols to choose from. We are going to leave it with the default, "Map Notes".  
+1. Click "Add" > "Add Map Notes". You can change the name of the layer. We are just going to leave it for now. The templates will give you different map symbols to choose from. We are going to leave it with the default, "Map Notes".  
 2. Notice that you can create features that are point, line, and area types. We are going to use a point feature using "Stickpin".   
 3. Pan and zoom to the desired location and click on the map to add a pin.  
 4. Set the pin's title and description. You can even add an image here. The map is interactive, so you are adding information that will exist in a popup on the pin.  
@@ -150,9 +150,21 @@ In the furutre, you could learn how to [customize](https://www.esri.com/arcgis-b
 ### 3. Search for data (something relevant to the novel) ###
 
 1. Click "Add" > "Browse Living Atlas Layers". ArcGIS Living Atlas of the World is a collection of global geographic information. Curated by Esri with contributions from its partner and user communities, Living Atlas contains valuable maps, data layers, tools, services, and apps for geographic analysis.  
-2. Search for "township and range".  
-3. Click the + to add the PLSS data to the map.
-4. Save and close the map. Press Save again.
+3. Click the small dropdown and click "ArcGIS Online". This allows you to search any content that other arcGIS users have published publically. These will not be as stable as the Living Atlas, but you can usually trust government sources. 
+4. Search for "Cabeza Prieta". 
+5. There is one layer found. Click the + to add the PLSS data to the map.
+6. Save the map. 
+
+<img src="https://jmersonuo.github.io/StoryMaps/img/WildernessAreas.JPG" width ="334px">  
+
+7. Hover over the layer and press the symbol button (square, rectangle, and circle) 
+8. Click options to change to the symbology for all the features in the layer. I'm making it green, with no outline and, 50% transparent.
+
+ 
+
+<img src="https://jmersonuo.github.io/StoryMaps/img/wildernessSymbol.JPG" width ="334px">  
+
+8. Press Save again.
 
 Notice that your edits to the map persist when you scroll up and down the map.
 
