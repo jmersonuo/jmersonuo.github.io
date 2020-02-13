@@ -35,32 +35,32 @@ Start the [Story Map Journal Builder](https://uo-online.maps.arcgis.com/apps/Map
 Alternatively, you can start in the ArcGIS Online website, open the web map you want to use in your Map Journal, or any one of the web maps if you intend to use several, share it as a web application, and then choose Story Map Journal from the application gallery. The Map Journal Builder will launch so you can configure the application.   
 
 ## 2 ##
-| In the dialog that appears when the Map Journal Builder starts, choose the layout you would like to use and press Start. In this tutorial we'll use the default Side Panel layout but the steps are the same for the Floating Panel layout. |<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step2.png" height ="150px"> |
+In the dialog that appears when the Map Journal Builder starts, choose the layout you would like to use and press Start. In this tutorial we'll use the default Side Panel layout but the steps are the same for the Floating Panel layout. <img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step2.png" width ="334px"> 
 
 
 ## 3 ##
-<img align="right" src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step3.png" height ="150px"> Enter a title for your Map Journal. You can also take an optional quick tour of the Builder at this point.  
+Enter a title for your Map Journal. You can also take an optional quick tour of the Builder at this point.  
+<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step3.png" width ="334px">
 
 ## 4 ##
-<img align="right" src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step4.png" height ="150px">
-
 The dialog will appear that lets you add the first entry, the "home section", into your Map Journal. The home section is the first section your users will see when they open your Map Journal, so it serves as the introduction.
 
 In this dialog, you are first prompted for the content you want this section to show in the "main stage": the main area of the display to the right of the side panel. Choose between a Map, Image, Video or Web page.
 
-If you want to use a web map, which is the default option, click the Map dropdown and either select the map you want to use or choose the option to create a new map. If you create a new map, the map editor window will appear. After you've selected or created a map, you will then be given the options, shown in the screenshot here, to customize how the map is displayed. You can choose to display a particular area of the map, turn layers on or off, display a particular feature's popup, or any combination of those. For example if you choose a custom location, the Builder will prompt you to interactively zoom to the area you want to use, and then you'll press a button to capture that extent. This lets you override the default extent of the web map.
-
+If you want to use a web map, which is the default option, click the Map dropdown and either select the map you want to use or choose the option to create a new map. If you create a new map, the map editor window will appear. After you've selected or created a map, you will then be given the options, shown in the screenshot here, to customize how the map is displayed. You can choose to display a particular area of the map, turn layers on or off, display a particular feature's popup, or any combination of those. For example if you choose a custom location, the Builder will prompt you to interactively zoom to the area you want to use, and then you'll press a button to capture that extent. This lets you override the default extent of the web map.  
+  
 Press Next.  
+  
+<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step4.png" width ="334px">
 
 ## 5 ##
-<img align="right" src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step5.png" height ="150px">
-
 The Add Home Section dialog will now prompt you to enter and format the content that will appear in the side panel for the home section. You can type directly into the built-in rich text editor. You can also paste text into the editor from word processing programs in which case the formatting is carried over into the editor. You can also embed graphics, images and videos in with the text. You can also define "story actions" in the section's text so that, for example, clicking a word automatically zooms the main stage's map to a particular location. (We'll show you how to set up these actions in step 8 below).
 
-Press Add. Your completed home section will now appear in your Map Journal.
+Press Add. Your completed home section will now appear in your Map Journal.  
 
-To save your work so far, press the Save button in the top right hand corner of the Builder.
+To save your work so far, press the Save button in the top right hand corner of the Builder.  
 
+<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step5.png" width ="334px">
 
 ## 6 ##
 ## 7 ##
