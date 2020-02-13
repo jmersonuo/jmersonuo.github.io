@@ -124,6 +124,22 @@ Go back to the top (Main Stage) and click the pencil to edit the section. Now cl
 In the map editor you can customize the maps that used in your story.
 ### 1. Change the basemap ###
 
-As a novice cartographer, select one of the 12 provided basemaps. In the furutre, you can learn how to [customize](https://www.esri.com/arcgis-blog/products/developers/mapping/design-custom-basemaps-with-the-new-arcgis-vector-tile-style-editor/) basemaps.
+As a novice cartographer, select one of the 12 provided basemaps. For this demo, we are going to choose "terrain", to emphasise the topography, while maintaining a neutral background that our data points will stand out on.
 
-<img src="https://www.esri.com/arcgis-blog/wp-content/uploads/2018/05/vse-1920x1080.png" height ="500px">
+In the furutre, you can learn how to [customize](https://www.esri.com/arcgis-blog/products/developers/mapping/design-custom-basemaps-with-the-new-arcgis-vector-tile-style-editor/) basemaps.
+
+<img src="https://www.esri.com/arcgis-blog/wp-content/uploads/2018/05/vse-1920x1080.png" height ="300px">
+
+### 2. Add data manually (add points from the novel) ###
+
+1. Click "Add" > "Add Map Notes". You can change the name of they layer. I am not going to. The templates will give you different map symbols to choose from. I am going to leave it with the default, "Map Notes".  
+2. Click on a template from the Add Feature's menu. Notice that you can create features that are point, line, and area types. We are going to use a point feature using "Stickpin".   
+3. Pan and zoom to the desired location and click on the map to add a pin.  
+4. Set the pin's title and desscription. You can even add an image here. The map is interactive, so you are adding information that will exist in a popup on the pin.  
+5. Optionally change the symbol. Notice there are *dozens* of options to choose from.  
+6. Save the map.   
+
+### 3. Search for data (something relevant to the novel) ###
+
+1. Click "Add" > "Browse Living Atlas Layers". 
+2. Add whatever it is that Marcel added.
