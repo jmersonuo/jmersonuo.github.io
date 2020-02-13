@@ -20,7 +20,8 @@ The stepts for creating your story map are to:
       <li>Search for data (something relevant to the novel) </li> 
     </ol>
   </li>
-  <li></li> 
+  <li>Define "story actions" </li>
+  <li>Configure and share your map/li> 
 </ol>
 
 ## I. State the story goal ##
@@ -141,5 +142,40 @@ In the furutre, you can learn how to [customize](https://www.esri.com/arcgis-blo
 
 ### 3. Search for data (something relevant to the novel) ###
 
-1. Click "Add" > "Browse Living Atlas Layers". 
-2. Add whatever it is that Marcel added.
+1. Click "Add" > "Browse Living Atlas Layers". ArcGIS Living Atlas of the World is a collection of global geographic information. Curated by Esri with contributions from its partner and user communities, Living Atlas contains valuable maps, data layers, tools, services, and apps for geographic analysis.  
+2. Search for "township and range".  
+3. Click the + to add the PLSS data to the map.
+4. Save and close the map. Press Save again.
+
+Notice that your edits to the map persist when you scroll up and down the map/
+
+
+## VI. Define "story actions" ##
+
+As we mentioned above, you can optionally define "story actions" in the side panel content for a section to provide users with another level of interaction when they read your Map Journal. For example in this [Map Journal example](http://links.esri.com/storymaps/map_journal_example_main_stage_action_popups) story actions have been added to the sections that turn different layers on in the map.
+
+To define a story action in a section, edit the section's side panel text by clicking the blue edit button at the top of the side panel and in the Edit Section dialog's Side Panel tab, select the text that you want to turn into an action. Now click the first button in the Story Actions toolbar. A dialog will appear allowing you to specify what the action will do. Your action can zoom to a location on the web map the section is displaying, turn one or more of its layers on or off, display a popup for one of its features, or a combination of these. You can also switch to a different web map or load an image, video or web page, or navigate to a different section in your Map Journal. Press Apply and then Save when you are done.
+
+Story actions are easy to define but give you great flexibility for engaging users and directing their attention to specific locations on your maps, etc.
+
+<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step8.png" width ="334px">
+
+## VII. Configure and share your map ##
+
+Now you've defined all the sections, you can refine your Map Journal's appearance by clicking the Settings button at the top of the Builder.
+
+The Settings dialog lets you change some layout options, choose a different color scheme (theme), and customize the logo that appears at the top of your story. Using your own logo is important because it adds authority to your story and shows people who created it. Your organization's logo and color scheme may already be reflected in your story if they have been set as defaults by your ArcGIS account administrator (this option is only available if you are using an ArcGIS subscription account). Be sure to specify a URL that your readers will be taken to when they click your logo, so they can find out more about your organization.
+
+<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step9.png" width ="334px">
+
+Once you are happy with the look of your Map Journal, you are ready to share it.
+
+First press the Save button in the top right hand corner of the Builder to ensure that all your work is saved. Now press the Share button at the top of the Builder. In the dialog that appears, you can share your Map Journal publicly, or, if you're using an ArcGIS subscription account, you'll also see the option to share your Map Journal so it is accessible only within your organization. The dialog will warn you about any issues in your story content that would prevent it from working correctly for your audience. For example it will warn you if any of the data in a publicly shared story map isn't publicly accessible.
+
+Congratulations, your Story Map Journal is now operational!
+
+To make further changes to your Map Journal, you can launch it and click the Edit button you'll see in its header. (That button is only present when you are signed in to ArcGIS Online with your account: other people won't see it).
+
+To manage your Map Journal go to My Stories. My Stories lists all the story map apps you have created that are hosted in ArcGIS Online. It lets you edit your stories, review their content, check them for issues, upload thumbnails for them, etc. For example you can launch and edit the web maps used in your Map Journal from My Stories to make modifications to them.
+
+<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step10.png" width ="334px">
