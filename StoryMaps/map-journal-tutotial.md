@@ -88,9 +88,9 @@ To save your work so far, press the Save button in the top right hand corner of 
 ### 1. Add a section ###
 Use the Add Section button at the bottom of the side panel to add additional sections into your Map Journal. The same dialog will appear each time you add a section allowing you to specify the content for the main stage and the side panel.
 
-To make edits or other changes to a section you've added, click the blue edit button at the top of the side panel. <img src="https://jmersonuo.github.io/StoryMaps/img/editButton.JPG">  
+To make edits or other changes to a section you've added, click the blue edit button at the top of the side panel. <img src="https://jmersonuo.github.io/StoryMaps/img/editButton.JPG" height="25px">  
 
-You can use the Organize button to reorder and delete sections. <img src="https://jmersonuo.github.io/StoryMaps/img/organizetButton.JPG"> 
+You can use the Organize button to reorder and delete sections. <img src="https://jmersonuo.github.io/StoryMaps/img/organizeButton.JPG" height="25px"> 
 
 Title:
 > Cabeza Prieta Wilderness 
