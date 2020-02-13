@@ -25,7 +25,7 @@ The stepts for creating your story map are to:
 </ol>
 
 ## I. State the story goal ##
-What is the goal of your "story"? Do you want to provide photos or recordings for different locations? Do you want to convey distance? Do you want to creat an experienctial version of a journey?
+What is the goal of your "story"? Do you want to provide photos or recordings for different locations? Do you want to convey distance? Do you want to create an experiential version of a journey?
 
 ## II. Pick a format ##
 
@@ -103,12 +103,12 @@ Title:
 
 Set the custom location to the Cabeza Prieta Wilderness and the press next.
 
-I am going to add a short peice of text:
+I am going to add a short piece of text:
 > We begin in the Cabeza Prieta Wilderness. A beautiful piece of land along the US/Mexico border.
 
 ### 2. Add an image ###
 
-Click camera icon to insert an image. You could use images stored on a fliker account or add an image from a link using an iframe. To do this you can insert the URL of any image into the code block below. Just be sure to credit the sorce. 
+Click camera icon to insert an image. You could use images stored on a fliker account or add an image from a link using an iframe. To do this you can insert the URL of any image into the code block below. Just be sure to credit the source. 
 
 Link:
 `<iframe src="https://winapps.umt.edu/winapps/media2/wilderness/images/NWPS/lib/thumbID250/4246.jpg"></iframe> `
@@ -123,7 +123,7 @@ Add a caption under the photo - size 9, dark grey:
 ## V. Customize the map ##
 
 Now that we know how to add sections, let's look at editing the map.
-Go back to the top (Main Stage) and click the pencil to edit the section. Now click "edit" besode the map title.
+Go back to the top (Main Stage) and click the pencil to edit the section. Now click "edit" beside the map title.
 
 In the map editor you can customize the maps that used in your story.
 ### 1. Change the basemap ###
@@ -139,7 +139,7 @@ In the furutre, you can learn how to [customize](https://www.esri.com/arcgis-blo
 1. Click "Add" > "Add Map Notes". You can change the name of they layer. I am not going to. The templates will give you different map symbols to choose from. I am going to leave it with the default, "Map Notes".  
 2. Click on a template from the Add Feature's menu. Notice that you can create features that are point, line, and area types. We are going to use a point feature using "Stickpin".   
 3. Pan and zoom to the desired location and click on the map to add a pin.  
-4. Set the pin's title and desscription. You can even add an image here. The map is interactive, so you are adding information that will exist in a popup on the pin.  
+4. Set the pin's title and description. You can even add an image here. The map is interactive, so you are adding information that will exist in a popup on the pin.  
 5. Optionally change the symbol. Notice there are *dozens* of options to choose from.  
 6. Save the map.   
 
