@@ -63,7 +63,7 @@ The dialog will appear that lets you add the first entry, the "home section", in
 
 In this dialog, you are first prompted for the content you want this section to show in the "main stage": the main area of the display to the right of the side panel. Choose between a Map, Image, Video or Web page.
 
-We are going to use an image. I am going to *upload* an image. Set it's position to *fill* and give it the following alternitive text:
+We are going to use an image. I am going to **upload** an image. Set it's position to **fill** and give it the following alternitive text:
 >Desert landscape on the Cabeza prieta national wildlife refuge.
 
 <img src="https://jmersonuo.github.io/StoryMaps/img/imageUpload.JPG" width ="334px"> <img src="https://jmersonuo.github.io/StoryMaps/img/imageSettings.JPG" width ="334px">
