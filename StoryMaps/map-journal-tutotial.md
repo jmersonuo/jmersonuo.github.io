@@ -125,3 +125,5 @@ In the map editor you can customize the maps that used in your story.
 ### 1. Change the basemap ###
 
 As a novice cartographer, select one of the 12 provided basemaps. In the furutre, you can learn how to [customize](https://www.esri.com/arcgis-blog/products/developers/mapping/design-custom-basemaps-with-the-new-arcgis-vector-tile-style-editor/) basemaps.
+
+<img src="https://www.esri.com/arcgis-blog/wp-content/uploads/2018/05/vse-1920x1080.png" height ="500px">
