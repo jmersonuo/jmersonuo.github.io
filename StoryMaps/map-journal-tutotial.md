@@ -38,7 +38,7 @@ For example, you might choose to display the same web map throughout your Map Jo
 
 You can use any ArcGIS Online web maps in your Map Journal: you can create new web maps, use your existing web maps, or use web maps that have been created and shared publicly by other users or organizations.
 
-If you'll be creating one or more new web maps for use in your Map Journal, you can either create them in [ArcGIS](http://www.arcgis.com/home/) Online before you start building your Map Journal, or you can create them on-the-go within the Map Journal Builder. From within the Builder, you can also edit web maps that you own. After you have created your Map Journal, you can continue to work on your maps to refine their content, symbology, and popups.
+If you'll be creating one or more new web maps for use in your Map Journal, you can either create them in [ArcGIS Online](http://www.arcgis.com/home/)  before you start building your Map Journal, or you can create them on-the-go within the Map Journal Builder. From within the Builder, you can also edit web maps that you own. After you have created your Map Journal, you can continue to work on your maps to refine their content, symbology, and popups.
 
 
 ### 1 ###
@@ -79,9 +79,9 @@ We will use the following text:
 
 Press Add. Your completed home section will now appear in your Map Journal.  
 
-To save your work so far, press the Save button in the top right hand corner of the Builder.  
-
 <img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step5.png" width ="334px">
+
+To save your work so far, press the Save button in the top right hand corner of the Builder.  
 
 ## IV. Add another section: text and an image ##
 
