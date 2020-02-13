@@ -176,7 +176,7 @@ The Settings dialog lets you change some layout options, choose a different colo
 ### 2. Share ###
 Once you are happy with the look of your Map Journal, you are ready to share it.
 
-First press the Save button in the top right hand corner of the Builder to ensure that all your work is saved. Now press the Share button at the top of the Builder. In the dialog that appears, you can share your Map Journal publicly, or, if you're using an ArcGIS subscription account, you'll also see the option to share your Map Journal so it is accessible only within your organization. The dialog will warn you about any issues in your story content that would prevent it from working correctly for your audience. For example it will warn you if any of the data in a publicly shared story map isn't publicly accessible.
+First press the Save button in the top right hand corner of the Builder to ensure that all your work is saved. Now press the Share button at the top of the Builder. In the dialog that appears, you can share your Map Journal publicly. The dialog will warn you about any issues in your story content that would prevent it from working correctly for your audience. For example it will warn you if any of the data in a publicly shared story map isn't publicly accessible.
 
 Congratulations, your Story Map Journal is now operational!
 
