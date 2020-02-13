@@ -18,8 +18,8 @@ The steps for creating your story map are to:
       <li>Search for data (something relevant to the novel) </li> 
     </ol>
   </li>
-  <li>Set up "story actions" </li>
   <li>Configure and share your map</li> 
+  <li>Advanced: Set up "story actions" </li>
 </ol>
 
 ## I. State the story goal ##
@@ -71,7 +71,7 @@ You will then be given the options, shown in the screenshot **below**, to custom
 Press Next to add your first content.  
 
 ### 2.2. Add opening text ###
-The Add Home Section dialog will now prompt you to enter and format the content that will appear in the side panel for the home section. You can type directly into the built-in rich text editor. You can also paste text into the editor from word processing programs in which case the formatting is carried over into the editor. You can also embed graphics, images and videos in with the text. You can also define "story actions" in the section's text so that, for example, clicking a word automatically zooms the main stage's map to a particular location. (We'll show you how to set up these actions in **step VI. Set up “story actions”** below).
+The Add Home Section dialog will now prompt you to enter and format the content that will appear in the side panel for the home section. You can type directly into the built-in rich text editor. You can also paste text into the editor from word processing programs in which case the formatting is carried over into the editor. You can also embed graphics, images and videos in with the text. You can also define "story actions" in the section's text so that, for example, clicking a word automatically zooms the main stage's map to a particular location. (We'll show you how to set up these actions in **Section VII. Set up “story actions”** below).
 
 We will use the following text:
 >In May 2001, a group of men attempted to cross the Mexican border into the desert of southern Arizona, through the deadliest region of the continent, the "Devil's Highway." Three years later, Luis Alberto Urrea wrote about what happened to them. The result was a national bestseller, a Pulitzer Prize finalist, a "book of the year" in multiple newspapers, and a work proclaimed as a modern American classic.  (Amazon). 
@@ -128,18 +128,18 @@ Go back to the top (Main Stage) and click the pencil to edit the section, click 
 In the map editor, you can customize the maps that used in your story.  
 ### 1. Change the basemap ###
 
-As a novice cartographer, select one of the 12 provided basemaps. For this demo, we are going to choose "terrain", to emphasise the topography, while maintaining a neutral background that our data points will stand out on.  
+As a novice cartographer, select one of the 12 provided basemaps. For this demo, we are going to choose "Terrain with Labels", to emphasise the topography, while maintaining a neutral background that our data points will stand out on.  
 
 <img src="https://jmersonuo.github.io/StoryMaps/img/Basemaps.JPG" width ="334px">
 
-In the furutre, you can learn how to [customize](https://www.esri.com/arcgis-blog/products/developers/mapping/design-custom-basemaps-with-the-new-arcgis-vector-tile-style-editor/) basemaps.
+In the furutre, you could learn how to [customize](https://www.esri.com/arcgis-blog/products/developers/mapping/design-custom-basemaps-with-the-new-arcgis-vector-tile-style-editor/) basemaps.
 
 <img src="https://www.esri.com/arcgis-blog/wp-content/uploads/2018/05/vse-1920x1080.png" height ="250px">
 
 ### 2. Add data manually (add points from the novel) ###
 
-1. Click "Add" > "Add Map Notes". You can change the name of they layer. I am not going to. The templates will give you different map symbols to choose from. I am going to leave it with the default, "Map Notes".  
-2. Click on a template from the Add Feature's menu. Notice that you can create features that are point, line, and area types. We are going to use a point feature using "Stickpin".   
+1. Click "Add" > "Add Map Notes". You can change the name of they layer. We are just going to leave it for now. The templates will give you different map symbols to choose from. We are going to leave it with the default, "Map Notes".  
+2. Notice that you can create features that are point, line, and area types. We are going to use a point feature using "Stickpin".   
 3. Pan and zoom to the desired location and click on the map to add a pin.  
 4. Set the pin's title and description. You can even add an image here. The map is interactive, so you are adding information that will exist in a popup on the pin.  
 5. Optionally change the symbol. Notice there are *dozens* of options to choose from.  
@@ -156,18 +156,7 @@ In the furutre, you can learn how to [customize](https://www.esri.com/arcgis-blo
 
 Notice that your edits to the map persist when you scroll up and down the map.
 
-
-## VI. Set up "story actions" ##
-
-As we mentioned above, you can optionally define "story actions" in the side panel content for a section to provide users with another level of interaction when they read your Map Journal. For example in this [Map Journal example](http://links.esri.com/storymaps/map_journal_example_main_stage_action_popups) story actions have been added to the sections that turn different layers on in the map.
-
-To define a story action in a section, edit the section's side panel text by clicking the blue edit button at the top of the side panel and in the Edit Section dialog's Side Panel tab, select the text that you want to turn into an action. Now click the first button in the Story Actions toolbar. A dialog will appear allowing you to specify what the action will do. Your action can zoom to a location on the web map the section is displaying, turn one or more of its layers on or off, display a popup for one of its features, or a combination of these. You can also switch to a different web map or load an image, video or web page, or navigate to a different section in your Map Journal. Press Apply and then Save when you are done.
-
-Story actions are easy to define but give you great flexibility for engaging users and directing their attention to specific locations on your maps, etc.
-
-<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step8.png" width ="334px">
-
-## VII. Configure and share your map ##
+## VI. Configure and share your map ##
 
 ### 1. Configure ###
 
@@ -189,3 +178,14 @@ To make further changes to your Map Journal, you can launch it and click the Edi
 To manage your Map Journal go to My Stories. My Stories lists all the story map apps you have created that are hosted in ArcGIS Online. It lets you edit your stories, review their content, check them for issues, upload thumbnails for them, etc. For example you can launch and edit the web maps used in your Map Journal from My Stories to make modifications to them.
 
 <img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step10.png" width ="334px">
+
+
+## VII. Advanced set up "story actions" ##
+
+As we mentioned above, you can optionally define "story actions" in the side panel content for a section to provide users with another level of interaction when they read your Map Journal. For example in this [Map Journal example](http://links.esri.com/storymaps/map_journal_example_main_stage_action_popups) story actions have been added to the sections that turn different layers on in the map.
+
+To define a story action in a section, edit the section's side panel text by clicking the blue edit button at the top of the side panel and in the Edit Section dialog's Side Panel tab, select the text that you want to turn into an action. Now click the first button in the Story Actions toolbar. A dialog will appear allowing you to specify what the action will do. Your action can zoom to a location on the web map the section is displaying, turn one or more of its layers on or off, display a popup for one of its features, or a combination of these. You can also switch to a different web map or load an image, video or web page, or navigate to a different section in your Map Journal. Press Apply and then Save when you are done.
+
+Story actions are easy to define but give you great flexibility for engaging users and directing their attention to specific locations on your maps, etc.
+
+<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step8.png" width ="334px">
