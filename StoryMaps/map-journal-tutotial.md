@@ -116,23 +116,25 @@ Caption:
 Alternitive text: 
 > Photo of saguaro cactuses and a mountain the Cabeza Prieta Wilderness
 
-After adding the image we have this:
+After adding the image we have this:  
 <img src="https://jmersonuo.github.io/StoryMaps/img/afterImage.JPG" width ="334px">
 
 
 ## V. Customize the map ##
 
-Now that we know how to add sections, let's look at editing the map.
-Go back to the top (Main Stage) and click the pencil to edit the section. Now click "edit" beside the map title.
+Now that we know how to add sections, let's look at editing the map.  
+Go back to the top (Main Stage) and click the pencil to edit the section, click on the "main stage" tab. Now click "edit" beside the map title.
 
-In the map editor you can customize the maps that used in your story.
+In the map editor, you can customize the maps that used in your story.  
 ### 1. Change the basemap ###
 
-As a novice cartographer, select one of the 12 provided basemaps. For this demo, we are going to choose "terrain", to emphasise the topography, while maintaining a neutral background that our data points will stand out on.
+As a novice cartographer, select one of the 12 provided basemaps. For this demo, we are going to choose "terrain", to emphasise the topography, while maintaining a neutral background that our data points will stand out on.  
+
+<img src="https://jmersonuo.github.io/StoryMaps/img/Basemaps.JPG" width ="334px">
 
 In the furutre, you can learn how to [customize](https://www.esri.com/arcgis-blog/products/developers/mapping/design-custom-basemaps-with-the-new-arcgis-vector-tile-style-editor/) basemaps.
 
-<img src="https://www.esri.com/arcgis-blog/wp-content/uploads/2018/05/vse-1920x1080.png" height ="300px">
+<img src="https://www.esri.com/arcgis-blog/wp-content/uploads/2018/05/vse-1920x1080.png" height ="250px">
 
 ### 2. Add data manually (add points from the novel) ###
 
@@ -141,7 +143,9 @@ In the furutre, you can learn how to [customize](https://www.esri.com/arcgis-blo
 3. Pan and zoom to the desired location and click on the map to add a pin.  
 4. Set the pin's title and description. You can even add an image here. The map is interactive, so you are adding information that will exist in a popup on the pin.  
 5. Optionally change the symbol. Notice there are *dozens* of options to choose from.  
-6. Save the map.   
+6. Save the map. 
+
+<img src="https://jmersonuo.github.io/StoryMaps/img/POI.JPG" width ="334px">
 
 ### 3. Search for data (something relevant to the novel) ###
 
@@ -150,7 +154,7 @@ In the furutre, you can learn how to [customize](https://www.esri.com/arcgis-blo
 3. Click the + to add the PLSS data to the map.
 4. Save and close the map. Press Save again.
 
-Notice that your edits to the map persist when you scroll up and down the map/
+Notice that your edits to the map persist when you scroll up and down the map.
 
 
 ## VI. Set up "story actions" ##
