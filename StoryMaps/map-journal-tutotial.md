@@ -66,10 +66,9 @@ In this dialog, you are first prompted for the content you want this section to 
 We are going to use an image. I am going to *upload* an image. Set it's position to *fill* and give it the following alternitive text:
 >Desert landscape on the Cabeza prieta national wildlife refuge.
 
-<img src="https://jmersonuo.github.io/StoryMaps/img/imageUpload.JPG" width ="334px">
-<img src="https://jmersonuo.github.io/StoryMaps/img/imageSettings.JPG" width ="334px">
+<img src="https://jmersonuo.github.io/StoryMaps/img/imageUpload.JPG" width ="334px"> <img src="https://jmersonuo.github.io/StoryMaps/img/imageSettings.JPG" width ="334px">
 
-Press Next to add your first content.  
+Press **Next**.  
 
 ### 2.2. Add opening text ###
 The Add Home Section dialog will now prompt you to enter and format the content that will appear in the side panel for the home section. You can type directly into the built-in rich text editor. You can also paste text into the editor from word processing programs in which case the formatting is carried over into the editor. You can also embed graphics, images and videos in with the text. You can also define "story actions" in the section's text so that, for example, clicking a word automatically zooms the main stage's map to a particular location. (We'll show you how to set up these actions in **Section VII. Set up “story actions”** below).
@@ -81,10 +80,10 @@ We will use the following text:
 
 <img src="https://jmersonuo.github.io/StoryMaps/img/EditTitle.JPG" width ="334px">
 
-Press Add. Your completed home section will now appear in the Map Journal.  
+Press **Add**. Your completed home section will now appear in the Map Journal.  
 To save your work so far, press the **Save** button in the top right hand corner of the Builder.  
 
-## IV. Add another section: text and an image ##
+## IV. Add another section: text, and image, and a map ##
 
 ### 1. Add a section ###
 Use the Add Section button at the bottom of the side panel to add additional sections into your Map Journal. The same dialog will appear each time you add a section allowing you to specify the content for the main stage and the side panel.
@@ -94,18 +93,23 @@ To make edits or other changes to a section you've added, click the blue edit bu
 You can use the Organize button to reorder and delete sections. <img src="https://jmersonuo.github.io/StoryMaps/img/organizeButton.JPG" height="45px"> 
 
 Title:
-> Cabeza Prieta Wilderness 
+> Federal Wilderness Areas 
+
+### 2. Add a map ###
+Set the main stage content to **Map**. Then click the Map dropdown and choose the option to **create a new map**. When you create a new map, the map editor window will appear. Zoom to the area you plan to use, then save and close your new map. We'll come back and edit it later. 
+
+You will then be given the options, shown in the screenshot **below**, to customize how the map is displayed. You can choose to display a particular area of the map, turn layers on or off, display a particular feature's popup, or any combination of those. For example if you choose a custom location, the Builder will prompt you to interactively zoom to the area you want to use, and then you'll press a button to capture that extent. We will come back and edit the map later. 
 
 Set the custom location to the Cabeza Prieta Wilderness and the press next.
 
 We are going to add a short piece of text:
-> We begin in the Cabeza Prieta Wilderness. A beautiful piece of land along the US/Mexico border.
+> The landscape of Desolation is technically protected land under the aegis of the U.S. government. Two federally protected land areas sits side by side in this roughly 2,000-square-mile landscape: Cabeza Prieta National Wildlife Refuge to the west, and Organ Pipe Cactus National Monument to the east. 
 
 <img src="https://jmersonuo.github.io/StoryMaps/img/newSection.JPG" width ="334px">
 
 ### 2. Add an image ###
 
-Click camera icon to insert an image. <img src="https://jmersonuo.github.io/StoryMaps/img/editButton.JPG" height="25px">  
+Click the camera icon to insert an image. <img src="https://jmersonuo.github.io/StoryMaps/img/editButton.JPG" height="25px">  
 You could use images stored on a fliker account or add an image from the web. To do this you can insert the URL of any image, just be sure to **credit the source**.
 
 Link:
@@ -122,19 +126,15 @@ After adding the image we have this:
 
 **Save** the changes to your map.
 
-## V. Add a map ##
+## V. Edit the map ##
 
 Now that we know how to add sections, let's look at adding a map.  
-
-### 1. Add a map ###
-Add a new section, and set the main stage content to **Map**. Then click the Map dropdown and choose the option to **create a new map**. When you create a new map, the map editor window will appear. Zoom to the area you plan to use, then save and close your new map. We'll come back and edit it later. 
-
-You will then be given the options, shown in the screenshot **below**, to customize how the map is displayed. You can choose to display a particular area of the map, turn layers on or off, display a particular feature's popup, or any combination of those. For example if you choose a custom location, the Builder will prompt you to interactively zoom to the area you want to use, and then you'll press a button to capture that extent. We will come back and edit the map later.  
-  
+   
 <img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step4.png" width ="334px">  
 Go back to the top (Main Stage) and click the pencil to edit the section, click on the "main stage" tab. Now click "edit" beside the map title.
 
 In the map editor, you can customize the maps that used in your story.  
+
 ### 2. Change the basemap ###
 
 As a novice cartographer, select one of the 12 provided basemaps. For this demo, we are going to choose "Terrain with Labels", to emphasize the topography, while maintaining a neutral background that our data points will stand out on.  
