@@ -11,8 +11,7 @@ The steps for creating your story map are to:
   <li>Pick a format (“App”) </li>
   <li>Add a title and your first section </li>
   <li>Add text and an image </li>
-  <li>Customize a map</li>
-  <li>
+  <li>Customize a map
     <ol type="i"> 
       <li>Change the basemap</li>
       <li>Add data manually (add points from the novel)  </li> 
@@ -89,11 +88,9 @@ To save your work so far, press the Save button in the top right hand corner of 
 ### 1. Add a section ###
 Use the Add Section button at the bottom of the side panel to add additional sections into your Map Journal. The same dialog will appear each time you add a section allowing you to specify the content for the main stage and the side panel.
 
-To make edits or other changes to a section you've added, click the blue edit button at the top of the side panel.
+To make edits or other changes to a section you've added, click the blue edit button at the top of the side panel. <img src="(https://jmersonuo.github.io/StoryMaps/img/editButton.JPG">  
 
-You can use the Organize button to reorder and delete sections.
-
-<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step7.png" width ="334px">
+You can use the Organize button to reorder and delete sections. <img src="(https://jmersonuo.github.io/StoryMaps/img/organizetButton.JPG"> 
 
 Title:
 > Cabeza Prieta Wilderness 
