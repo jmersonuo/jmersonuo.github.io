@@ -48,7 +48,8 @@ Start the [Story Map Journal Builder](https://uo-online.maps.arcgis.com/apps/Map
 Alternatively, you can start in the ArcGIS Online website, open the web map you want to use in your Map Journal, or any one of the web maps if you intend to use several, share it as a web application, and then choose Story Map Journal from the application gallery. The Map Journal Builder will launch so you can configure the application.   
 
 ### 2 ###
-In the dialog that appears when the Map Journal Builder starts, choose the layout you would like to use and press Start. In this tutorial we'll use the default Side Panel layout but the steps are the same for the Floating Panel layout. <img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step2.png" width ="334px"> 
+In the dialog that appears when the Map Journal Builder starts, choose the layout you would like to use and press Start. In this tutorial we'll use the default Side Panel layout but the steps are the same for the Floating Panel layout.  
+<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step2.png" width ="334px"> 
 
 ## III. Add a title and your first section ##
 ### 1. Title ###
@@ -59,23 +60,25 @@ Our title is:
 > A journey within The Devil's Highway
 
 ### 2. Home section ###
+### 1. Configure the opening section ###
 The dialog will appear that lets you add the first entry, the "home section", into your Map Journal. The home section is the first section your users will see when they open your Map Journal, so it serves as the introduction.
 
 In this dialog, you are first prompted for the content you want this section to show in the "main stage": the main area of the display to the right of the side panel. Choose between a Map, Image, Video or Web page.
 
 We are going to use a web map, which is the default option, click the Map dropdown and choose the option to **create a new map**. When you create a new map, the map editor window will appear. Zoom to the areas you plan to use, then save and close your new map. We'll come back and edit it later. 
 
-You will then be given the options, shown in the screenshot **below**, to customize how the map is displayed. You can choose to display a particular area of the map, turn layers on or off, display a particular feature's popup, or any combination of those. For example if you choose a custom location, the Builder will prompt you to interactively zoom to the area you want to use, and then you'll press a button to capture that extent. We will come back and edit this later.  
+You will then be given the options, shown in the screenshot **below**, to customize how the map is displayed. You can choose to display a particular area of the map, turn layers on or off, display a particular feature's popup, or any combination of those. For example if you choose a custom location, the Builder will prompt you to interactively zoom to the area you want to use, and then you'll press a button to capture that extent. We will come back and edit the map later.  
   
 Press Next to add your first content.  
   
 <img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step4.png" width ="334px">
 
-### 1. Opening text ###
-The Add Home Section dialog will now prompt you to enter and format the content that will appear in the side panel for the home section. You can type directly into the built-in rich text editor. You can also paste text into the editor from word processing programs in which case the formatting is carried over into the editor. You can also embed graphics, images and videos in with the text. You can also define "story actions" in the section's text so that, for example, clicking a word automatically zooms the main stage's map to a particular location. (We'll show you how to set up these actions in step **8** below).
+### 2. Add opening text ###
+The Add Home Section dialog will now prompt you to enter and format the content that will appear in the side panel for the home section. You can type directly into the built-in rich text editor. You can also paste text into the editor from word processing programs in which case the formatting is carried over into the editor. You can also embed graphics, images and videos in with the text. You can also define "story actions" in the section's text so that, for example, clicking a word automatically zooms the main stage's map to a particular location. (We'll show you how to set up these actions in **step VI. Define “story actions”** below).
 
 We will use the following text:
->In May 2001, a group of men attempted to cross the Mexican border into the desert of southern Arizona, through the deadliest region of the continent, the "Devil's Highway." Three years later, Luis Alberto Urrea wrote about what happened to them. 
+>In May 2001, a group of men attempted to cross the Mexican border into the desert of southern Arizona, through the deadliest region of the continent, the "Devil's Highway." Three years later, Luis Alberto Urrea wrote about what happened to them.   
+>  
 > Scroll down to follow their journey.
 
 Press Add. Your completed home section will now appear in your Map Journal.  
@@ -105,7 +108,7 @@ I am going to add a short peice of text:
 
 ### 2. Add an image ###
 
-Click camera icon to insert an image. You could use images stored on a fliker account or add an image from a link using an iframe. To do this you can insert the URL of an image into the code block below.
+Click camera icon to insert an image. You could use images stored on a fliker account or add an image from a link using an iframe. To do this you can insert the URL of any image into the code block below. Just be sure to credit the sorce. 
 
 Link:
 `<iframe src="https://winapps.umt.edu/winapps/media2/wilderness/images/NWPS/lib/thumbID250/4246.jpg"></iframe> `
@@ -162,12 +165,15 @@ Story actions are easy to define but give you great flexibility for engaging use
 
 ## VII. Configure and share your map ##
 
+### 1. Configure ###
+
 Now you've defined all the sections, you can refine your Map Journal's appearance by clicking the Settings button at the top of the Builder.
 
-The Settings dialog lets you change some layout options, choose a different color scheme (theme), and customize the logo that appears at the top of your story. Using your own logo is important because it adds authority to your story and shows people who created it. Your organization's logo and color scheme may already be reflected in your story if they have been set as defaults by your ArcGIS account administrator (this option is only available if you are using an ArcGIS subscription account). Be sure to specify a URL that your readers will be taken to when they click your logo, so they can find out more about your organization.
+The Settings dialog lets you change some layout options, choose a different color scheme (theme), and customize the logo that appears at the top of your story. 
 
 <img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step9.png" width ="334px">
 
+### 2. Share ###
 Once you are happy with the look of your Map Journal, you are ready to share it.
 
 First press the Save button in the top right hand corner of the Builder to ensure that all your work is saved. Now press the Share button at the top of the Builder. In the dialog that appears, you can share your Map Journal publicly, or, if you're using an ArcGIS subscription account, you'll also see the option to share your Map Journal so it is accessible only within your organization. The dialog will warn you about any issues in your story content that would prevent it from working correctly for your audience. For example it will warn you if any of the data in a publicly shared story map isn't publicly accessible.
