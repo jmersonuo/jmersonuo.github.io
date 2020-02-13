@@ -21,7 +21,7 @@ The stepts for creating your story map are to:
     </ol>
   </li>
   <li>Define "story actions" </li>
-  <li>Configure and share your map/li> 
+  <li>Configure and share your map</li> 
 </ol>
 
 ## I. State the story goal ##
