@@ -74,14 +74,14 @@ Press Next to add your first content.
 The Add Home Section dialog will now prompt you to enter and format the content that will appear in the side panel for the home section. You can type directly into the built-in rich text editor. You can also paste text into the editor from word processing programs in which case the formatting is carried over into the editor. You can also embed graphics, images and videos in with the text. You can also define "story actions" in the section's text so that, for example, clicking a word automatically zooms the main stage's map to a particular location. (We'll show you how to set up these actions in **Section VII. Set up “story actions”** below).
 
 We will use the following text:
->In May 2001, a group of men attempted to cross the Mexican border into the desert of southern Arizona, through the deadliest region of the continent, the "Devil's Highway." Three years later, Luis Alberto Urrea wrote about what happened to them. The result was a national bestseller, a Pulitzer Prize finalist, a "book of the year" in multiple newspapers, and a work proclaimed as a modern American classic.  (Amazon). 
+>In May 2001, a group of men attempted to cross the Mexican border into the desert of southern Arizona, through the deadliest region of the continent, the "Devil's Highway." Three years later, Luis Alberto Urrea wrote about what happened to them. The result was a national bestseller, a Pulitzer Prize finalist, a "book of the year" in multiple newspapers, and a work proclaimed as a modern American classic. (Amazon). 
 >  
 > Scroll down to follow their journey.
 
 <img src="https://jmersonuo.github.io/StoryMaps/img/EditTitle.JPG" width ="334px">
 
 Press Add. Your completed home section will now appear in the Map Journal.  
-To save your work so far, press the Save button in the top right hand corner of the Builder.  
+To save your work so far, press the **Save** button in the top right hand corner of the Builder.  
 
 ## IV. Add another section: text and an image ##
 
@@ -119,7 +119,7 @@ Alternitive text:
 After adding the image we have this:  
 <img src="https://jmersonuo.github.io/StoryMaps/img/afterImage.JPG" width ="334px">
 
-Save the changes to your map.
+**Save** the changes to your map.
 
 ## V. Customize the map ##
 
@@ -139,12 +139,12 @@ In the future, you could learn how to [customize](https://www.esri.com/arcgis-bl
 
 ### 2. Add data manually (add points from the novel) ###
 
-1. Click "Add" > "Add Map Notes". You can change the name of the layer. We are just going to leave it for now. The templates will give you different map symbols to choose from. We are going to leave it with the default, "Map Notes".  
+1. Click **Add** > **Add Map Notes**. You can change the name of the layer. We are just going to leave it for now. The templates will give you different map symbols to choose from. We are going to leave it with the default, "Map Notes".  
 2. Notice that you can create features that are point, line, and area types. We are going to use a point feature using "Stickpin".   
 3. Pan and zoom to the desired location and click on the map to add a pin.  
 4. Set the pin's title and description. You can even add an image here. The map is interactive, so you are adding information that will exist in a popup on the pin.  
 5. Optionally change the symbol. Notice there are *dozens* of options to choose from.  
-6. Save the map. 
+6. **Save** the map. 
 
 <img src="https://jmersonuo.github.io/StoryMaps/img/POI.JPG" width ="334px">
 
@@ -154,7 +154,7 @@ In the future, you could learn how to [customize](https://www.esri.com/arcgis-bl
 3. Click the small dropdown and click "ArcGIS Online". This allows you to search any content that other arcGIS users have published publically. These will not be as stable as the Living Atlas, but you can usually trust government sources. 
 4. Search for "Cabeza Prieta". 
 5. There is one layer found. Click the + to add the PLSS data to the map.
-6. Save the map. 
+6. **Save** the map. 
 
 <img src="https://jmersonuo.github.io/StoryMaps/img/WildernessAreas.JPG" width ="334px">  
 
@@ -163,8 +163,8 @@ In the future, you could learn how to [customize](https://www.esri.com/arcgis-bl
 
 <img src="https://jmersonuo.github.io/StoryMaps/img/wildernessSymbol.JPG" width ="334px">  
 
-8. Press Save again. Close the Map.
-9. Save the changes to your map.
+8. Press **Save** again. Close the Map.
+9. **Save** the changes to your map.
 
 Notice that your edits to the map persist when you scroll up and down the map.
 
@@ -172,22 +172,22 @@ Notice that your edits to the map persist when you scroll up and down the map.
 
 ### 1. Configure ###
 
-Now you've defined all the sections, you can refine your Map Journal's appearance by clicking the Settings button at the top of the Builder.
+Now you've defined all the sections, you can refine your Map Journal's appearance by clicking the **Settings** button at the top of the Builder.
 
-The Settings dialog lets you change some layout options, choose a different color scheme (theme), and customize the logo that appears at the top of your story. 
+The **Settings** dialog lets you change some layout options, choose a different color scheme (theme), and customize the logo that appears at the top of your story. 
 
 <img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step9.png" width ="334px">
 
 ### 2. Share ###
 Once you are happy with the look of your Map Journal, you are ready to share it.
 
-First press the Save button in the top right hand corner of the Builder to ensure that all your work is saved. Now press the Share button at the top of the Builder. In the dialog that appears, you can share your Map Journal publicly. The dialog will warn you about any issues in your story content that would prevent it from working correctly for your audience. For example it will warn you if any of the data in a publicly shared story map isn't publicly accessible.
+First press the **Save** button in the top right hand corner of the Builder to ensure that all your work is saved. Now press the **Share** button at the top of the Builder. In the dialog that appears, you can share your Map Journal publicly. The dialog will warn you about any issues in your story content that would prevent it from working correctly for your audience. For example it will warn you if any of the data in a publicly shared story map isn't publicly accessible.
 
 Congratulations, your Story Map Journal is now operational!
 
-To make further changes to your Map Journal, you can launch it and click the Edit button you'll see in its header. (That button is only present when you are signed in to ArcGIS Online with your account: other people won't see it).
+To make further changes to your Map Journal, you can launch it and click the **Edit** button you'll see in its header. (That button is only present when you are signed in to ArcGIS Online with your account: other people won't see it).
 
-To manage your Map Journal go to My Stories. My Stories lists all the story map apps you have created that are hosted in ArcGIS Online. It lets you edit your stories, review their content, check them for issues, upload thumbnails for them, etc. For example you can launch and edit the web maps used in your Map Journal from My Stories to make modifications to them.
+To manage your Map Journal go to [My Stories](https://storymaps-classic.arcgis.com/en/my-stories/). My Stories lists all the story map apps you have created that are hosted in ArcGIS Online. It lets you edit your stories, review their content, check them for issues, upload thumbnails for them, etc. For example you can launch and edit the web maps used in your Map Journal from My Stories to make modifications to them.
 
 <img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step10.png" width ="334px">
 
@@ -196,7 +196,7 @@ To manage your Map Journal go to My Stories. My Stories lists all the story map 
 
 As we mentioned above, you can optionally define "story actions" in the side panel content for a section to provide users with another level of interaction when they read your Map Journal. For example in this [Map Journal example](http://links.esri.com/storymaps/map_journal_example_main_stage_action_popups) story actions have been added to the sections that turn different layers on in the map.
 
-To define a story action in a section, edit the section's side panel text by clicking the blue edit button at the top of the side panel and in the Edit Section dialog's Side Panel tab, select the text that you want to turn into an action. Now click the first button in the Story Actions toolbar. A dialog will appear allowing you to specify what the action will do. Your action can zoom to a location on the web map the section is displaying, turn one or more of its layers on or off, display a popup for one of its features, or a combination of these. You can also switch to a different web map or load an image, video or web page, or navigate to a different section in your Map Journal. Press Apply and then Save when you are done.
+To define a story action in a section, edit the section's side panel text by clicking the blue edit button at the top of the side panel and in the **Edit Section** dialog's **Side Panel** tab, select the text that you want to turn into an action. Now click the first button in the **Story Actions** toolbar. A dialog will appear allowing you to specify what the action will do. Your action can zoom to a location on the web map the section is displaying, turn one or more of its layers on or off, display a popup for one of its features, or a combination of these. You can also switch to a different web map or load an image, video or web page, or navigate to a different section in your Map Journal. Press Apply and then Save when you are done.
 
 Story actions are easy to define but give you great flexibility for engaging users and directing their attention to specific locations on your maps, etc.
 
