@@ -29,7 +29,7 @@ What is the goal of your "story"? Do you want to provide photos or recordings fo
 
 ## II. Pick a format ##
 
-There are several Esri StoryMaps "Classic" formats that you can follow. Here is a [flowchart](Pick a storymap flowchart.pdf) to help you decide which is best for your story. *For this demo, we will use **Story Map Journal**.*
+There are several Esri StoryMaps "Classic" formats that you can follow. Here is a [flowchart](https://jmersonuo.github.io/StoryMaps/Pick%20a%20storymap%20flowchart.pdf) to help you decide which is best for your story. *For this demo, we will use **Story Map Journal**.*
 
 **Getting started**
 
