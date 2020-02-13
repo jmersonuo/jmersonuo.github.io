@@ -119,6 +119,7 @@ Alternitive text:
 After adding the image we have this:  
 <img src="https://jmersonuo.github.io/StoryMaps/img/afterImage.JPG" width ="334px">
 
+Save the changes to your map.
 
 ## V. Customize the map ##
 
@@ -160,11 +161,10 @@ In the future, you could learn how to [customize](https://www.esri.com/arcgis-bl
 7. Hover over the layer and press the symbol button (square, rectangle, and circle) 
 8. Click options to change to the symbology for all the features in the layer. I'm making it green, with no outline and, 50% transparent.
 
- 
-
 <img src="https://jmersonuo.github.io/StoryMaps/img/wildernessSymbol.JPG" width ="334px">  
 
-8. Press Save again.
+8. Press Save again. Close the Map.
+9. Save the changes to your map.
 
 Notice that your edits to the map persist when you scroll up and down the map.
 
