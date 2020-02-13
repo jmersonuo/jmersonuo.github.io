@@ -11,8 +11,9 @@ The steps for creating your story map are to:
   <li>Pick a format (“App”) </li>
   <li>Add a title and your first section </li>
   <li>Add text and an image </li>
-  <li>Customize a map
+  <li>Add a map
     <ol type="i"> 
+      <li>Add a map</li>
       <li>Change the basemap</li>
       <li>Add data manually (add points from the novel)  </li> 
       <li>Search for data (something relevant to the novel) </li> 
@@ -54,7 +55,7 @@ Enter a title for your Map Journal. You can also take an optional quick tour of 
 <img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step3.png" width ="334px">
 
 Our title is:
-> A journey within *The Devil's Highway*
+> The Devil's Highway: Helicopters
 
 ### 2. Home section ###
 ### 2.1. Configure the opening section ###
@@ -62,11 +63,11 @@ The dialog will appear that lets you add the first entry, the "home section", in
 
 In this dialog, you are first prompted for the content you want this section to show in the "main stage": the main area of the display to the right of the side panel. Choose between a Map, Image, Video or Web page.
 
-We are going to use a web map, which is the default option, click the Map dropdown and choose the option to **create a new map**. When you create a new map, the map editor window will appear. Zoom to the area you plan to use, then save and close your new map. We'll come back and edit it later. 
+We are going to use an image. I am going to *upload* an image. Set it's position to *fill* and give it the following alternitive text:
+>Desert landscape on the Cabeza prieta national wildlife refuge.
 
-You will then be given the options, shown in the screenshot **below**, to customize how the map is displayed. You can choose to display a particular area of the map, turn layers on or off, display a particular feature's popup, or any combination of those. For example if you choose a custom location, the Builder will prompt you to interactively zoom to the area you want to use, and then you'll press a button to capture that extent. We will come back and edit the map later.  
-  
-<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step4.png" width ="334px">  
+<img src="https://jmersonuo.github.io/StoryMaps/img/imageUpload.JPG" width ="334px">
+<img src="https://jmersonuo.github.io/StoryMaps/img/imageSettings.JPG" width ="334px">
 
 Press Next to add your first content.  
 
@@ -74,7 +75,7 @@ Press Next to add your first content.
 The Add Home Section dialog will now prompt you to enter and format the content that will appear in the side panel for the home section. You can type directly into the built-in rich text editor. You can also paste text into the editor from word processing programs in which case the formatting is carried over into the editor. You can also embed graphics, images and videos in with the text. You can also define "story actions" in the section's text so that, for example, clicking a word automatically zooms the main stage's map to a particular location. (We'll show you how to set up these actions in **Section VII. Set up “story actions”** below).
 
 We will use the following text:
->In May 2001, a group of men attempted to cross the Mexican border into the desert of southern Arizona, through the deadliest region of the continent, the "Devil's Highway." Three years later, Luis Alberto Urrea wrote about what happened to them. The result was a national bestseller, a Pulitzer Prize finalist, a "book of the year" in multiple newspapers, and a work proclaimed as a modern American classic. (Amazon). 
+>Luis Alberto Urrea's 2004 chronicle The Devil's Highway: A True Story describes the deaths of fourteen Mexican men in the Sonoran desert of southern Arizona, as well as the rescue of twelve other men by the U.S. Border Patrol. The men were migrating to the U.S. for economic opportunities. The fourteenth chapter of the book, "Helicopters," describes numerous deaths and rescues in detail, and geolocates the deceased in the harsh desert landscape. 
 >  
 > Scroll down to follow their journey.
 
@@ -121,13 +122,20 @@ After adding the image we have this:
 
 **Save** the changes to your map.
 
-## V. Customize the map ##
+## V. Add a map ##
 
-Now that we know how to add sections, let's look at editing the map.  
+Now that we know how to add sections, let's look at adding a map.  
+
+### 1. Add a map ###
+Add a new section, and set the main stage content to **Map**. Then click the Map dropdown and choose the option to **create a new map**. When you create a new map, the map editor window will appear. Zoom to the area you plan to use, then save and close your new map. We'll come back and edit it later. 
+
+You will then be given the options, shown in the screenshot **below**, to customize how the map is displayed. You can choose to display a particular area of the map, turn layers on or off, display a particular feature's popup, or any combination of those. For example if you choose a custom location, the Builder will prompt you to interactively zoom to the area you want to use, and then you'll press a button to capture that extent. We will come back and edit the map later.  
+  
+<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step4.png" width ="334px">  
 Go back to the top (Main Stage) and click the pencil to edit the section, click on the "main stage" tab. Now click "edit" beside the map title.
 
 In the map editor, you can customize the maps that used in your story.  
-### 1. Change the basemap ###
+### 2. Change the basemap ###
 
 As a novice cartographer, select one of the 12 provided basemaps. For this demo, we are going to choose "Terrain with Labels", to emphasize the topography, while maintaining a neutral background that our data points will stand out on.  
 
@@ -137,7 +145,7 @@ In the future, you could learn how to [customize](https://www.esri.com/arcgis-bl
 
 <img src="https://www.esri.com/arcgis-blog/wp-content/uploads/2018/05/vse-1920x1080.png" height ="250px">
 
-### 2. Add data manually (add points from the novel) ###
+### 3. Add data manually (add points from the novel) ###
 
 1. Click **Add** > **Add Map Notes**. You can change the name of the layer. We are just going to leave it for now. The templates will give you different map symbols to choose from. We are going to leave it with the default, "Map Notes".  
 2. Notice that you can create features that are point, line, and area types. We are going to use a point feature using "Stickpin".   
@@ -148,7 +156,7 @@ In the future, you could learn how to [customize](https://www.esri.com/arcgis-bl
 
 <img src="https://jmersonuo.github.io/StoryMaps/img/POI.JPG" width ="334px">
 
-### 3. Search for data (something relevant to the novel) ###
+### 4. Search for data (something relevant to the novel) ###
 
 1. Click "Add" > "Browse Living Atlas Layers". ArcGIS Living Atlas of the World is a collection of global geographic information. Curated by Esri with contributions from its partner and user communities, Living Atlas contains valuable maps, data layers, tools, services, and apps for geographic analysis.  
 3. Click the small dropdown and click "ArcGIS Online". This allows you to search any content that other arcGIS users have published publically. These will not be as stable as the Living Atlas, but you can usually trust government sources. 
