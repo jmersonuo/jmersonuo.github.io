@@ -90,28 +90,34 @@ Use the Add Section button at the bottom of the side panel to add additional sec
 
 To make edits or other changes to a section you've added, click the blue edit button at the top of the side panel. <img src="https://jmersonuo.github.io/StoryMaps/img/editButton.JPG" height="25px">  
 
-You can use the Organize button to reorder and delete sections. <img src="https://jmersonuo.github.io/StoryMaps/img/organizeButton.JPG" height="25px"> 
+You can use the Organize button to reorder and delete sections. <img src="https://jmersonuo.github.io/StoryMaps/img/organizeButton.JPG" height="45px"> 
 
 Title:
 > Cabeza Prieta Wilderness 
 
 Set the custom location to the Cabeza Prieta Wilderness and the press next.
 
-I am going to add a short piece of text:
+We are going to add a short piece of text:
 > We begin in the Cabeza Prieta Wilderness. A beautiful piece of land along the US/Mexico border.
+
+<img src="https://jmersonuo.github.io/StoryMaps/img/newSection.JPG" width ="334px">
 
 ### 2. Add an image ###
 
-Click camera icon to insert an image. You could use images stored on a fliker account or add an image from a link using an iframe. To do this you can insert the URL of any image into the code block below. Just be sure to credit the source. 
+Click camera icon to insert an image. <img src="https://jmersonuo.github.io/StoryMaps/img/editButton.JPG" height="25px">  
+You could use images stored on a fliker account or add an image from the web. To do this you can insert the URL of any image, just be sure to **credit the source**.
 
 Link:
-`<iframe src="https://winapps.umt.edu/winapps/media2/wilderness/images/NWPS/lib/thumbID250/4246.jpg"></iframe> `
+> https://winapps.umt.edu/winapps/media2/wilderness/images/NWPS/lib/thumbID250/4246.jpg
+
+Caption:
+> Cabeza Prieta Wilderness (Credit: NPS)
 
 Alternitive text: 
-> Photo of the Cabeza Prieta Wilderness
+> Photo of saguaro cactuses and a mountain the Cabeza Prieta Wilderness
 
-Add a caption under the photo - size 9, dark grey: 
-> Cabeza Prieta Wilderness (Credit: NPS)
+After adding the image we have this:
+<img src="https://jmersonuo.github.io/StoryMaps/img/afterImage.JPG" width ="334px">
 
 
 ## V. Customize the map ##
