@@ -12,7 +12,7 @@ The stepts for creating your story map are to:
   <li>Pick a format (“App”) see handout </li>
   <li>Add a title and your first section </li>
   <li>Add text and an image </li>
-  <li>Add a map in an immersive section</li>
+  <li>Customize the map</li>
   <li>
     <ol type="i"> 
       <li>Change the basemap</li>
@@ -70,7 +70,6 @@ Press Next to add your first content.
   
 <img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step4.png" width ="334px">
 
-## Add text and an image ##
 ### 1. Opening text ###
 The Add Home Section dialog will now prompt you to enter and format the content that will appear in the side panel for the home section. You can type directly into the built-in rich text editor. You can also paste text into the editor from word processing programs in which case the formatting is carried over into the editor. You can also embed graphics, images and videos in with the text. You can also define "story actions" in the section's text so that, for example, clicking a word automatically zooms the main stage's map to a particular location. (We'll show you how to set up these actions in step **8** below).
 
@@ -84,5 +83,45 @@ To save your work so far, press the Save button in the top right hand corner of 
 
 <img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step5.png" width ="334px">
 
-## 6 ##
-## 7 ##
+## IV. Add another section: text and an image ##
+
+### 1. Add a section ###
+Use the Add Section button at the bottom of the side panel to add additional sections into your Map Journal. The same dialog will appear each time you add a section allowing you to specify the content for the main stage and the side panel.
+
+To make edits or other changes to a section you've added, click the blue edit button at the top of the side panel.
+
+You can use the Organize button to reorder and delete sections.
+
+<img src="https://storymaps-classic.arcgis.com/en/app-list/map-journal/img/step7.png" width ="334px">
+
+Title:
+> Cabeza Prieta Wilderness 
+
+Set the custom location to the Cabeza Prieta Wilderness and the press next.
+
+I am going to add a short peice of text:
+> We begin in the Cabeza Prieta Wilderness. A beautiful piece of land along the US/Mexico border.
+
+### 2. Add an image ###
+
+Click camera icon to insert an image. You could use images stored on a fliker account or add an image from a link using an iframe. To do this you can insert the URL of an image into the code block below.
+
+Link:
+`<iframe src="https://winapps.umt.edu/winapps/media2/wilderness/images/NWPS/lib/thumbID250/4246.jpg"></iframe> `
+
+Alternitive text: 
+> Photo of the Cabeza Prieta Wilderness
+
+Add a caption under the photo - size 9, dark grey: 
+> Cabeza Prieta Wilderness (Credit: NPS)
+
+
+## V. Customize the map ##
+
+Now that we know how to add sections, let's look at editing the map.
+Go back to the top (Main Stage) and click the pencil to edit the section. Now click "edit" besode the map title.
+
+In the map editor you can customize the maps that used in your story.
+### 1. Change the basemap ###
+
+As a novice cartographer, select one of the 12 provided basemaps. In the furutre, you can learn how to [customize](https://www.esri.com/arcgis-blog/products/developers/mapping/design-custom-basemaps-with-the-new-arcgis-vector-tile-style-editor/) basemaps.
