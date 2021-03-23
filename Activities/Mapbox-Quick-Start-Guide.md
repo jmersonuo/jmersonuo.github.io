@@ -95,7 +95,7 @@ When you have finished experimenting, make sure your code is set to Portland and
 
 Besides a basemap, you can easily add other things to your map, including markers and popups.
 
-Let’s adda marker to the same longitude/latitude that we centered our map on:
+Let’s add a marker to the same longitude/latitude that we centered our map on:
 
 ```javascript
 var marker = new mapboxgl.Marker()
