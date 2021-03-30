@@ -1,26 +1,27 @@
 ## Mapbox Quick Start Guide
 
-Please sign up for a mapbox account [here](https://account.mapbox.com/auth/signup/).
+You should have already signed up for a mapbox account. If you hae not, do so [here](https://account.mapbox.com/auth/signup/).
 
-This step-by-step guide will quickly get you started on Mapbox basics, including setting up a Mapbox map, working with markers, circles and popups and setting up events! All of the code below can be found in this handy [JSFiddle](https://jsfiddle.net/mjdanielson/9jh3bzc8/1/).
+This step-by-step guide will quickly get you started on Mapbox basics, including setting up a Mapbox map, working with markers, circles and popups and setting up events!
 
-Begin by copying the files for today's activity from the the "Class_Data" folder to your personal workspace on the "R" drive. Open and edit the file using a text editor, such as Brackets. 
+Begin by copying the files for assignment 1 from the the "Class_Data" folder to your personal workspace on the "R" drive or to your personal computer. Open and edit the QuickStartMap.html using a text editor, such as Brackets. 
 
 ### I. Preparing your page
 
-Before writing any code for the map, you need to do the following preparation steps on your page:
+Notice that the outline of a web page is already there for you. The `DOCTYPE` is html, there is a `head` section, which includes a `style` subsection. There is `body` section, with a `script` subsection.  There are also comments throughout that will guide where you should place the code below. 
+First, lets add references to the Mapbox JavaScript and CSS, which will allow us to add a map to the page:
 
-* Include Mapbox JavaScript file:
+* In between the head, include Mapbox JavaScript file:
 
 ```html
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.js'></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     
 ```
 
 * Include Mapbox CSS file __after__ Mapbox’s JavaScript:
 
 ```html
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.css' rel='stylesheet' />
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 ```
 
 Put a div element with a certain id where you want your map to be:
@@ -30,14 +31,15 @@ Put a div element with a certain id where you want your map to be:
 
 ```
 
-You will also want to apply some CSS to specify what the layout looks like. This is particularly important for the map div, which *won't* show up on the page until you give it a height:
+You will also want to apply some CSS to specify what the layout looks like. **This is particularly important** for the map div, which *won't* show up on the page until you give it a height. 
+
+The CSS below means the body section of your web page has 0 margin or padding, and the div with the ID "map", will fill the space 0 pixles from the top, to 0 pixles from the bottom, and 100% of the width of your browser page... resulting in a full page map!
 
 ```css
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
 ```
 
-This means the body div of your web page has 0 margin or padding, and the div with the ID "map", will fill the space 0 pixles from the top, to 0 pixles from the bottom, and 100% of the width of your browser page... resulting in a full page map!
 
 <a title="Felix.leg [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Css_box_model.svg"><img width="512" alt="Css box model" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Css_box_model.svg/512px-Css_box_model.svg.png"></a>
 
@@ -45,12 +47,12 @@ Now you’re ready to initialize the map and do some stuff with it.
 
 ### II. Setting up the map
 
-Let’s create a map of the centered on Portland with the beautiful Mapbox Streets style. 
+Let’s create a map of the centered on Portland with the lovely "Mapbox Streets" style as the basemap. 
 
-The first thing you'll need to do is add your access token. Without this, the rest of the code will not work. Note: all the following code should be between script tags.:
+The first thing you'll need to do is add **your** access token. Without this, the rest of the code will not work. Note: all the following code should be between `script` tags.:
 
 ```javascript
-mapboxgl.accessToken = 'pk.eyJ1IjoibWpkYW5pZWxzb24iLCJhIjoiY2p2bzFlbnZ5MW5pbTN5cGJ2YWp2MW9vaiJ9.kAaZq3iyJwvrMLK7XDs_qw';
+mapboxgl.accessToken = 'pk.eyJ1IjoibWpkYW5pZWxzb24iLCJhIjoiY2p2bzFlbnZ5MW5pbTN5cGJ2YWp2MW9vaiJ9.kAaZq3iyJwvrMLK7XDs_qw'; // Course access token. Replace with YOURS.
 
 ```
 
@@ -64,9 +66,11 @@ Next, we’ll initialize the map and set its view with specified coordinates and
   </p>
  
 
-For this section of code, we will need a [style ID](https://docs.mapbox.com/help/glossary/style-id/).  A style ID is a unique identifier for each style associated with any Mapbox username. To use the Mapbox Styles API, you will need to know the style ID for the map style you are working with.
+For this section of code, we will need a [style ID](https://docs.mapbox.com/help/glossary/style-id/).  A style ID is a unique identifier for each style associated with any Mapbox username. To use the Mapbox Styles API, you will need to know the style ID for the map style you are working with. 
 
-In the code block below, you will need to replace the coordinates for the starting position. Try setting the coordinates for Portland, Oregon by replacing the longitude field witih: -122.6788 and the latitude field with: 45.5212. You can http://geojson.io to find the coordinates by placing a marker using.
+We are going to initialize a map with the variable name "map", and is going to be added into the div, or `container`, with the ID "map". Keep in mind. These could be changed.
+
+In the code block below, _you will need to replace the coordinates_ for the starting map center position. Set the coordinates for Portland, Oregon by replacing the longitude field witih: -122.6788 and the latitude field with: 45.5212. 
 
 ```javascript
 var map = new mapboxgl.Map({
@@ -77,13 +81,15 @@ var map = new mapboxgl.Map({
 });
 ```
 
+Tip: You can quickly find map coordinates by going to https://maps.google.com and right-click on the map, or go to http://geojson.io and find coordinates by placing a marker.
+
 That’s it! You have a working Mapbox map now. Open your `.html` file in a browser and take a look.
 
 No map? There is likely an error in your code. Open your browser's **Web Console** to look for error messages.
 
 Try changing it:
-1. Adjust the zoom level to see how this impacts the map. 
-2. Set the center coordinates to two other cities around the world. 
+1. Adjust the **zoom** level to see how this impacts the map. 
+2. Set the **center** coordinates to two other cities around the world. 
 
 When you have finished experimenting, make sure your code is set to Portland and your zoom level is set to 11 before moving on.
 
@@ -95,7 +101,8 @@ When you have finished experimenting, make sure your code is set to Portland and
 
 Besides a basemap, you can easily add other things to your map, including markers and popups.
 
-Let’s add a marker to the same longitude/latitude that we centered our map on:
+Let’s add a marker to the same longitude/latitude that we centered our map on. We are going to add a marker with the variable name "marker". In the `script` section, after the 
+` var map...` add the following:
 
 ```javascript
 var marker = new mapboxgl.Marker()
@@ -109,7 +116,7 @@ var marker = new mapboxgl.Marker()
 
 Take a look at the [API](https://docs.mapbox.com/mapbox-gl-js/api/#marker) to see what marker options are available.
 
-Let's change the color of our marker! The default color for the marker is blue. Add a color parameter to your code and change the color! You can use the name of most common colors (`'red'`, `'blue'`, `'green'`) or enter a HEX colod code (`'#42f569'`) or rgb color (`'rgb(0,255,0)'`). We'll cover colors in more detail soon. Try a few different colors.
+Let's change the color of our marker. The default color for the marker is blue. Add a color parameter to your code and change the color! You can use the name of most common colors (`'red'`, `'blue'`, `'green'`) or enter a HEX colod code (`'#42f569'`) or rgb color (`'rgb(0,255,0)'`). We'll cover colors in more detail soon. Try a few different colors.
 
 ```javascript
 var marker = new mapboxgl.Marker({color:'red'})
@@ -117,7 +124,7 @@ var marker = new mapboxgl.Marker({color:'red'})
   .addTo(map);
 ```
 
-Want to add antother marker? Create a second marker variable.
+Want to add antother marker? Create a second marker variable. It has to have a different variable name. In this case, we'll use "marker2".
 
 ```javascript
 var marker2 = new mapboxgl.Marker({color:'red'})
