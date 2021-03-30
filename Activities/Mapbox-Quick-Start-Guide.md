@@ -66,13 +66,13 @@ mapboxgl.accessToken = 'pk.a...bunch..of..letters......'; //  Put your access to
 This is what mine looks like:
 
 <p align="center">
-    <img src= "Images/01_token.png">
+    <img src= "Images/01_token.jpg">
   </p>
 
 Next, we’ll initialize the map and set its view with specified coordinates and a zoom level.
 
 <p align="center">
-    <img src= "Images/01_Portland.jpg">
+    <img src= "Images/01_Portland.png">
   </p>
  
 
