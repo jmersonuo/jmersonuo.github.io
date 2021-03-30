@@ -24,7 +24,7 @@ First, lets add references to the Mapbox JavaScript and CSS, which will allow us
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 ```
 
-Put a div element with a certain id where you want your map to be:
+* Put a div element with a certain id where you want your map to be:
 
 ```html
 <div id='map'></div>
@@ -43,26 +43,36 @@ The CSS below means the body section of your web page has 0 margin or padding, a
 
 <a title="Felix.leg [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Css_box_model.svg"><img width="512" alt="Css box model" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Css_box_model.svg/512px-Css_box_model.svg.png"></a>
 
-Now you’re ready to initialize the map and do some stuff with it.
+Now you’re ready to initialize the map and set  .
 
 ### II. Setting up the map
 
+Tip: all the following code should be between `script` tags.
+
 Let’s create a map of the centered on Portland with the lovely "Mapbox Streets" style as the basemap. 
 
-The first thing you'll need to do is add **your** access token. Without this, the rest of the code will not work. Note: all the following code should be between `script` tags.:
+
+_To use any of Mapbox's tools, APIs, or SDKs, you'll need a Mapbox [access token](https://docs.mapbox.com/help/glossary/access-token/). Mapbox uses access tokens to associate API requests with your account. 
+
+You can find your access tokens, create new ones, or delete existing ones on your Access Tokens page [https://account.mapbox.com/access-tokens/](https://account.mapbox.com/access-tokens/) or programmatically using the [Mapbox Tokens API](https://docs.mapbox.com/api/accounts/#tokens)._
+
+The first thing you'll need to do is add **your** access token, which gives you access to the mapbox API and will track how many views your map has. Without this, the 
+
 
 ```javascript
-mapboxgl.accessToken = 'pk.eyJ1IjoibWpkYW5pZWxzb24iLCJhIjoiY2p2bzFlbnZ5MW5pbTN5cGJ2YWp2MW9vaiJ9.kAaZq3iyJwvrMLK7XDs_qw'; // Course access token. Replace with YOURS.
+mapboxgl.accessToken = 'pk.a...bunch..of..letters......'; //  Put your access tokenm between the single quotes.
 
 ```
+This is what mine looks like:
 
-_To use any of Mapbox's tools, APIs, or SDKs, you'll need a Mapbox [access token](https://docs.mapbox.com/help/glossary/access-token/). Mapbox uses access tokens to associate API requests with your account. You can find your access tokens, create new ones, or delete existing ones on your [Access Tokens page](https://account.mapbox.com/access-tokens/) or programmatically using the [Mapbox Tokens API](https://docs.mapbox.com/api/accounts/#tokens)._
-
+<p align="center">
+    <img src= "Images/01_token.png">
+  </p>
 
 Next, we’ll initialize the map and set its view with specified coordinates and a zoom level.
 
 <p align="center">
-    <img src= "Images/01_Portland.png">
+    <img src= "Images/01_Portland.jpg">
   </p>
  
 
