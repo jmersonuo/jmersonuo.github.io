@@ -11,27 +11,27 @@ Begin by copying the files for assignment 1 from the the "Class_Data" folder to 
 Notice that the outline of a web page is already there for you. The `DOCTYPE` is html, there is a `head` section, which includes a `style` subsection. There is `body` section, with a `script` subsection.  There are also comments throughout that will guide where you should place the code below. 
 First, lets add references to the Mapbox JavaScript and CSS, which will allow us to add a map to the page:
 
-* In between the head, include Mapbox JavaScript file:
+1. In between the head, include Mapbox JavaScript file:
 
 ```html
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     
 ```
 
-* Include Mapbox CSS file __after__ Mapbox’s JavaScript:
+2. Include Mapbox CSS file __after__ Mapbox’s JavaScript:
 
 ```html
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 ```
 
-* Put a div element with a certain id where you want your map to be:
+3. Put a div element with a certain id where you want your map to be:
 
 ```html
 <div id='map'></div>
 
 ```
 
-You will also want to apply some CSS to specify what the layout looks like. **This is particularly important** for the map div, which *won't* show up on the page until you give it a height. 
+4. You will also want to apply some CSS to specify what the layout looks like. **This is particularly important** for the map div, which *won't* show up on the page until you give it a height. 
 
 The CSS below means the body section of your web page has 0 margin or padding, and the div with the ID "map", will fill the space 0 pixles from the top, to 0 pixles from the bottom, and 100% of the width of your browser page... resulting in a full page map!
 
@@ -47,17 +47,15 @@ Now you’re ready to initialize the map and set  .
 
 ### II. Setting up the map
 
+Let’s create a map of the centered on Portland with the lovely "Mapbox Streets" style as the basemap. 
 Tip: all the following code should be between `script` tags.
 
-Let’s create a map of the centered on Portland with the lovely "Mapbox Streets" style as the basemap. 
 
-
-_To use any of Mapbox's tools, APIs, or SDKs, you'll need a Mapbox [access token](https://docs.mapbox.com/help/glossary/access-token/). Mapbox uses access tokens to associate API requests with your account. 
+1. To use any of Mapbox's tools, APIs, or SDKs, you'll need a Mapbox [access token](https://docs.mapbox.com/help/glossary/access-token/). Mapbox uses access tokens to associate API requests with your account. 
 
 You can find your access tokens, create new ones, or delete existing ones on your Access Tokens page [https://account.mapbox.com/access-tokens/](https://account.mapbox.com/access-tokens/) or programmatically using the [Mapbox Tokens API](https://docs.mapbox.com/api/accounts/#tokens)._
 
 The first thing you'll need to do is add **your** access token, which gives you access to the mapbox API and will track how many views your map has. Without this, the 
-
 
 ```javascript
 mapboxgl.accessToken = 'pk.a...bunch..of..letters......'; //  Put your access tokenm between the single quotes.
@@ -66,7 +64,7 @@ mapboxgl.accessToken = 'pk.a...bunch..of..letters......'; //  Put your access to
 This is what mine looks like:
 
 <p align="center">
-    <img src= "Images/01_token.jpg">
+    <img src= "Images/01_token.JPG">
   </p>
 
 Next, we’ll initialize the map and set its view with specified coordinates and a zoom level.
@@ -76,7 +74,7 @@ Next, we’ll initialize the map and set its view with specified coordinates and
   </p>
  
 
-For this section of code, we will need a [style ID](https://docs.mapbox.com/help/glossary/style-id/).  A style ID is a unique identifier for each style associated with any Mapbox username. To use the Mapbox Styles API, you will need to know the style ID for the map style you are working with. 
+For this section of code, we will need a [style ID](https://docs.mapbox.com/help/glossary/style-id/).  A style ID is a unique identifier for each style associated with any Mapbox username. To use the Mapbox Styles API, you will need to know the style ID for the map style you are working with.
 
 We are going to initialize a map with the variable name "map", and is going to be added into the div, or `container`, with the ID "map". Keep in mind. These could be changed.
 
@@ -205,9 +203,55 @@ Keep in mind, since you need to add a single string element, you'll have to care
 ```
 
 
-### Congratulations! You've completed the exercise! 
+### Congratulations! You've completed the tutorial! 
 
 <p align = "center">
 	<img src="https://media.giphy.com/media/11uArCoB4fkRcQ/giphy.gif">
 	</p>
 
+
+### Assignment submission
+
+Following the tutorial, you now have a full page map. Now use what you have learned to make the following customizations:
+
+1.  Add at least 1 pin marker with a custom color (use a different color than default blue).
+2.  Add a pop-up that has a link (use a different link than the tutorial).
+3.  Change the basemap style to something other than streets-v11.
+4.
+    * If you are working on your own computer, or WinSCP has been installed in the lab, upload your map to your UO pages webspace following the steps shown to you in th lecture, and submit your URL e.g. `pages.uoregon.edu/[your user name]/WebMapping/QuickStartMap.html`, **OR**
+    * If you are working in the lab and we still don't have WinSCP installed, attach your .html file to this submission
+
+
+### Optional advanced:
+If you would like to try using a web map service WMS to your map, take a look at this example https://docs.mapbox.com/mapbox-gl-js/example/wms/
+You can add the same WMS layer to your map by changing the zoom and center to:
+
+```javascript
+	zoom: 8,
+	center: [-74.5447, 40.6892] 
+```
+
+After the map has been initialzed, still withing the `script` section, use map.addSource and map.addLayer to add a connection to your WMS service, and add it as a layer to the map.
+
+```javascript
+map.on('load', function () {
+	map.addSource('wms-test-source', {
+		'type': 'raster',
+		// use the tiles option to specify a WMS tile source URL
+		// https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/
+		'tiles': [
+		'https://img.nj.gov/imagerywms/Natural2015?bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&layers=Natural2015'
+		],
+		'tileSize': 256
+	});
+	map.addLayer(
+	{
+		'id': 'wms-test-layer',
+		'type': 'raster',
+		'source': 'wms-test-source',
+		'paint': {}
+		},
+		'aeroway-line'
+	);
+});
+```
