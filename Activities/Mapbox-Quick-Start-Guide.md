@@ -1,24 +1,24 @@
 ## Mapbox Quick Start Guide
 
-You should have already signed up for a mapbox account. If you hae not, do so [here](https://account.mapbox.com/auth/signup/).
+You should have already signed up for a mapbox account. If you have not, do so [here](https://account.mapbox.com/auth/signup/).
 
-This step-by-step guide will quickly get you started on Mapbox basics, including setting up a Mapbox map, working with markers, circles and popups and setting up events!
+This step-by-step guide will quickly get you started on Mapbox basics, including setting up a Mapbox map, working with markers and popups and setting up events!
 
-Begin by copying the files for assignment 1 from the the "Class_Data" folder to your personal workspace on the "R" drive or to your personal computer. Open and edit the QuickStartMap.html using a text editor, such as Brackets. 
+Begin by copying the files for Assignment 1 from the R Drive "Class_Data" folder to your personal workspace on the "R" drive or to your personal computer. Open and edit the QuickStartMap.html using a text editor, such as Brackets. 
 
 ### I. Preparing your page
 
 Notice that the outline of a web page is already there for you. The `DOCTYPE` is html, there is a `head` section, which includes a `style` subsection. There is `body` section, with a `script` subsection.  There are also comments throughout that will guide where you should place the code below. 
-First, lets add references to the Mapbox JavaScript and CSS, which will allow us to add a map to the page:
+First, let's add references to the Mapbox JavaScript and CSS, which will allow us to add a map to the page:
 
-1. In between the head, include Mapbox JavaScript file:
+1. In the `head` section, indicate the path to the Mapbox JavaScript file:
 
 ```html
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     
 ```
 
-2. Include Mapbox CSS file __after__ Mapbox’s JavaScript:
+2. Indicate the path to Mapbox CSS file __after__ Mapbox’s JavaScript:
 
 ```html
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
@@ -43,11 +43,11 @@ The CSS below means the body section of your web page has 0 margin or padding, a
 
 <a title="Felix.leg [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Css_box_model.svg"><img width="512" alt="Css box model" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Css_box_model.svg/512px-Css_box_model.svg.png"></a>
 
-Now you’re ready to initialize the map and set  .
+Now you have a framework for where the map will go, but no map yet. If you look at your `.html` file in a browser, it will be blank.
 
 ### II. Setting up the map
 
-Let’s create a map of the centered on Portland with the lovely "Mapbox Streets" style as the basemap. 
+Let’s create a map, centered on Portland, with the lovely "Mapbox Streets" style as the basemap. 
 Tip: all the following code should be between `script` tags.
 
 
@@ -67,7 +67,7 @@ This is what mine looks like:
     <img src= "Images/01_token.JPG">
   </p>
 
-Next, we’ll initialize the map and set its view with specified coordinates and a zoom level.
+2. Next, we’ll initialize the map and set its view with specified coordinates and a zoom level.
 
 <p align="center">
     <img src= "Images/01_Portland.png">
@@ -95,7 +95,7 @@ That’s it! You have a working Mapbox map now. Open your `.html` file in a brow
 
 No map? There is likely an error in your code. Open your browser's **Web Console** to look for error messages.
 
-Try changing it:
+Try changing the map:
 1. Adjust the **zoom** level to see how this impacts the map. 
 2. Set the **center** coordinates to two other cities around the world. 
 
@@ -109,7 +109,7 @@ When you have finished experimenting, make sure your code is set to Portland and
 
 Besides a basemap, you can easily add other things to your map, including markers and popups.
 
-Let’s add a marker to the same longitude/latitude that we centered our map on. We are going to add a marker with the variable name "marker". In the `script` section, after the 
+1. Let’s add a marker to the same longitude/latitude that we centered our map on. We are going to add a marker with the variable name "marker". In the `script` section, after the 
 ` var map...` add the following:
 
 ```javascript
@@ -124,7 +124,7 @@ var marker = new mapboxgl.Marker()
 
 Take a look at the [API](https://docs.mapbox.com/mapbox-gl-js/api/#marker) to see what marker options are available.
 
-Let's change the color of our marker. The default color for the marker is blue. Add a color parameter to your code and change the color! You can use the name of most common colors (`'red'`, `'blue'`, `'green'`) or enter a HEX colod code (`'#42f569'`) or rgb color (`'rgb(0,255,0)'`). We'll cover colors in more detail soon. Try a few different colors.
+2. Let's change the color of our marker. The default color for the marker is blue. Add a color parameter to your code and change the color! You can use the name of most common colors (`'red'`, `'blue'`, `'green'`) or enter a HEX colod code (`'#42f569'`) or rgb color (`'rgb(0,255,0)'`). We'll cover colors in more detail soon. Try a few different colors.
 
 ```javascript
 var marker = new mapboxgl.Marker({color:'red'})
@@ -132,7 +132,7 @@ var marker = new mapboxgl.Marker({color:'red'})
   .addTo(map);
 ```
 
-Want to add antother marker? Create a second marker variable. It has to have a different variable name. In this case, we'll use "marker2".
+3. Want to add antother marker? Create a second marker variable. It has to have a different variable name. In this case, we'll use "marker2".
 
 ```javascript
 var marker2 = new mapboxgl.Marker({color:'red'})
@@ -149,25 +149,25 @@ var marker2 = new mapboxgl.Marker({color:'red'})
 
 Popups are usually used when you want to attach some information to a particular object on a map. In Mapbox, you can [add a popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup) to your features with only a few lines of code! 
 
-First, you will need to initialize a pop-up variable. In the JavaScript section of your code, make sure you declare this variable **before** you declare the marker variable, which will use it: 
+1. First, you will need to initialize a pop-up variable. In the JavaScript section of your code, make sure you declare this variable **before** you declare the marker variable, which will use it: 
 
 ```javascript
 var popup = new mapboxgl.Popup({ offset: 25 })
 .setHTML('Hello World. Welcome to Portland!');
 ```
 
-Next add the `.setPopup` function to your existing marker variable:
+2. Next add the `.setPopup` function to your existing marker variable:
 
 ```javascript
 var marker = new mapboxgl.Marker()
     .setLngLat([-122.6788, 45.5212])
-    .setPopup(popup) //add the popup to the marker 
+    .setPopup(popup) //add the popup with the variable name 'popup' to the marker 
     .addTo(map); // add the open marker to the map
 ```
-Once, you added the `.setPopup` function to your marker, refresh your map and click on the marker!
+3. Once, you added the `.setPopup` function to your marker, refresh your map and click on the marker!
 
 
-You can also use popups as layers (when you need something more than attaching a popup to an object). Add this code block after your marker:
+4. You can also use popups as layers (when you need something more than attaching a popup to an object). Add this code block after your marker:
 
 ```javascript
 var popup_layer = new mapboxgl.Popup({closeOnClick: false}) 
@@ -176,7 +176,7 @@ var popup_layer = new mapboxgl.Popup({closeOnClick: false})
 .addTo(map); //add this popup to the map!
 ```
 
-Try changing the `closeOnClick` argument to 'true' and refresh your map. What happens when you click anywhere in the map? 
+5. Try changing the `closeOnClick` argument to 'true' and refresh your map. What happens when you click anywhere in the map? 
 
 Take a look at the [popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup) documentation to learn more about the parameters associated with Mapbox popups. Try adjusting one or more parameters - for instace, try changing the anchor position. 
 
@@ -190,7 +190,7 @@ Take a look at the [popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup) docu
         .addTo(map);
 ```
 
-Notice that you can put any HTML tags, as a single string element, within the `setHTML` functions. For example, you could add an [image](https://www.w3schools.com/html/html_images.asp) or a [hyperlink](https://www.w3schools.com/html/html_links.asp).
+6. Notice that you can put any HTML tags, as a single string element, within the `setHTML` functions. For example, you could add an [image](https://www.w3schools.com/html/html_images.asp) or a [hyperlink](https://www.w3schools.com/html/html_links.asp).
 Keep in mind, since you need to add a single string element, you'll have to carefully nest any quotation marks.
 
 ```javascript
@@ -214,7 +214,7 @@ Keep in mind, since you need to add a single string element, you'll have to care
 
 Following the tutorial, you now have a full page map. Now use what you have learned to make the following customizations:
 
-1.  Add at least 1 pin marker with a custom color (use a different color than default blue).
+1.  Include at least 1 pin marker with a custom color (use a different color than default blue or the tutorial's red).
 2.  Add a pop-up that has a link (use a different link than the tutorial).
 3.  Change the basemap style to something other than streets-v11.
 4.
