@@ -33,7 +33,7 @@ First, let's add references to the Mapbox JavaScript and CSS, which will allow u
 
 4. You will also want to apply some CSS to specify what the layout looks like. **This is particularly important** for the map div, which *won't* show up on the page until you give it a height. 
 
-The CSS below means the body section of your web page has 0 margin or padding, and the div with the ID "map", will fill the space 0 pixles from the top, to 0 pixles from the bottom, and 100% of the width of your browser page... resulting in a full page map!
+The CSS below means the body section of your web page has 0 margin or padding, and the div with the ID "map", will fill the space 0 pixels from the top, to 0 pixels from the bottom, and 100% of the width of your browser page... resulting in a full page map!
 
 ```css
         body { margin:0; padding:0; }
@@ -55,10 +55,10 @@ Tip: all the following code should be between `script` tags.
 
 You can find your access tokens, create new ones, or delete existing ones on your Access Tokens page [https://account.mapbox.com/access-tokens/](https://account.mapbox.com/access-tokens/) or programmatically using the [Mapbox Tokens API](https://docs.mapbox.com/api/accounts/#tokens)._
 
-The first thing you'll need to do is add **your** access token, which gives you access to the mapbox API and will track how many views your map has. Without this, the 
+The first thing you'll need to do is add **your** access token, which gives you access to the mapbox API, access to styles associated with your account, and will track how many views your map has. Without this, the map will not work.
 
 ```javascript
-mapboxgl.accessToken = 'pk.a...bunch..of..letters......'; //  Put your access tokenm between the single quotes.
+mapboxgl.accessToken = 'pk.a...bunch..of..letters......'; //  Put your access token between the single quotes.
 
 ```
 This is what mine looks like:
@@ -78,7 +78,7 @@ For this section of code, we will need a [style ID](https://docs.mapbox.com/help
 
 We are going to initialize a map with the variable name "map", and is going to be added into the div, or `container`, with the ID "map". Keep in mind. These could be changed.
 
-In the code block below, _you will need to replace the coordinates_ for the starting map center position. Set the coordinates for Portland, Oregon by replacing the longitude field witih: -122.6788 and the latitude field with: 45.5212. 
+In the code block below, _you will need to replace the coordinates_ for the starting map center position. Set the coordinates for Portland, Oregon by replacing the longitude field with: -122.6788 and the latitude field with: 45.5212. 
 
 ```javascript
 var map = new mapboxgl.Map({
@@ -124,7 +124,7 @@ var marker = new mapboxgl.Marker()
 
 Take a look at the [API](https://docs.mapbox.com/mapbox-gl-js/api/#marker) to see what marker options are available.
 
-2. Let's change the color of our marker. The default color for the marker is blue. Add a color parameter to your code and change the color! You can use the name of most common colors (`'red'`, `'blue'`, `'green'`) or enter a HEX colod code (`'#42f569'`) or rgb color (`'rgb(0,255,0)'`). We'll cover colors in more detail soon. Try a few different colors.
+2. Let's change the color of our marker. The default color for the marker is blue. Add a color parameter to your code and change the color! You can use the name of most common colors (`'red'`, `'blue'`, `'green'`) or enter a HEX color code (`'#42f569'`) or rgb color (`'rgb(0,255,0)'`). We'll cover colors in more detail soon. Try a few different colors.
 
 ```javascript
 var marker = new mapboxgl.Marker({color:'red'})
@@ -132,7 +132,7 @@ var marker = new mapboxgl.Marker({color:'red'})
   .addTo(map);
 ```
 
-3. Want to add antother marker? Create a second marker variable. It has to have a different variable name. In this case, we'll use "marker2".
+3. Want to add another marker? Create a second marker variable. It has to have a different variable name. In this case, we'll use "marker2".
 
 ```javascript
 var marker2 = new mapboxgl.Marker({color:'red'})
@@ -176,9 +176,13 @@ var popup_layer = new mapboxgl.Popup({closeOnClick: false})
 .addTo(map); //add this popup to the map!
 ```
 
-5. Try changing the `closeOnClick` argument to 'true' and refresh your map. What happens when you click anywhere in the map? 
+5. Try changing the `closeOnClick` argument to 'true' and refresh your map. What happens when you click anywhere in the map?
 
-Take a look at the [popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup) documentation to learn more about the parameters associated with Mapbox popups. Try adjusting one or more parameters - for instace, try changing the anchor position. 
+```javascript
+var popup_layer = new mapboxgl.Popup({closeOnClick: true}) 
+```
+
+6. Take a look at the [popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup) documentation to learn more about the parameters associated with Mapbox popups. Try adjusting one or more parameters - for instance, try changing the anchor position. 
 
 
 ```javascript
@@ -190,7 +194,7 @@ Take a look at the [popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup) docu
         .addTo(map);
 ```
 
-6. Notice that you can put any HTML tags, as a single string element, within the `setHTML` functions. For example, you could add an [image](https://www.w3schools.com/html/html_images.asp) or a [hyperlink](https://www.w3schools.com/html/html_links.asp).
+7. Notice that you can put any HTML tags, as a single string element, within the `setHTML` functions. For example, you could add an [image](https://www.w3schools.com/html/html_images.asp) or a [hyperlink](https://www.w3schools.com/html/html_links.asp).
 Keep in mind, since you need to add a single string element, you'll have to carefully nest any quotation marks.
 
 ```javascript
@@ -216,9 +220,9 @@ Following the tutorial, you now have a full page map. Now use what you have lear
 
 1.  Include at least 1 pin marker with a custom color (use a different color than default blue or the tutorial's red).
 2.  Add a pop-up that has a link (use a different link than the tutorial).
-3.  Change the basemap style to something other than streets-v11.
+3.  Change the basemap style to something other than streets-v11. Use any default or gallery style.
 4.
-    * If you are working on your own computer, or WinSCP has been installed in the lab, upload your map to your UO pages webspace following the steps shown to you in th lecture, and submit your URL e.g. `pages.uoregon.edu/[your user name]/WebMapping/QuickStartMap.html`, **OR**
+    * If you are working on your own computer, or WinSCP has been installed in the lab, upload your map to your UO pages webspace following the steps shown to you in the lecture, and submit your URL e.g. `pages.uoregon.edu/[your user name]/WebMapping/QuickStartMap.html`, **OR**
     * If you are working in the lab and we still don't have WinSCP installed, attach your .html file to this submission
 
 
@@ -231,7 +235,7 @@ You can add the same WMS layer to your map by changing the zoom and center to:
 	center: [-74.5447, 40.6892] 
 ```
 
-After the map has been initialzed, still withing the `script` section, use map.addSource and map.addLayer to add a connection to your WMS service, and add it as a layer to the map.
+After the map has been initialized, still withing the `script` section, use map.addSource and map.addLayer to add a connection to your WMS service, and add it as a layer to the map.
 
 ```javascript
 map.on('load', function () {
