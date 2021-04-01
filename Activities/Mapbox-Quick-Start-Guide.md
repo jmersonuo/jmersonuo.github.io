@@ -13,35 +13,35 @@ First, let's add references to the Mapbox JavaScript and CSS, which will allow u
 
 1. In the `head` section, indicate the path to the Mapbox JavaScript file:
 
-```html
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+	```html
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     
-```
+	```
 
 2. Indicate the path to Mapbox CSS file __after__ Mapbox’s JavaScript:
 
-```html
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
-```
+	```html
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+	```
 
 3. Put a div element with a certain id where you want your map to be:
 
-```html
-<div id='map'></div>
+	```html
+	<div id='map'></div>
 
-```
+	```
 
 4. You will also want to apply some CSS to specify what the layout looks like. **This is particularly important** for the map div, which *won't* show up on the page until you give it a height. 
 
-The CSS below means the body section of your web page has 0 margin or padding, and the div with the ID "map", will fill the space 0 pixels from the top, to 0 pixels from the bottom, and 100% of the width of your browser page... resulting in a full page map!
+	The CSS below means the body section of your web page has 0 margin or padding, and the div with the ID "map", will fill the space 0 pixels from the top, to 0 pixels from the bottom, and 100% of the width of your browser page... resulting in a full page map!
 
-```css
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-```
+	```css
+		body { margin:0; padding:0; }
+		#map { position:absolute; top:0; bottom:0; width:100%; }
+	```
 
 
-<a title="Felix.leg [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Css_box_model.svg"><img width="512" alt="Css box model" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Css_box_model.svg/512px-Css_box_model.svg.png"></a>
+	<a title="Felix.leg [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Css_box_model.svg"><img width="512" alt="Css box model" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Css_box_model.svg/512px-Css_box_model.svg.png"></a>
 
 Now you have a framework for where the map will go, but no map yet. If you look at your `.html` file in a browser, it will be blank.
 
