@@ -150,7 +150,7 @@ Popups are usually used when you want to attach some information to a particular
 
 	```javascript
 	var popup = new mapboxgl.Popup({ offset: 25 })
-	.setHTML('Hello World. Welcome to Portland!');
+	    .setHTML('Hello World. Welcome to Portland!');
 	```
 
 2. Next add the `.setPopup` function to your existing marker variable:
@@ -168,9 +168,9 @@ Popups are usually used when you want to attach some information to a particular
 
 	```javascript
 	var popup_layer = new mapboxgl.Popup({closeOnClick: false}) 
-	.setLngLat([-122.64, 45.5]) //popup coordinates
-	.setHTML('<h1>Hi Portland!</h1>') //popup text
-	.addTo(map); //add this popup to the map!
+	    .setLngLat([-122.64, 45.5]) //popup coordinates
+	    .setHTML('<h1>Hi Portland!</h1>') //popup text
+	    .addTo(map); //add this popup to the map!
 	```
 
 5. Try changing the `closeOnClick` argument to 'true' and refresh your map. What happens when you click anywhere in the map?
@@ -183,7 +183,7 @@ Popups are usually used when you want to attach some information to a particular
 
 
 	```javascript
-	      var popup_layer = new mapboxgl.Popup({
+	var popup_layer = new mapboxgl.Popup({
 		  closeOnClick: true, anchor: 'top-right'
 		})
 		.setLngLat([-122.64, 45.5])
@@ -195,7 +195,7 @@ Popups are usually used when you want to attach some information to a particular
 Keep in mind, since you need to add a single string element, you'll have to carefully nest any quotation marks.
 
 	```javascript
-	    var popup_layer_voodoo = new mapboxgl.Popup({
+	var popup_layer_voodoo = new mapboxgl.Popup({
 		  closeOnClick: true, anchor: 'top-left'
 		})
 		.setLngLat([-122.673308, 45.522675])
