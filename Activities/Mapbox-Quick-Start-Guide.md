@@ -28,7 +28,6 @@ First, let's add references to the Mapbox JavaScript and CSS, which will allow u
 
 	```html
 	<div id='map'></div>
-
 	```
 
 4. You will also want to apply some CSS to specify what the layout looks like. **This is particularly important** for the map div, which *won't* show up on the page until you give it a height. 
