@@ -1,6 +1,6 @@
 ## Mapbox Quick Start Guide
 
-You should have already signed up for a mapbox account. If you have not, do so [here](https://account.mapbox.com/auth/signup/).
+You should have already signed up for a mapbox account. If you have not, do so [here](https://account.mapbox.com/auth/signup/){:target="_blank"}.
 
 This step-by-step guide will quickly get you started on Mapbox basics, including setting up a Mapbox map, working with markers and popups and setting up events!
 
@@ -49,9 +49,9 @@ Let’s create a map, centered on Portland, with the lovely "Mapbox Streets" sty
 Tip: all the following code should be between `script` tags.
 
 
-1. To use any of Mapbox's tools, APIs, or SDKs, you'll need a Mapbox [access token](https://docs.mapbox.com/help/glossary/access-token/). Mapbox uses access tokens to associate API requests with your account. 
+1. To use any of Mapbox's tools, APIs, or SDKs, you'll need a Mapbox [access token](https://docs.mapbox.com/help/glossary/access-token/){:target="_blank"}. Mapbox uses access tokens to associate API requests with your account. 
 
-	You can find your access tokens, create new ones, or delete existing ones on your Access Tokens page [https://account.mapbox.com/access-tokens/](https://account.mapbox.com/access-tokens/) or programmatically using the [Mapbox Tokens API](https://docs.mapbox.com/api/accounts/#tokens)._
+	You can find your access tokens, create new ones, or delete existing ones on your Access Tokens page. Log into Mapbox and go to [https://account.mapbox.com/access-tokens/](https://account.mapbox.com/access-tokens/){:target="_blank"}.
 
 	The first thing you'll need to do is add **your** access token, which gives you access to the mapbox API, access to styles associated with your account, and will track how many views your map has. Without this, the map will not work.
 
@@ -71,7 +71,7 @@ Tip: all the following code should be between `script` tags.
 	  </p>
 
 
-	For this section of code, we will need a [style ID](https://docs.mapbox.com/help/glossary/style-id/).  A style ID is a unique identifier for each style associated with any Mapbox username. To use the Mapbox Styles API, you will need to know the style ID for the map style you are working with.
+	For this section of code, we will need a [style ID](https://docs.mapbox.com/help/glossary/style-id/){:target="_blank"}.  A style ID is a unique identifier for each style associated with any Mapbox username. To use the Mapbox Styles API, you will need to know the style ID for the map style you are working with.
 
 	We are going to initialize a map with the variable name "map", and is going to be added into the div, or `container`, with the ID "map". Keep in mind. These could be changed.
 
@@ -86,7 +86,7 @@ Tip: all the following code should be between `script` tags.
 	});
 	```
 
-	Tip: You can quickly find map coordinates by going to https://maps.google.com and right-click on the map, or go to http://geojson.io and find coordinates by placing a marker.
+	Tip: You can quickly find map coordinates by going to [https://maps.google.com](https://maps.google.com){:target="_blank"} and right-click on the map, or go to [http://geojson.io](http://geojson.io){:target="_blank"} and find coordinates by placing a marker.
 
 	That’s it! You have a working Mapbox map now. Open your `.html` file in a browser and take a look.
 
@@ -144,7 +144,7 @@ Besides a basemap, you can easily add other things to your map, including marker
 	<img src ="Images/Portland_Markers.png">
 </p>
 
-Popups are usually used when you want to attach some information to a particular object on a map. In Mapbox, you can [add a popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup) to your features with only a few lines of code! 
+Popups are usually used when you want to attach some information to a particular object on a map. In Mapbox, you can [add a popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup){:target="_blank"} to your features with only a few lines of code! 
 
 1. First, you will need to initialize a pop-up variable. In the JavaScript section of your code, make sure you declare this variable **before** you declare the marker variable, which will use it: 
 
@@ -179,7 +179,7 @@ Popups are usually used when you want to attach some information to a particular
 	var popup_layer = new mapboxgl.Popup({closeOnClick: true}) 
 	```
 
-6. Take a look at the [popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup) documentation to learn more about the parameters associated with Mapbox popups. Try adjusting one or more parameters - for instance, try changing the anchor position. 
+6. Take a look at the API [popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup){:target="_blank"} documentation to learn more about the parameters associated with Mapbox popups. Try adjusting one or more parameters - for instance, try changing the anchor position. 
 
 
 	```javascript
@@ -191,7 +191,7 @@ Popups are usually used when you want to attach some information to a particular
 		.addTo(map);
 	```
 
-7. Notice that you can put any HTML tags, as a single string element, within the `setHTML` functions. For example, you could add an [image](https://www.w3schools.com/html/html_images.asp) or a [hyperlink](https://www.w3schools.com/html/html_links.asp).
+7. Notice that you can put any HTML tags, as a single string element, within the `setHTML` functions. For example, you could add an [image](https://www.w3schools.com/html/html_images.asp){:target="_blank"} or a [hyperlink](https://www.w3schools.com/html/html_links.asp){:target="_blank"}.
 Keep in mind, since you need to add a single string element, you'll have to carefully nest any quotation marks.
 
 	```javascript
@@ -224,7 +224,7 @@ Following the tutorial, you now have a full page map. Now use what you have lear
 
 
 ### Optional advanced:
-If you would like to try using a web map service WMS to your map, take a look at this example https://docs.mapbox.com/mapbox-gl-js/example/wms/
+If you would like to try using a web map service WMS to your map, take a look at this example [https://docs.mapbox.com/mapbox-gl-js/example/wms/](https://docs.mapbox.com/mapbox-gl-js/example/wms/){:target="_blank"}
 You can add the same WMS layer to your map by changing the zoom and center to:
 
 	```javascript
