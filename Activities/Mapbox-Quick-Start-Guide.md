@@ -227,14 +227,14 @@ Following the tutorial, you now have a full page map. Now use what you have lear
 If you would like to try using a web map service WMS to your map, take a look at this example [https://docs.mapbox.com/mapbox-gl-js/example/wms/](https://docs.mapbox.com/mapbox-gl-js/example/wms/){:target="_blank"}
 You can add the same WMS layer to your map by changing the zoom and center to:
 
-	```javascript
-		zoom: 8,
-		center: [-74.5447, 40.6892] 
-	```
+```
+zoom: 8,
+center: [-74.5447, 40.6892] 
+```
 
 After the map has been initialized, still withing the `script` section, use map.addSource and map.addLayer to add a connection to your WMS service, and add it as a layer to the map.
 
-	```javascript
+```
 	map.on('load', function () {
 		map.addSource('wms-test-source', {
 			'type': 'raster',
@@ -255,4 +255,4 @@ After the map has been initialized, still withing the `script` section, use map.
 			'aeroway-line'
 		);
 	});
-	```
+```
