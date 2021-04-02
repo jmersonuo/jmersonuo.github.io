@@ -42,6 +42,8 @@ First, let's add references to the Mapbox JavaScript and CSS, which will allow u
 
 
 	<a title="Felix.leg [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Css_box_model.svg"><img width="512" alt="Css box model" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Css_box_model.svg/512px-Css_box_model.svg.png"></a>
+	
+	You can read about each specific CSS property at the W3Schools CSS reference: [margin](https://www.w3schools.com/cssref/pr_margin.asp){:target="_blank"}, [padding](https://www.w3schools.com/cssref/pr_padding.asp){:target="_blank"}, [position](https://www.w3schools.com/cssref/pr_position.asp){:target="_blank"}
 
 Now you have a framework for where the map will go, but no map yet. If you look at your `.html` file in a browser, it will be blank.
 
