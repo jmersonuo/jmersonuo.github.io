@@ -86,6 +86,16 @@ Tip: all the following code should be between `script` tags.
 	});
 	```
 
+
+	STOP! Did you set the coordinates? This is a skill you need!
+	It should look like this:
+	
+	<p align = "center">
+	<img src = "Images/mapInitialization.JPG">
+	</p>
+
+
+
 	Tip: You can quickly find map coordinates by going to [https://maps.google.com](https://maps.google.com){:target="_blank"} and right-click on the map, or go to [http://geojson.io](http://geojson.io){:target="_blank"} and find coordinates by placing a marker.
 
 	That’s it! You have a working Mapbox map now. Open your `.html` file in a browser and take a look.
