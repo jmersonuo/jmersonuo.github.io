@@ -71,7 +71,7 @@ Tip: all the following code should be between `script` tags.
 	  </p>
 
 
-	For this section of code, we will need a [style ID](https://docs.mapbox.com/help/glossary/style-id/){:target="_blank"}.  A style ID is a unique identifier for each style associated with any Mapbox username. To use the Mapbox Styles API, you will need to know the style ID for the map style you are working with.
+	For this section of code, we will need a [style ID](https://docs.mapbox.com/api/maps/styles/){:target="_blank"}.  A style ID is a unique identifier for each style associated with any Mapbox username. To use the Mapbox Styles API, you will need to know the style ID for the map style you are working with.
 
 	We are going to initialize a map with the variable name "map", and is going to be added into the div, or `container`, with the ID "map". Keep in mind. These could be changed.
 
@@ -227,7 +227,7 @@ Following the tutorial, you now have a full page map. Now use what you have lear
 
 1.  Include at least 1 pin marker with a custom color (use a different color than default blue or the tutorial's red).
 2.  Add a pop-up that has a link (use a different link than the tutorial).
-3.  Change the basemap style to something other than streets-v11. Use any default or gallery style.
+3.  Change the basemap style to something other than streets-v11. Use any [default style](https://docs.mapbox.com/api/maps/styles/){:target="_blank"} or [gallery style](https://www.mapbox.com/gallery/){:target="_blank"}
 4.
     * If you are working on your own computer, or WinSCP has been installed in the lab, upload your map to your UO pages webspace following the steps shown to you in the lecture, and submit your URL e.g. `pages.uoregon.edu/[your user name]/WebMapping/QuickStartMap.html`, **OR**
     * If you are working in the lab and we still don't have WinSCP installed, attach your .html file to this submission
