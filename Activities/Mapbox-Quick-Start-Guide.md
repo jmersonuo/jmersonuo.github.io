@@ -231,8 +231,8 @@ Following the tutorial, you now have a full page map. Now use what you have lear
 
 1.  Include at least 1 pin marker with a custom color (use a different color than default blue or the tutorial's red).
 2.  Add a pop-up that has a link (use a different link than the tutorial).
-3.  Change the basemap style to something other than streets-v11. Use any [default style](https://docs.mapbox.com/api/maps/styles/){:target="_blank"} or [gallery style](https://www.mapbox.com/gallery/){:target="_blank"}
-4.
+3.  Change the basemap style to something other than streets-v11. Use any [default style](https://docs.mapbox.com/api/maps/styles/){:target="_blank"} or [gallery style](https://www.mapbox.com/gallery/){:target="_blank"}  
+4.  
     * If you are working on your own computer, or WinSCP has been installed in the lab, upload your map to your UO pages webspace following the steps shown to you in the lecture, and submit your URL e.g. `pages.uoregon.edu/[your user name]/WebMapping/QuickStartMap.html`, **OR**
     * If you are working in the lab and we still don't have WinSCP installed, attach your .html file to this submission
 
