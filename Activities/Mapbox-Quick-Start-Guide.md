@@ -6,6 +6,8 @@ This step-by-step guide will quickly get you started on Mapbox basics, including
 
 Begin by copying the files for Assignment 1 from the R Drive "Class_Data" folder to your personal workspace on the "R" drive or to your personal computer. Open and edit the QuickStartMap.html using a text editor, such as Brackets. 
 
+If you aren't sure how to access the course R Drive, use the instructions on Canvas and get help from the the class GEs.
+
 ### I. Preparing your page
 
 Notice that the outline of a web page is already there for you. The `DOCTYPE` is html, there is a `head` section, which includes a `style` subsection. There is `body` section, with a `script` subsection.  There are also comments throughout that will guide where you should place the code below. 
