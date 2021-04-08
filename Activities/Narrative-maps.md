@@ -1,6 +1,6 @@
 ## Making Fixed and Fly-To Maps
 
-Today we are going to make two different types of maps. The first will be fixed in place. It can't be panned or zoomed by the user. The second will automatically fly-to predefined locations, guiding the user around.
+Today we are going to make two different types of maps. The first will be fixed in place. It can't be panned or zoomed by the user, but is otherwise still and interactive map. The second will automatically fly-to predefined locations, guiding the user around.
 
 ### A. FIXED MAPS
 
@@ -8,114 +8,118 @@ Today we are going to make two different types of maps. The first will be fixed 
 
 Start with the file `Fixed-structure.html` in the R-Drive Class_Data folder. Once again, you need to do the following preparation steps on your page (this time we are adding version 1.4.0):
 
-* Include Mapbox JavaScript file:
+1. Include Mapbox JavaScript file:
 
-```html
-      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js'></script>
-```
-* Include Mapbox CSS file __after__ Mapbox’s JavaScript:
+      ```html
+            <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+      ```
+2. Include Mapbox CSS file __after__ Mapbox’s JavaScript:
 
-```html
-      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css' rel='stylesheet' />
-```
+      ```html
+           <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+      ```
 
-In the body, you'll add the [heading](https://www.w3schools.com/tags/tag_hn.asp) Map 1, a div element with the id "map1" where you want your first map to be, and a line or [horizontal rule](https://www.w3schools.com/tags/tag_hr.asp) below the map. Click the links to view the HMTL reference for these tags:
+3. In the body, you'll add the [heading](https://www.w3schools.com/tags/tag_hn.asp) Map 1, a div element with the id "map1" where you want your first map to be, and a line or [horizontal rule](https://www.w3schools.com/tags/tag_hr.asp) below the map. Tip: Click the links to view the HMTL reference for these tags:
 
-```html
+      ```html
       <h1> Map 1: </h1>
-      <div id='map1'></div>
+            <div id='map1'></div>
       <hr>
-```
+      ```
 
-This time we will apply some CSS to specify the height and width of the map. This is particularly important for the map div, which *won't* show up on the page until you give it a height. Notice the css class for the map matches the ID of the map DIV (map1):
+4. This time we will apply some CSS to specify an exact height and width for the map. This is particularly important for the map div, which *won't* show up on the page until you give it a height. Notice the css class for the map matches the ID of the map DIV (map1):
 
-```css
-        body { margin:50px; padding:0; }
-        #map1 { position:relative; height:300px; width:50%;}
-```
+      ```css
+              body { margin:50px; padding:0; }
+              #map1 { position:relative; height:300px; width:50%;}
+      ```
 
-This means the body div of your web page has a 50px margin around the edge, and the div with the ID "map1", will be 300px tall, and will take 50% of the width of your browser page.
+      This means the body div of your web page has a 50px margin around the edge, and the div with the ID "map1", will be 300px tall, and will take 50% of the width of your browser page.
 
-Now you’re ready to initialize the map and customize it.
+      Now you’re ready to initialize the map and customize it.
 
 ### 2. Setting up the fixed map
 
 Let’s create a map the centered on Portland with the Mapbox Streets style. Note: all the following code should be between script tags.
 
-Add your access token. Without this, the mapbox code will not work. 
+1. Add **your** access token, which gives you access to the mapbox API, access to styles associated with your account, and will track how many views your map has. Without this, the map will not work. 
+      Remember, you can find your access tokens, create new ones, or delete existing ones on your [Access Tokens page](https://account.mapbox.com/access-tokens/) 
 
-```javascript
-mapboxgl.accessToken = 'pk.eyJ1IjoibWpkYW5pZWxzb24iLCJhIjoiY2p2bzFlbnZ5MW5pbTN5cGJ2YWp2MW9vaiJ9.kAaZq3iyJwvrMLK7XDs_qw';
-```
+	```javascript
+	mapboxgl.accessToken = 'pk.a...bunch..of..letters......'; //  Put your access token between the single quotes.
+	```
+	This is what mine looks like:
 
-Remember, you can find your access tokens, create new ones, or delete existing ones on your [Access Tokens page](https://account.mapbox.com/access-tokens/) or programmatically using the [Mapbox Tokens API](https://docs.mapbox.com/api/accounts/#tokens).
+	<p align="center">
+	    <img src= "Images/01_token.JPG">
+	</p>
 
-Next, we’ll initialize the map and set its view with specified coordinates and a zoom level.
+2. Next, initialize the map and set its view with specified coordinates and a zoom level.
  
-In the code block below, you will need to replace:
-1. the style URL, using 'mapbox://styles/mapbox/streets-v11' or check out the map [API](https://docs.mapbox.com/mapbox-gl-js/api/#map) to see more style options 
-2. the coordinates for the starting position. Use Portland, Oregon: [-122.6788, 45.5212]
+      In the code block below, you will need to replace:
+      1. the style URL, using 'mapbox://styles/mapbox/streets-v11' or check out the map [API](https://docs.mapbox.com/mapbox-gl-js/api/#map) to see more style options 
+      2. the coordinates for the starting position. Use Portland, Oregon: [-122.6788, 45.5212]
 
-```javascript
-var map = new mapboxgl.Map({
-    container: 'map1', // id of a div on your page, where the map will be inserted
-    style: 'set-the-style-here', // the style URL 'mapbox://styles/mapbox/streets-v11' 
-    center: [set-the-lng, set-the-lat], // starting position [lng, lat] eg. [-122.6788, 45.5212]
-    zoom: 11 // starting zoom 
-});
-```
+      ```javascript
+      var map = new mapboxgl.Map({
+          container: 'map1', // id of a div on your page, where the map will be inserted
+          style: 'set-the-style-here', // the style URL 'mapbox://styles/mapbox/streets-v11' 
+          center: [set-the-lng, set-the-lat], // starting position [lng, lat] eg. [-122.6788, 45.5212]
+          zoom: 11 // starting zoom 
+      });
+      ```
 
-<p align="center">
-    <img src= "Images/02_Portland.JPG">
-</p>
+      <p align="center">
+          <img src= "Images/02_Portland.JPG">
+      </p>
 
 **STOP:** Your map should be ready to take a look at. Open your `.html` file in a browser and take a look.
 No map? There is likely an error in your code. Open your browser's Developer tools or Web Console to look for error messages.
 
-Can you pan and zoom? Yes. Great. Now, let's take that ability away.
+Can you pan and zoom? Yes!? Great. Now, let's take that ability away.
 
 ### 3. Add a marker with a popup
 
 Like last time, let’s add a marker to the same longitude/latitude that we centered our map on. Remember you can look at the [API](https://docs.mapbox.com/mapbox-gl-js/api/#marker) to see what marker options are available.
 
-Add the script:
+Add the script to inialize the popup and initialize a marker that uses that popup:
 
-```javascript
-            var popup = new mapboxgl.Popup()
-                .setText('This is my first point.');
+      ```javascript
+                  var popup = new mapboxgl.Popup()
+                      .setText('This is my first point.');
 
-            var marker = new mapboxgl.Marker({color:'red'})
-              .setLngLat([-122.6788, 45.5212]) // starting position [lng, lat]
-              .setPopup(popup) //add the popup to the marker 
-              .addTo(map);
-```
+                  var marker = new mapboxgl.Marker({color:'red'})
+                    .setLngLat([-122.6788, 45.5212]) // starting position [lng, lat]
+                    .setPopup(popup) //add the popup named "popup" to this marker 
+                    .addTo(map);
+      ```
 
-It should look like this:
+      It should look like this:
 
-<p align = "center">
-    <img src="Images/02_Portland_Marker.JPG">
- </p>
+      <p align = "center">
+          <img src="Images/02_Portland_Marker.JPG">
+       </p>
 
 ### 4. Remove the map interactivity
 
 Let's look at the map API again, specifically at the [interaction handlers](https://docs.mapbox.com/mapbox-gl-js/api/#user%20interaction%20handlers). Map objects have several interactivity handlers. We are going to disable them *all*.
-After the map was initialized, add the following JavaScript code:
+1. After the map was initialized, add the following JavaScript code:
 
-```javascript
-            // Disable drag and zoom handlers.
-            map.dragPan.disable();
-            map.scrollZoom.disable();
-            map.boxZoom.disable();
-            map.dragRotate.disable();
-            map.keyboard.disable();
-            map.doubleClickZoom.disable();
-            map.touchZoomRotate.disable();
-            map.touchZoomRotate.disableRotation();
-```
+      ```javascript
+                  // Disable drag and zoom handlers.
+                  map.dragPan.disable();
+                  map.scrollZoom.disable();
+                  map.boxZoom.disable();
+                  map.dragRotate.disable();
+                  map.keyboard.disable();
+                  map.doubleClickZoom.disable();
+                  map.touchZoomRotate.disable();
+                  map.touchZoomRotate.disableRotation();
+      ```
 
 Notice that each line starts with `map`, which is the variable name used when we initialized the map: `var map = new mapboxgl.Map(...`.
 
-**STOP:** Test it out. Can you pan and zoom anymore? Nope. Success!
+**STOP:** Test it out. Can you pan and zoom anymore? Nope. Can you still click on the marker to open the popup? Success, a fixed, interactive map!
 
 ### 5. Add a second map
 
