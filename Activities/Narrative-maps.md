@@ -91,6 +91,7 @@ Add the script to inialize the popup and initialize a marker that uses that popu
                   var marker = new mapboxgl.Marker({color:'red'})
                     .setLngLat([-122.6788, 45.5212]) // starting position [lng, lat]
                     .setPopup(popup) //add the popup named "popup" to this marker 
+		    .addTo(map); // add it to the map with the ID "map"
 ```
 
 It should look like this:
@@ -151,7 +152,7 @@ To add a second map to your page. You have to add a div to the structure of your
 		    var marker2 = new mapboxgl.Marker({color:'blue'})
 		      .setLngLat([-122.6588, 45.1212]) // starting position [lng, lat] 
 		      .setPopup(popup2) //add the popup to the marker 
-		      .addTo(map2);
+		      .addTo(map2); // id it to the map with the ID *map2*
 	```
 5. Disable the map interactivity. Notice we are disabling interactivity on **map2**:
 	```javascript        
