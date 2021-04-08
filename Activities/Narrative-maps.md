@@ -124,52 +124,52 @@ Notice that each line starts with `map`, which is the variable name used when we
 
 To add a second map to your page. You have to add a div to the structure of your page, use CSS to make sure the map has some height, initialize the second map, create another pop-up and marker, and disable the interactivity for the second map as well. We will use `map2` for both the div ID and the map object variable name. 
 
-Below the `<HR>`, add another heading and div:
-```html
-        <h1> Map 2:</h1>
-        <div id='map2'></div>
-```
-In the head, stlye section, add CSS to stlye the second map:
-```css
-#map2 { position:relative; height:300px; width:50%;}
-```
-Below the other JavaScript, initialize the 2nd map:
-```javascript
-            // Then initialize the 2nd map
-            var map2 = new mapboxgl.Map({
-                container: 'map2', // id of a div on your page, where the map will be inserted
-                style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-                center: [-122.6588, 45.1212], // starting position [lng, lat] eg. [-122.6788, 45.5212]
-                zoom: 11 // starting zoom 
-            });
-```    
-Add a marker:
-```javascript
-            var popup2 = new mapboxgl.Popup()
-                .setText('This is my second point.');
+1. Below the `<HR>`, add another heading and div:
+	```html
+		<h1> Map 2:</h1>
+		<div id='map2'></div>
+	```
+2. In the head, stlye section, add CSS to stlye the second map:
+	```css
+	#map2 { position:relative; height:300px; width:50%;}
+	```
+3. Below the other JavaScript, initialize the 2nd map:
+	```javascript
+		    // Then initialize the 2nd map
+		    var map2 = new mapboxgl.Map({
+			container: 'map2', // id of a div on your page, where the map will be inserted
+			style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+			center: [-122.6588, 45.1212], // starting position [lng, lat] eg. [-122.6788, 45.5212]
+			zoom: 11 // starting zoom 
+		    });
+	```    
+4. Add a marker:
+	```javascript
+		    var popup2 = new mapboxgl.Popup()
+			.setText('This is my second point.');
 
-            var marker2 = new mapboxgl.Marker({color:'blue'})
-              .setLngLat([-122.6588, 45.1212]) // starting position [lng, lat] 
-              .setPopup(popup2) //add the popup to the marker 
-              .addTo(map2);
-```
-Disable the map interactivity. Notice we are disabling interactivity on **map2**:
-```javascript        
-            // Disable drag and zoom handlers. 
-            map2.dragPan.disable();
-            map2.scrollZoom.disable();
-            map2.boxZoom.disable();
-            map2.dragRotate.disable();
-            map2.keyboard.disable();
-            map2.doubleClickZoom.disable();
-            map2.touchZoomRotate.disable();
-            map2.touchZoomRotate.disableRotation();
-```
+		    var marker2 = new mapboxgl.Marker({color:'blue'})
+		      .setLngLat([-122.6588, 45.1212]) // starting position [lng, lat] 
+		      .setPopup(popup2) //add the popup to the marker 
+		      .addTo(map2);
+	```
+5. Disable the map interactivity. Notice we are disabling interactivity on **map2**:
+	```javascript        
+		    // Disable drag and zoom handlers. 
+		    map2.dragPan.disable();
+		    map2.scrollZoom.disable();
+		    map2.boxZoom.disable();
+		    map2.dragRotate.disable();
+		    map2.keyboard.disable();
+		    map2.doubleClickZoom.disable();
+		    map2.touchZoomRotate.disable();
+		    map2.touchZoomRotate.disableRotation();
+	```
 <p align = "center">
     <img src="Images/02_TwoMaps.JPG" height="80%">
  </p>
 
-**Congratulations!** You've made a webpage with two static maps! _For your assignment, you'll have to add a third map._
+**Congratulations!** You've made a webpage with two fixed maps! _For your assignment, you'll have to add a third map on your own._
 
 
 ### B. Fly-To Maps
