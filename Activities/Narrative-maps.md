@@ -84,21 +84,20 @@ Like last time, let’s add a marker to the same longitude/latitude that we cent
 
 Add the script to inialize the popup and initialize a marker that uses that popup:
 
-      ```javascript
+ ```javascript
                   var popup = new mapboxgl.Popup()
                       .setText('This is my first point.');
 
                   var marker = new mapboxgl.Marker({color:'red'})
                     .setLngLat([-122.6788, 45.5212]) // starting position [lng, lat]
                     .setPopup(popup) //add the popup named "popup" to this marker 
-                    .addTo(map);
-      ```
+```
 
-      It should look like this:
+It should look like this:
 
-      <p align = "center">
-          <img src="Images/02_Portland_Marker.JPG">
-       </p>
+<p align = "center">
+	<img src="Images/02_Portland_Marker.JPG">
+</p>
 
 ### 4. Remove the map interactivity
 
