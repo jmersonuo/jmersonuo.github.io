@@ -170,7 +170,8 @@ To add a second map to your page. You have to add a div to the structure of your
     <img src="Images/02_TwoMaps.JPG" height="80%">
  </p>
 
-**Congratulations!** You've made a webpage with two fixed maps! _For your assignment, you'll have to add a third map on your own._
+**Congratulations!** You've made a webpage with two fixed maps! 
+**_For your assignment, you'll have to add a third map on your own._**
 
 
 ### B. Fly-To Maps
