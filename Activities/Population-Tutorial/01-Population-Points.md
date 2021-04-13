@@ -133,74 +133,83 @@ Each layer in Studio can be styled individually by clicking on the name of the l
 
 ### VI. Data driven style
 
-In the Mapbox Studio style editor, you can assign a radius size value to each layer based on its zoom level. Click the Style link in the **renters** layer. Next, click **Style across zoom range**. We'll talk more about why we do this during the upcoming Scale lecture.
+In the Mapbox Studio style editor, you can assign a radius size value to each layer based on its zoom level. 
 
-The rate of change is set to **Linear**. Click **Edit** and select **Exponential** instead. Click **Done**. Since you have set the rate of change to step, the colors for each range of density between stops will be uniform.
+1. Click the Style tab in the **renters** layer and click on **Radius** Next, click **Style across zoom range**. We'll talk more about why we do this during the upcoming Scale lecture.
 
-Now it's time to start adding stops and radius sizes! You will create several stops in order to make your layers visible at multiple zoom levels. Click on **Edit** in the first zoom level stop. 
+2. The rate of change is set to **Linear**. Click **Edit** and select **Exponential** instead. Click **Done**. Since you have set the rate of change to step, the colors for each range of density between stops will be uniform.
 
-Change zoom value of the first stop to 12, and change the radius size to **1.5**.  Click **Done**.
-
-<p align="center">
-  <img src="Images/Style-Zoom-Range.gif">
-</p>
+  Now it's time to start adding stops and radius sizes! You will create several stops in order to make your layers visible at multiple zoom levels. 
   
+3. Click on **Edit** in the first zoom level stop. 
+4. Change zoom value of the first stop to 12, and change the radius size to **1.5**.  Click **Done**.
+
+  <p align="center">
+    <img src="Images/Style-Zoom-Range.gif">
+  </p>
   
-Click **+ Add another stop**. Assign the zoom level to 15, and change the radius size to **1.58**. Click **Done**. 
-Create the following additional stops:
 
-| Zoom Level | Value   |
-|------------|---------|
-| 16         | 2.5     |
-| 17         | 3.95    |
-| 18         | 6.25    |
-| 19         | 9.88    |
-| 20         | 15.63   |
-| 21         | 24.71   |
-| 22         | 39.06   |
+  Click **+ Add another stop**. Assign the zoom level to 15, and change the radius size to **1.58**. Click **Done**. 
+  Create the following additional stops:
+
+    | Zoom Level | Value   |
+    |------------|---------|
+    | 16         | 2.5     |
+    | 17         | 3.95    |
+    | 18         | 6.25    |
+    | 19         | 9.88    |
+    | 20         | 15.63   |
+    | 21         | 24.71   |
+    | 22         | 39.06   |
 
 
 
-As you start adding stops, you will see the map change on the right to reflect the new stops. In this case, you will notice the size of the **renters** layer changing as you zoom in and out of the map. 
 
+As you start adding stops, you will see the map change on the right to reflect the new stops. In this case, you will notice the size of the **renters** layer changing as you zoom in and out of the map. This is what it will look like when you are done:
+
+
+  <p align="center">
+    <img src="Images/Style-Zoom-Range.png">
+  </p>
+  
 
 ### VII. Style your owner data layer
 
 We want to apply the same styling rules that we just assigned to our **renters** layer to our **owners** layer. Instead of inputting all of the values that we just added to our **renters** layer, we can simply copy the rules that wecreated into our **owners** layer. It is stored as "JSON" code.
 
-Click the Style link in the **renters** layer. Next, click on **radius** and find the JSON editor symbol ```</>```. Select the JSON editor and copy the code OR copy the code written below. 
+1. Click the Style link in the **renters** layer. Next, click on **radius** and find the JSON editor symbol ```</>```. Select the JSON editor and copy the code OR copy the code written below. 
 
-```javascript
-[
-  "interpolate",
-  ["exponential", 1],
-  ["zoom"],
-  12,
-  1.5,
-  15,
-  1.58,
-  16,
-  2.5,
-  17,
-  3.95,
-  18,
-  6.25,
-  19,
-  9.88,
-  20,
-  15.63,
-  21,
-  24.71,
-  22,
-  39.06
-]
-```
+    ```javascript
+    [
+      "interpolate",
+      ["exponential", 1],
+      ["zoom"],
+      12,
+      1.5,
+      15,
+      1.58,
+      16,
+      2.5,
+      17,
+      3.95,
+      18,
+      6.25,
+      19,
+      9.88,
+      20,
+      15.63,
+      21,
+      24.71,
+      22,
+      39.06
+    ]
+    ```
 
-Navigate to your **owners** layer and select **radius**. Paste the styling rules into the JSON editor of this layer. You should see these changes immediately. 
+2. Navigate to your **owners** layer and select **radius**. Paste the styling rules into the JSON editor of this layer. You should see these changes immediately. 
 
-<p align="center">
-  <img src="Images/Radius_Size.gif">
-</p>
+    <p align="center">
+      <img src="Images/Radius_Size.gif">
+    </p>
 
 
 ----------
