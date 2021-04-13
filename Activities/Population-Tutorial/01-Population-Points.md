@@ -1,7 +1,7 @@
 <img src="Images/logo.png" width="150px">
 
-
-<h2 align="center"> Mapping renters vs owners in Portland </h2>
+<h2 align="center"> Custom data in an interactive map in mapbox </h2>
+<h3 align="center"> Mapping renters vs owners in Portland </h3>
 <h3 align="center"> Part I: Creating a map style in Studio </h3>
 
 The US Census makes owner/renter information readily available for census block geometries, in this lab series we are going to view the owner/renter information in different ways: 
@@ -28,52 +28,59 @@ For this first exercise, we will be creating a dot density map that displays the
 
 ----------
 
-### I Data
+### I. Data
 
   The data are provided as [MBTiles](https://docs.mapbox.com/help/glossary/mbtiles){:target="_blank"}, but you could also upload shapefiles or JSON files.
 
 
 1. Download the following:
-  - Portland **renters** by block group 2017 [Download](Data/Renters.mbtiles) 
-  - Portland **homeowners** by block group 2017 [Download](Data/Owners.mbtiles)  
+  - Portland **renters** by block group 2017: [Download](Data/Renters.mbtiles) 
+  - Portland **homeowners** by block group 2017: [Download](Data/Owners.mbtiles)  
   [Source: US Census](https://data.census.gov){:target="_blank"} 
  
  2. Note where it saved (e.g, your downloads folder)
 
 ----------
 
-### II Uploading data to Studio
+### II. Uploading data to Studio
 
-To add the renter data to a style in Mapbox Studio, you need to upload it to your account. 
-1. Login to mapbox, and go to your [**Tilesets**](https://www.mapbox.com/studio/tilesets){:target="_blank"} page in Mapbox Studio to upload your *renter* data.
+To add the data to a style in Mapbox Studio, you need to upload it to your account. 
+1. Login to [mapbox studio](https://studio.mapbox.com/){:target="_blank"}
+    Notice the buttons on the top right "Styles", "Tilesets", "Datasets", you'll be navigating throught each of these.
+    <p align="center">
+      <img src="Images/tilesets.png">
+    </p>
 
-  <p align="center">
-    <img src="Images/tilesets.png">
-  </p>
-
-
-2. Upload your **owner** data to Mapbox, by clicking "New tileset"
-3. Drag and drop the Owners.mbtiles file into the site or click "sElect a file" and browse to it
-*Note*: you are limited to 20 uploads / month via this drag and drop method. If you need to upload more than that, you can do so via methods that we won't be covering in class. 
+2. Go to your **Tilesets** page
+3. Upload your **owner** data to Mapbox, by clicking "New tileset"
+4. Drag and drop the Owners.mbtiles file into the site or click "Select a file" and browse to it  
+  *Note*: you are limited to 20 uploads / month via this drag and drop method. If you need to upload more than that, you can do so via methods that we won't be covering in class. 
+5. Upload your **renter** data to Mapbox, by clicking "New tileset"
+6. Drag and drop the Renters.mbtiles file into the site or click "Select a file" and browse to it
 
 ----------
 
-### Create a new style 
+### III. Create a new style for your data
 
-After you've uploaded your data, it's time to create a new "style" so you can put it on the map! Go to your [Styles page](https://www.mapbox.com/studio/). Click the **New style** button. Find the *Dark Template* style and click **Customize Dark**.
+After you've uploaded your data, it's time to create a new "style" so you can put it on the map!  
 
-<p align="center">
-  <img src="Images/Dark_style.png">
-</p>
+1. Go to your **Styles** page. Click the **New style** button. 
+    Notice: the different styles contain both different color schemes, and differnt basemap data 
+2. Select the *Basic* template style and choose the variation called **Galaxy**.
+3. Click "Customize Basic"
 
-Rename the style so that you can find it later: click into the title field in the upper left side of the screen to change the title from "Dark" to ‘Renters vs Owners’.
+    <p align="center">
+      <img src="Images/Dark_style.png">
+    </p>
 
-<p align="center">
-  <img src="Images/Name_Change-Generic.gif">
-</p>
-  
+4. Rename the style so that you can find it later: click into the title field in the upper left side of the screen to change the title from "Basic" to ‘Renters vs Owners’.
 
-*You can always refer to the* [*Mapbox Studio Manual*](https://www.mapbox.com/studio-manual/reference/styles/) *for more information on working with styles.*
+    <p align="center">
+      <img src="Images/Name_Change-Generic.gif">
+    </p>
+
+
+  *You can always refer to the* [*Mapbox Studio Manual*](https://www.mapbox.com/studio-manual/reference/styles/) *for more information on working with styles.*
 
 ----------
 
