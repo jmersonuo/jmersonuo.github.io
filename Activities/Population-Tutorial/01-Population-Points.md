@@ -13,35 +13,48 @@ For this first exercise, we will be creating a dot density map that displays the
 
 ### In this tutorial you will:
 
-- [Create a style](https://www.mapbox.com/help/how-map-design-works/#how-map-styles-work) for a basemap for a dynamic, [interactive web map or app](https://www.mapbox.com/help/how-web-apps-work/)
-- [Manage and edit layers](https://www.mapbox.com/studio-manual/reference/styles/#style-editor) in your style
-- [Add data](https://www.mapbox.com/help/uploads/) to a style
-- Make [beautiful custom styles](https://www.mapbox.com/designer-maps/)
-- Use [dynamic styling rules](https://blog.mapbox.com/studio-expressions-design-81012e2dab55) (e.g. based on zoom level, based on field in the data etc.)
+  - Create a style for a basemap for a dynamic, interactive web map
+  - Manage and edit layers in your style
+  - Add data to a style
+  - Modify an existing style
+  - Use dynamic styling rules (e.g. based on zoom level, based on field in the data etc.)
+
+  Here are some additional resources you can explore:
+  - [How map styles work](https://www.mapbox.com/help/how-map-design-works/#how-map-styles-work){:target="_blank"} 
+  - [How we apps work](https://www.mapbox.com/help/how-web-apps-work/){:target="_blank"}
+  - [Style editor](https://www.mapbox.com/studio-manual/reference/styles/#style-editor){:target="_blank"} in your style
+  - [Uploading data](https://www.mapbox.com/help/uploads/){:target="_blank"}
+  - [More powerful styling in Studio](https://blog.mapbox.com/studio-expressions-design-81012e2dab55){:target="_blank"} (e.g. based on zoom level, based on field in the data etc.)
 
 ----------
 
-### Data
+### I Data
 
-The data are provided as [MBTiles](https://docs.mapbox.com/help/glossary/mbtiles), but you could also upload shapefiles or JSON files.
+  The data are provided as [MBTiles](https://docs.mapbox.com/help/glossary/mbtiles){:target="_blank"}, but you could also upload shapefiles or JSON files.
 
-- [Portland renters by block group 2017](Data/Renters.mbtiles) - [Source: US Census](https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml) 
 
-- [Portland homeowners by block group 2017](Data/Owners.mbtiles) - [Source: US Census](https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml) 
+1. Download the following:
+  - Portland **renters** by block group 2017 [Download](Data/Renters.mbtiles) 
+  - Portland **homeowners** by block group 2017 [Download](Data/Owners.mbtiles)  
+  [Source: US Census](https://data.census.gov){:target="_blank"} 
+ 
+ 2. Note where it saved (e.g, your downloads folder)
 
 ----------
 
-### Uploading data to Studio
+### II Uploading data to Studio
 
-To add the renter data to a style in Mapbox Studio, you need to upload it to your account. Go to your [**Tilesets**](https://www.mapbox.com/studio/tilesets) [page](https://www.mapbox.com/studio/tilesets) in Mapbox Studio to upload your *renter* data.
+To add the renter data to a style in Mapbox Studio, you need to upload it to your account. 
+1. Login to mapbox, and go to your [**Tilesets**](https://www.mapbox.com/studio/tilesets){:target="_blank"} page in Mapbox Studio to upload your *renter* data.
 
-<p align="center">
-  <img src="Images/tilesets.png">
-</p>
+  <p align="center">
+    <img src="Images/tilesets.png">
+  </p>
 
 
-<br>
-Next, upload your *owner* data to Mapbox. 
+2. Upload your **owner** data to Mapbox, by clicking "New tileset"
+3. Drag and drop the Owners.mbtiles file into the site or click "sElect a file" and browse to it
+*Note*: you are limited to 20 uploads / month via this drag and drop method. If you need to upload more than that, you can do so via methods that we won't be covering in class. 
 
 ----------
 
