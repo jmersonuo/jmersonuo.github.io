@@ -139,17 +139,17 @@ In the Mapbox Studio style editor, you can assign a radius size value to each la
 
 2. The rate of change is set to **Linear**. Click **Edit** and select **Exponential** instead. Click **Done**. Since you have set the rate of change to step, the colors for each range of density between stops will be uniform.
 
-  Now it's time to start adding stops and radius sizes! You will create several stops in order to make your layers visible at multiple zoom levels. 
+    Now it's time to start adding stops and radius sizes! You will create several stops in order to make your layers visible at multiple zoom levels. 
   
 3. Click on **Edit** in the first zoom level stop. 
 4. Change zoom value of the first stop to 12, and change the radius size to **1.5**.  Click **Done**.
 
-  <p align="center">
-    <img src="Images/Style-Zoom-Range.gif">
-  </p>
+    <p align="center">
+      <img src="Images/Style-Zoom-Range.gif">
+    </p>
   
 
-  Click **+ Add another stop**. Assign the zoom level to 15, and change the radius size to **1.58**. Click **Done**. 
+5. Click **+ Add another stop**. Assign the zoom level to 15, and change the radius size to **1.58**. Click **Done**. 
   Create the following additional stops:
 
     | Zoom Level | Value   |
@@ -163,15 +163,13 @@ In the Mapbox Studio style editor, you can assign a radius size value to each la
     | 22         | 39.06   |
 
 
-
-
-As you start adding stops, you will see the map change on the right to reflect the new stops. In this case, you will notice the size of the **renters** layer changing as you zoom in and out of the map. This is what it will look like when you are done:
+As you start adding stops, you will see the map change on the right to reflect the new stops. In this case, you will notice the size of the **renters** layer changing as you zoom in and out of the map. This is what the radius setting will look like when you are done:
 
 
   <p align="center">
     <img src="Images/Style-Zoom-Range.png">
   </p>
-  
+ 
 
 ### VII. Style your owner data layer
 
@@ -205,7 +203,7 @@ We want to apply the same styling rules that we just assigned to our **renters**
     ]
     ```
 
-2. Navigate to your **owners** layer and select **radius**. Paste the styling rules into the JSON editor of this layer. You should see these changes immediately. 
+2. Navigate to your **owners** layer and select **radius**. Paste the styling rules into the JSON editor of this layer. You should see these changes immediately. Zoom in and out to see your handywork! The dots will change size as you zoom in and out. 
 
     <p align="center">
       <img src="Images/Radius_Size.gif">
@@ -217,13 +215,16 @@ We want to apply the same styling rules that we just assigned to our **renters**
 
 ### VII. Reorder your layers
 
-<p align="center">
-  <img src="Images/Labels.png">
-</p>
+One of the most powerful things about the Mapbox Studio style editor is that you can reorder any of the elements of the map. Forexample, we can move the basemap lables over our new dat layers. Notice in the image below that we moved the settlement-labels to the top of the layer list. This puts the labels from the basemap on top of the data that you've added to the standard map layers.
 
-One of the most powerful things about the Mapbox Studio style editor is that you can reorder any of the elements of the map. Notice in the photo above that we moved the settlement-labels to the top of the layer list. This puts the labels from the basemap on top of the data that you've added to the standard map layers.
+To make your map match the example above:
+  1. click and drag the **renters** layer to below the **Place labels, place-labels** group
+  2. click and drag the **owners** layer to below the **Place labels, place-labels** group
 
-To make your map match the example above, move your **settlement-label** to the top of your layer list.
+
+  <p align="center">
+    <img src="Images/Labels.png">
+  </p>
 
 ----------
 
