@@ -13,11 +13,11 @@ For this first exercise, we will be creating a dot density map that displays the
 
 ### In this tutorial you will:
 
-  - Create a style for a basemap for a dynamic, interactive web map
+  - Upload data 
+  - Add data, as a layer, to a basic style
+  - Set dynamic styling rules (e.g. based on zoom level, based on field in the data etc.)
   - Manage and edit layers in your style
-  - Add data to a style
-  - Modify an existing style
-  - Use dynamic styling rules (e.g. based on zoom level, based on field in the data etc.)
+
 
   Here are some additional resources you can explore:
   - [How map styles work](https://www.mapbox.com/help/how-map-design-works/#how-map-styles-work){:target="_blank"} 
@@ -103,14 +103,14 @@ After you've uploaded your data, it's time to create a new "style" so you can pu
 4. Now add the ower data. In the *New layer* panel, look in the list of *Data sources* for the **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
 
 
-5. Click the **Style** tab and the map will switch back to style mode displaying your new layer. You will see the state data on the map with a default style (black with 100% opacity).
+5. Click the **Style** tab and the map will switch back to style mode displaying your new layers. You will see the state data on the map with a default style (black with 100% opacity).
 
     <p align="center">
       <img src="Images/Style-Layers.png">
     </p>
 
 
-6. You could rename the layer by clicking on the name of the layer at the top of the panel. 
+6. Rename the layers "Owners" and "Renters" by clicking on the name of each layer at the top of the panel. 
 
 STOP: At this point you should have added both the renter-occupued and owner-occupied tilesets to your "Owners vs Renters" styles and both should have the "type" circle.
 
@@ -120,13 +120,14 @@ STOP: At this point you should have added both the renter-occupued and owner-occ
 
 Each layer in Studio can be styled individually by clicking on the name of the layer in the Layer list. There are several layer types to choose from. Each layer type has a unique set of layer properties that can be specified. There are a few options for specifying property values. You can pick values individually, based on a data attribute, based on the zoom level, or the value of another property. For more information on layer types and their styling rules check out this [reference guide](https://docs.mapbox.com/studio-manual/reference/styles/).
 
-In the Mapbox Studio style editor, you can assign a color to each of your layers. Click the Style link in the **renters** layer. Next, click **color** and change the hex color value (after the '#') to #cc00c2 (bright pink).
+1. Here in the Mapbox Studio style editor, you can assign a color to each of your layers. Click the Style tab in the **renters** layer. 
+2. Click **color** and change the hex color value (after the '#') to #cc00c2 (bright pink).
 
-<p align="center">
-  <img src="Images/Color-picker.png">
-</p>
-  
- Next, click the Style link in the **owners** layer and change the hex color value (after the '#') to a  #00d2e6 (bright blue). 
+    <p align="center">
+      <img src="Images/Color-picker.png">
+    </p>
+
+ 3. Next, click the Style link in the **owners** layer and change the hex color value (after the '#') to a  #00d2e6 (bright blue). 
 
 ----------
 
