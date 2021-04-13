@@ -232,14 +232,22 @@ To make your map match the example above:
 ### IX. Publish the style
 
 
-Now that you've got your map looking good, it's time to publish your "Style" so that it can be viewed on the web! Click the **Publish style** button at the top of the toolbar on the right side of the screen, then click **Publish** again on the next prompt.
+Now that you've got your map looking good, it's time to publish your "Style" so that it can be viewed on the web! 
 
-<p align='center'>
-  <img src="Images/publish_style.png">
-</p>
+1. Click the **Publish...** button at the top of the toolbar on the right side of the screen, then click **Publish** again on the change preview prompt.
+
+    <p align='center'>
+      <img src="Images/publish_style.png">
+    </p>
 
 Hooray! Your style is now published. If you go back to your Styles page, you will see your new style at the top of the list.
-You can use your ‘Share URL’ to open your style in a new browser tab and share it with collaborators for review.
+
+You can use your ‘Share URL’ to open your style in a new browser tab and share it with collaborators for review, or you can use the style URL to embed it using JavaScript.
+
+    <p align='center'>
+      <img src="Images/share.png">
+    </p>
+
 
 ----------
 
