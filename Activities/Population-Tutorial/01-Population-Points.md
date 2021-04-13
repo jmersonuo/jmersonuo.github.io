@@ -73,50 +73,50 @@ After you've uploaded your data, it's time to create a new "style" so you can pu
       <img src="Images/Dark_style.png">
     </p>
 
-4. Rename the style so that you can find it later: click into the title field in the upper left side of the screen to change the title from "Basic" to ‘Renters vs Owners’.
+4. Rename the style so that you can find and use it later: click into the title field in the upper left side of the screen to change the title from "Basic" to ‘Renters vs Owners’.
 
     <p align="center">
       <img src="Images/Name_Change-Generic.gif">
     </p>
 
-
-  *You can always refer to the* [*Mapbox Studio Manual*](https://www.mapbox.com/studio-manual/reference/styles/) *for more information on working with styles.*
-
-----------
-
-### Add a new layer
-
-To add and symbolize your data, you will need to add a **new layer** to the map. At the top of the layer panel, click **+ Add layer** and select your **renter** layer that you just uploaded as a tileset. 
-
-The editor is now showing your map in “x-ray mode.” X-ray mode shows all the data in the sources added to the style, regardless of whether there is a layer to style it.
-
-In the *New layer* panel, look in the list of *Data sources* for the **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
-
-
-The default Basic map view is not centered on the United States. Mapbox Studio recognizes that the data you have uploaded is focused on a different location, so it displays the message *"This tileset isn't available from your map view."* Click **Go to data**, and the map view will refocus on the United States.
-
-Your new layer will be highlighted on the x-ray map. If it doesn't look like the image below, you may need to change the "Type" to "Circle".
-
-<p align="center">
-  <img src="Images/zray.png">
-</p>
-
-
-Click the **Style** tab and the map will switch back to style mode displaying your new layer. You will see the state data on the map with a default style (black with 100% opacity).
-
-
-<p align="center">
-  <img src="Images/Style-Layers.png">
-</p>
-
-
-You can rename the layer by clicking on the name of the layer at the top of the panel. 
-
-At this point you should have added both the renter-occupued and owner-occupied tilesets to your "Owners vs Renters" styles and both should have the "type" circle.
+5. close any popups and notifications about tours and new features. You can view those later if you'd like. *You can always refer to the* [*Mapbox Studio Manual*](https://www.mapbox.com/studio-manual/reference/styles/) *for more information on working with styles.*
 
 ----------
 
-### Symbolize or "style" the layer
+### IV. Add a new layer
+
+1. To add and symbolize your data, you will need to add it as a new layer to the style. On the **Layers** panel, click the **+** button to add a new layer, from the **Source** menu, and sfind and select the **renter** layer that you uploaded as a tileset. 
+    <p align="center">
+      <img src="Images/New Layer.png">
+    </p>
+
+2. A popup may tell you the data isn't visible in your current view. click **Go to data** to quicky pan from Boston to Portland.  
+
+3. The editor is now showing your map in “x-ray mode.” X-ray mode shows all the data in the sources added to the style, regardless of whether there is a layer to style it.
+
+    Your new layer will be highlighted on the x-ray map. If it doesn't look like the image below, you may need to change the "Type" to "Circle".
+
+    <p align="center">
+      <img src="Images/zray.png">
+    </p>
+
+4. Now add the ower data. In the *New layer* panel, look in the list of *Data sources* for the **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
+
+
+5. Click the **Style** tab and the map will switch back to style mode displaying your new layer. You will see the state data on the map with a default style (black with 100% opacity).
+
+    <p align="center">
+      <img src="Images/Style-Layers.png">
+    </p>
+
+
+6. You could rename the layer by clicking on the name of the layer at the top of the panel. 
+
+STOP: At this point you should have added both the renter-occupued and owner-occupied tilesets to your "Owners vs Renters" styles and both should have the "type" circle.
+
+----------
+
+### V. Symbolize or "style" the layer
 
 Each layer in Studio can be styled individually by clicking on the name of the layer in the Layer list. There are several layer types to choose from. Each layer type has a unique set of layer properties that can be specified. There are a few options for specifying property values. You can pick values individually, based on a data attribute, based on the zoom level, or the value of another property. For more information on layer types and their styling rules check out this [reference guide](https://docs.mapbox.com/studio-manual/reference/styles/).
 
@@ -130,7 +130,7 @@ In the Mapbox Studio style editor, you can assign a color to each of your layers
 
 ----------
 
-### Data driven style
+### VI. Data driven style
 
 In the Mapbox Studio style editor, you can assign a radius size value to each layer based on its zoom level. Click the Style link in the **renters** layer. Next, click **Style across zoom range**. We'll talk more about why we do this during the upcoming Scale lecture.
 
@@ -163,7 +163,7 @@ Create the following additional stops:
 As you start adding stops, you will see the map change on the right to reflect the new stops. In this case, you will notice the size of the **renters** layer changing as you zoom in and out of the map. 
 
 
-### Style your owner data layer
+### VII. Style your owner data layer
 
 We want to apply the same styling rules that we just assigned to our **renters** layer to our **owners** layer. Instead of inputting all of the values that we just added to our **renters** layer, we can simply copy the rules that wecreated into our **owners** layer. It is stored as "JSON" code.
 
@@ -205,7 +205,7 @@ Navigate to your **owners** layer and select **radius**. Paste the styling rules
 ----------
 
 
-### Reorder your layers
+### VII. Reorder your layers
 
 <p align="center">
   <img src="Images/Labels.png">
@@ -218,7 +218,7 @@ To make your map match the example above, move your **settlement-label** to the 
 ----------
 
 
-### Publish the style
+### IX. Publish the style
 
 
 Now that you've got your map looking good, it's time to publish your "Style" so that it can be viewed on the web! Click the **Publish style** button at the top of the toolbar on the right side of the screen, then click **Publish** again on the next prompt.
@@ -232,9 +232,8 @@ You can use your ‘Share URL’ to open your style in a new browser tab and sha
 
 ----------
 
-### Next steps
-
-Head to [part 2](02-Population-Points.md) to learn how add interactive elements to your map and publish it to the web with Mapbox GL JS. 
+### X. Next steps
+Next lab, we'll complete [part 2](02-Population-Points.md) to add interactive elements to your map and publish it to the web with Mapbox GL JS. 
 
 
 
