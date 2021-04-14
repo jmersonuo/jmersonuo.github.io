@@ -244,9 +244,9 @@ Hooray! Your style is now published. If you go back to your Styles page, you wil
 
 You can use your ‘Share URL’ to open your style in a new browser tab and share it with collaborators for review, or you can use the style URL to embed it using JavaScript.
 
-    <p align='center'>
+<p align='center'>
       <img src="Images/share.png">
-    </p>
+</p>
 
 
 ----------
