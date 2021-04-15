@@ -268,7 +268,7 @@ The following code adds the *styling rules* that will be style the DOM elements 
           }
     ```
 
-5. Take a look at your changes! Blank? Check your bowser's console for errors.
+5. Take a look at your changes! Blank? Check your bowser's console for errors. Click on the arrow on the top of the legend. Is it interactive? No, not yet.
 
     **Recap:** To create the legend, we added several DOM Objects using DIVs and Spans using HTML. The "style" of these objects was set using CSS. The CSS was used to make legend object float in front of the map. A legend could also be fixed outside the map frame above, below, or beside the map. The colors of the dots in the legend were hard coded to match the colors we used in the map in the HTML above. If you change the colors in your style, you'll _also_ have to change them in the legend.
 
@@ -292,9 +292,13 @@ The following code adds the *styling rules* that will be style the DOM elements 
     
  ```     
  
-Take a look at your changes in a browser once again! Is it interactive? <br>
+Take a look at your changes in a browser once again! Click on the arrow on the top of the legend. Is it interactive? <br>
 Yes? Nice.
 
+It should look like this.
+<p align="center">
+    <img src="https://media.giphy.com/media/Bj2UZgqqzUxwc/giphy.gif">
+</p>
 
 ----------
 
@@ -306,16 +310,16 @@ Yes? Nice.
 
 If you don't follow how every line of code works, that's OK! At this point it is important to understand that you added several chunks for code. Some for the map, some for the legend, and some for interactivity. You could add your own data to a Mapbox Style, add that style to this map, make a few changes to the legend and you can make this interactive map your own!
 
-<p align="center">
-    <img src="https://media.giphy.com/media/Bj2UZgqqzUxwc/giphy.gif">
-</p>
+    <p align="center">
+        <img src="../Population-Tutorial/Images/finalmap.png">
+    </p>
 
 
 
 ----------
 
 ### VI. What to submit
-1. Change the colors of your points in the "style" and in the map *legend*. Note: your legend should match your map.
+1. Change the colors of your points in the "style" and in the map *legend*. Note: your legend should match your map your custom colors should be visible on your Pages webspace.
 2. Be sure you added comments above each section of code, as instructed. Use the examples provided, or add something more verbose that would help future you, or another developer know that each section of code is for
 3. Clean up your alignment. Subsections should be nested (tabbed over). At a minimum, you should be able to draw a line down your screen between the opening and closing `head`,`body`, and `script` tags without running into other lines of code.
 4. Answer the questions in the submission
