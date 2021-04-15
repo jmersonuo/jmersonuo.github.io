@@ -7,8 +7,10 @@
 ### In this tutorial you will:
 
 - Learn about GL-JS and adding interactivity
-- Call on map layers using GL-JS
-- Learn additional tools and tricks for creating compelling maps
+- Add map elements using mapbox  GL-JS
+- Style page elements using CSS
+- Add interactivity using JavaScript
+
 
 A few additional resources for Mapbox GL JS:
 
@@ -73,7 +75,7 @@ To begin, we will be using a sample code to initialize a simple web map.
 
 ### II. Adding your custom style
 
-1. To load the style that you created in the part 1, you need to go to go your Mapbox Studio account and copy the Style URL forthe map you mase last lab:
+1. To load the style that you created in the part 1, you need to go to go your Mapbox Studio account and copy the Style URL for the map you made last lab:
 
     <p align="center">
         <img src="../Opioid-Tutorial/Images/mapstyle.gif">
