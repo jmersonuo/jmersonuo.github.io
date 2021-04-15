@@ -46,8 +46,8 @@ To begin, we will be using a sample code to initialize a simple web map.
         <title>Owners vs Renters Map</title>
         <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js'></script>
-        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css' rel='stylesheet' />
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
         <style>
             body { margin:0; padding:0; }
             #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -206,8 +206,8 @@ The following code adds the *styling rules* that will be style the DOM elements 
 
     ```
 
-2. Next, we will need to add a container to display background information about our map and data sources. Add a new DIV container to your DOM by adding this code below the map DIV container. Add a comment above this div explaining what it is. (e.g. // map decription panel).
-
+2. Next, we will need to add a container to display background information about our map and data sources. Add a new DIV container to your DOM by adding this code below the _map_ DIV. It is `HTML` so, don't add in between the `script`tags. That's for JavaScript. 
+    
     ```html
          <div class="descriptionPanel" id="descriptionPanel" style="height: 320px;">
             <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
@@ -217,11 +217,14 @@ The following code adds the *styling rules* that will be style the DOM elements 
             This is a map showing every single person in the United States as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block, however within each block location is randomized. Points are colored based on number home owners versus renters on a block.
             </p>
          </div>
+4. Add a comment above this div explaining what it is. (e.g. // map decription panel).
+
 
     ```
-    Notice that the specification for the div with the `class=descriptionPanel` was defined in the CSS. Classes in CSS start with a `.`:
+    *Notice* that the specification for the div with the `class=descriptionPanel` was defined in the CSS. Classes in CSS start with a `.`:
     
     ```css
+       FIND THIS CODE AND EXAMINE IT, BUT YOU DON"T NEED TO ADD THIS A SECOND TIME.
       /*  style for items with the class "descriptionPanel" */
       .descriptionPanel {
         position: absolute;
@@ -254,9 +257,10 @@ The following code adds the *styling rules* that will be style the DOM elements 
          <div class="layerDescription">Renters</div>
       </div>
     ```
-    Notice that the specification for the `class=layerDescription` was defined in the CSS:
+    *Notice* that the specification for the `class=layerDescription` was defined in the CSS:
     
     ```css
+     FIND THIS CODE AND EXAMINE IT, BUT YOU DON"T NEED TO ADD THIS A SECOND TIME.
         .layerDescription {
             color: white;
             float: left;
