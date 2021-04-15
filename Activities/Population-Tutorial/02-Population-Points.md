@@ -82,7 +82,7 @@ To begin, we will be using a sample code to initialize a simple web map.
     <h3 align ="center"> OR </h3>
     <br>
     <p align="center">
-        <img src="../Opioid-Tutorial/Images/share.png">
+        <img src="../Population-Tutorial/Images/share.png">
     </p>
 
 2. Paste your style URL into your code where the map is initialized in the JavaScript.
