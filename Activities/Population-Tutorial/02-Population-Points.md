@@ -23,75 +23,78 @@ A few additional resources for Mapbox GL JS:
 
 ----------
 
-I. ### SEtting up your HTML page
+### I. Setting up your HTML page
 
 
 To begin, we will be using a sample code to initialize a simple web map. 
 1. Create a new folder for this assignment on your *R-drive*. 
 2. Create a new file called `index.html` and copy the code below.
 
-Note that is contains the standard sections: `HEAD` contaiing a title (text in the bowser tab), links to the mapbox JS and CSS libraries, and *new* library we have not used yet called [Boostrap](https://www.w3schools.com/whatis/whatis_bootstrap.asp){:target="_blank"}. Boostrap is a CSS Framework for developing responsive websites and we'll explore it when get more into layout.
+    Note that is contains the standard sections: 
+        - `HMTL` containing everything else
+        - `head` containing a title (text in the bowser tab), links to the mapbox JS and CSS libraries, and *new* library we have not used yet called [Boostrap](https://www.w3schools.com/whatis/whatis_bootstrap.asp){:target="_blank"}. Boostrap is a CSS Framework for developing responsive websites and we'll explore it when get more into layout.
+        - `style` within the `head`
+        - `body` which contains a `div` for the map, and a `script` section.
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset='utf-8' />
+        <title>Owners vs Renters Map</title>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css' rel='stylesheet' />
+        <style>
+            body { margin:0; padding:0; }
+            #map { position:absolute; top:0; bottom:0; width:100%; }
+        </style>
+    </head>
+    <body>
+
+      <div id='map'></div>
+      <script>
+        mapboxgl.accessToken = 'ACCESS TOKEN GOES HERE'; 
+        var map = new mapboxgl.Map({
+            container: 'map', // container id
+            style: 'STYLE URL GOES HERE', // stylesheet location
+        });
+      </script>
+
+    </body>
+    </html>
+    ```
 
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8' />
-    <title>Owners vs Renters Map</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
-</head>
-<body>
-
-  <div id='map'></div>
-  <script>
-    mapboxgl.accessToken = 'ACCESS TOKEN GOES HERE'; 
-    var map = new mapboxgl.Map({
-        container: 'map', // container id
-        style: 'STYLE URL GOES HERE', // stylesheet location
-    });
-  </script>
-
-</body>
-</html>
-```
-
-
-- Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/define-access-token/)in the section that says "ACCESS TOKEN GOES HERE" (get your access token from your Mapbox [‘Account’ page](https://account.mapbox.com/)).
+3. Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/define-access-token/)in the section that says "ACCESS TOKEN GOES HERE". Remember, you can get your access token from your Mapbox [‘Account’ page](https://account.mapbox.com/)).
 
 ----------
 
-### Adding your custom style
+### II. Adding your custom style
 
-**Style**: Mapbox GL JS permits URLs instead of literal data in several places, including data sources. To load the style that you created in the part 1, you need to go to go your Mapbox Studio account and find your Style URL ([how to find your Style URL](https://docs.mapbox.com/help/glossary/style-url/)):
+1. To load the style that you created in the part 1, you need to go to go your Mapbox Studio account and copy the Style URL forthe map you mase last lab:
 
-<p align="center">
-    <img src="../Opioid-Tutorial/Images/mapstyle.gif">
-</p>
-<br>
-<h3 align ="center"> OR </h3>
-<br>
-<p align="center">
-    <img src="../Opioid-Tutorial/Images/mapstyle.png">
-</p>
+    <p align="center">
+        <img src="../Opioid-Tutorial/Images/mapstyle.gif">
+    </p>
+    <br>
+    <h3 align ="center"> OR </h3>
+    <br>
+    <p align="center">
+        <img src="../Opioid-Tutorial/Images/mapstyle.png">
+    </p>
 
-- Copy and paste your style URL into your code. *(Look for a row with something that says something like 'STYLE URL GOES HERE')*
-<p align="center">
-    <img src="Images/Initial_Map.png">
+2. Copy and paste your style URL into your code. *(Look for a row with something that says something like 'STYLE URL GOES HERE')*
+    <p align="center">
+        <img src="Images/Initial_Map.png">
     </p>
 
 Now preview it in a browser to view your changes. Is is blank? Did you add _your_ mapbox token and your style?
 
 ----------
 
-## Add navigation controls
+## III. Add navigation controls
 
 Let’s try modifying the code to add a new element to the map. Currently, you can zoom in and out using your mouse, but we want to add navigation controls (zoom in, zoom out, and north arrow) to make the zooming functions more obvious to our end users.
 
@@ -113,7 +116,7 @@ map.addControl(new mapboxgl.NavigationControl());
 
 ----------
 
-### Adding a dynamic legend
+### IV. Adding a dynamic legend
 
 The following code adds the *styling rules* that will be style the 
 DOM objects that show the legend for the map. 
@@ -235,7 +238,7 @@ Take a look at your changes! Blank? Check your bowser's console for errors.
 
 <hr>
 <br>
-Next, let's add interaction to our legend. For this we need to add some JavaScript. The following variable 'state' and function 'panelSelect' will enable the user to show and hide the map description that we added in the last section. Copy and paste the code snippet after your map variable. Add a comment above to indicate what this is for (e.g. // legend interatcion).
+Next, let's add interaction to our legend. For this we need to add some JavaScript. The following variable 'state' and function 'panelSelect' will enable the user to show and hide the map description that we added in the last section. Copy and paste the code snippet after your map variable. Add a comment above to indicate what this is for (e.g. // legend interaction).
 
 ```javascript
       var state = { panelOpen: true };
@@ -260,7 +263,7 @@ Yes? Nice.
 
 ----------
 
-### Create your webpage
+### V. Create your webpage
 
 Copy the file to your "Pages" webspace to see it working live.  
 
