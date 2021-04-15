@@ -121,36 +121,105 @@ Let’s try modifying the code to add a new **element** to the map. Currently, y
 
 ### IV. Adding a dynamic legend
 
-The following code adds the *styling rules* that will be style the 
-DOM objects that show the legend for the map. 
+The following code adds the *styling rules* that will be style the DOM elements that show the legend for the map. 
 
-This is CSS. Copy and paste the following just after the opening ``<style>`` tag in the `<head>` of your code: 
+1. This is CSS (cascading style sheets) code, so it goes in the `style` section. Copy and paste the following just after the opening ``<style>`` tag in the `<head>` of your code: 
 
-```css
-      /*  stlye for paragraph tags */
-      p {
-        color: white; 
-      }
+    ```css
+          /*  stlye for paragraph tags */
+          p {
+            color: white; 
+          }
 
-      /* style for heading level 4 tags */
-      h4 { 
-        color: white;
-        margin-left: 10px;
-      }
+          /* style for heading level 4 tags */
+          h4 { 
+            color: white;
+            margin-left: 10px;
+          }
 
-      /*  style for items with the class "LegendContainer" */
-      .LegendContainer {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        z-index: 2;
-        width: 300px;
-        height: 40px;
-        background: rgba(80, 80, 80, .75);
-        transition: width 2s, height 2s;
-        border-radius: 7px;
-      }
+          /*  style for items with the class "LegendContainer" */
+          .LegendContainer {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 2;
+            width: 300px;
+            height: 40px;
+            background: rgba(80, 80, 80, .75);
+            transition: width 2s, height 2s;
+            border-radius: 7px;
+          }
 
+          /*  style for items with the class "descriptionPanel" */
+          .descriptionPanel {
+            position: absolute;
+            bottom: 65px;
+            left: 20px;
+            z-index: 2;
+            width: 300px;
+            height: 40px;
+            background: rgba(80, 80, 80, .75);
+            transition: width 2s, height 2s;
+            overflow: hidden;
+            border-radius: 7px;
+          }
+
+          /*  style for items with the class "descriptionPanel" when active */
+          .LegendContainer:active {
+            width: 240px;
+            height: 250px;
+          }
+
+          /* style for items with the class "legendItem" */
+          .legendItem {
+            float: left;
+            width: 50%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+
+          /* style for items with the class "colorBox" */
+          .colorBox {
+            width: 20px;
+            height: 20px;
+            float: left;
+            border-radius: 10px;
+            margin-left: 10px;
+          }
+
+          /* style for items with the class "layerDescription" */
+          .layerDescription {
+            color: white;
+            float: left;
+            margin-left: 10px;
+          }
+
+          /* style for items with the class "chevron" */
+          .chevron {
+            position: relative;
+            margin-left: 45%;
+            font-size: x-large;
+            color: white;
+          }
+
+    ```
+
+2. Next, we will need to add a container to display background information about our map and data sources. Add a new DIV container to your DOM by adding this code below the map DIV container. Add a comment above this div explaining what it is. (e.g. // map decription panel).
+
+    ```html
+         <div class="descriptionPanel" id="descriptionPanel" style="height: 320px;">
+            <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
+            <hr />
+            <h4>WHAT AM I LOOKING AT?</h4><br />
+            <p style="margin-left: 10px; margin-right: 10px;">
+            This is a map showing every single person in the United States as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block, however within each block location is randomized. Points are colored based on number home owners versus renters on a block.
+            </p>
+         </div>
+
+    ```
+    Notice that the specification for the div with the `class=descriptionPanel` was defined in the CSS. Classes in CSS start with a `.`:
+    
+    ```css
       /*  style for items with the class "descriptionPanel" */
       .descriptionPanel {
         position: absolute;
@@ -164,84 +233,41 @@ This is CSS. Copy and paste the following just after the opening ``<style>`` tag
         overflow: hidden;
         border-radius: 7px;
       }
+    ```
+    
+    You can find each of these properties in the [CCS reference](https://www.w3schools.com/cssref/){:target="_blank". An important property is [z-index](https://www.w3schools.com/cssref/pr_pos_z-index.asp){:target="_blank"}, which ensures the panel div sits in front of the map. We'll talk more about this when we get to layout.
 
-      /*  style for items with the class "descriptionPanel" when active */
-      .LegendContainer:active {
-        width: 240px;
-        height: 250px;
-      }
+3. Take a look at your map in the browser. See the new container!?
 
-      /* style for items with the class "legendItem" */
-      .legendItem {
-        float: left;
-        width: 50%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
+4. Create a second container to help your users differentiate between the layer colors. Add a comment above this code explaining to yourself, or another programmer, what this chunk of code is.  (e.g. // map legend).
 
-      /* style for items with the class "colorBox" */
-      .colorBox {
-        width: 20px;
-        height: 20px;
-        float: left;
-        border-radius: 10px;
-        margin-left: 10px;
-      }
+    ```html
+      <div class="LegendContainer">
+        <div class="legendItem">
+            <div class="colorBox" style="background-color: #00d2e6;"></div>
+            <div class="layerDescription">Owners</div>
+        </div>
+        <div class="legendItem">
+            <div class="colorBox" style="background-color: #cc00c2;"></div>
+         <div class="layerDescription">Renters</div>
+      </div>
+    ```
+    Notice that the specification for the `class=layerDescription` was defined in the CSS:
+    
+    ```css
+        .layerDescription {
+            color: white;
+            float: left;
+            margin-left: 10px;
+          }
+    ```
 
-      /* style for items with the class "layerDescription" */
-      .layerDescription {
-        color: white;
-        float: left;
-        margin-left: 10px;
-      }
+5. Take a look at your changes! Blank? Check your bowser's console for errors.
 
-      /* style for items with the class "chevron" */
-      .chevron {
-        position: relative;
-        margin-left: 45%;
-        font-size: x-large;
-        color: white;
-      }
+    **Recap:** To create the legend, we added several DOM Objects using DIVs and Spans using HTML. The "style" of these objects was set using CSS. The CSS was used to make legend object float in front of the map. A legend could also be fixed outside the map frame above, below, or beside the map. The colors of the dots in the legend were hard coded to match the colors we used in the map in the HTML above. If you change the colors in your style, you'll _also_ have to change them in the legend.
 
-```
 
-Next, we will need to add a container to display background information about our map and data sources. Add a new DIV container to your DOM by adding this code below the map DIV container. Add a comment above this code explaining what it is.
-
-```html
-     <div class="descriptionPanel" id="descriptionPanel" style="height: 320px;">
-        <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
-        <hr />
-        <h4>WHAT AM I LOOKING AT?</h4><br />
-        <p style="margin-left: 10px; margin-right: 10px;">
-        This is a map showing every single person in the United States as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block, however within each block location is randomized. Points are colored based on number home owners versus renters on a block.
-        </p>
-     </div>
-
-```
-
-Take a look at your map. See the new container!?
-<br><br>
-Create a second container to help your users differentiate between the layer colors. Add a comment above this code explaining what it is.
-
-```html
-  <div class="LegendContainer">
-    <div class="legendItem">
-        <div class="colorBox" style="background-color: #00d2e6;"></div>
-        <div class="layerDescription">Owners</div>
-    </div>
-    <div class="legendItem">
-        <div class="colorBox" style="background-color: #cc00c2;"></div>
-     <div class="layerDescription">Renters</div>
-  </div>
-  ```
-<br>
-Take a look at your changes! Blank? Check your bowser's console for errors.
-
-**Recap:** To create the legend, we added several DOM Objects using DIVs and Spans using HTML. The "style" of these objects was set using CSS. The CSS was used to make legend object float in front of the map. A legend could also be fixed above, below, or beside the map. The colors of the dots in the legend were hard coded to match the colors we used in the map in the HTML above. If you change the colors in your style, you'll _also_ have to change them in the legend.
-
-<hr>
-<br>
-Next, let's add interaction to our legend. For this we need to add some JavaScript. The following variable 'state' and function 'panelSelect' will enable the user to show and hide the map description that we added in the last section. Copy and paste the code snippet after your map variable. Add a comment above to indicate what this is for (e.g. // legend interaction).
+6. Next, let's add interaction to our legend. For this we need to add some *JavaScript*. The following variable `state` and function `panelSelect` will enable the user to show and hide the map description that we added in the last section. Copy and paste the code snippet into the`script` section, after your map variable. Add a comment above to indicate what this is for (e.g. // legend interaction).
 
 ```javascript
       var state = { panelOpen: true };
@@ -266,9 +292,9 @@ Yes? Nice.
 
 ----------
 
-### V. Create your webpage
+### V. Post your webpage
 
-Copy the file to your "Pages" webspace to see it working live.  
+1. Copy the html file to your "Pages" webspace to see it working live.  
 
 ***Voila! Now you have a live website with a Mapbox map!*** 
 
@@ -280,4 +306,10 @@ If you don't follow how every line of code works, that's OK! At this point it is
 
 
 
+----------
 
+### VI. What to submit
+1. Change the colors of your points in the "style" and in the map *legend*. Note: your legend should match your map.
+2. Be sure you added comments above each section of code, as instructed. Use the examples provided, or add something more verbose that would help future you, or another developer know that each section of code is for
+3. Clean up your alignment. Subsections should be nested (tabbed over). At a minimum, you should be able to draw a line down your screen between the opening and closing `head`,`body`, and `script` tags without running into other lines of code.
+4. Answer the questions in the submission
