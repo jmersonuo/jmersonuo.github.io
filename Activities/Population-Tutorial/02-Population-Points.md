@@ -82,37 +82,40 @@ To begin, we will be using a sample code to initialize a simple web map.
     <h3 align ="center"> OR </h3>
     <br>
     <p align="center">
-        <img src="../Opioid-Tutorial/Images/mapstyle.png">
+        <img src="../Opioid-Tutorial/Images/share.png">
     </p>
 
-2. Copy and paste your style URL into your code. *(Look for a row with something that says something like 'STYLE URL GOES HERE')*
+2. Paste your style URL into your code where the map is initialized in the JavaScript.
+    Now preview it in a browser to view your changes. Is is blank? Did you add _your_ mapbox token and your style?
     <p align="center">
         <img src="Images/Initial_Map.png">
     </p>
-
-Now preview it in a browser to view your changes. Is is blank? Did you add _your_ mapbox token and your style?
 
 ----------
 
 ## III. Add navigation controls
 
-Let’s try modifying the code to add a new element to the map. Currently, you can zoom in and out using your mouse, but we want to add navigation controls (zoom in, zoom out, and north arrow) to make the zooming functions more obvious to our end users.
+Let’s try modifying the code to add a new **element** to the map. Currently, you can zoom in and out using your mouse, but we want to add navigation **controls** (zoom in, zoom out, and north arrow) to make the zooming functions more obvious to our end users.
 
-To get started, check out this code: [https://www.mapbox.com/mapbox-gl-js/example/navigation/](https://www.mapbox.com/mapbox-gl-js/example/navigation/)
+1. For refernce, check out this mapbox example: [https://www.mapbox.com/mapbox-gl-js/example/navigation/](https://www.mapbox.com/mapbox-gl-js/example/navigation/){:target="_blank"}
 
-What part of the example is missing for your current code? The NavigationControl! Add the navigation control function into your code below your map variable. This goes before the closing `</script>` tag. Pay attention to the whitespace as you add new code. Keep the whitespace neat!
+    What part of the example is missing for your current code? The **NavigationControl**! 
+    
+2. Add the navigation control function into your code below your map variable. This goes before the closing `</script>` tag. Pay attention to the whitespace as you add new code. Keep the whitespace and alignment neat!
 
-Preview it in the browser when you have finished. See the nav controls on the top right?
+    ```javascript
+    // Add zoom and rotation controls to the map.
+    map.addControl(new mapboxgl.NavigationControl());
+    ```
 
-Are you an advanced programmer? look in the API reference for [nagivgation control](https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol) to see how to move the control to the `top-left`.
+    `map.addControl...` adds the map control to the element with variable name "map" using the "dot operator". If you were to add it a differnt map, you'd have to adjust the name before the period or "dot".
+    
+    Preview it in the browser when you have finished. See the nav controls on the top right?
 
-_Hint:_ The example in the documentation adds the control in two lines, whereas we had previously added it in one line. 
+3. Are you an skilled programmer? look in the API reference for [nagivgation control](https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol){:target="_blank"} to see how to move the control to the `top-left`.
 
-```javascript
-// Add zoom and rotation controls to the map.
-map.addControl(new mapboxgl.NavigationControl());
+    _Hint:_ The example in the documentation adds the control in two lines, whereas we had previously added it in one line. 
 
-```
 
 ----------
 
