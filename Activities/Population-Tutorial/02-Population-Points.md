@@ -12,25 +12,26 @@
 
 A few additional resources for Mapbox GL JS:
 
-- [https://www.mapbox.com/mapbox-gl-js/api/](https://www.mapbox.com/mapbox-gl-js/api/)
-- [https://www.mapbox.com/mapbox-gl-js/examples](https://www.mapbox.com/mapbox-gl-js/examples) 
-- Example finished maps that use Mapbox GL JS for more design control and interactivity: [https://native-land.ca/](https://native-land.ca/) or [https://www.mapbox.com/amnesty/](https://www.mapbox.com/amnesty/) or [https://www.nytimes.com/interactive/2018/upshot/election-2016-voting-precinct-maps.html](https://www.nytimes.com/interactive/2018/upshot/election-2016-voting-precinct-maps.html) 
-- This exercise is based on: [https://docs.mapbox.com/help/tutorials/choropleth-studio-gl-pt-2/](https://docs.mapbox.com/help/tutorials/choropleth-studio-gl-pt-2/)
+- [https://www.mapbox.com/mapbox-gl-js/api/](https://www.mapbox.com/mapbox-gl-js/api/){:target="_blank"}
+- [https://www.mapbox.com/mapbox-gl-js/examples](https://www.mapbox.com/mapbox-gl-js/examples){:target="_blank"}
+- Example finished maps that use Mapbox GL JS for more design control and interactivity: 
+    - [https://native-land.ca/](https://native-land.ca/){:target="_blank"} 
+    - [https://www.mapbox.com/amnesty/](https://www.mapbox.com/amnesty/){:target="_blank"} 
+    - [https://www.nytimes.com/interactive/2018/upshot/election-2016-voting-precinct-maps.html](https://www.nytimes.com/interactive/2018/upshot/election-2016-voting-precinct-maps.html){:target="_blank"} 
+- This exercise is based on: [https://docs.mapbox.com/help/tutorials/choropleth-studio-gl-pt-2/](https://docs.mapbox.com/help/tutorials/choropleth-studio-gl-pt-2/){:target="_blank"} 
 
 
 ----------
 
-### Get started
-
-To create a web map, you'll need to have some familiarity with HTML, CSS, and JavaScript. If you are new to web maps, explore our [tutorials](https://docs.mapbox.com/help/tutorials/) and [documentation](https://docs.mapbox.com/help/how-mapbox-works/web-apps/) to help you get started.
-
-----------
+I. ### SEtting up your HTML page
 
 
-### Writing your first code
+To begin, we will be using a sample code to initialize a simple web map. 
+1. Create a new folder for this assignment on your *R-drive*. 
+2. Create a new file called `index.html` and copy the code below.
 
+Note that is contains the standard sections: `HEAD` contaiing a title (text in the bowser tab), links to the mapbox JS and CSS libraries, and *new* library we have not used yet called [Boostrap](https://www.w3schools.com/whatis/whatis_bootstrap.asp){:target="_blank"}. Boostrap is a CSS Framework for developing responsive websites and we'll explore it when get more into layout.
 
-To begin, we will be using a sample code created by the documentation team at Mapbox to initialize a simple web map. Create a new folder for this assignment on your *R-drive*. Create a new file called `index.html` and copy the code below.
 
 ```html
 <!DOCTYPE html>
