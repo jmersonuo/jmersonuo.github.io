@@ -218,7 +218,7 @@ The following code adds the *styling rules* that will be style the DOM elements 
             </p>
          </div>
     ```
-4. Add a comment above this div explaining what it is. (e.g. // map decription panel).
+4. Add a comment above this div explaining what it is. (e.g. /* map description panel */).
 
     *Notice* that the specification for the div with the `class=descriptionPanel` was defined in the CSS. Classes in CSS start with a `.`:
     
@@ -243,7 +243,7 @@ The following code adds the *styling rules* that will be style the DOM elements 
 
 3. Take a look at your map in the browser. See the new container!?
 
-4. Create a second container to help your users differentiate between the layer colors. Add a comment above this code explaining to yourself, or another programmer, what this chunk of code is.  (e.g. // map legend).
+4. Create a second container to help your users differentiate between the layer colors. Add a comment above this code explaining to yourself, or another programmer, what this chunk of code is.  (e.g. /* map legend */).
 
     ```html
       <div class="LegendContainer">
