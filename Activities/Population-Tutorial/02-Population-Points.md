@@ -217,10 +217,9 @@ The following code adds the *styling rules* that will be style the DOM elements 
             This is a map showing every single person in the United States as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block, however within each block location is randomized. Points are colored based on number home owners versus renters on a block.
             </p>
          </div>
+    ```
 4. Add a comment above this div explaining what it is. (e.g. // map decription panel).
 
-
-    ```
     *Notice* that the specification for the div with the `class=descriptionPanel` was defined in the CSS. Classes in CSS start with a `.`:
     
     ```css
