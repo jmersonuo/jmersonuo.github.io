@@ -310,9 +310,9 @@ It should look like this.
 
 If you don't follow how every line of code works, that's OK! At this point it is important to understand that you added several chunks for code. Some for the map, some for the legend, and some for interactivity. You could add your own data to a Mapbox Style, add that style to this map, make a few changes to the legend and you can make this interactive map your own!
 
-    <p align="center">
-        <img src="../Population-Tutorial/Images/finalmap.png">
-    </p>
+<p align="center">
+    <img src="../Population-Tutorial/Images/finalmap.png">
+</p>
 
 
 
@@ -320,6 +320,6 @@ If you don't follow how every line of code works, that's OK! At this point it is
 
 ### VI. What to submit
 1. Change the colors of your points in the "style" and in the map *legend*. Note: your legend should match your map your custom colors should be visible on your Pages webspace.
-2. Be sure you added comments above each section of code, as instructed. Use the examples provided, or add something more verbose that would help future you, or another developer know that each section of code is for
+2. Be sure you added comments above each section of code, as instructed. Use the examples provided, or add something more verbose that would help future you, or another developer know that each section of code is for.
 3. Clean up your alignment. Subsections should be nested (tabbed over). At a minimum, you should be able to draw a line down your screen between the opening and closing `head`,`body`, and `script` tags without running into other lines of code.
-4. Answer the questions in the submission
+4. Answer the questions in the submission instructions.
