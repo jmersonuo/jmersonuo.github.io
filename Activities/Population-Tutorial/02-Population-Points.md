@@ -253,7 +253,8 @@ The following code adds the *styling rules* that will be style the DOM elements 
         </div>
         <div class="legendItem">
             <div class="colorBox" style="background-color: #cc00c2;"></div>
-         <div class="layerDescription">Renters</div>
+            <div class="layerDescription">Renters</div>
+        </div>
       </div>
     ```
     *Notice* that the specification for the `class=layerDescription` was defined in the CSS:
