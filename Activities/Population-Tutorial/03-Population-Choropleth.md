@@ -10,7 +10,7 @@ The US Census makes owner/renter information readily available for census block 
 2) Viewing the relative incidence of owners to renters using a choropeth map. 
 
 For this first exercise, we will be creating two choropleth maps that display 1) the percentage of owners, and 2) the percentage of renters in Portland, Oregon. 
-In the last tutorial we used Studio to dynamically style all of our layers. For this tutorial, we will be using one of Mapbox's custom styles and writing our styling rules directly in our site's code.
+In the last tutorial we used Studio to dynamically style all of our layers. For this tutorial, we will be writing our styling rules directly in our site's code.
 
 <p align="center">
 <img src="Images/slide.gif">
