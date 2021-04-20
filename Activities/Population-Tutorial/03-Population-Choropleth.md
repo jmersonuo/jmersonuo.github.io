@@ -9,7 +9,7 @@ The US Census makes owner/renter information readily available for census block 
 1) Mapping the per-person level information, and 
 2) Viewing the relative incidence of owners to renters using a choropeth map. 
 
-For this first exercise, we will be creating two choropleth maps that display 1) the percentage of owners, and 2) the percentage of renters in Portland, Oregon. 
+For this first exercise, we will be creating two choropleth maps that display 1) the percentage of owners, and 2) the percentage of renters in Portland, Oregon. We will place one map div directly over another map div and use a Mapbox slider JavaScript Plugin to change which map div is visible.
 In the last tutorial we used Studio to dynamically style all of our layers. For this tutorial, we will be writing our styling rules directly in our site's code.
 
 <p align="center">
@@ -177,23 +177,20 @@ Below your `ownerMap` variable, initialize your renter map by creating a new var
 ----------
 
 ### VI. Comparing maps
+To allow users to compare the two maps by swiping left and right, we can leverage the Mapbox slider JS. To do this, add the following code _after_ your two map variables. Notice it uses the names of the two map variables you already created? Check out [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
 
-Next, we need to enables users to compare our two maps by swiping left and right. Do this add the following code after your two map variables. Check out [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare) for more information about the mapbox-gl-compare plugin.
-
-```javascript 
-
-var map = new mapboxgl.Compare(ownerMap, renterMap, {
-});
-
-```
+	```javascript 
+		var map = new mapboxgl.Compare(ownerMap, renterMap, {
+		});
+	```
 
 Preview your map in a browser to view your changes.
 
 
 
 <p align="center">
-  <img src="Images/compare1.png">
-  </p>
+	<img src="Images/compare1.png">
+</p>
 
 
 
