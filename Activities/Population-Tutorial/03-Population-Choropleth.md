@@ -172,7 +172,7 @@ Below your `ownerMap` variable, initialize your renter map by creating a new var
 var renterMap = new mapboxgl.Map({
     container: 'renters', // owners map div 
     style: 'mapbox://styles/mapbox/dark-v10', // Mapbox dark style 
-    center: [-122.67745971679688, 45.52751668442124], 
+    center: // Use the same center as your other map so that they are perfectly aligned
     zoom: 10 
 });
 ```
@@ -183,8 +183,8 @@ var renterMap = new mapboxgl.Map({
 To allow users to compare the two maps by swiping left and right, we can leverage the Mapbox slider JS. To do this, add the following code _after_ your two map variables. Notice it uses the names of the two map variables you already created? Check out [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
 
 ```javascript 
-	var map = new mapboxgl.Compare(ownerMap, renterMap, {
-	});
+var map = new mapboxgl.Compare(ownerMap, renterMap, {
+});
 ```
 
 Preview your map in a browser to view your changes.
@@ -196,7 +196,7 @@ Preview your map in a browser to view your changes.
 </p>
 
 
-
+----------
 ### VI. The load event
 
 What is a callback?
@@ -220,20 +220,19 @@ For this exercise you will have two load events, one for your owner map and one 
 
 
 	```javascript
-	       ownerMap.addLayer({
-		 id: 'Owner Data',
-		 type: "fill",
-		 source: {
-		   type: 'vector',
-		   url: 'mapbox://YOUR URL' //input your tileset url
-		 },
-		   'source-layer': 'YOUR SOURCE LAYER NAME', //input your source layer name e.g. Owner-Renter-Pop-dr7310
-		 paint: {
-		   'fill-color': '#cb1515',
-		 }
+       ownerMap.addLayer({
+	 id: 'Owner Data',
+	 type: "fill",
+	 source: {
+	   type: 'vector',
+	   url: 'mapbox://YOUR URL' //input your tileset url
+	 },
+	   'source-layer': 'YOUR SOURCE LAYER NAME', //input your source layer name e.g. Owner-Renter-Pop-dr7310
+	 paint: {
+	   'fill-color': '#cb1515',
+	 }
 
-	       });
-
+       });
 	```
 
 3. Before you preview your changes, you will need to changes this code to use the tileset that is in yourmapbox account. 
@@ -285,8 +284,7 @@ Replace '#cb1515' with the following:
    "#3182bd",
    31.942,
     "hsl(210, 90%, 32%)"],
-   "fill-opacity": 0.7
-                
+   "fill-opacity": 0.7          
  ```
  
 This code is very similar to the process we used in Studio. We are filtering the data from our layer by the data range found in the 'Own' field. Each of the five steps is assigned a color and the fill-opacity is set to 0.7. 
