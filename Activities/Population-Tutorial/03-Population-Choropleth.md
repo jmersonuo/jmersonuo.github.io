@@ -230,9 +230,9 @@ For this exercise you will have two load events, one for your owner map and one 
 	 type: "fill",
 	 source: {
 	   type: 'vector',
-	   url: 'mapbox://YOUR URL'  //input your tileset url e.g. 'mapbox:jomerson.6ykhlovc' 
+	   url: 'mapbox://YOUR URL'  //input your tileset url e.g. 'mapbox://jomerson.6ykhlovc' 
 	 },
-	   'source-layer': 'YOUR SOURCE LAYER NAME', //input your source layer name e.g. Owner-Renter-Pop-dr7310
+	   'source-layer': 'YOUR SOURCE LAYER NAME', //input your source layer name e.g. 'Owner-Renter-Pop-dr7310'
 	 paint: {
 	   'fill-color': '#cb1515',
 	 }
@@ -242,37 +242,38 @@ For this exercise you will have two load events, one for your owner map and one 
 
 3. Before you preview your changes, you will need to changes this code to use the tileset that is in yourmapbox account. The steps to follow are below. 
 
+----------
+#### VII. Connecting your tileset 
 
-#### Tileset Menu 
+1. In your Mapbox account, navigate to your **Owner-Renter-Pops** tileset menu. 
 
-In your Mapbox account, navigate to your **Owner-Renter-Pops** tileset menu. 
+	For each tilset, you can either click on the name of the tilset to go to its information page or click the button <img src="Images/Screen%20Shot%202019-10-25%20at%202.20.03%20PM.png"> for more options: 
 
-For each tilset, you can either click on the name of the tilset to go to its information page or click the button <img src="Images/Screen%20Shot%202019-10-25%20at%202.20.03%20PM.png"> for more options: 
+	**Replace**
+	Replace the current data in your tileset with new data. The tileset ID will stay the same and the new data will be reflected in all styles that reference this tileset.
 
-**Replace**
-Replace the current data in your tileset with new data. The tileset ID will stay the same and the new data will be reflected in all styles that reference this tileset.
+	**Delete**
+	You can permanently delete a tileset from your account at any time. Deleted tilesets may not be recovered.
 
-**Delete**
-You can permanently delete a tileset from your account at any time. Deleted tilesets may not be recovered.
-
-**Tileset ID**
-From this menu, you can also copy the [tileset ID](https://docs.mapbox.com/help/glossary/tileset-id/) to be used with Mapbox SDKs and APIs.
+	**Tileset ID**
+	From this menu, you can also copy the [tileset ID](https://docs.mapbox.com/help/glossary/tileset-id/){:target="_blank"} to be used with Mapbox SDKs and APIs.
 
 
-Copy your tileset ID and add it to your code (be sure to keep the mapbox:// in your url):  
+2. Copy your tileset ID and add it to your code (be sure to keep the mapbox:// in your url):  
 
-```url: 'mapbox://YOUR URL' //input your tileset url```
+	```url: 'mapbox://YOUR URL' //input your tileset url```
 
-Next, copy and paste the name of your [source layer](https://docs.mapbox.com/help/glossary/source-layer/) into the code. 
+3. Next, copy and paste the name of your [source layer](https://docs.mapbox.com/help/glossary/source-layer/){:target="_blank"} into the code. 
 
-Preview your map in a browser to view your changes! You should see your vector layer on your map. 
+4. Preview your map in a browser to view your changes! You should see your vector layer on your map. 
 
 
 <p align='center'>
   <img src="Images/Screen%20Shot%202019-10-25%20at%202.25.13%20PM.png">
   </p>
-  
-### Data driven styling 
+
+----------
+### VIII. Data driven styling 
 
 You can assign a color to each block group based on its field and variables. For our first map, we want to create a choropleth map that displays the percentage of the Portland population that owns a home. In order to style by homeownership, you will need to style our data by our 'Own' field and to change the 'fill-color' parameter of the layer you just added to your map. 
 
@@ -301,8 +302,8 @@ Preview your map in a browser to view your changes.
   <img src="Images/owner_slide.png">
   </p>
   
-
-### Adding a second layer 
+----------
+### IV. Adding a second layer 
 
 Currently, we have only have information for homeowners displayed on our map. In order to make a meaningful comparison, we will need to add information about renters. 
 
@@ -339,34 +340,34 @@ Copy your tileset ID and add it to your code (be sure to keep the mapbox:// in y
 
 ```url: 'mapbox://YOUR URL' //input your tileset url```
 
-Next, copy and paste the name of your [source layer](https://docs.mapbox.com/help/glossary/source-layer/) into the code. Your tileset ID and the source-layer name will be the same for both layers. 
+Next, copy and paste the name of your [source layer](https://docs.mapbox.com/help/glossary/source-layer/){:target="_blank"} into the code. Your tileset ID and the source-layer name will be the same for both layers. 
 
 Preview your map in a browser to view your changes! You should see your vector layer on your map. 
 
-
-### Styling your second layer 
+----------
+### X. Styling your second layer 
 
 For the renter map, we want to create a choropleth map that displays the percentage of the Portland population that rents. In order to style by percentage of renters, you will need to style our data by the 'Rent' field. You will also need to change the 'fill-color' parameter of the layer you just added to your map. 
 
-Replace `'#cb1515'` with the following: 
+1. Replace `'#cb1515'` with the following: 
 
-```JavaScript
-   ["step",
-   ["get", "Rent"],
-   "hsl(225, 100%, 97%)",
-   16.81,
-   "hsl(203, 47%, 82%)",
-   22.338,
-   "hsl(202, 57%, 63%)",
-   27.32,
-   "#3182bd",
-   31.942,
-    "hsl(210, 90%, 32%)"],
-   "fill-opacity": 0.7
-                
- ```
+	```JavaScript
+	   ["step",
+	   ["get", "Rent"],
+	   "hsl(225, 100%, 97%)",
+	   16.81,
+	   "hsl(203, 47%, 82%)",
+	   22.338,
+	   "hsl(202, 57%, 63%)",
+	   27.32,
+	   "#3182bd",
+	   31.942,
+	    "hsl(210, 90%, 32%)"],
+	   "fill-opacity": 0.7
+
+	 ```
  
-Preview your map in a browser to view your changes.
+2. Preview your map in a browser to view your changes.
  
 <p align="center">
 <img src="Images/slide.gif">
