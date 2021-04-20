@@ -221,7 +221,7 @@ For this exercise you will have two load events, one for your owner map and one 
 	});
     ```
 
-2. Next, we will add our owner and renter data layer to the map using ownerMap.addLayer(). Remember that this goes *inside* of the load function. 
+2. Next, we will add our owner and renter data layer to the map using ownerMap.addLayer(). Remember that this goes *inside* of the load function, af ter the comment `// the rest of the owner data code will go in here`. 
 
 
 	```javascript
@@ -230,7 +230,7 @@ For this exercise you will have two load events, one for your owner map and one 
 	 type: "fill",
 	 source: {
 	   type: 'vector',
-	   url: 'mapbox://YOUR URL' //input your tileset url
+	   url: 'mapbox://YOUR URL'  //input your tileset url e.g. 'mapbox:jomerson.6ykhlovc' 
 	 },
 	   'source-layer': 'YOUR SOURCE LAYER NAME', //input your source layer name e.g. Owner-Renter-Pop-dr7310
 	 paint: {
@@ -240,11 +240,12 @@ For this exercise you will have two load events, one for your owner map and one 
        });
 	```
 
-3. Before you preview your changes, you will need to changes this code to use the tileset that is in yourmapbox account. 
+3. Before you preview your changes, you will need to changes this code to use the tileset that is in yourmapbox account. The steps to follow are below. 
 
-In your Mapbox account, navigate to your **Owner-Renter-Pops** tileset menu. 
 
 #### Tileset Menu 
+
+In your Mapbox account, navigate to your **Owner-Renter-Pops** tileset menu. 
 
 For each tilset, you can either click on the name of the tilset to go to its information page or click the button <img src="Images/Screen%20Shot%202019-10-25%20at%202.20.03%20PM.png"> for more options: 
 
