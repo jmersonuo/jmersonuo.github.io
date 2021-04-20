@@ -19,10 +19,10 @@ In the last tutorial we used Studio to dynamically style all of our layers. For 
 
 ### In this tutorial you will:
 
-- [Add data](https://www.mapbox.com/help/uploads/) to Mapbox
+- [Add data](https://www.mapbox.com/help/uploads/){:target="_blank"} to Mapbox
 - Call on map layers using GL-JS
 - Learn about GL-JS and adding interactivity, styling your layers 
-- Learn additional tools and tricks such as how to [swipe between maps](https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-compare/)
+- Learn additional tools and tricks such as how to [swipe between maps](https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-compare/){:target="_blank"}
 
 ----------
 
@@ -32,7 +32,7 @@ Download the data below.
 1. Clicking on the link below, will take you to a github page
 2. then click *download* to save it to your computer or R-Drive space. If your browser tries to just preview the data (a lot of coordinates), you can force it to save: right click on the download button and then click "Save As".
 
-	- [Percentage of renters, owners and total population by block group 2017](Data/Owner-Renter-Pop.geojson) - [Source: US Census](https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml) 
+	- [Percentage of renters, owners and total population by block group 2017](Data/Owner-Renter-Pop.geojson){:target="_blank"} - Source: US Census
 
 <p align="center">
 <img src="Images/download.PNG">
@@ -44,7 +44,7 @@ Download the data below.
 ### II. Upload data as a tileset to Mapbox
 
 To add the percentage of renters vs owners data to Mapbox as a tileset, you need to upload it to your account. 
-1. Go to your [**Tilesets**](https://studio.mapbox.com/tilesets/) page in Mapbox Studio to upload your data.
+1. Go to your [**Tilesets**](https://studio.mapbox.com/tilesets/){:target="_blank"} page in Mapbox Studio to upload your data.
 2. On your Tilesets page, click the **New tileset** button. 
 3. Select the geojson data containing your renters and owners data and upload it to your account. 
 
