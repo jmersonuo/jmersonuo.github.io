@@ -99,8 +99,8 @@ To add the percentage of renters vs owners data to Mapbox as a tileset, you need
 
 
 
-		<div id='owners' class='map'></div>  // div for owners map div
-		<div id='renters' class='map'></div> // div for renters map div
+		<div id='owners' class='map'></div>  <!-- div for owners map div -->
+		<div id='renters' class='map'></div> <!-- div for renters map div -->
 
 
 		<script>
@@ -123,27 +123,23 @@ To add the percentage of renters vs owners data to Mapbox as a tileset, you need
 3. Next, between your script tags (where it says 'add your Mapbox access toke and map variable here') add your Mapbox access token and initialize your owner choropleth by creating a ownerMap variable. This first map will display information about the percentage of homeowners in Portland. 
 
 	```JavaScript
+		mapboxgl.accessToken = 'YOUR ACCESS TOKEN';
 
-	mapboxgl.accessToken = 'YOUR ACCESS TOKEN';
-
-	var ownerMap = new mapboxgl.Map({
-	    container: 'owners', // owners map div 
-	    style: 'mapbox://styles/mapbox/dark-v10', // Mapbox dark style 
-	    center: [0, 0], // change the long/lat coordinates to -122.67745971679688, 45.52751668442124],
-	    zoom: 0 // change the zoom level to 10 
-	});
+		var ownerMap = new mapboxgl.Map({
+		    container: 'owners', // owners map div 
+		    style: 'mapbox://styles/mapbox/dark-v10', // Mapbox dark style 
+		    center: [0, 0], 
+		    zoom: 0 
+		});
 	```
-
-	<p align="center">
-	  <img src="Images/full-mapp.png">
-	</p>
-
-
 
 4. Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/define-access-token/)in the section that says "ACCESS TOKEN GOES HERE" (get your access token from your Mapbox [‘Account’ page](https://account.mapbox.com/)).
 
 	The Mapbox style has already been chosen for you. In this exercise we are using the Mapbox dark style.  
 
+	<p align="center">
+	  <img src="Images/full-mapp.png">
+	</p>
 
 
 ----------
@@ -153,16 +149,14 @@ To add the percentage of renters vs owners data to Mapbox as a tileset, you need
 Now that we’ve initialized the webmap, let’s try to make some changes to our code. Currently, your map is zoomed out to see the whole world when it loads. We need to change the location and the zoom level so that we can only view Portland, Oregon. 
 
 1. Locate the line of code that is telling the map where to center the view.
-2. Try changing the center location to the center of the US by picking a new coordinate using [http://geojson.io/](http://geojson.io/#map=2/20.0/0.0).
+2. Try changing the center location to the center of the US by picking a new coordinate finding a coordinate in [google maps](maps.google.com){:target="_blank"} or by placing a marker in [http://geojson.io/](http://geojson.io/#map=2/20.0/0.0){:target="_blank"}.
 4. Change the coordinates in your code and preview your changes.
 5. Change the zoom level to 10, centered on Portland. 
 6. Preview your map in a browser to view your changes.
 
-
 <p align="center">
   <img src="Images/Portland.png">
 </p>
-
 
 
 ----------
@@ -172,13 +166,12 @@ Now that we’ve initialized the webmap, let’s try to make some changes to our
 Below your `ownerMap` variable, initialize your renter map by creating a new variable called `renterMap`. This second map will display information about the percentage of renters in Portland. 
 
 	```javascript 
-
-	var renterMap = new mapboxgl.Map({
-	    container: 'renters', // owners map div 
-	    style: 'mapbox://styles/mapbox/dark-v10', // Mapbox dark style 
-	    center: [-122.67745971679688, 45.52751668442124], 
-	    zoom: 10 
-	});
+		var renterMap = new mapboxgl.Map({
+		    container: 'renters', // owners map div 
+		    style: 'mapbox://styles/mapbox/dark-v10', // Mapbox dark style 
+		    center: [-122.67745971679688, 45.52751668442124], 
+		    zoom: 10 
+		});
 	```
 
 ----------
