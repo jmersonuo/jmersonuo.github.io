@@ -195,7 +195,7 @@ To allow users to compare the two maps by swiping left and right, we can leverag
 	```
 
 2. Preview your map in a browser to view your changes.
-3. One uses the light background and one uses the dark background, so you can see the swipe in action. Since we want the swipe to look seamless, change the style of the renterMap to also use `light-v10`
+3. One uses the light background and one uses the dark background, so you can see the swipe in action. Since we want the swipe to look seamless, change the style of the renterMap to also use `dark-v10`
 
 
 <p align="center">
