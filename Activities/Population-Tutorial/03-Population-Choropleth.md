@@ -182,18 +182,20 @@ var renterMap = new mapboxgl.Map({
 ----------
 
 ### VI. Comparing maps
-To allow users to compare the two maps by swiping left and right, we can leverage the Mapbox slider JS. To do this, add the following code _after_ your two map variables. Notice it uses the names of the two map variables you already created? Check out [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
+To allow users to compare the two maps by swiping left and right, we can leverage the Mapbox slider JS. 
 
-```javascript 
-// A selector or reference to HTML element
-var container = '#comparison-container';
+1. To do this, add the following code _after_ your two map variables. Notice it uses the names of the two map variables you already created? Check out [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
 
-var map = new mapboxgl.Compare(ownerMap, renterMap, container, {
-})
-```
+	```javascript 
+	// A selector or reference to HTML element
+	var container = '#comparison-container';
 
-Preview your map in a browser to view your changes.
+	var map = new mapboxgl.Compare(ownerMap, renterMap, container, {
+	})
+	```
 
+2. Preview your map in a browser to view your changes.
+3. One uses the light background and one uses the dark background, so you can see the swipe in action. Since we want the swipe to look seamless, change the style of the renterMap to also use `light-v10`
 
 
 <p align="center">
