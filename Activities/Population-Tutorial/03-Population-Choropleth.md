@@ -123,14 +123,14 @@ To add the percentage of renters vs owners data to Mapbox as a tileset, you need
 3. Next, between your script tags (where it says 'add your Mapbox access toke and map variable here') add your Mapbox access token and initialize your owner choropleth by creating a ownerMap variable. This first map will display information about the percentage of homeowners in Portland. 
 
 	```JavaScript
-		mapboxgl.accessToken = 'YOUR ACCESS TOKEN';
-
-		var ownerMap = new mapboxgl.Map({
-		    container: 'owners', // owners map div 
-		    style: 'mapbox://styles/mapbox/dark-v10', // Mapbox dark style 
-		    center: [0, 0], 
-		    zoom: 0 
-		});
+	mapboxgl.accessToken = 'YOUR ACCESS TOKEN';
+	
+	var ownerMap = new mapboxgl.Map({
+	    container: 'owners', // owners map div 
+	    style: 'mapbox://styles/mapbox/dark-v10', // Mapbox dark style 
+	    center: [0, 0], 
+	    zoom: 0 
+	});
 	```
 
 4. Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/define-access-token/)in the section that says "ACCESS TOKEN GOES HERE" (get your access token from your Mapbox [‘Account’ page](https://account.mapbox.com/)).
@@ -165,13 +165,13 @@ Now that we’ve initialized the webmap, let’s try to make some changes to our
 
 Below your `ownerMap` variable, initialize your renter map by creating a new variable called `renterMap`. This second map will display information about the percentage of renters in Portland. 
 
-	```javascript 
-		var renterMap = new mapboxgl.Map({
-		    container: 'renters', // owners map div 
-		    style: 'mapbox://styles/mapbox/dark-v10', // Mapbox dark style 
-		    center: [-122.67745971679688, 45.52751668442124], 
-		    zoom: 10 
-		});
+	```JavaScript
+	var renterMap = new mapboxgl.Map({
+	    container: 'renters', // owners map div 
+	    style: 'mapbox://styles/mapbox/dark-v10', // Mapbox dark style 
+	    center: [-122.67745971679688, 45.52751668442124], 
+	    zoom: 10 
+	});
 	```
 
 ----------
@@ -179,7 +179,7 @@ Below your `ownerMap` variable, initialize your renter map by creating a new var
 ### VI. Comparing maps
 To allow users to compare the two maps by swiping left and right, we can leverage the Mapbox slider JS. To do this, add the following code _after_ your two map variables. Notice it uses the names of the two map variables you already created? Check out [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
 
-	```javascript 
+	```JavaScript 
 		var map = new mapboxgl.Compare(ownerMap, renterMap, {
 		});
 	```
@@ -207,7 +207,7 @@ To make sure the rest of the code can execute, it needs to live in a callback fu
 For this exercise you will have two load events, one for your owner map and one for your renter map. 
 
 1. After the ownerMap, add this callback:
-	```javascript 
+	```JavaScript 
 
 	ownerMap.on('load', function() {
 	  // the rest of the owner data code will go in here
@@ -218,7 +218,7 @@ For this exercise you will have two load events, one for your owner map and one 
 2. Next, we will add our owner and renter data layer to the map using ownerMap.addLayer(). Remember that this goes *inside* of the load function. 
 
 
-	```javascript
+	```JavaScript
 
 	       ownerMap.addLayer({
 		 id: 'Owner Data',
@@ -273,7 +273,7 @@ You can assign a color to each block group based on its field and variables. For
 
 Replace '#cb1515' with the following: 
 
-```javascript
+```JavaScript
    ["step",
    ["get", "Own"],
    "hsl(225, 100%, 97%)",
@@ -304,7 +304,7 @@ Currently, we have only have information for homeowners displayed on our map. In
 
 First, add a second load event called renterMap (the renter variable will go inside of this function):
 
-```javascript 
+```JavaScript 
 
 renterMap.on('load', function() {
   // the rest of the renter data code will go in here
@@ -314,7 +314,7 @@ renterMap.on('load', function() {
 
 Next, add your renter data as a layer using .addLayer. 
 
-```javascript
+```JavaScript
        renterMap.addLayer({
          id: 'Renter Data',
          type: "fill",
@@ -346,7 +346,7 @@ For the renter map, we want to create a choropleth map that displays the percent
 
 Replace `'#cb1515'` with the following: 
 
-```javascript
+```JavaScript
    ["step",
    ["get", "Rent"],
    "hsl(225, 100%, 97%)",
