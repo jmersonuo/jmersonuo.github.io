@@ -103,8 +103,10 @@ To add the percentage of renters vs owners data to Mapbox as a tileset, you need
 
 
 
-		<div id='owners' class='map'></div>  <!-- div for owners map div -->
-		<div id='renters' class='map'></div> <!-- div for renters map div -->
+		<div id="comparison-container">
+	     		<div id='owners' class='map'></div>  <!-- div for owners map div -->
+	     		<div id='renters' class='map'></div> <!--  div for renters map div -->
+     		</div>
 
 
 		<script>
@@ -171,7 +173,7 @@ Below your `ownerMap` variable, initialize your renter map by creating a new var
 ```JavaScript
 var renterMap = new mapboxgl.Map({
     container: 'renters', // owners map div 
-    style: 'mapbox://styles/mapbox/dark-v10', // Mapbox dark style 
+    style: 'mapbox://styles/mapbox/light-v10', // Mapbox light style so we can observe the swipe
     center: // Use the same center as your other map so that they are perfectly aligned
     zoom: 10 
 });
@@ -183,8 +185,11 @@ var renterMap = new mapboxgl.Map({
 To allow users to compare the two maps by swiping left and right, we can leverage the Mapbox slider JS. To do this, add the following code _after_ your two map variables. Notice it uses the names of the two map variables you already created? Check out [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
 
 ```javascript 
-var map = new mapboxgl.Compare(ownerMap, renterMap, {
-});
+// A selector or reference to HTML element
+var container = '#comparison-container';
+
+var map = new mapboxgl.Compare(ownerMap, renterMap, container, {
+})
 ```
 
 Preview your map in a browser to view your changes.
