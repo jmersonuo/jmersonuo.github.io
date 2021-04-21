@@ -382,7 +382,7 @@ For the renter map, we want to create a choropleth map that displays the percent
 ### Congratulations! You've completed the exercise! 
 
 <p align = "center">
-    <img src="https://giphy.com/gifs/finally-atlast-itsover-eY1JD4KPG4HMk">
+    <img src="https://media.giphy.com/media/eY1JD4KPG4HMk/giphy.gif">
 </p>
 
 ### Extra Steps 
