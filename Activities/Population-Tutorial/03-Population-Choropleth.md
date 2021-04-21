@@ -2,14 +2,14 @@
 
 
 <h2 align="center"> Mapping renters vs owners in Portland </h2>
-<h3 align="center"> Part III: Creating a comparitive choropleth map </h3>
+<h3 align="center"> Part III: Creating a comparative choropleth map </h3>
 
 The US Census makes owner/renter information readily available for census block geometries, in this lab series we are going to view the owner/renter information in different ways: 
 
 1) Mapping the per-person level information, and 
 2) Viewing the relative incidence of owners to renters using a choropeth map. 
 
-For this first exercise, we will be creating two choropleth maps that display 1) the percentage of owners, and 2) the percentage of renters in Portland, Oregon. We will place one map div directly over another map div and use a Mapbox slider JavaScript Plugin to change which map div is visible.
+For this exercise, we will be creating two choropleth maps that display 1) the percentage of owners, and 2) the percentage of renters in Portland, Oregon. We will place one map div directly over another map div and use a Mapbox slider JavaScript Plugin to change which map div is visible.
 In the last tutorial we used Studio to dynamically style all of our layers. For this tutorial, we will be writing our styling rules directly in our site's code.
 
 <p align="center">
@@ -20,9 +20,9 @@ In the last tutorial we used Studio to dynamically style all of our layers. For 
 ### In this tutorial you will:
 
 - [Add data](https://www.mapbox.com/help/uploads/){:target="_blank"} to Mapbox as a tileset
-- Add a tileset to a map using Mapbox GJLS
+- Add a [tileset](https://docs.mapbox.com/help/glossary/tileset/){:target="_blank"} to a map using Mapbox GJLS
 - Add interactivity using a Mapbox plugin to [swipe between maps](https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-compare/){:target="_blank"}
-- Style your layers using JavaScript
+- Style your layers using Mapbox GL JS (JavaScript)
 
 ----------
 
@@ -43,7 +43,7 @@ Download the data below.
 
 ### II. Upload data as a tileset to Mapbox
 
-Uploading your data as a tileset, rather than directly to a stlye, allows you to add it to maps independantly from a style. You could add the same tileset to multiple differnt map, over differnt basemap "styles". To add the percentage of renters vs owners data to Mapbox as a tileset, you need to upload it to your account. 
+Uploading your data as a tileset, rather than directly to a stlye, allows you to add it to maps independently from a style. You could add the same tileset to multiple different map, over different basemap "styles". To add the percentage of renters vs owners data to Mapbox as a tileset, you need to upload it to your account. 
 
 1. Go to your [**Tilesets**](https://studio.mapbox.com/tilesets/){:target="_blank"} page in Mapbox Studio to upload your data.
 2. On your Tilesets page, click the **New tileset** button. 
@@ -245,7 +245,7 @@ For this exercise you will have two load events, one for your owner map and one 
        });
 	```
 
-3. Before you preview your changes, you will need to changes this code to use the tileset that is in yourmapbox account. The steps to follow are below. 
+3. Before you preview your changes, you will need to changes this code to use the tileset that is in your mapbox account. The steps to follow are below. 
 
 ----------
 #### VII. Connecting your tileset 
@@ -327,7 +327,7 @@ Currently, we have only have information for homeowners displayed on our map. In
 
 	```
 
-2. Next, add your renter data as a layer using .addLayer. Your tileset ID and the source-layer name will be the same for both layers. We will set a diffent attribute when styling the data.
+2. Next, add your renter data as a layer using .addLayer. Your tileset ID and the source-layer name will be the same for both layers. We will set a different attribute when styling the data.
 
 	```JavaScript
 	       renterMap.addLayer({
