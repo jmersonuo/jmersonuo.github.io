@@ -292,7 +292,7 @@ This code is very similar to the process we used in Studio. We are filtering the
               paint: {
                 'fill-color':
                   ["step",
-                   ["get", "Own"],
+                   ["get", "Rent"],
                    "hsl(225, 100%, 97%)",
                    17.0,
                    "hsl(203, 47%, 82%)",
