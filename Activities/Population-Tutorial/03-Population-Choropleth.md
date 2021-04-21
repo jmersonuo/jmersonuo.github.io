@@ -448,6 +448,7 @@ In order to add a popup, we'll need to initialize a popup variable, and then use
         popup.remove();
         });
 	```
+3. Change the content of the Owner map popup so that is has a label that makes sense.
 
 ### Extra Steps 
 
