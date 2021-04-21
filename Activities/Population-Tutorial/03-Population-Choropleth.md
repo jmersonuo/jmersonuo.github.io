@@ -223,21 +223,21 @@ For this exercise you will have two load events, one for your owner map and one 
 	});
     ```
 
-2. Next, we will add our owner and renter data layer to the map using ownerMap.addLayer(). Remember that this goes *inside* of the load function, after the comment `// the rest of the owner data code will go in here`. 
+2. Next, we will add our owner data layer to the map using ownerMap.addLayer(). Remember that this goes *inside* of the load function, after the comment `// the rest of the owner data code will go in here`. 
 
 
 	```javascript
        ownerMap.addLayer({
-	 id: 'Owner Data',
-	 type: "fill",
-	 source: {
-	   type: 'vector',
-	   url: 'mapbox://YOUR TILESET ID'  //input your tileset ID url e.g. 'mapbox://jomerson.6ykhlovc' 
-	 },
-	   'source-layer': 'YOUR SOURCE LAYER NAME', //input your source layer name e.g. 'Owner-Renter-Pop-ca08iw'
-	 paint: {
-	   'fill-color': '#cb1515',
-	 }
+	 	id: 'Owner Data',
+	 	type: "fill",
+		 source: {
+		   type: 'vector',
+		   url: 'mapbox://YOUR TILESET ID'  //input your tileset ID url e.g. 'mapbox://jomerson.6ykhlovc' 
+		 },
+		   'source-layer': 'YOUR SOURCE LAYER NAME', //input your source layer name e.g. 'Owner-Renter-Pop-ca08iw'
+		 paint: {
+		   'fill-color': '#cb1515',
+		 }
 
        });
 	```
@@ -287,7 +287,7 @@ This code is very similar to the process we used in Studio. We are filtering the
 
 1. In the JS, replace the "paint" from red '#cb1515', to stepped blue bins, with an opacity of 0.7, using the following: 
 
-	```JavaScript
+	```javascript
               paint: {
                 'fill-color':
                   ["step",
@@ -320,7 +320,7 @@ Currently, we have only have information for homeowners displayed on our map. In
 
 1. First, add a second load event called renterMap (the renter variable will go inside of this function):
 
-	```JavaScript 
+	```javascript 
 
 	renterMap.on('load', function() {
 	  // the rest of the renter data code will go in here
@@ -330,7 +330,7 @@ Currently, we have only have information for homeowners displayed on our map. In
 
 2. Next, add your renter data as a layer using .addLayer. Your tileset ID and the source-layer name will be the same for both layers. We will set a different attribute when styling the data.
 
-	```JavaScript
+	```javascript
 	       renterMap.addLayer({
 		 id: 'Renter Data',
 		 type: "fill",
@@ -362,7 +362,7 @@ For the renter map, we want to create a choropleth map that displays the percent
 
 1. Replace `'#0090f5'` with the following: 
 
-```JavaScript
+```javascript
    ["step",
    ["get", "Own"],
    "hsl(225, 100%, 97%)",
@@ -411,8 +411,8 @@ In order to add a popup, we'll need to initialize a popup variable, and then use
         });
 
         renterMap.on('mouseleave', 'Renter Data', function () {
-        renterMap.getCanvas().style.cursor = '';
-        popup.remove();
+        	renterMap.getCanvas().style.cursor = '';
+        	popup.remove();
         });
 	```
 
@@ -435,8 +435,8 @@ In order to add a popup, we'll need to initialize a popup variable, and then use
         });
 
         ownerMap.on('mouseleave', 'Owner Data', function () {
-        ownerMap.getCanvas().style.cursor = '';
-        popup.remove();
+        	ownerMap.getCanvas().style.cursor = '';
+        	popup.remove();
         });
 	```
 3. Change the content of the Owner map popup so that is has a label that makes sense.
