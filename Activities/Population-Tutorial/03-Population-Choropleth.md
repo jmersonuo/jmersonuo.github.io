@@ -448,7 +448,7 @@ In order to add a popup, we'll need to initialize a popup variable, and then use
     <img src="https://media.giphy.com/media/eY1JD4KPG4HMk/giphy.gif">
 </p>
 
-### Extra Steps 
+### Extra Advanced Challenge 
 
 Try adding a legend and a title to your map to make it easier for readers to understand the comparison between owners and renters in Portland. 
 
