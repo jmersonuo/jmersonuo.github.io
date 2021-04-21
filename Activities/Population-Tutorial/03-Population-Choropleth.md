@@ -168,7 +168,8 @@ var renterMap = new mapboxgl.Map({
 });
 ```
 
-Note: in the CSS, that both maps have their style set via the class "map" or `.map`, so both fill the whole screen. This means that one map will cover the other until we set up the swipe plugin:
+Note: in the CSS, that both maps have their style set via the class "map" or `.map`, so both fill the whole screen. This means that one map will cover the other until we set up the swipe plugin:  
+
 	```css
 	/* locate this but don't add again */
 	.map {
@@ -232,7 +233,7 @@ For this exercise you will have two load events, one for your owner map and one 
 	 type: "fill",
 	 source: {
 	   type: 'vector',
-	   url: 'mapbox://YOUR URL'  //input your tileset url e.g. 'mapbox://jomerson.6ykhlovc' 
+	   url: 'mapbox://YOUR TILESET ID'  //input your tileset ID url e.g. 'mapbox://jomerson.6ykhlovc' 
 	 },
 	   'source-layer': 'YOUR SOURCE LAYER NAME', //input your source layer name e.g. 'Owner-Renter-Pop-dr7310'
 	 paint: {
@@ -266,7 +267,7 @@ For this exercise you will have two load events, one for your owner map and one 
 	```url: 'mapbox://YOUR URL' //input your tileset url```
 	
 	<p align="center">
-	<img src="Images/tileset.png">
+	<img src="Images/tileset.PNG">
 	</p>
 
 3. Next, copy and paste the name of your [source layer](https://docs.mapbox.com/help/glossary/source-layer/){:target="_blank"} into the code. 
@@ -332,7 +333,7 @@ Currently, we have only have information for homeowners displayed on our map. In
 		 type: "fill",
 		 source: {
 		   type: 'vector',
-		   url: 'mapbox://YOUR URL' //input your tileset url
+		   url: 'mapbox://YOUR ID' //input your tileset ID URL
 		 },
 		   'source-layer': 'YOUR SOURCE LAYER NAME', //input your source layer name e.g. Owner-Renter-Pop-dr7310
 		 paint: {
@@ -343,9 +344,9 @@ Currently, we have only have information for homeowners displayed on our map. In
 
 	```
 
-3. Copy your tileset ID and add it to your code (be sure to keep the mapbox:// in your url):  
+3. Copy your tileset ID and add it to your code (be sure to keep the mapbox:// in you in your ID URL):  
 
-	```url: 'mapbox://YOUR URL' //input your tileset url```
+	```url: 'mapbox://YOUR URL' //input your tileset ID URL```
 
 4. Next, copy and paste the name of your [source layer](https://docs.mapbox.com/help/glossary/source-layer/){:target="_blank"} into the code. 
 
