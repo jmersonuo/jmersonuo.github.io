@@ -74,43 +74,29 @@ Uploading your data as a tileset, rather than directly to a stlye, allows you to
 	    <!-- JS and CSS for the swipe plugin -->
 	    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js'></script>
 	    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css' type='text/css' />
-
-	    <style>
-		body { margin:0; padding:0; }
-		#map { position:absolute; top:0; bottom:0; width:100%; }
-	    </style>
+	     <style>
+		 body { margin:0; padding:0;overflow: hidden;}
+		 body * {
+			-webkit-touch-callout: none;
+			  -webkit-user-select: none;
+			 -moz-user-select: none;
+			  -ms-user-select: none;
+			      user-select: none;
+		     }
+		 /* locate this but don't add again */
+		 .map {
+			 position: absolute;
+			 top: 0;
+			 bottom: 0;
+			 width: 100%;
+		     }
+	     </style>
 	</head>
 	<body>
-
-		<style>
-			body {
-			    overflow: hidden;
-			}
-
-			body * {
-			   -webkit-touch-callout: none;
-			     -webkit-user-select: none;
-				-moz-user-select: none;
-				 -ms-user-select: none;
-				     user-select: none;
-			}
-
-
-			.map {
-			    position: absolute;
-			    top: 0;
-			    bottom: 0;
-			    width: 100%;
-			}
-		</style>
-
-
-
 		<div id="comparison-container">
 	     		<div id='owners' class='map'></div>  <!-- div for owners map div -->
 	     		<div id='renters' class='map'></div> <!--  div for renters map div -->
      		</div>
-
 
 		<script>
 		  //add your Mapbox access token and map variable here!
@@ -198,7 +184,7 @@ Note: in the CSS, that both maps have their style set via the class "map" or `.m
 ### VI. Comparing maps
 To allow users to compare the two maps by swiping left and right, we can leverage the Mapbox slider JS. 
 
-1. To do this, add the following code _after_ your two map variables. Notice it uses the names of the two map variables you already created? Check out [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
+1. To do this, add the following JS between the `script` tages, code _after_ your two map variables. Notice it uses the names of the two map variables you already created! Check out [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
 
 	```javascript 
 	// A selector or reference to HTML element
