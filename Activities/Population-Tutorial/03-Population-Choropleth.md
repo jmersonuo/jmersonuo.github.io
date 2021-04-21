@@ -391,6 +391,64 @@ For the renter map, we want to create a choropleth map that displays the percent
     <img src="https://media.giphy.com/media/eY1JD4KPG4HMk/giphy.gif">
 </p>
 
+
+----------
+### XI. Addition a popup that opens on hover
+
+In order to add a popup, we'll need to initialize a popup variable, and then use JS that interacts with each layer in each map.
+
+1. Add the following code at within your `script` section
+	```javascript
+	// Create a popup, but don't add it to the map yet.
+	var popup = new mapboxgl.Popup({
+		closeButton: false,
+		closeOnClick: false
+        });
+        renterMap.on('mousemove', 'Renter Data', function (e) {
+        
+	// Change the cursor style as a UI indicator.
+        renterMap.getCanvas().style.cursor = 'pointer';
+
+        var coordinates = e.lngLat;
+        var description = e.features[0].properties.Rent;
+
+        // Populate the popup and set its coordinates
+        // based on the feature found.
+        popup.setLngLat(coordinates)
+            .setHTML("Renters: " + description + "%")
+            .addTo(renterMap);
+        });
+
+        renterMap.on('mouseleave', 'Renter Data', function () {
+        renterMap.getCanvas().style.cursor = '';
+        popup.remove();
+        });
+	```
+
+2. Use the following for the owner map:
+
+	```javascript
+	        ownerMap.on('mousemove', 'Owner Data', function (e) {
+        
+	// Change the cursor style as a UI indicator.
+        ownerMap.getCanvas().style.cursor = 'pointer';
+
+        var coordinates = e.lngLat;
+        var description = e.features[0].properties.Own;
+
+        // Populate the popup and set its coordinates
+        // based on the feature found.
+        popup.setLngLat(coordinates)
+            .setHTML(" CHANGE THIS " + description + "%")
+            .addTo(ownerMap);
+        });
+
+        ownerMap.on('mouseleave', 'Owner Data', function () {
+        ownerMap.getCanvas().style.cursor = '';
+        popup.remove();
+        });
+	```
+
 ### Extra Steps 
 
 Try adding a legend and a title to your map to make it easier for readers to understand the comparison between owners and renters in Portland. 
