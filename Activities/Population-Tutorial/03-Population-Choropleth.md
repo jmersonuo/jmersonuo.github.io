@@ -235,7 +235,7 @@ For this exercise you will have two load events, one for your owner map and one 
 	   type: 'vector',
 	   url: 'mapbox://YOUR TILESET ID'  //input your tileset ID url e.g. 'mapbox://jomerson.6ykhlovc' 
 	 },
-	   'source-layer': 'YOUR SOURCE LAYER NAME', //input your source layer name e.g. 'Owner-Renter-Pop-dr7310'
+	   'source-layer': 'YOUR SOURCE LAYER NAME', //input your source layer name e.g. 'Owner-Renter-Pop-ca08iw'
 	 paint: {
 	   'fill-color': '#cb1515',
 	 }
@@ -262,9 +262,9 @@ For this exercise you will have two load events, one for your owner map and one 
 	From this menu, you can also copy the [tileset ID](https://docs.mapbox.com/help/glossary/tileset-id/){:target="_blank"} to be used with Mapbox SDKs and APIs.
 
 
-2. Copy your tileset ID and add it to your code (be sure to keep the mapbox:// in your url):  
+2. Copy your tileset ID and add it to your code (be sure to keep the mapbox:// in your tileset ID url):  
 
-	```url: 'mapbox://YOUR URL' //input your tileset url```
+	```url: 'mapbox://YOUR ID' //input your tileset ID URL```  
 	
 	<p align="center">
 	<img src="Images/tileset.PNG">
@@ -272,7 +272,7 @@ For this exercise you will have two load events, one for your owner map and one 
 
 3. Next, copy and paste the name of your [source layer](https://docs.mapbox.com/help/glossary/source-layer/){:target="_blank"} into the code. 
 
-4. Preview your map in a browser to view your changes! You should see your vector layer on your map. 
+4. Preview your map in a browser to view your changes! You should see a vector layer filled with red on one map. 
 
 
 <p align='center'>
@@ -286,21 +286,25 @@ You can assign a color to each block group based on its field and variables. For
 
 This code is very similar to the process we used in Studio. We are filtering the data from our layer by the data range found in the 'Own' field. Each of the five steps is assigned a color and the fill-opacity is set to 0.7. 
 
-1. Replace '#cb1515' with the following: 
+1. In the JS, replace the "paint" from red '#cb1515', to stepped blue bins, with an opacity of 0.7, using the following: 
 
 	```JavaScript
-	   ["step",
-	   ["get", "Own"],
-	   "hsl(225, 100%, 97%)",
-	   17.0,
-	   "hsl(203, 47%, 82%)",
-	   22.0,
-	   "hsl(202, 57%, 63%)",
-	   27.0,
-	   "#3182bd",
-	   32.0,
-	    "hsl(210, 90%, 32%)"],
-	   "fill-opacity": 0.7          
+              paint: {
+                'fill-color':
+                  ["step",
+                   ["get", "Own"],
+                   "hsl(225, 100%, 97%)",
+                   17.0,
+                   "hsl(203, 47%, 82%)",
+                   22.0,
+                   "hsl(202, 57%, 63%)",
+                   27.0,
+                   "#3182bd",
+                   32.0,
+                    "hsl(210, 90%, 32%)"
+                  ],
+                  "fill-opacity": 0.7 
+              }       
 	 ```
 
 
