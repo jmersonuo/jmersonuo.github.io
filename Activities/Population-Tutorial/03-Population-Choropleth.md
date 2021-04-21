@@ -50,7 +50,7 @@ Uploading your data as a tileset, rather than directly to a stlye, allows you to
 3. Select the geojson data containing your renters and owners data and upload it to your account. 
 
 	<p align="center">
-	  <img src="Images/tilesets.png">
+	  <img src="Images/tileset.PNG">
 	</p>
 
 
