@@ -384,14 +384,6 @@ For the renter map, we want to create a choropleth map that displays the percent
 <img src="Images/slide.gif">
 </p>
   
- 
-### Congratulations! You've completed the exercise! 
-
-<p align = "center">
-    <img src="https://media.giphy.com/media/eY1JD4KPG4HMk/giphy.gif">
-</p>
-
-
 ----------
 ### XI. Adding a popup that opens on hover
 
@@ -449,6 +441,13 @@ In order to add a popup, we'll need to initialize a popup variable, and then use
         });
 	```
 3. Change the content of the Owner map popup so that is has a label that makes sense.
+
+ 
+### Congratulations! You've completed the exercise! 
+
+<p align = "center">
+    <img src="https://media.giphy.com/media/eY1JD4KPG4HMk/giphy.gif">
+</p>
 
 ### Extra Steps 
 
