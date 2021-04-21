@@ -267,6 +267,10 @@ For this exercise you will have two load events, one for your owner map and one 
 2. Copy your tileset ID and add it to your code (be sure to keep the mapbox:// in your url):  
 
 	```url: 'mapbox://YOUR URL' //input your tileset url```
+	
+	<p align="center">
+	<img src="Images/tileset.png">
+	</p>
 
 3. Next, copy and paste the name of your [source layer](https://docs.mapbox.com/help/glossary/source-layer/){:target="_blank"} into the code. 
 
@@ -282,26 +286,27 @@ For this exercise you will have two load events, one for your owner map and one 
 
 You can assign a color to each block group based on its field and variables. For our first map, we want to create a choropleth map that displays the percentage of the Portland population that owns a home. In order to style by homeownership, you will need to style our data by our 'Own' field and to change the 'fill-color' parameter of the layer you just added to your map. 
 
-Replace '#cb1515' with the following: 
-
-```JavaScript
-   ["step",
-   ["get", "Own"],
-   "hsl(225, 100%, 97%)",
-   16.81,
-   "hsl(203, 47%, 82%)",
-   22.338,
-   "hsl(202, 57%, 63%)",
-   27.32,
-   "#3182bd",
-   31.942,
-    "hsl(210, 90%, 32%)"],
-   "fill-opacity": 0.7          
- ```
- 
 This code is very similar to the process we used in Studio. We are filtering the data from our layer by the data range found in the 'Own' field. Each of the five steps is assigned a color and the fill-opacity is set to 0.7. 
 
-Preview your map in a browser to view your changes.
+1. Replace '#cb1515' with the following: 
+
+	```JavaScript
+	   ["step",
+	   ["get", "Own"],
+	   "hsl(225, 100%, 97%)",
+	   17.0,
+	   "hsl(203, 47%, 82%)",
+	   22.0,
+	   "hsl(202, 57%, 63%)",
+	   27.0,
+	   "#3182bd",
+	   32.0,
+	    "hsl(210, 90%, 32%)"],
+	   "fill-opacity": 0.7          
+	 ```
+
+
+2. Preview your map in a browser to view your changes.
 
 <p align='center'>
   <img src="Images/owner_slide.png">
@@ -310,67 +315,66 @@ Preview your map in a browser to view your changes.
 ----------
 ### IV. Adding a second layer 
 
-Currently, we have only have information for homeowners displayed on our map. In order to make a meaningful comparison, we will need to add information about renters. 
+Currently, we have only have information for homeowners displayed on our map. In order to make a meaningful comparison, we will need to add the data symbolized using the renters attribute. We'll add this layer to the other map, so the user can see it when they swipe between maps. 
 
-First, add a second load event called renterMap (the renter variable will go inside of this function):
+1. First, add a second load event called renterMap (the renter variable will go inside of this function):
 
-```JavaScript 
+	```JavaScript 
 
-renterMap.on('load', function() {
-  // the rest of the renter data code will go in here
-});
+	renterMap.on('load', function() {
+	  // the rest of the renter data code will go in here
+	});
 
-```
+	```
 
-Next, add your renter data as a layer using .addLayer. 
+2. Next, add your renter data as a layer using .addLayer. Your tileset ID and the source-layer name will be the same for both layers. We will set a diffent attribute when styling the data.
 
-```JavaScript
-       renterMap.addLayer({
-         id: 'Renter Data',
-         type: "fill",
-         source: {
-           type: 'vector',
-           url: 'mapbox://YOUR URL' //input your tileset url
-         },
-           'source-layer': 'YOUR SOURCE LAYER NAME', //input your source layer name e.g. Owner-Renter-Pop-dr7310
-         paint: {
-           'fill-color': '#cb1515',
-         }
+	```JavaScript
+	       renterMap.addLayer({
+		 id: 'Renter Data',
+		 type: "fill",
+		 source: {
+		   type: 'vector',
+		   url: 'mapbox://YOUR URL' //input your tileset url
+		 },
+		   'source-layer': 'YOUR SOURCE LAYER NAME', //input your source layer name e.g. Owner-Renter-Pop-dr7310
+		 paint: {
+		   'fill-color': '#0090f5',
+		 }
 
-       });
+	       });
 
-```
+	```
 
-Copy your tileset ID and add it to your code (be sure to keep the mapbox:// in your url):  
+3. Copy your tileset ID and add it to your code (be sure to keep the mapbox:// in your url):  
 
-```url: 'mapbox://YOUR URL' //input your tileset url```
+	```url: 'mapbox://YOUR URL' //input your tileset url```
 
-Next, copy and paste the name of your [source layer](https://docs.mapbox.com/help/glossary/source-layer/){:target="_blank"} into the code. Your tileset ID and the source-layer name will be the same for both layers. 
+4. Next, copy and paste the name of your [source layer](https://docs.mapbox.com/help/glossary/source-layer/){:target="_blank"} into the code. 
 
-Preview your map in a browser to view your changes! You should see your vector layer on your map. 
+5. Preview your map in a browser to view your changes! You should see your vector layer on your second map. 
 
 ----------
 ### X. Styling your second layer 
 
 For the renter map, we want to create a choropleth map that displays the percentage of the Portland population that rents. In order to style by percentage of renters, you will need to style our data by the 'Rent' field. You will also need to change the 'fill-color' parameter of the layer you just added to your map. 
 
-1. Replace `'#cb1515'` with the following: 
+1. Replace `'#0090f5'` with the following: 
 
-	```JavaScript
-	   ["step",
-	   ["get", "Rent"],
-	   "hsl(225, 100%, 97%)",
-	   16.81,
-	   "hsl(203, 47%, 82%)",
-	   22.338,
-	   "hsl(202, 57%, 63%)",
-	   27.32,
-	   "#3182bd",
-	   31.942,
-	    "hsl(210, 90%, 32%)"],
-	   "fill-opacity": 0.7
-
-	 ```
+```JavaScript
+   ["step",
+   ["get", "Own"],
+   "hsl(225, 100%, 97%)",
+   17.0,
+   "hsl(203, 47%, 82%)",
+   22.0,
+   "hsl(202, 57%, 63%)",
+   27.0,
+   "#3182bd",
+   32.0,
+    "hsl(210, 90%, 32%)"],
+   "fill-opacity": 0.7          
+ ```
  
 2. Preview your map in a browser to view your changes.
  
