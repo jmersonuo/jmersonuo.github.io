@@ -177,10 +177,21 @@ Below your `ownerMap` variable, initialize your renter map by creating a new var
 var renterMap = new mapboxgl.Map({
     container: 'renters', // owners map div 
     style: 'mapbox://styles/mapbox/light-v10', // Mapbox light style so we can observe the swipe
-    center: // Use the same center as your other map so that they are perfectly aligned
+    center: [X,Y],// Use the same center as your other map so that they are perfectly aligned
     zoom: 10 
 });
 ```
+
+Note: in the CSS, that both maps have their style set via the class "map" or `.map`, so both fill the whole screen. This means that one map will cover the other until we set up the swipe plugin:
+	```css
+	/* locate this but don't add again */
+	.map {
+             position: absolute;
+             top: 0;
+             bottom: 0;
+             width: 100%;
+         }
+	 ```
 
 ----------
 
