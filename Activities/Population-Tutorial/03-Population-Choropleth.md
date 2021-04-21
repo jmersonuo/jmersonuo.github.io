@@ -19,10 +19,10 @@ In the last tutorial we used Studio to dynamically style all of our layers. For 
 
 ### In this tutorial you will:
 
-- [Add data](https://www.mapbox.com/help/uploads/){:target="_blank"} to Mapbox
-- Call on map layers using GL-JS
-- Learn about GL-JS and adding interactivity, styling your layers 
-- Learn additional tools and tricks such as how to [swipe between maps](https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-compare/){:target="_blank"}
+- [Add data](https://www.mapbox.com/help/uploads/){:target="_blank"} to Mapbox as a tileset
+- Add a tileset to a map using Mapbox GJLS
+- Add interactivity using a Mapbox plugin to [swipe between maps](https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-compare/){:target="_blank"}
+- Style your layers using JavaScript
 
 ----------
 
@@ -43,7 +43,8 @@ Download the data below.
 
 ### II. Upload data as a tileset to Mapbox
 
-To add the percentage of renters vs owners data to Mapbox as a tileset, you need to upload it to your account. 
+Uploading your data as a tileset, rather than directly to a stlye, allows you to add it to maps independantly from a style. You could add the same tileset to multiple differnt map, over differnt basemap "styles". To add the percentage of renters vs owners data to Mapbox as a tileset, you need to upload it to your account. 
+
 1. Go to your [**Tilesets**](https://studio.mapbox.com/tilesets/){:target="_blank"} page in Mapbox Studio to upload your data.
 2. On your Tilesets page, click the **New tileset** button. 
 3. Select the geojson data containing your renters and owners data and upload it to your account. 
@@ -69,6 +70,8 @@ To add the percentage of renters vs owners data to Mapbox as a tileset, you need
 	    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 	    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
 	    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+		
+	    <!-- JS and CSS for the swipe plugin -->
 	    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js'></script>
 	    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css' type='text/css' />
 
@@ -121,10 +124,10 @@ To add the percentage of renters vs owners data to Mapbox as a tileset, you need
 
 	```html
 	<!-- Locate, but don't add again -->
+	<!-- JS and CSS for the swipe plugin -->
 	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.js'></script>
 	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css'
 	```
-
       
 3. Next, between your script tags (where it says 'add your Mapbox access toke and map variable here') add your Mapbox access token and initialize your owner choropleth by creating a ownerMap variable. This first map will display information about the percentage of homeowners in Portland. 
 
@@ -223,7 +226,7 @@ For this exercise you will have two load events, one for your owner map and one 
 	});
     ```
 
-2. Next, we will add our owner and renter data layer to the map using ownerMap.addLayer(). Remember that this goes *inside* of the load function, af ter the comment `// the rest of the owner data code will go in here`. 
+2. Next, we will add our owner and renter data layer to the map using ownerMap.addLayer(). Remember that this goes *inside* of the load function, after the comment `// the rest of the owner data code will go in here`. 
 
 
 	```javascript
@@ -247,7 +250,7 @@ For this exercise you will have two load events, one for your owner map and one 
 ----------
 #### VII. Connecting your tileset 
 
-1. In your Mapbox account, navigate to your **Owner-Renter-Pops** tileset menu. 
+1. In your Mapbox account, navigate to Studio, then Tilesets, then find your **Owner-Renter-Pops** tileset menu. 
 
 	For each tilset, you can either click on the name of the tilset to go to its information page or click the button <img src="Images/Screen%20Shot%202019-10-25%20at%202.20.03%20PM.png"> for more options: 
 
@@ -378,9 +381,9 @@ For the renter map, we want to create a choropleth map that displays the percent
  
 ### Congratulations! You've completed the exercise! 
 
-	<p align = "center">
-		<img src="https://media.giphy.com/media/11uArCoB4fkRcQ/giphy.gif">
-	</p>
+<p align = "center">
+    <img src="https://giphy.com/gifs/finally-atlast-itsover-eY1JD4KPG4HMk">
+</p>
 
 ### Extra Steps 
 
