@@ -393,7 +393,7 @@ For the renter map, we want to create a choropleth map that displays the percent
 
 
 ----------
-### XI. Addition a popup that opens on hover
+### XI. Adding a popup that opens on hover
 
 In order to add a popup, we'll need to initialize a popup variable, and then use JS that interacts with each layer in each map.
 
