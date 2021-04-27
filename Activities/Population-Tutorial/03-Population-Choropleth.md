@@ -448,8 +448,16 @@ In order to add a popup, we'll need to initialize a popup variable, and then use
     <img src="https://media.giphy.com/media/eY1JD4KPG4HMk/giphy.gif">
 </p>
 
-### Extra Advanced Challenge 
+### XII. Extra Advanced Challenge 
 
 Try adding a legend and a title to your map to make it easier for readers to understand the comparison between owners and renters in Portland. 
 
+To add a legend be sure to add each of the chunks of code:
+
+- The HTML for the legend container `<div class="LegendContainer">... </div>`  You don't have to add the description panel container, but you can if you want it, too.
+- The CSS for styling the chunks
+	- Change the width of each legend item by removing the 50% width from the `.legendItem` class
+	- You can change the width of the whole legend panel by changing the width of it in the `.LegendContainer` class
+- Add the JS for the description panel interaction, if you added it.
+- If you add the description panel and want interaction, also add the link to the Bootstrap library in the HEAD (See the NOTE in I. Setting up your HTML page)
 
