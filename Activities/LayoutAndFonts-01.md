@@ -105,9 +105,10 @@ You will then add the map the versitile layout template.
             }
         ]
     };
-    ```  
+```
     
 2. Once the map loads, // Add a GeoJSON source containing place coordinates and information.
+
   ```JavaScript
           // Add a GeoJSON source containing place coordinates and information.
         map.addSource('places', {
