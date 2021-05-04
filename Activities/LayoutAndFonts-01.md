@@ -16,11 +16,16 @@ You will then add the map the versitile layout template.
 
 
 1. Save the following files to your R drive, or local computer:
-  - 
+  - filter-markers.html
+
+
+  When you open the map, you should have a mapbox-light style centered on Washington DC.
+  <img src=DC.JPG>
+
 
 ----------
 
-### II. Adding the GeoJSON DATA
+### II. Adding the GeoJSON data to the map
 
 1. In the scrip section of `filter-markers.html`, add the GeoSJON data structure in a variable called "places" where it says `// ADD THE DATA HERE`.
 
