@@ -20,9 +20,9 @@ You will then add the map the versitile layout template.
 
 ----------
 
-### II. Adding the GEOJSON DATA
+### II. Adding the GeoJSON DATA
 
-1. In the scrip section, add the data below.
+1. In the scrip section of `filter-markers.html`, add the GeoSJON data structure in a variable called "places" where it says `// ADD THE DATA HERE`.
 
   ```JavaScript
       // This GeoJSON contains features that include an "icon"
@@ -105,4 +105,61 @@ You will then add the map the versitile layout template.
             }
         ]
     };
-    ```
+    ```  
+    
+2. Once the map loads, // Add a GeoJSON source containing place coordinates and information.
+  ```JavaScript
+          // Add a GeoJSON source containing place coordinates and information.
+        map.addSource('places', {
+            'type': 'geojson',
+            'data': places
+        });
+  ```  
+3.
+
+  ```JavaScript
+          places.features.forEach(function (feature) {
+            var symbol = feature.properties['icon'];
+            var layerID = 'poi-' + symbol;
+
+            // Add a layer for this symbol type if it hasn't been added already.
+            if (!map.getLayer(layerID)) {
+                map.addLayer({
+                    'id': layerID,
+                    'type': 'symbol',
+                    'source': 'places',
+                    'layout': {
+                        // These icons are a part of the Mapbox Light style.
+                        // To view all images available in a Mapbox style, open
+                        // the style in Mapbox Studio and click the "Images" tab.
+                        // To add a new image to the style at runtime see
+                        // https://docs.mapbox.com/mapbox-gl-js/example/add-image/
+                        'icon-image': symbol + '-15',
+                        'icon-allow-overlap': true
+                    },
+                    'filter': ['==', 'icon', symbol]
+                });
+
+                // Add checkbox and label elements for the layer.
+                var input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = layerID;
+                input.checked = true;
+                filterGroup.appendChild(input);
+
+                var label = document.createElement('label');
+                label.setAttribute('for', layerID);
+                label.textContent = symbol;
+                filterGroup.appendChild(label);
+
+                // When the checkbox changes, update the visibility of the layer.
+                input.addEventListener('change', function (e) {
+                    map.setLayoutProperty(
+                        layerID,
+                        'visibility',
+                        e.target.checked ? 'visible' : 'none'
+                    );
+                });
+            }
+        });
+   ``` 
