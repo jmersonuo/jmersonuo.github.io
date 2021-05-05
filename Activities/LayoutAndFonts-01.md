@@ -209,7 +209,7 @@ via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-ima
 	   ``` 
    Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
    
-5. To add the legend, we add checkbox and label elements for each layer. Uncomment the following code-block:
+5. To add the legend, we add checkbox and label elements for each layer. *Uncomment* the following code-block:
     ```Javascript
 	// Add checkbox and label elements for the layer.
 	var input = document.createElement('input');
@@ -224,7 +224,7 @@ via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-ima
 	filterGroup.appendChild(label);
     ```
 	
-6. To add interation to the legend, we add a listener to each intupt checkbox. Uncomment the following code block:
+6. To add interation to the legend, we add a listener to each intupt checkbox. *Uncomment* the following code block:
     ```Javascript
 	// When the checkbox changes, update the visibility of the layer.
 	input.addEventListener('change', function (e) {
