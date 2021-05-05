@@ -22,10 +22,10 @@ You will then add the map the versatile layout template.
   - VersitileLayout.css
 
 
-  When you open the map, you should have a mapbox-light style centered on Washington DC.  
+	When you open the map, you should have a mapbox-light style centered on Washington DC.  
 	<p align="center">
 	    <img src= "Images/DC.JPG"> 
-	</p>  
+	</p>
 
 ----------
 
