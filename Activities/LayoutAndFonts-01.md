@@ -28,7 +28,7 @@ You will then add the map the versitile layout template.
 
 ### II. Adding the GeoJSON data to the map
 
-1. In the scrip section of `filter-markers.html`, add the GeoSJON data structure in a variable called "places" where it says `// ADD THE DATA HERE`.
+1. In the scrip section of `filter-markers.html`, add the GeoSJON data structure in a variable called "places" where it says `// ADD THE DATA HERE`. This just loads data into the variable "places", so you won't see a change in the map.
 
   ```JavaScript
       // This GeoJSON contains features that include an "icon"
@@ -113,15 +113,34 @@ You will then add the map the versitile layout template.
     };
 ```
     
-2. Once the map loads, // Add a GeoJSON source containing place coordinates and information.
+2. Once the map loads, // Add a GeoJSON source containing place coordinates and the layer using an icon image.
 
   ```JavaScript
-          // Add a GeoJSON source containing place coordinates and information.
+        // Add a GeoJSON source containing place coordinates and information.
         map.addSource('places', {
             'type': 'geojson',
             'data': places
         });
+        
+        // add a new layer using the points
+        var layerID = 'points';
+            map.addLayer({
+                'id': layerID,
+                'type': 'symbol',
+                'source': 'places',
+                'layout': {
+                    'icon-image': 'marker-15',
+                    'icon-allow-overlap': true
+                },
+            });
   ```  
+  
+  The markers should be visible on the map as little black squares.
+  
+  <p align="center">
+	    <img src= "Images/DC-Squaremarkers.JPG">
+	  </p>
+  
 3.
 
   ```JavaScript
