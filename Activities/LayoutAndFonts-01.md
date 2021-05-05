@@ -220,7 +220,7 @@ via this (add iamge method)[https://docs.mapbox.com/mapbox-gl-js/example/add-ima
 	filterGroup.appendChild(label);
     ```
 	
-6. To add interation to the legend, we add a listener to each intupt checkbox. Uncomment the following code-block:
+6. To add interation to the legend, we add a listener to each intupt checkbox. Uncomment the following code block:
     ```Javascript
 	// When the checkbox changes, update the visibility of the layer.
 	input.addEventListener('change', function (e) {
@@ -238,22 +238,22 @@ Viola!! An interactive map that filters layers by value!
 ### III. Adding scale dependency
    
    Find where the map is initialized.
-   	- Add a max zoom (you pick what the max zoom sould be). Here is the table of zoom levels: [https://docs.mapbox.com/help/glossary/zoom-level/](https://docs.mapbox.com/help/glossary/zoom-level/){:target="_blank"}
-   	- Add a min zoom (you pick what the min zoom sould be)
-   	- Prevent users from leaving your this bounding around DC. Read about max bounds in the API [https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds){:target="_blank"}
+   	- Add a min zoom (you pick what the min zoom sould be).  Here is the table of zoom levels: [https://docs.mapbox.com/help/glossary/zoom-level/](https://docs.mapbox.com/help/glossary/zoom-level/){:target="_blank"}
+   	- Prevent users from leaving your this bounding around DC by setting the max bounds, per the code block below. Read about max bounds in the API [https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds){:target="_blank"}
 
-	```// Set bounds to Washington, DC
+	```JavaScript
+	// Set bounds to Washington, DC
 		var bounds = [
 		    [-77.26383, 38.73854], // Southwest coordinates
 		    [-76.83569, 39.00114] // Northeast coordinates 
 		];
 
 		var map = new mapboxgl.Map({
-		container: 'map',
-		style: 'mapbox://styles/mapbox/streets-v11',
-		center: [-73.9978, 40.7209],
-		zoom: 13,
-		maxBounds: bounds // Sets bounds from variable above
+			container: 'map',
+			style: 'mapbox://styles/mapbox/light-v10',
+			center: [-77.04, 38.907],
+			zoom: 11.15,
+			maxBounds: bounds // Sets bounds from variable above
 		});
 	```
 
