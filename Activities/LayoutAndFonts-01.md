@@ -20,8 +20,9 @@ You will then add the map the versitile layout template.
 
 
   When you open the map, you should have a mapbox-light style centered on Washington DC.
-  <img src=DC.JPG>
-
+	<p align="center">
+	    <img src= "Images/DC.JPG">
+	  </p>
 
 ----------
 
