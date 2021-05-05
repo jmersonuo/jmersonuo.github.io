@@ -4,7 +4,7 @@
 
 
 For this first exercise, we will be adding GeoJSON format points to a map using mapbox GLJS. 
-You will then add the map the versitile layout template.
+You will then add the map the versatile layout template.
 
 
   Here are some additional resources you can explore:
@@ -113,7 +113,7 @@ You will then add the map the versitile layout template.
     };
 ```
     
-2. Once the map loads, // Add a GeoJSON source containing place coordinates and the layer using an icon image.
+2. Once the map loads, add a GeoJSON source containing place coordinates and the layer using an icon image. This goes inside the ` // Map's On 'load' function`.
 
   ```JavaScript
         // Add a GeoJSON source containing place coordinates and information.
@@ -141,10 +141,26 @@ You will then add the map the versitile layout template.
 	    <img src= "Images/DC-Squaremarkers.JPG">
 	  </p>
   
-3.
+3. We are going to change how the data are added. Instead of adding all the points as a single layer, we will iterate through each record of the data and add a new layer if we find a new value in the symbol field. The symbols are from the style for this map from the Maki Icons. To add different images, you'd need to create your own style refer to the images as shown in the symbology lab.
+
+  DELETE or comment out
+	```JavaScript         
+		var layerID = 'points';
+		map.addLayer({
+			'id': layerID,
+			'type': 'symbol',
+			'source': 'places',
+			'layout': {
+			    'icon-image': 'marker-15',
+			    'icon-allow-overlap': true
+			},
+		    });
+	```
+4. under `// add a new layer using the points` add the following chunk of code
 
   ```JavaScript
-          places.features.forEach(function (feature) {
+        // add a new layer using the points
+        places.features.forEach(function (feature) {
             var symbol = feature.properties['icon'];
             var layerID = 'poi-' + symbol;
 
@@ -166,29 +182,32 @@ You will then add the map the versitile layout template.
                     'filter': ['==', 'icon', symbol]
                 });
 
-                // Add checkbox and label elements for the layer.
-                var input = document.createElement('input');
-                input.type = 'checkbox';
-                input.id = layerID;
-                input.checked = true;
-                filterGroup.appendChild(input);
+//                // Add checkbox and label elements for the layer.
+//                var input = document.createElement('input');
+//                input.type = 'checkbox';
+//                input.id = layerID;
+//                input.checked = true;
+//                filterGroup.appendChild(input);
 
-                var label = document.createElement('label');
-                label.setAttribute('for', layerID);
-                label.textContent = symbol;
-                filterGroup.appendChild(label);
+//                var label = document.createElement('label');
+//                label.setAttribute('for', layerID);
+//                label.textContent = symbol;
+//                filterGroup.appendChild(label);
 
-                // When the checkbox changes, update the visibility of the layer.
-                input.addEventListener('change', function (e) {
-                    map.setLayoutProperty(
-                        layerID,
-                        'visibility',
-                        e.target.checked ? 'visible' : 'none'
-                    );
-                });
+//                // When the checkbox changes, update the visibility of the layer.
+//                input.addEventListener('change', function (e) {
+//                    map.setLayoutProperty(
+//                        layerID,
+//                        'visibility',
+//                        e.target.checked ? 'visible' : 'none'
+//                    );
+//                });
             }
         });
+    });
    ``` 
+   
+Notice the the    
    
 <hr>
 ### III. Adding scale dependency
