@@ -145,19 +145,19 @@ You will then add the map the versatile layout template.
 via this (add iamge method)[https://docs.mapbox.com/mapbox-gl-js/example/add-image/]{:target="_blank"}.
 
   DELETE or comment out
-	```JavaScript         
-		var layerID = 'points';
-		map.addLayer({
-			'id': layerID,
-			'type': 'symbol',
-			'source': 'places',
-			'layout': {
-			    'icon-image': 'marker-15',
-			    'icon-allow-overlap': true
-			},
-		    });
-	```
-4. under `// add a new layer using the points` add the following chunk of code
+    ```JavaScript         
+	var layerID = 'points';
+	map.addLayer({
+		'id': layerID,
+		'type': 'symbol',
+		'source': 'places',
+		'layout': {
+		    'icon-image': 'marker-15',
+		    'icon-allow-overlap': true
+		},
+	 });
+    ```
+4. Under `// add a new layer using the points` add the following chunk of code
 
   ```JavaScript
         // add a new layer using the points
@@ -203,9 +203,9 @@ via this (add iamge method)[https://docs.mapbox.com/mapbox-gl-js/example/add-ima
 		});
 	    });
    ``` 
-	Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
+   Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
    
-5. To add the interactive legend, we add checkbox and label elements for each layer. Uncomment the following code-block:
+5. To add the legend, we add checkbox and label elements for each layer. Uncomment the following code-block:
     ```Javascript
 	// Add checkbox and label elements for the layer.
 	var input = document.createElement('input');
@@ -220,20 +220,32 @@ via this (add iamge method)[https://docs.mapbox.com/mapbox-gl-js/example/add-ima
 	filterGroup.appendChild(label);
     ```
 	
-7. 
+6. To add interation to the legend, we add a listener to each intupt checkbox. Uncomment the following code-block:
+    ```Javascript
+	// When the checkbox changes, update the visibility of the layer.
+	input.addEventListener('change', function (e) {
+	    map.setLayoutProperty(
+		layerID,
+		'visibility',
+		e.target.checked ? 'visible' : 'none'
+	    );
+	});
+    ```
+   
+Viola!! An interactive map that filters layers by value!
    
 <hr>
 ### III. Adding scale dependency
    
    Find where the map is initialized.
-   	- Add a max zoom (you pick what the max zoom sould be). Here is the table of zoom levels: https://docs.mapbox.com/help/glossary/zoom-level/ 
-   	- Add a min zoom (you pick)
-   	- Prevent users from leaving your this bounding around DC. Read about max bounds in the API https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds
+   	- Add a max zoom (you pick what the max zoom sould be). Here is the table of zoom levels: [https://docs.mapbox.com/help/glossary/zoom-level/](https://docs.mapbox.com/help/glossary/zoom-level/){:target="_blank"}
+   	- Add a min zoom (you pick what the min zoom sould be)
+   	- Prevent users from leaving your this bounding around DC. Read about max bounds in the API [https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds){:target="_blank"}
 
-	```// Set bounds to New York, New York
+	```// Set bounds to Washington, DC
 		var bounds = [
-		[-74.04728500751165, 40.68392799015035], // Southwest coordinates
-		[-73.91058699000139, 40.87764500765852] // Northeast coordinates
+		    [-77.26383, 38.73854], // Southwest coordinates
+		    [-76.83569, 39.00114] // Northeast coordinates 
 		];
 
 		var map = new mapboxgl.Map({
@@ -241,7 +253,7 @@ via this (add iamge method)[https://docs.mapbox.com/mapbox-gl-js/example/add-ima
 		style: 'mapbox://styles/mapbox/streets-v11',
 		center: [-73.9978, 40.7209],
 		zoom: 13,
-		maxBounds: bounds // Sets bounds as max
+		maxBounds: bounds // Sets bounds from variable above
 		});
 	```
 
