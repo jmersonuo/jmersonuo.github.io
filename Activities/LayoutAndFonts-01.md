@@ -171,8 +171,8 @@ You will then add the map the versitile layout template.
         });
    ``` 
    
-   <hr>
-   ### III. Adding scale dependency
+<hr>
+### III. Adding scale dependency
    
    Find where the map is initialized.
    	- Add a max zoom (you pick what the max zoom sould be). Here is the table of zoom levels: https://docs.mapbox.com/help/glossary/zoom-level/ 
@@ -193,3 +193,47 @@ You will then add the map the versitile layout template.
 		maxBounds: bounds // Sets bounds as max
 		});
 	```
+
+<hr>
+### IIV. Add it to the versitile layout 
+	Note the lecture code version, added directly into the layout. In this version we will add it as an iFrame.
+	
+	- Add the map via an iFrame  (read about iframes)
+	- Change the title
+	- Add some desctiptive text the the panel on the left
+	- Add some descriptive text to the paragraph on the right
+
+
+### IIV. Now let's try somthing else. Let's put the same map in a bootsrap template
+	
+	Bootstrap is a free front-end framework for faster and easier web development.
+
+	Bootstrap also gives you the ability to easily create responsive designs.
+
+	Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins.
+	![image](https://user-images.githubusercontent.com/29931155/117084542-4ee07100-acfc-11eb-90ca-834ee7616c1f.png)
+
+	
+	Go through the following sections of the bootstrap 4 tutorial.
+	Read the information provided and click on each of the “Try it yourself!” buttons. 
+	Add text here and there to see how it fits in the layout.
+
+	https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp 
+
+	Get Started
+	Grid Basic
+	Typography
+	Colors
+	Tables
+	Images
+	Buttons
+	Pagination
+	![image](https://user-images.githubusercontent.com/29931155/117084583-6b7ca900-acfc-11eb-853f-19f4850dfbcb.png)
+
+	
+	
+	
+	- Add the map via an iFrame  (read about iframes)
+	- Change the title
+	- Add some desctiptive text the the panel on the left
+	- Add some descriptive text to the paragraph on the right
