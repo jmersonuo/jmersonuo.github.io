@@ -12,7 +12,7 @@ You will then add the map the versatile layout template.
 
 ----------
 
-### I. Getting setup
+### I. Getting setup  
 
 
 1. From the course R Drive (R:\Class_Data\Activity5), save the following files to your R drive:
@@ -22,18 +22,18 @@ You will then add the map the versatile layout template.
   - VersitileLayout.css
 
 
-  When you open the map, you should have a mapbox-light style centered on Washington DC.
+  When you open the map, you should have a mapbox-light style centered on Washington DC.  
 	<p align="center">
-	    <img src= "Images/DC.JPG">
-	  </p>
+	    <img src= "Images/DC.JPG"> 
+	</p>  
 
 ----------
 
-### II. Adding the GeoJSON data to the map
+### II. Adding the GeoJSON data to the map  
 
-1. In the scrip section of `filter-markers.html`, add the GeoSJON data structure in a variable called "places" where it says `// ADD THE DATA HERE`. This just loads data into the variable "places", so you won't see a change in the map.
+1. In the scrip section of `filter-markers.html`, add the GeoSJON data structure in a variable called "places" where it says `// ADD THE DATA HERE`. This just loads data into the variable "places", so you won't see a change in the map.  
 
-  ```JavaScript
+  ```JavaScript  
       // This GeoJSON contains features that include an "icon"
     // property. The value of the "icon" property corresponds
     // to an image in the Mapbox Light style's sprite. (Note:
@@ -114,11 +114,11 @@ You will then add the map the versatile layout template.
             }
         ]
     };
-```
+  ```  
     
 2. Once the map loads, add a GeoJSON source containing place coordinates and the layer using an icon image. This goes inside the ` // Map's On 'load' function`.
 
-  ```JavaScript
+  ```JavaScript  
         // Add a GeoJSON source containing place coordinates and information.
         map.addSource('places', {
             'type': 'geojson',
@@ -147,7 +147,8 @@ You will then add the map the versatile layout template.
 3. We are going to change how the data are added. Instead of adding all the points as a single layer, we will iterate through each record of the data and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style refer to the images as shown in the symbology lab or add imges at runtime using                        
 via this (add iamge method)[https://docs.mapbox.com/mapbox-gl-js/example/add-image/]{:target="_blank"}.
 
-    delete or comment out
+    Delete or comment out  
+    
     ```JavaScript         
 	var layerID = 'points';
 	map.addLayer({
