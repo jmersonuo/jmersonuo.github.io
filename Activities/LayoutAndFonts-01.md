@@ -11,6 +11,7 @@ You will then add the map the versatile layout template.
   - [Maki-icons](https://labs.mapbox.com/maki-icons/){:target="_blank"} 
   - [Mapbox zoom levels](https://docs.mapbox.com/help/glossary/zoom-level/){:target="_blank"}  
   - [Mapbox max bounds](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds){:target="_blank"} 
+  - [W3Schools iframes](https://www.w3schools.com/tags/tag_iframe.asp){:target="_blank"} 
   - [Bootsrap getting started](https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp){:target="_blank"} 
 
 ----------
