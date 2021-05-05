@@ -8,7 +8,7 @@ You will then add the map the versatile layout template.
 
 
   Here are some additional resources you can explore:
-  - [](){:target="_blank"} 
+  - [Maki-icons](https://labs.mapbox.com/maki-icons/){:target="_blank"} 
 
 ----------
 
@@ -141,7 +141,8 @@ You will then add the map the versatile layout template.
 	    <img src= "Images/DC-Squaremarkers.JPG">
 	  </p>
   
-3. We are going to change how the data are added. Instead of adding all the points as a single layer, we will iterate through each record of the data and add a new layer if we find a new value in the symbol field. The symbols are from the style for this map from the Maki Icons. To add different images, you'd need to create your own style refer to the images as shown in the symbology lab.
+3. We are going to change how the data are added. Instead of adding all the points as a single layer, we will iterate through each record of the data and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style refer to the images as shown in the symbology lab or add imges at runtime using                        
+via this (add iamge method)[https://docs.mapbox.com/mapbox-gl-js/example/add-image/]{:target="_blank"}.
 
   DELETE or comment out
 	```JavaScript         
@@ -172,42 +173,54 @@ You will then add the map the versatile layout template.
                     'source': 'places',
                     'layout': {
                         // These icons are a part of the Mapbox Light style.
-                        // To view all images available in a Mapbox style, open
-                        // the style in Mapbox Studio and click the "Images" tab.
-                        // To add a new image to the style at runtime see
-                        // https://docs.mapbox.com/mapbox-gl-js/example/add-image/
                         'icon-image': symbol + '-15',
                         'icon-allow-overlap': true
                     },
                     'filter': ['==', 'icon', symbol]
                 });
 
-//                // Add checkbox and label elements for the layer.
-//                var input = document.createElement('input');
-//                input.type = 'checkbox';
-//                input.id = layerID;
-//                input.checked = true;
-//                filterGroup.appendChild(input);
+	//                // Add checkbox and label elements for the layer.
+	//                var input = document.createElement('input');
+	//                input.type = 'checkbox';
+	//                input.id = layerID;
+	//                input.checked = true;
+	//                filterGroup.appendChild(input);
 
-//                var label = document.createElement('label');
-//                label.setAttribute('for', layerID);
-//                label.textContent = symbol;
-//                filterGroup.appendChild(label);
+	//                var label = document.createElement('label');
+	//                label.setAttribute('for', layerID);
+	//                label.textContent = symbol;
+	//                filterGroup.appendChild(label);
 
-//                // When the checkbox changes, update the visibility of the layer.
-//                input.addEventListener('change', function (e) {
-//                    map.setLayoutProperty(
-//                        layerID,
-//                        'visibility',
-//                        e.target.checked ? 'visible' : 'none'
-//                    );
-//                });
-            }
-        });
-    });
+	//                // When the checkbox changes, update the visibility of the layer.
+	//                input.addEventListener('change', function (e) {
+	//                    map.setLayoutProperty(
+	//                        layerID,
+	//                        'visibility',
+	//                        e.target.checked ? 'visible' : 'none'
+	//                    );
+	//                });
+		    }
+		});
+	    });
    ``` 
+	Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
    
-Notice the the    
+5. To add the interactive legend, we add checkbox and label elements for each layer. Uncomment the following code-block:
+    ```Javascript
+	// Add checkbox and label elements for the layer.
+	var input = document.createElement('input');
+	input.type = 'checkbox';
+	input.id = layerID;
+	input.checked = true;
+	filterGroup.appendChild(input);
+
+	var label = document.createElement('label');
+	label.setAttribute('for', layerID);
+	label.textContent = symbol;
+	filterGroup.appendChild(label);
+    ```
+	
+7. 
    
 <hr>
 ### III. Adding scale dependency
