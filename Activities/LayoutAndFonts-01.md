@@ -140,7 +140,7 @@ You will then add the map the versatile layout template.
   
   	The markers should be visible on the map as little black squares.
   
-	<p align="center">
+  <p align="center">
 	<img src= "Images/DC-Squaremarkers.JPG">
 	</p>
   
