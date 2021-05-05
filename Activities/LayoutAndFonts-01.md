@@ -15,8 +15,11 @@ You will then add the map the versatile layout template.
 ### I. Getting setup
 
 
-1. Save the following files to your R drive, or local computer:
+1. From the course R Drive (R:\Class_Data\Activity5), save the following files to your R drive:
   - filter-markers.html
+  - VersitileLayout.html
+  - VersitileLayout.js
+  - VersitileLayout.css
 
 
   When you open the map, you should have a mapbox-light style centered on Washington DC.
@@ -144,7 +147,7 @@ You will then add the map the versatile layout template.
 3. We are going to change how the data are added. Instead of adding all the points as a single layer, we will iterate through each record of the data and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style refer to the images as shown in the symbology lab or add imges at runtime using                        
 via this (add iamge method)[https://docs.mapbox.com/mapbox-gl-js/example/add-image/]{:target="_blank"}.
 
-  DELETE or comment out
+    delete or comment out
     ```JavaScript         
 	var layerID = 'points';
 	map.addLayer({
@@ -233,6 +236,10 @@ via this (add iamge method)[https://docs.mapbox.com/mapbox-gl-js/example/add-ima
     ```
    
 Viola!! An interactive map that filters layers by value!
+  <p align="center">
+	    <img src= "Images/DC-WithLegend.JPG">
+	  </p>
+
    
 <hr>
 ### III. Adding scale dependency
@@ -259,44 +266,47 @@ Viola!! An interactive map that filters layers by value!
 
 <hr>
 ### IIV. Add it to the versitile layout 
-	Note the lecture code version, added directly into the layout. In this version we will add it as an iFrame.
 	
-	- Add the map via an iFrame  (read about iframes)
-	- Change the title
-	- Add some desctiptive text the the panel on the left
-	- Add some descriptive text to the paragraph on the right
-
-
-### IIV. Now let's try somthing else. Let's put the same map in a bootsrap template
+Note the lecture code version, added a map directly into the layout. In this version, we will add it as an iFrame.
 	
-1. Understanding bootsrap
-	Bootstrap is a free front-end framework for faster and easier web development.
-	Bootstrap also gives you the ability to easily create responsive designs.
-	Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins.
-	![image](https://user-images.githubusercontent.com/29931155/117084542-4ee07100-acfc-11eb-90ca-834ee7616c1f.png)
+1. Open `VersitileLayout.html` in a text editor and add the map via an iFrame using the code block below. Read about [iframes](https://www.w3schools.com/tags/tag_iframe.asp).
+  Note that this refers to the filter-markers.html as a relative path, meaning they must be saved in the same folder. If you used a different name for your maps' html file, you'll have to use that file name as the source (src). 
+	```Javascript
+		<!--  ADD iframe here, inside the versitle layout's map container   -->
+         	<iframe src="filter-markers.html" title="Map"></iframe> 
+	```
 
-	
-	Go through the following sections of the bootstrap 4 tutorial.
-	Read the information provided and click on each of the “Try it yourself!” buttons. 
-	Add text here and there to see how it fits in the layout.
+- Change the title so it relates to the map
+- Add some desctiptive text about the map to the sidebar 
+- Add some descriptive text to the content panel
+  	
+	<p align="center">
+	   <img src= "Images/VersLayout.JPG">
+	</p>
 
-	https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp 
-
-	Get Started
-	Grid Basic
-	Typography
-	Colors
-	Tables
-	Images
-	Buttons
-	![image](https://user-images.githubusercontent.com/29931155/117084583-6b7ca900-acfc-11eb-853f-19f4850dfbcb.png)
 
 	
-2. Download the Basic Template	
-	
-	- Add the map via an iFrame  (read about iframes)
-	- Change the title
-	- Add some desctiptive text 
-
-<hr>
 That is all for today. Next lab, we'll explore editing fonts in the map and in the website!
+
+
+### IIV. Extra challenge
+
+If you are interested in trying a bootsrap template, check out the templates at [https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp](https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp)
+
+Go through the following sections of the bootstrap 4 tutorial.
+[https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp](https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp)
+
+Read the information provided and click on each of the “Try it yourself!” buttons. 
+Add text here and there to see how it fits in the layout.
+
+- Get Started
+- Grid Basic
+- Typography
+- Colors
+- Tables
+- Images
+- Buttons
+- Pagination
+
+
+
