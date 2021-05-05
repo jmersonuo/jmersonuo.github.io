@@ -206,10 +206,9 @@ You will then add the map the versitile layout template.
 
 ### IIV. Now let's try somthing else. Let's put the same map in a bootsrap template
 	
+1. Understanding bootsrap
 	Bootstrap is a free front-end framework for faster and easier web development.
-
 	Bootstrap also gives you the ability to easily create responsive designs.
-
 	Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins.
 	![image](https://user-images.githubusercontent.com/29931155/117084542-4ee07100-acfc-11eb-90ca-834ee7616c1f.png)
 
@@ -227,13 +226,14 @@ You will then add the map the versitile layout template.
 	Tables
 	Images
 	Buttons
-	Pagination
 	![image](https://user-images.githubusercontent.com/29931155/117084583-6b7ca900-acfc-11eb-853f-19f4850dfbcb.png)
 
 	
-	
+2. Download the Basic Template	
 	
 	- Add the map via an iFrame  (read about iframes)
 	- Change the title
-	- Add some desctiptive text the the panel on the left
-	- Add some descriptive text to the paragraph on the right
+	- Add some desctiptive text 
+
+<hr>
+That is all for today. Next lab, we'll explore editing fonts in the map and in the website!
