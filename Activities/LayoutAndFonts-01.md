@@ -170,3 +170,26 @@ You will then add the map the versitile layout template.
             }
         });
    ``` 
+   
+   <hr>
+   ### III. Adding scale dependency
+   
+   Find where the map is initialized.
+   	- Add a max zoom (you pick what the max zoom sould be). Here is the table of zoom levels: https://docs.mapbox.com/help/glossary/zoom-level/ 
+   	- Add a min zoom (you pick)
+   	- Prevent users from leaving your this bounding around DC. Read about max bounds in the API https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds
+
+	```// Set bounds to New York, New York
+		var bounds = [
+		[-74.04728500751165, 40.68392799015035], // Southwest coordinates
+		[-73.91058699000139, 40.87764500765852] // Northeast coordinates
+		];
+
+		var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/mapbox/streets-v11',
+		center: [-73.9978, 40.7209],
+		zoom: 13,
+		maxBounds: bounds // Sets bounds as max
+		});
+	```
