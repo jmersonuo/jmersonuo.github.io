@@ -161,9 +161,8 @@ via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-ima
 		},
 	 });
     ```
-4. Under `// add a new layer using the points` add the following chunk of code
-
-	  ```JavaScript
+4. Under `// add a new layer using the points` add the following chunk of code  
+  ```JavaScript  
 		// add a new layer using the points
 		places.features.forEach(function (feature) {
 		    var symbol = feature.properties['icon'];
@@ -206,7 +205,7 @@ via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-ima
 			    }
 			});
 		    });
-	   ``` 
+  ``` 
    Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
    
 5. To add the legend, we add checkbox and label elements for each layer. *Uncomment* the following code-block:
