@@ -116,27 +116,27 @@ You will then add the map the versatile layout template.
 	    };
 	  ```  
     
-2. Once the map loads, add a GeoJSON source containing place coordinates and the layer using an icon image. This goes inside the ` // Map's On 'load' function`.
+2. Once the map loads, add a GeoJSON source containing place coordinates and the layer using an icon image. This goes inside the `Map's On 'load' function`.
+	  
+	```JavaScript  
+	// Add a GeoJSON source containing place coordinates and information.
+	map.addSource('places', {
+	    'type': 'geojson',
+	    'data': places
+	});
 
-	  ```JavaScript  
-		// Add a GeoJSON source containing place coordinates and information.
-		map.addSource('places', {
-		    'type': 'geojson',
-		    'data': places
-		});
-
-		// add a new layer using the points
-		var layerID = 'points';
-		    map.addLayer({
-			'id': layerID,
-			'type': 'symbol',
-			'source': 'places',
-			'layout': {
-			    'icon-image': 'marker-15',
-			    'icon-allow-overlap': true
-			},
-		    });
-	  ```  
+	// add a new layer using the points
+	var layerID = 'points';
+	    map.addLayer({
+		'id': layerID,
+		'type': 'symbol',
+		'source': 'places',
+		'layout': {
+		    'icon-image': 'marker-15',
+		    'icon-allow-overlap': true
+		},
+	});
+	```  
   
   	The markers should be visible on the map as little black squares.
   
