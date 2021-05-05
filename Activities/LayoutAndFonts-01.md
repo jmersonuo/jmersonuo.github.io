@@ -240,8 +240,7 @@ Viola!! An interactive map that filters layers by value!
    Find where the map is initialized.
    	- Add a min zoom (you pick what the min zoom sould be).  Here is the table of zoom levels: [https://docs.mapbox.com/help/glossary/zoom-level/](https://docs.mapbox.com/help/glossary/zoom-level/){:target="_blank"}
    	- Prevent users from leaving your this bounding around DC by setting the max bounds, per the code block below. Read about max bounds in the API [https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds){:target="_blank"}
-
-	```JavaScript
+    ```JavaScript
 	// Set bounds to Washington, DC
 		var bounds = [
 		    [-77.26383, 38.73854], // Southwest coordinates
@@ -255,7 +254,7 @@ Viola!! An interactive map that filters layers by value!
 			zoom: 11.15,
 			maxBounds: bounds // Sets bounds from variable above
 		});
-	```
+    ```
 
 <hr>
 ### IIV. Add it to the versitile layout 
