@@ -270,7 +270,7 @@ Viola!! An interactive map that filters layers by value!
   ```
 
 <hr>
-### IIV. Add it to the versitile layout 
+### IV. Add it to the versitile layout 
 	
 Note the lecture code version, added a map directly into the layout. In this version, we will add it as an iFrame.
 	
@@ -293,8 +293,8 @@ Note the lecture code version, added a map directly into the layout. In this ver
 	
 That is all for today. Next lab, we'll explore editing fonts in the map and in the website!
 
-
-### IIV. Extra challenge
+<hr>
+### V. Extra challenge
 
 1. If you are interested in trying a bootsrap template, check out the templates at [https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp](https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp)  
 
