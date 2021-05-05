@@ -31,7 +31,7 @@ You will then add the map the versatile layout template.
 
 ### II. Adding the GeoJSON data to the map  
 
-1. In the scrip section of `filter-markers.html`, add the GeoSJON data structure in a variable called "places" where it says `// ADD THE DATA HERE`. This just loads data into the variable "places", so you won't see a change in the map.  
+1. In the script section of `filter-markers.html`, add the GeoSJON data structure in a variable called "places" where it says `// ADD THE DATA HERE`. This just loads data into the variable "places", so you won't see a change in the map.  
 
 	  ```JavaScript  
 	      // This GeoJSON contains features that include an "icon"
