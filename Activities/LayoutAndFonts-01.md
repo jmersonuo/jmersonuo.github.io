@@ -145,7 +145,7 @@ You will then add the map the versatile layout template.
 	  </p>
   
 3. We are going to change how the data are added. Instead of adding all the points as a single layer, we will iterate through each record of the data and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style refer to the images as shown in the symbology lab or add imges at runtime using                        
-via this (add iamge method)[https://docs.mapbox.com/mapbox-gl-js/example/add-image/]{:target="_blank"}.
+via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-image/){:target="_blank"}.
 
     Delete or comment out  
     
