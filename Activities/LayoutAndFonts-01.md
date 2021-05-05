@@ -118,31 +118,31 @@ You will then add the map the versatile layout template.
     
 2. Once the map loads, add a GeoJSON source containing place coordinates and the layer using an icon image. This goes inside the ` // Map's On 'load' function`.
 
-  ```JavaScript  
-        // Add a GeoJSON source containing place coordinates and information.
-        map.addSource('places', {
-            'type': 'geojson',
-            'data': places
-        });
-        
-        // add a new layer using the points
-        var layerID = 'points';
-            map.addLayer({
-                'id': layerID,
-                'type': 'symbol',
-                'source': 'places',
-                'layout': {
-                    'icon-image': 'marker-15',
-                    'icon-allow-overlap': true
-                },
-            });
-  ```  
+	  ```JavaScript  
+		// Add a GeoJSON source containing place coordinates and information.
+		map.addSource('places', {
+		    'type': 'geojson',
+		    'data': places
+		});
+
+		// add a new layer using the points
+		var layerID = 'points';
+		    map.addLayer({
+			'id': layerID,
+			'type': 'symbol',
+			'source': 'places',
+			'layout': {
+			    'icon-image': 'marker-15',
+			    'icon-allow-overlap': true
+			},
+		    });
+	  ```  
   
-  The markers should be visible on the map as little black squares.
+  	The markers should be visible on the map as little black squares.
   
-  <p align="center">
-	    <img src= "Images/DC-Squaremarkers.JPG">
-	  </p>
+	  <p align="center">
+		    <img src= "Images/DC-Squaremarkers.JPG">
+		  </p>
   
 3. We are going to change how the data are added. Instead of adding all the points as a single layer, we will iterate through each record of the data and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style refer to the images as shown in the symbology lab or add imges at runtime using                        
 via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-image/){:target="_blank"}.
@@ -163,50 +163,50 @@ via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-ima
     ```
 4. Under `// add a new layer using the points` add the following chunk of code
 
-  ```JavaScript
-        // add a new layer using the points
-        places.features.forEach(function (feature) {
-            var symbol = feature.properties['icon'];
-            var layerID = 'poi-' + symbol;
+	  ```JavaScript
+		// add a new layer using the points
+		places.features.forEach(function (feature) {
+		    var symbol = feature.properties['icon'];
+		    var layerID = 'poi-' + symbol;
 
-            // Add a layer for this symbol type if it hasn't been added already.
-            if (!map.getLayer(layerID)) {
-                map.addLayer({
-                    'id': layerID,
-                    'type': 'symbol',
-                    'source': 'places',
-                    'layout': {
-                        // These icons are a part of the Mapbox Light style.
-                        'icon-image': symbol + '-15',
-                        'icon-allow-overlap': true
-                    },
-                    'filter': ['==', 'icon', symbol]
-                });
+		    // Add a layer for this symbol type if it hasn't been added already.
+		    if (!map.getLayer(layerID)) {
+			map.addLayer({
+			    'id': layerID,
+			    'type': 'symbol',
+			    'source': 'places',
+			    'layout': {
+				// These icons are a part of the Mapbox Light style.
+				'icon-image': symbol + '-15',
+				'icon-allow-overlap': true
+			    },
+			    'filter': ['==', 'icon', symbol]
+			});
 
-	//                // Add checkbox and label elements for the layer.
-	//                var input = document.createElement('input');
-	//                input.type = 'checkbox';
-	//                input.id = layerID;
-	//                input.checked = true;
-	//                filterGroup.appendChild(input);
+		//                // Add checkbox and label elements for the layer.
+		//                var input = document.createElement('input');
+		//                input.type = 'checkbox';
+		//                input.id = layerID;
+		//                input.checked = true;
+		//                filterGroup.appendChild(input);
 
-	//                var label = document.createElement('label');
-	//                label.setAttribute('for', layerID);
-	//                label.textContent = symbol;
-	//                filterGroup.appendChild(label);
+		//                var label = document.createElement('label');
+		//                label.setAttribute('for', layerID);
+		//                label.textContent = symbol;
+		//                filterGroup.appendChild(label);
 
-	//                // When the checkbox changes, update the visibility of the layer.
-	//                input.addEventListener('change', function (e) {
-	//                    map.setLayoutProperty(
-	//                        layerID,
-	//                        'visibility',
-	//                        e.target.checked ? 'visible' : 'none'
-	//                    );
-	//                });
-		    }
-		});
-	    });
-   ``` 
+		//                // When the checkbox changes, update the visibility of the layer.
+		//                input.addEventListener('change', function (e) {
+		//                    map.setLayoutProperty(
+		//                        layerID,
+		//                        'visibility',
+		//                        e.target.checked ? 'visible' : 'none'
+		//                    );
+		//                });
+			    }
+			});
+		    });
+	   ``` 
    Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
    
 5. To add the legend, we add checkbox and label elements for each layer. Uncomment the following code-block:
