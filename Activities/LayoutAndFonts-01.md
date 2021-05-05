@@ -9,6 +9,8 @@ You will then add the map the versatile layout template.
 
   Here are some additional resources you can explore:
   - [Maki-icons](https://labs.mapbox.com/maki-icons/){:target="_blank"} 
+  - [Mapbox zoom levels](https://docs.mapbox.com/help/glossary/zoom-level/){:target="_blank"}  
+  - [Mapbox max bounds](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds){:target="_blank"} 
 
 ----------
 
