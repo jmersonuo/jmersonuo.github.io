@@ -11,6 +11,7 @@ You will then add the map the versatile layout template.
   - [Maki-icons](https://labs.mapbox.com/maki-icons/){:target="_blank"} 
   - [Mapbox zoom levels](https://docs.mapbox.com/help/glossary/zoom-level/){:target="_blank"}  
   - [Mapbox max bounds](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds){:target="_blank"} 
+  - [Bootsrap getting started](https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp){:target="_blank"} 
 
 ----------
 
@@ -35,7 +36,7 @@ You will then add the map the versatile layout template.
 
 1. In the script section of `filter-markers.html`, add the GeoSJON data structure in a variable called "places" where it says `// ADD THE DATA HERE`. This just loads data into the variable "places", so you won't see a change in the map.  
 
-	  ```JavaScript  
+	  ```Javascript  
 	      // This GeoJSON contains features that include an "icon"
 	    // property. The value of the "icon" property corresponds
 	    // to an image in the Mapbox Light style's sprite. (Note:
@@ -120,7 +121,7 @@ You will then add the map the versatile layout template.
     
 2. Once the map loads, add a GeoJSON source containing place coordinates and the layer using an icon image. This goes inside the `Map's On 'load' function`.
 	  
-	```JavaScript  
+	```Javascript  
 	// Add a GeoJSON source containing place coordinates and information.
 	map.addSource('places', {
 	    'type': 'geojson',
@@ -151,7 +152,7 @@ via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-ima
 
     Delete or comment out  
     
-    ```JavaScript         
+    ```Javascript         
 	var layerID = 'points';
 	map.addLayer({
 		'id': layerID,
@@ -164,7 +165,7 @@ via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-ima
 	 });
     ```
 4. Under `// add a new layer using the points` add the following chunk of code  
-  ```JavaScript  
+  ```Javascript  
 		// add a new layer using the points
 		places.features.forEach(function (feature) {
 		    var symbol = feature.properties['icon'];
@@ -294,22 +295,20 @@ That is all for today. Next lab, we'll explore editing fonts in the map and in t
 
 ### IIV. Extra challenge
 
-If you are interested in trying a bootsrap template, check out the templates at [https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp](https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp)
+1. If you are interested in trying a bootsrap template, check out the templates at [https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp](https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp)  
 
-Go through the following sections of the bootstrap 4 tutorial.
-[https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp](https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp)
+2. Go through the following sections of the bootstrap 4 tutorial. [https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp](https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp)
 
-Read the information provided and click on each of the “Try it yourself!” buttons. 
-Add text here and there to see how it fits in the layout.
-
-- Get Started
-- Grid Basic
-- Typography
-- Colors
-- Tables
-- Images
-- Buttons
-- Pagination
+3. Read the information provided and click on each of the “Try it yourself!” buttons. 
+	Add text here and there to see how it fits in the layout.
+	- Get Started
+	- Grid Basic
+	- Typography
+	- Colors
+	- Tables
+	- Images
+	- Buttons
+	- Pagination
 
 
 
