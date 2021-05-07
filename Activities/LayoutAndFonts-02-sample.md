@@ -3,7 +3,7 @@
 
 
 
-For this scond exercise, we will be:
+For this second exercise, we will be:
 - adding popups to the map features
 - adding a google font to the site
 - using CSS to apply the font to various parts of the map and site
@@ -28,20 +28,20 @@ For this scond exercise, we will be:
 
 ----------
 
-### III. Chaging the mouse symbol over points 
+### III. Changing the mouse symbol over points 
 
 1. 
 
 ----------
 
-### III. Adding a font to the map
+### IV. Adding a font to the map
 
 Assume a client has asked you to find a free to use "fun or whimsical" font for this map of sites in Washington D.C. In this
 
-1. Visit https://fonts.google.com/ chose a "fun or whimsical" font, but make sure it is still legiable. 
+1. Visit https://fonts.google.com/ chose a "fun or whimsical" font, but make sure it is still legible. 
 2. Get the HTML/CSS code by clicking "select this font"
 3. Insert the html into the `<head>` of your site.
-   e.g. If I picked Martel, I would insert the following codde block. You should pick a differnt font, and you'll be asked to explain your choice for the assignment submission:
+   e.g. If I picked Martel, I would insert the following code block. You should pick a different font, and you'll be asked to explain your choice for the assignment submission:
    ```javascript
       <!--   Link to google font-->
       <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -49,7 +49,7 @@ Assume a client has asked you to find a free to use "fun or whimsical" font for 
    ```
 4. Set the font for the legend "Filter-group":
    In the `<style>` section at the top, locate the class `.filter-group` and delete or comment out the current font `font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;`. Replace it with the font-family that you selected.
-   e.g. If I picked Martel, the class `.filter-group` would looke like this:
+   e.g. If I picked Martel, the class `.filter-group` would look like this:
    ```css
        .filter-group {
         font-family: 'Martel', serif;
