@@ -1,5 +1,5 @@
 <h2 align="center"> Putting a mapbox map into an HTML template </h2>
-<h3 align="center"> Part 2: Changing fonts </h3>
+<h3 align="center"> Part 2: Changing fonts and getting a little more andaved with looping through data</h3>
 
 
 
@@ -122,4 +122,9 @@ Assume a client has asked you to find a free to use "fun or whimsical" font for 
         font-size: 150%;
     }   
     ```
+
+Here is an example with Martel. Yours should use a different font.
+   <p align="center">
+	    <img src= "Images/05-popup-font.JPG"> 
+  </p>
 
