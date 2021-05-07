@@ -26,7 +26,7 @@ For this second exercise, we will be:
 
 In order to add popups we need to specify the popup function for each of the layers.  We will do this within the forEach function that looks at each record in the geoJSON (` places.features.forEach(function (feature) {... }`), and within the if condition that checks the map or new icon types (`if (!map.getLayer(layerID)) {... }`).  
 
-1. *Locate* the last line of within the scope of (`if (!map.getLayer(layerID)) {... }`).  It should be the checkbox's change funtion:
+1. *Locate* the last line of within the scope of (`if (!map.getLayer(layerID)) {... }`).  It should be the checkbox's change function:
   ```javascript
      // When the checkbox changes, update the visibility of the layer.
      input.addEventListener('change', function (e) {
@@ -38,7 +38,8 @@ In order to add popups we need to specify the popup function for each of the lay
       });
   ```
     
-3. After this, add the following codeblock that will create variable that builds an HTML description for each point, gets the coordinates of each point, and then uses that description for the HTML of the popup that will open at the point's coordinates.
+3. After this, add the following code block that will create variable that builds an HTML description for each point, gets the coordinates of each point, and then uses that description for the HTML of the popup that will open at the point's coordinates. Because this is within the same loop, so it is added for each layer using the variable `layerID`. In past assignments, we had explicitly named the layer for `map.on` functions.
+
   ```javascript
      // When a click event occurs on a feature in the places layer, 
      // open a popup at the location of the feature, with description HTML from its properties.
@@ -52,18 +53,34 @@ In order to add popups we need to specify the popup function for each of the lay
             .addTo(map);
      });
   ```  
-  <p align="center">
+4. Try clicking on a map point, a popup should open!
+   <p align="center">
 	    <img src= "Images/05-popup.JPG"> 
   </p>
  
   
-4. For an extra challenge, modify the text within the popup.
+5. For an extra challenge, edit the value of the `description` variable to modify the text within the popup.
 
 ----------
 
 ### III. Changing the mouse symbol over points 
 
-1. 
+Thinking about accordance, we should let our users know that the points are clickable. To do so, lets change the mouse cursor to a pointer when we roll over a feature in each layer. Just like the previous step, this is within a loop, so it is added for each layer using the variable `layerID`. In past assignments, we had explicitly named the layer for `map.on` functions.
+
+1. In the same scope as the code above (`if (!map.getLayer(layerID)) {{...}`), right after the code block for the popups, add the following code block:
+  ```javascript
+     // Change the cursor to a pointer when the mouse is over the places layer.
+     map.on('mouseenter', layerID, function () {
+          map.getCanvas().style.cursor = 'pointer';
+     });
+
+     // Change it back to a pointer when it leaves.
+     map.on('mouseleave', layerID, function () {
+            map.getCanvas().style.cursor = '';
+     });
+  ```
+
+2. Hover over points in the map. Does your mouse chnage? Yes? hurrah!
 
 ----------
 
@@ -98,7 +115,7 @@ Assume a client has asked you to find a free to use "fun or whimsical" font for 
    ```
    
 4. Set the font for the popups:
-   In the `<style>` section at the top, add a class `.mapboxgl-popup` with the font-family that you selected. Adjust the size of the font if yours feels too big, or too small. If I picked Martel, the new class would looke like this:
+   In the `<style>` section at the top, add a class `.mapboxgl-popup` with the font-family that you selected. Adjust the size of the font if yours feels too big, or too small. If I picked Martel, the new class would look like this:
    ```css
     .mapboxgl-popup{
         font-family: 'Martel', serif;
