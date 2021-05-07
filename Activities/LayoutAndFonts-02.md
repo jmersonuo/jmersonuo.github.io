@@ -18,7 +18,7 @@ For this second exercise, we will be:
 ### I. Getting setup  
 
 
-1. 
+1. Open the HTML files that you started eding in part 1.
 
 ----------
 
@@ -130,7 +130,7 @@ Here is an example with Martel. Yours should use a different font.
 
 ----------
 
-### IV. Adding a font to the parent webpage (versatile layout)
+### V. Adding a font to the parent webpage (versatile layout)
 
 So far, the edits we made make changes to the map. Since the map is in an iFrame in another web page, we edit it separately.
 
@@ -161,3 +161,54 @@ So far, the edits we made make changes to the map. Since the map is in an iFrame
 	  position: relative;
 	  z-index: 1;
    ```
+
+
+----------
+### VI. Cleaning things up a bit
+
+Often, templates have sections that we aren't going to use, so we can remove them.  Currently, we are not using the search bar. So let's hide it. To do so, we can simply remove the DOM elements from the HTML by commenting them out, we could delete them later if we are sure we don't want them.
+
+1. *locate* the search container, it looks like this. Use an HTML block comment `<!--` to `-->` to comment it out.
+  ```html
+	<!--
+	<div class="search-container cell medium-3 large-2">
+	    <input type="text" placeholder="Search..." class="search" />
+	    <ul class="search-results no-bullet">
+		<li>Search Result 1</li>
+		<li>Search Result 2</li>
+		<li>Search Result 3</li>
+	    </ul>
+	</div>
+	-->
+   ```
+   
+ 2. Customize the layout by editing the CSS so that the header matches the legend box. I am going edit the `.site-header` class to have the same color text as the map menu. You change change both to different colors.
+  - In `filter-markers.html`, the CSS at the top has a class `.filter-group` 
+  
+   ```css
+    .filter-group input[type='checkbox'] + label {
+        background-color: #3386c0;
+        text-transform: capitalize;
+    }
+   ```
+   
+  - In `VersitileLayout.css`, the we can change the `.site-title` color.
+  
+   ```css
+    .site-title {
+	  color: #3386c0;
+	  font-size: 1.25rem;
+	  line-height: $site-header-height;
+	  font-family: 'Martel', serif;  /* google font was added here */
+    }
+   ```
+   
+ ### We've begun to customize the layout!  
+      <p align="center">
+	    <img src= "Images/05-Header-title.JPG"> 
+     </p>
+     
+### What to turn in:
+- Upload your layout to Pages by uploading the map's html, and the layout's html, js, and css files. 
+- Visit the site yourself to make sure it works! Don't forget, on Pages, filenames are case sensitive! So the file names need to match the references within the html file EXACTLY!
+- Use the submission link to provide the link to your *layout*, attached the same files, and answer the questions listed.
