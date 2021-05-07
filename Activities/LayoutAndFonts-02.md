@@ -34,7 +34,7 @@ In order to add popups we need to specify the popup function for each of the lay
       });
   ```
     
-3. After this, add the following code block that will create variable that builds an HTML description for each point, gets the coordinates of each point, and then uses that description for the HTML of the popup that will open at the point's coordinates. Because this is within the same loop, so it is added for each layer using the variable `layerID`. In past assignments, we had explicitly named the layer for `map.on` functions.
+2. After this, add the following code block that will create variable that builds an HTML description for each point, gets the coordinates of each point, and then uses that description for the HTML of the popup that will open at the point's coordinates. Because this is within the same loop, so it is added for each layer using the variable `layerID`. In past assignments, we had explicitly named the layer for `map.on` functions.
 
   ```javascript
      // When a click event occurs on a feature in the places layer, 
@@ -49,13 +49,13 @@ In order to add popups we need to specify the popup function for each of the lay
             .addTo(map);
      });
   ```  
-4. Try clicking on a map point, a popup should open!
+3. Try clicking on a map point, a popup should open!
    <p align="center">
 	    <img src= "Images/05-popup.JPG"> 
   </p>
  
   
-5. For an extra challenge, edit the value of the `description` variable to modify the text within the popup.
+4. For an extra challenge, edit the value of the `description` variable to modify the text within the popup.
 
 ----------
 
@@ -110,7 +110,7 @@ Assume a client has asked you to find a free to use "fun or whimsical" font for 
     }
    ```
    
-4. Set the font for the popups:
+5. Set the font for the popups:
    In the `<style>` section in the , add a class `.mapboxgl-popup` with the font-family that you selected. Adjust the size of the font if yours feels too big, or too small. If I picked Martel, the new class would look like this:
    ```css
     .mapboxgl-popup{
