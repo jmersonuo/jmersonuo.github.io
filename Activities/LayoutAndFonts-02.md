@@ -1,5 +1,5 @@
 <h2 align="center"> Putting a mapbox map into an HTML template </h2>
-<h3 align="center"> Part 2: Changing fonts and getting a little more andaved with looping through data</h3>
+<h3 align="center"> Part 2: Changing fonts and getting a little more advanced with looping through data</h3>
 
 
 
