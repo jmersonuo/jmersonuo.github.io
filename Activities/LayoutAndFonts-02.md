@@ -9,10 +9,6 @@ For this second exercise, we will be:
 - using CSS to apply the font to various parts of the map and site
 
 
-  Here are some additional resources you can explore:
-  - [Maki-icons](https://labs.mapbox.com/maki-icons/){:target="_blank"} 
-
-
 ----------
 
 ### I. Getting setup  
