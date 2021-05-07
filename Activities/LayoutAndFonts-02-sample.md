@@ -101,7 +101,7 @@ Assume a client has asked you to find a free to use "fun or whimsical" font for 
    In the `<style>` section, *locate* the existing class `.filter-group` and delete or comment out the current font `font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;`. Replace it with the font-family that you selected.
    e.g. If I picked Martel, the class `.filter-group` would look like this:
    ```css
-       .filter-group {
+   .filter-group {
         font-family: 'Martel', serif;
         font-weight: 600;
         position: absolute;
@@ -148,16 +148,16 @@ So far, the edits we made make changes to the map. Since the map is in an iFrame
 4. Open the `VersitileLayout.css` with your text editor. There are a lot of classes already defined for us, but thankfully they are well commented! 
 5. *Locate* the class `.site-title` and add your font-family:
    ```css
-     .site-title {
+   .site-title {
 	  font-size: 1.25rem;
 	  line-height: $site-header-height;
-	  font-family: 'Martel', serif;
-     }
+	  font-family: 'Martel', serif;  /* google font was added here */
+   }
    ```
 6.  *Locate* the class `.site-main` and add your font-family:
    ```css
-     .site-main {
-	  font-family: 'Martel', serif;
+   .site-main {
+	  font-family: 'Martel', serif;  /* google font was added here */
 	  position: relative;
 	  z-index: 1;
    ```
