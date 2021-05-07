@@ -42,7 +42,7 @@ Assume a client has asked you to find a free to use "fun or whimsical" font for 
 2. Get the HTML/CSS code by clicking "select this font"
 3. Insert the html into the `<head>` of your site.
    e.g. If I picked Martel, I would insert the following code block. You should pick a different font, and you'll be asked to explain your choice for the assignment submission:
-   ```javascript
+   ```html
       <!--   Link to google font-->
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Martel&display=swap" rel="stylesheet">
