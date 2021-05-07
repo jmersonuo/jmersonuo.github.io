@@ -52,6 +52,12 @@ In order to add popups we need to specify the popup function for each of the lay
             .addTo(map);
      });
   ```  
+  	<p align="center">
+	    <img src= "Images/05-popup.JPG"> 
+	</p>
+ 
+  
+4. For an extra challenge, modify the text within the popup.
 
 ----------
 
