@@ -98,7 +98,7 @@ Assume a client has asked you to find a free to use "fun or whimsical" font for 
       <link href="https://fonts.googleapis.com/css2?family=Martel&display=swap" rel="stylesheet">
    ```
 4. Set the font for the legend "Filter-group":
-   In the `<style>` section at the top, locate the class `.filter-group` and delete or comment out the current font `font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;`. Replace it with the font-family that you selected.
+   In the `<style>` section, *locate* the existing class `.filter-group` and delete or comment out the current font `font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;`. Replace it with the font-family that you selected.
    e.g. If I picked Martel, the class `.filter-group` would look like this:
    ```css
        .filter-group {
@@ -115,7 +115,7 @@ Assume a client has asked you to find a free to use "fun or whimsical" font for 
    ```
    
 4. Set the font for the popups:
-   In the `<style>` section at the top, add a class `.mapboxgl-popup` with the font-family that you selected. Adjust the size of the font if yours feels too big, or too small. If I picked Martel, the new class would look like this:
+   In the `<style>` section in the , add a class `.mapboxgl-popup` with the font-family that you selected. Adjust the size of the font if yours feels too big, or too small. If I picked Martel, the new class would look like this:
    ```css
     .mapboxgl-popup{
         font-family: 'Martel', serif;
@@ -128,3 +128,20 @@ Here is an example with Martel. Yours should use a different font.
 	    <img src= "Images/05-popup-font.JPG"> 
   </p>
 
+----------
+
+### IV. Adding a font to the parent webpage (versitile layout)
+
+So far, the edits we made make changes to the map. Since the map is in an iFrame in another webpage, we edit it seperatly.
+
+1. Open your file `VersitileLayout.html`, or whatever you named the html file that has an iframe containing your map.
+2. In the `<head>`, add a link to your google font. e.g. for Martel, it looks like this:
+   ```html
+      <!--   Link to google font-->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Martel&display=swap" rel="stylesheet">
+   ```
+3. Notice that the `<head>` contains a reletive link to a CSS file, rather than embedding it directly in the HTML file: 
+  ```html
+	<link href="VersitileLayout.css" rel="stylesheet" />
+  ```
