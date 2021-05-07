@@ -130,9 +130,9 @@ Here is an example with Martel. Yours should use a different font.
 
 ----------
 
-### IV. Adding a font to the parent webpage (versitile layout)
+### IV. Adding a font to the parent webpage (versatile layout)
 
-So far, the edits we made make changes to the map. Since the map is in an iFrame in another webpage, we edit it seperatly.
+So far, the edits we made make changes to the map. Since the map is in an iFrame in another web page, we edit it separately.
 
 1. Open your file `VersitileLayout.html`, or whatever you named the html file that has an iframe containing your map.
 2. In the `<head>`, add a link to your google font. e.g. for Martel, it looks like this:
@@ -141,7 +141,23 @@ So far, the edits we made make changes to the map. Since the map is in an iFrame
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Martel&display=swap" rel="stylesheet">
    ```
-3. Notice that the `<head>` contains a reletive link to a CSS file, rather than embedding it directly in the HTML file: 
-  ```html
-	<link href="VersitileLayout.css" rel="stylesheet" />
-  ```
+3. *Notice* that the `<head>` contains a relative link to a CSS file, rather than embedding it directly in the HTML file: 
+   ```html
+     <link href="VersitileLayout.css" rel="stylesheet" />
+   ```
+4. Open the `VersitileLayout.css` with your text editor. There are a lot of classes already defined for us, but thankfully they are well commented! 
+5. *Locate* the class `.site-title` and add your font-family:
+   ```css
+     .site-title {
+	  font-size: 1.25rem;
+	  line-height: $site-header-height;
+	  font-family: 'Martel', serif;
+     }
+   ```
+6.  *Locate* the class `.site-main` and add your font-family:
+   ```css
+     .site-main {
+	  font-family: 'Martel', serif;
+	  position: relative;
+	  z-index: 1;
+   ```
