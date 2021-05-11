@@ -36,7 +36,7 @@ In order to add popups we need to specify the popup function for each of the lay
     
 2. After this, add the following code block that will create variable that builds an HTML description for each point, gets the coordinates of each point, and then uses that description for the HTML of the popup that will open at the point's coordinates. Because this is within the same loop, so it is added for each layer using the variable `layerID`. In past assignments, we had explicitly named the layer for `map.on` functions.
 
-  ```javascript
+   ```javascript
      // When a click event occurs on a feature in the places layer, 
      // open a popup at the location of the feature, with description HTML from its properties.
      map.on('click', layerID, function (e) {
@@ -48,7 +48,7 @@ In order to add popups we need to specify the popup function for each of the lay
             .setHTML(description)
             .addTo(map);
      });
-  ```  
+   ```  
 3. Try clicking on a map point, a popup should open!
    <p align="center">
 	    <img src= "Images/05-popup.JPG"> 
