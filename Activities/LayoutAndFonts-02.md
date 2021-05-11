@@ -199,7 +199,7 @@ Often, templates have sections that we aren't going to use, so we can remove the
     }
    ```
    
- ### We've begun to customize the layout!  
+### We've begun to customize the layout!  
   <p align="center">
 	    <img src= "Images/05-Header-title.JPG"> 
      </p>
