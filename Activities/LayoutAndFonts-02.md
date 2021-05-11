@@ -23,7 +23,7 @@ For this second exercise, we will be:
 In order to add popups we need to specify the popup function for each of the layers.  We will do this within the forEach function that looks at each record in the geoJSON (` places.features.forEach(function (feature) {... }`), and within the if condition that checks the map or new icon types (`if (!map.getLayer(layerID)) {... }`).  
 
 1. *Locate* the last line of within the scope of (`if (!map.getLayer(layerID)) {... }`).  It should be the checkbox's change function:
-  ```javascript
+   ```javascript
      // When the checkbox changes, update the visibility of the layer.
      input.addEventListener('change', function (e) {
            map.setLayoutProperty(
@@ -32,7 +32,7 @@ In order to add popups we need to specify the popup function for each of the lay
                e.target.checked ? 'visible' : 'none'
            );
       });
-  ```
+   ```
     
 2. After this, add the following code block that will create variable that builds an HTML description for each point, gets the coordinates of each point, and then uses that description for the HTML of the popup that will open at the point's coordinates. Because this is within the same loop, so it is added for each layer using the variable `layerID`. In past assignments, we had explicitly named the layer for `map.on` functions.
 
@@ -52,7 +52,7 @@ In order to add popups we need to specify the popup function for each of the lay
 3. Try clicking on a map point, a popup should open!
    <p align="center">
 	    <img src= "Images/05-popup.JPG"> 
-  </p>
+   </p>
  
   
 4. For an extra challenge, edit the value of the `description` variable to modify the text within the popup.
