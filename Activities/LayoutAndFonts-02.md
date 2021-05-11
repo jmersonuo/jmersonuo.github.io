@@ -121,8 +121,8 @@ Assume a client has asked you to find a free to use "fun or whimsical" font for 
 
 Here is an example with Martel. Yours should use a different font.
    <p align="center">
-	    <img src= "Images/05-popup-font.JPG"> 
-  </p>
+	    <img src= "Images/05-popup-font.JPG">
+   </p>
 
 ----------
 
