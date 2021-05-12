@@ -270,7 +270,7 @@ Viola!! An interactive map that filters layers by value!
   ```
 
 <hr>
-### IV. Add it to the versitile layout 
+### IV. Add the map to the versitile layout 
 	
 Note the lecture code version, added a map directly into the layout. In this version, we will add it as an iFrame.
 	
