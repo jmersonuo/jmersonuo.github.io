@@ -16,13 +16,9 @@ For this first exercise, we will be adding sound to marker popups in a Mapbox ma
 
 ### I. Getting setup  
 
-The story map template contains 
-  - A story content file (config.js). This JSON-formatted text file includes story copy, location information, and settings to control how the map & story are displayed. This is what the storyteller edits.
-  - A map story file (index.html). This HTML file reads information from the content file and dynamically builds out the story and map controls. This is what the reader sees.
-
-1. From the course R Drive (R:\Class_Data\Activity6), `save Sound-in-Mapbox-Popup.zip` your R drive. It contains:
+1. From the course R Drive (R:\Class_Data\Activity6-Sound), downlowd the files to your R drive or local computer. It contains:
   - QickStartMap-withSound.html
-  - The folder Sounds, which contains the file yell-YELLBisonEating150313.mp3 'Source: NPS/Neal Herbert, <a href="https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm">NPS</a>'
+  - The folder "Sounds", which contains the file yell-YELLBisonEating150313.mp3 'Source: NPS/Neal Herbert, <a href="https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm">NPS</a>'
 
 2. Review the HTML. Notice it has the standard:
   - `<head> ... </head>` 
@@ -308,10 +304,13 @@ Now let's add some UI to make it easier to get to each location.
 3. Add a listener for the div with the ID 'YellowstonButton', that's the button. Use the same center as the marker and a zoom level of 9.
   
 ----------
+
+Try all 3 buttons, open all 3 popups, lisen to all 3 recordings. Does everything work?
+
 <p align="center">
       <img src="https://media2.giphy.com/media/lTpme2Po0hkqI/giphy.gif?cid=790b7611e7df5c85dd11452d8b06e0102c02acc014faa891&rid=giphy.gif&ct=g" alt="That's all folks!">
     </p>
-    
+----------    
 ### What to turn in:
 
 1. Complete all the steps above
