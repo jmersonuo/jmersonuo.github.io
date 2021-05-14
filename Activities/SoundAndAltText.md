@@ -129,9 +129,7 @@ To embed a YouTube Video, we can add an iframe to the HTML content of `popup1_co
 For example:
    ```javascript
    var x = "Hello";
-   var y = " World";
-  
-   x += y;
+   var += " World";
    ```
  x now equals "Hello World".
  
@@ -189,9 +187,9 @@ For example:
 ----------
 
 ### V. Embed a sound file using an html audio player in popup 3
-Now let's add a sound file from a reletive location (one that you have stored on your computer).  The National Park Service has a whole library of sounds that you can download: https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm. "They may be downloaded and used without limitation; however, please credit the "National Park Service " where appropriate".  
+Now let's add a sound file from a relative location (one that you have stored on your computer).  The National Park Service has a whole library of sounds that you can download: https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm. "They may be downloaded and used without limitation; however, please credit the "National Park Service " where appropriate".  
 
-The sound file you downloaded from the R drive is a recording a bison eating. Have a listen to it using the default audio player on your computer.
+The sound file you downloaded from the R drive is a recording a bison eating `yell-YELLBisonEating150313.mp3`. Have a listen to it using the default audio player on your computer.
 
 1. To make it easier to see your changes, set the map's inital center to the same location as the Yellowstone popup.
 2. Locate the popup for marker 3 `popup3_content` 
@@ -217,9 +215,26 @@ The sound file you downloaded from the R drive is a recording a bison eating. Ha
 ----------
 
 ### VI. Add an absolute link to a image to popup3 file
+The audio file of the bison eating is great, but it could use a visual. Let's add the image that the NPS used at https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm. We can use an img tag and set the src to the image URL.
 
+1. Visit the bison sounds clip at https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm and right click on the image > copy image link
+   <p align="center">
+    <img src= "Images/6-CopyImageLink.JPG"> 
+    </p>
+2. Paste the link into the browser. TADA! We can use this URL as the absolute path to this image.
+3. append an HTML img tag to `popup3_content`
+   ```javascript
+   popup3_content += '<img class="popupImage" src="PATH_TO_FILE">' ;
+   ```
+4. replace the `PATH_TO_FILE` with the bison image link `https://www.nps.gov/yell/learn/photosmultimedia/images/ndh-yell-bison-gibbon_2.jpg?maxwidth=1200&maxheight=1200&autorotate=false`
+5. Let's add more attribution
+   ``````javascript
+   popup3_content += 'Source: NPS/Neal Herbert, <a href="https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm">NPS</a>';
+   ```
 
-1.
+ <p align="center">
+    <img src= "Images/6-YellowstonePopupWImage.JPG"> 
+    </p>
 
 
 ----------
