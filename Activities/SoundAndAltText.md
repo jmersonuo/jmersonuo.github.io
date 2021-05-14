@@ -3,7 +3,7 @@
 
 For this first exercise, we will be adding sound to marker popups in a Mapbox map
   - in popups using an iframe to share a video via absolute link (on the web)
-  - in a pupup to share a sound file via a reletive location (on your computer)
+  - in a pupup to share a sound file via a relative location (on your computer)
   - adding alt-text descriptions to images
   
 
@@ -104,7 +104,7 @@ Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then a
    The popups aren't linked to the markers yet. So, we need to edit the markers so that each is linked to one of the popups.
   
 
-2. Find where marker one is inialized. and add `.setPopup(popup1)` on a new line between the .setLngLat and .addTo(map). It will look like this:
+2. Find where marker one is initialized and add `.setPopup(popup1)` on a new line between the .setLngLat and .addTo(map). It will look like this:
    ```javascript
     // Marker 1 - Portland
     var marker1 = new mapboxgl.Marker({color:'DarkRed'})    
@@ -150,7 +150,7 @@ We can concatenate strings with a plus sign:
     var popup1_content = '<h2>Play the video to listen to Portland</h2><br>';
     popup1_content += '<iframe width="300px" src="https://www.youtube.com/embed/z1AdmS-LqyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
    ```
-     The porland popup should now look like this.
+     The Portland popup should now look like this.
      <p align="center">
     <img src= "Images/6-PortlandPopup.JPG"> 
     </p>
@@ -172,7 +172,7 @@ We can concatenate strings with a plus sign:
 ### V. Embed a Soundcloud player in popup 2
 
 
-1. To make it easier to see your changes, set the map's inital center to the same location as the London popup.
+1. To make it easier to see your changes, set the map's initial center to the same location as the London popup.
 2. Locate the popup for marker 2 `popup2_content` and use += to append the iframe embed code from https://soundcloud.com/londonstreetnoises/grosvenor-1928 `popup2_content`
 3. Click the share button, then `Embed`, then copy the code.
     <p align="center">
@@ -184,7 +184,7 @@ We can concatenate strings with a plus sign:
     <img src= "Images/6-EmbedCode.JPG"> 
     </p>
     
-4. Lastly, let's also add the source and a link using an acnhor tag ```popup2_content += 'Source: LondonStreetNoises.co.uk, <a href="https://soundcloud.com/londonstreetnoises"> SoundCloud </a>';```
+4. Lastly, let's also add the source and a link using an anchor tag ```popup2_content += 'Source: LondonStreetNoises.co.uk, <a href="https://soundcloud.com/londonstreetnoises"> SoundCloud </a>';```
 
 
     <p align="center">
@@ -194,7 +194,7 @@ We can concatenate strings with a plus sign:
 
 ----------
 
-### V. Embed a sound file using an html audio player in popup 3
+### VI. Embed a sound file using an html audio player in popup 3
 Now let's add a sound file from a relative location (one that you have stored on your computer).  The National Park Service has a whole library of sounds that you can download: https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm. "They may be downloaded and used without limitation; however, please credit the "National Park Service " where appropriate".  
 
 The sound file you downloaded from the R drive is a recording a bison eating `yell-YELLBisonEating150313.mp3`. Have a listen to it using the default audio player on your computer.
@@ -205,7 +205,7 @@ The sound file you downloaded from the R drive is a recording a bison eating `ye
     ```javascript
     popup3_content += '<audio controls><source src="PATH_TO_FILE" type="audio/mpeg">Your browser does not support the audio element.</audio>';
     ```
-4. Repalce the `PATH_TO_FILE` with the path to the file _relative_ to this webpage. If it's in the sounds folder, it is going to be `sounds/yell-YELLBisonEating150313.mp3`
+4. Replace the `PATH_TO_FILE` with the path to the file _relative_ to this webpage. If it's in the sounds folder, it is going to be `sounds/yell-YELLBisonEating150313.mp3`
    ```javascript
    // Popup for marker 3  
     var popup3_content = '<h2>Press play to listen to a bison eating</h2><br>';   
@@ -222,7 +222,7 @@ The sound file you downloaded from the R drive is a recording a bison eating `ye
 
 ----------
 
-### VI. Add an absolute link to a image to popup3 file
+### VII. Add an absolute link to a image to popup3 file
 The audio file of the bison eating is great, but it could use a visual. Let's add the image that the NPS used at https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm. We can use an img tag and set the src to the image URL.
 
 1. Visit the bison sounds clip at https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm and right click on the image > copy image link
@@ -255,7 +255,7 @@ The audio file of the bison eating is great, but it could use a visual. Let's ad
 
 ----------
 
-### VII. Add alt text to the image
+### VIII. Add alt text to the image
 To add a little more accessibility to our page, we should add text that screen readers can read adding an alternate or "alt" attribute to our image tag.
 
 1. Review the HTML reference for the `alt` attribute of an `<img>` tag: https://www.w3schools.com/tags/att_img_alt.asp
@@ -268,7 +268,7 @@ To add a little more accessibility to our page, we should add text that screen r
 
 ----------
 
-### VIII. Add buttons to jump to each location
+### IX. Add buttons to jump to each location
 
 Now let's add some UI to make it easier to get to each location.
 
@@ -282,7 +282,7 @@ Now let's add some UI to make it easier to get to each location.
     <p align="center">
     <img src= "Images/6-Buttons.JPG"> 
     </p>
-2.  The buttons don't actually do anything until we add JavaScript "click" listeners to each botton, and within the scope of the listener, we can use a `map.JumpTo` function to change the map view. Here are the first 2:
+2.  The buttons don't actually do anything until we add JavaScript "click" listeners to each button, and within the scope of the listener, we can use a `map.JumpTo` function to change the map view. Here are the first 2:
    ```javascript
     /***  LISTENERS  ***/
         
@@ -308,7 +308,7 @@ Now let's add some UI to make it easier to get to each location.
   3. Add a listener for the div with the ID 'YellowstonButton', that's the button. Use the same center as the marker and a zoom level of 9.
 ----------
 <p align="center">
-      <img src="https://giphy.com/gifs/circle-lTpme2Po0hkqI">
+      <img src="https://media2.giphy.com/media/lTpme2Po0hkqI/giphy.gif?cid=790b7611e7df5c85dd11452d8b06e0102c02acc014faa891&rid=giphy.gif&ct=g">
     </p>
     
 ### What to turn in:
