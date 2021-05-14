@@ -39,7 +39,10 @@ The story map template contains
 
 ### II. Add 3 markers
 
-Let's start by adding 3 markers. Locate thecomment `/***  MARKERS  ***/` 
+Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then add the code block below. Notice that each marker:
+  - was set to the color `darkRed`
+  - has a Lng/Lat set
+  - then is added to the map with the variable named `map`
 
   ```javascript
    /***  MARKERS  ***/
@@ -71,7 +74,8 @@ Let's start by adding 3 markers. Locate thecomment `/***  MARKERS  ***/`
 
 ### II. Add popups to each marker
 
-1. First we need to initialize three variables popup1, popup2, and popup3. Each is paired with a text-string variable that will be used for the .setHTML() value. This could be done _within_ .setHTML(), as we have done in the past, but since the content is going to get pretty long, using a variable let's us stay a bit more organized.
+1. First we need to initialize three variables `var popup1`, `var popup2`, and `var popup3`. Each is paired with a text-string that will be used for the .setHTML() value `var popup1_content` etc. In the past, we have set the content right within `.setHTML()`, but since the content is going to get pretty long, using a variable let's us stay more organized.  
+  Copy in this code block:
 
    ```javascript
     /***  POPUPS  ***/
@@ -100,7 +104,7 @@ Let's start by adding 3 markers. Locate thecomment `/***  MARKERS  ***/`
    The popups aren't linked to the markers yet. So, we need to edit the markers so that each is linked to one of the popups.
   
 
-2. Find where marker one is inialized. and add `.setPopup(popup1)` on the line between the .setLngLat and .addTo(map). It will look like this:
+2. Find where marker one is inialized. and add `.setPopup(popup1)` on a new line between the .setLngLat and .addTo(map). It will look like this:
   ```javascript
    // Marker 1 - Portland
    var marker1 = new mapboxgl.Marker({color:'DarkRed'})    
@@ -109,7 +113,7 @@ Let's start by adding 3 markers. Locate thecomment `/***  MARKERS  ***/`
      .addTo(map);
   ```
 
-3. Add `.setPopup(popup2)` to marker2 on the line between `setLngLat` and `.addTo(map)`.
+3. Add `.setPopup(popup2)` to marker2 on a new line between `setLngLat` and `.addTo(map)`.
 4. Add `.setPopup(popup3)` to marker3.
 5. Zoom and pan to each marker and check that the popups open.
 
@@ -121,8 +125,29 @@ Let's start by adding 3 markers. Locate thecomment `/***  MARKERS  ***/`
 
 ### IV. Embed a YouTube video player in popup 1
 
+To embed a YouTube Video, we can add an iframe to the HTML content of `popup1_content`. We will use `+=` to append more html text to the end of the variable.  
+For example:
+  ```javascript
+  var x = "Hello";
+  var y = " World";
+  
+  x += y;
+  ```
+ x now equals "Hello World".
+ 
+ Let's try with the popup content:
 
-1.
+1. locate the popup for marker 1 and add the iframe emned code from https://www.youtube.com/embed/z1AdmS-LqyA
+
+   ```javascript
+    // Popup for marker 1  
+    var popup1_content = '<h2>Play the video to listen to Portland</h2><br>';
+    popup1_content += '<iframe width="300px" src="https://www.youtube.com/embed/z1AdmS-LqyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+   ```
+   
+     <p align="center">
+    <img src= "Images/6-PortlandPopup.JPG"> 
+    </p>
 
 
 
