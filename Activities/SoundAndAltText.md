@@ -128,8 +128,8 @@ We can concatenate strings with a plus sign:
    var x = "Hello";
    x = x + " World";
    ```
-   x now equals "Hello World".
-   OR
+   x now equals "Hello World".  
+    - OR - 
    ```javascript
    // using += as shorthand
    var x = "Hello";
@@ -151,7 +151,7 @@ We can concatenate strings with a plus sign:
     <img src= "Images/6-PortlandPopup.JPG"> 
     </p>
 
-2. Let's also add the source and a link ```popup1_content += 'Source: Ian Lind, <a href="https://www.youtube.com/embed/z1AdmS-LqyA">YouTube</a>';```
+2. Let's also add the source and a link by concatenating another string to the popup 1 content: ```popup1_content += 'Source: Ian Lind, <a href="https://www.youtube.com/embed/z1AdmS-LqyA">YouTube</a>';```
 
       ```javascript
     // Popup for marker 1  
@@ -191,7 +191,9 @@ We can concatenate strings with a plus sign:
 ----------
 
 ### VI. Embed a sound file using an html audio player in popup 3
-Now let's add a sound file from a relative location (one that you have stored on your computer).  The National Park Service has a whole library of sounds that you can download: [https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm](https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm){:target="_blank"}. "They may be downloaded and used without limitation; however, please credit the 'National Park Service' where appropriate".  
+Now let's add a sound file from a relative location (one that you have stored on your computer).
+  
+The National Park Service has a whole library of sounds that you can download: [https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm](https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm){:target="_blank"}. "They may be downloaded and used without limitation; however, please credit the 'National Park Service' where appropriate".  
 
 The sound file you downloaded from the R drive is a recording a bison eating `yell-YELLBisonEating150313.mp3`. Have a listen to it using the default audio player on your computer.
 
@@ -201,7 +203,8 @@ The sound file you downloaded from the R drive is a recording a bison eating `ye
     ```javascript
     popup3_content += '<audio controls><source src="PATH_TO_FILE" type="audio/mpeg">Your browser does not support the audio element.</audio>';
     ```
-4. Replace the `PATH_TO_FILE` with the path to the file _relative_ to this webpage. If it's in the sounds folder, it is going to be `sounds/yell-YELLBisonEating150313.mp3`
+4. Replace the `PATH_TO_FILE` with the path to the file _relative_ to this webpage. If it's in the sounds folder, it is going to be `sounds/yell-YELLBisonEating150313.mp3`  
+   **VERY IMPORATANT NOTE:** The path and file name are not case sensitive locally, but the Pages server is!! For this to work on the web, make sure your path and file name use the same case for all characters as the src as the folder and file.
    ```javascript
    // Popup for marker 3  
     var popup3_content = '<h2>Press play to listen to a bison eating</h2><br>';   
