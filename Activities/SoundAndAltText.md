@@ -125,11 +125,19 @@ Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then a
 
 ### IV. Embed a YouTube video player in popup 1
 
-To embed a YouTube Video, we can add an iframe to the HTML content of `popup1_content`. We will use `+=` to append more html text to the end of the variable.  
-For example:
+To embed a YouTube Video, we can add an iframe to the HTML content of `popup1_content`. To help keep our code organized we can concatenate or "join together" multiple text strings. We will use `+=` to append more html text to the end of the existing variable.  
+We can concatenate strings with a plus sign:
    ```javascript
+   // the long way
    var x = "Hello";
-   var += " World";
+   x = x + " World";
+   ```
+   x now equals "Hello World".
+   OR
+   ```javascript
+   // using += as shorthand
+   var x = "Hello";
+   x += " World";
    ```
  x now equals "Hello World".
  
@@ -222,14 +230,22 @@ The audio file of the bison eating is great, but it could use a visual. Let's ad
     <img src= "Images/6-CopyImageLink.JPG"> 
     </p>
 2. Paste the link into the browser. TADA! We can use this URL as the absolute path to this image.
-3. append an HTML img tag to `popup3_content`
+3. Append an HTML img tag to `popup3_content`
    ```javascript
    popup3_content += '<img class="popupImage" src="PATH_TO_FILE">' ;
    ```
-4. replace the `PATH_TO_FILE` with the bison image link `https://www.nps.gov/yell/learn/photosmultimedia/images/ndh-yell-bison-gibbon_2.jpg?maxwidth=1200&maxheight=1200&autorotate=false`
-5. Let's add more attribution
-   ``````javascript
-   popup3_content += 'Source: NPS/Neal Herbert, <a href="https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm">NPS</a>';
+   Note 1: `<img>` is a self closing tag, so we don't need a second tag to close it.
+4. Replace the `PATH_TO_FILE` with the bison image link `https://www.nps.gov/yell/learn/photosmultimedia/images/ndh-yell-bison-gibbon_2.jpg?maxwidth=1200&maxheight=1200&autorotate=false`
+5. Is the image way too big for the popup? Let use CSS to set it's width to 100% of the parent element. We already gave it a class named `popupImage`, so add the following to the `<style>` section in the `<head>`. 
+   ```css
+   .popupImage{
+       width:100%;
+    }
+   ``` 
+ 
+6. Let's add more attribution. On the next line, add:
+   ```javascript
+    popup3_content += 'Source: NPS/Neal Herbert, <a href="https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm">NPS</a>';
    ```
 
  <p align="center">
@@ -239,14 +255,68 @@ The audio file of the bison eating is great, but it could use a visual. Let's ad
 
 ----------
 
-### IV. Add alt text to the image
+### VII. Add alt text to the image
+To add a little more accessibility to our page, we should add text that screen readers can read adding an alternate or "alt" attribute to our image tag.
 
+1. Review the HTML reference for the `alt` attribute of an `<img>` tag: https://www.w3schools.com/tags/att_img_alt.asp
+2. In the img tag add `alt="Description of photo"`, and add your own description of the scene. 
+   Here is what I wrote:
+   
+ <p align="center">
+    <img src= "Images/6-AltText.JPG"> 
+    </p>
 
-1.
 ----------
 
-### IV. Add buttons to jump to each location
+### VIII. Add buttons to jump to each location
 
+Now let's add some UI to make it easier to get to each location.
 
-1.
+1. Near the top of the `<body>` we can add three buttons. One for each marker:
+   ```html
+      <button class='fly' id='PortlandButton'>Jump to Portland</button>
+      <button class='fly' id='LondonButton'>Jump to London</button>
+      <button class='fly' id='YellowstonButton'>Jump to Yellowstone</button> 
+   ```
+   These are all styled by the `.fly` class which was already added.
+    <p align="center">
+    <img src= "Images/6-Buttons.JPG"> 
+    </p>
+2.  The buttons don't actually do anything until we add JavaScript "click" listeners to each botton, and within the scope of the listener, we can use a `map.JumpTo` function to change the map view. Here are the first 2:
+   ```javascript
+    /***  LISTENERS  ***/
+        
+    // Add a 'Listener' to the div with the ID 'LondonButton', that's the button.
+    document.getElementById('LondonButton').addEventListener('click', function () {
+            map.jumpTo({
+                center: [-0.1534307, 51.501223], 
+                zoom: 11
+            });
+    });
+        
+    // Add a 'Listener' to the div with the ID 'PortlandButton', that's the button.
+    document.getElementById('PortlandButton').addEventListener('click', function () {
+            map.jumpTo({
+                center:[-122.6788,45.5212], 
+                zoom: 9
+            });
+    });
+        
+    /***  END LISTENERS  ***/
+   ```
+   
+  3. Add a listener for the div with the ID 'YellowstonButton', that's the button. Use the same center as the marker and a zoom level of 9.
 ----------
+<p align="center">
+      <img src="https://giphy.com/gifs/circle-lTpme2Po0hkqI">
+    </p>
+    
+### What to turn in:
+
+1. Complete all the steps above
+  Be sure to:
+    - Add your own descriptive text to the image's alt tag
+    - Add a lester for the Yellowstone button
+2. Make 1 change to the map (if you change the marker color(s), make sure to change the buttons' color(s) to match.
+3. Add the HTML script and image (with the same folder structure) to your Pages space
+ 
