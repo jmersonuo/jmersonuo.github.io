@@ -166,8 +166,9 @@ For example:
 ### V. Embed a Soundcloud player in popup 2
 
 
-1. Locate the popup for marker 2 `popup2_content` and use += to append the iframe embed code from https://soundcloud.com/londonstreetnoises/grosvenor-1928 `popup2_content`
-2.  Click the share button, then `Embed`, the copy the code.
+1. To make it easier to see your changes, set the map's inital center to the same location as the London popup.
+2. Locate the popup for marker 2 `popup2_content` and use += to append the iframe embed code from https://soundcloud.com/londonstreetnoises/grosvenor-1928 `popup2_content`
+3. Click the share button, then `Embed`, then copy the code.
     <p align="center">
     <img src= "Images/6-SoundCloud.JPG"> 
     </p>
@@ -177,7 +178,7 @@ For example:
     <img src= "Images/6-EmbedCode.JPG"> 
     </p>
     
-3. Lastly, let's also add the source and a link ```popup2_content += 'Source: LondonStreetNoises.co.uk, <a href="https://soundcloud.com/londonstreetnoises"> SoundCloud </a>';```
+4. Lastly, let's also add the source and a link using an acnhor tag ```popup2_content += 'Source: LondonStreetNoises.co.uk, <a href="https://soundcloud.com/londonstreetnoises"> SoundCloud </a>';```
 
 
     <p align="center">
@@ -188,9 +189,29 @@ For example:
 ----------
 
 ### V. Embed a sound file using an html audio player in popup 3
+Now let's add a sound file from a reletive location (one that you have stored on your computer).  The National Park Service has a whole library of sounds that you can download: https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm. "They may be downloaded and used without limitation; however, please credit the "National Park Service " where appropriate".  
 
+The sound file you downloaded from the R drive is a recording a bison eating. Have a listen to it using the default audio player on your computer.
 
-1.
+1. To make it easier to see your changes, set the map's inital center to the same location as the Yellowstone popup.
+2. Locate the popup for marker 3 `popup3_content` 
+3. Append a string containing an [HTML audio tag](https://www.w3schools.com/tags/tag_audio.asp){:target="_blank"} .
+    ```javascript
+    popup3_content += '<audio controls><source src="PATH_TO_FILE" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+    ```
+4. Repalce the `PATH_TO_FILE` with the path to the file _relative_ to this webpage. If it's in the sounds folder, it is going to be `sounds/yell-YELLBisonEating150313.mp3`
+   ```javascript
+   // Popup for marker 3  
+    var popup3_content = '<h2>Press play to listen to a bison eating</h2><br>';   
+    popup3_content += '<audio controls><source src="sounds/yell-YELLBisonEating150313.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+    ```
+     
+5. And of course, let's add linked attribution ```popup3_content += 'Source: NPS/Jennifer Jerret, <a href="https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm">NPS</a>';```
+
+    <p align="center">
+    <img src= "Images/6-YellowstonePopup.JPG"> 
+    </p>
+
 
 
 ----------
