@@ -1,7 +1,7 @@
 <h2 align="center"> Sound and Alt Text</h2>
 
 
-For this first exercise, we will be adding sound to marker popups in a Mapbox map
+For this first exercise, we will be adding sound to marker popups in a Mapbox map:
   - in popups using an iframe to share a video via absolute link (on the web)
   - in a pupup to share a sound file via a relative location (on your computer)
   - adding alt-text descriptions to images
@@ -18,7 +18,7 @@ For this first exercise, we will be adding sound to marker popups in a Mapbox ma
 
 1. From the course R Drive (R:\Class_Data\Activity6-Sound), downlowd the files to your R drive or local computer. It contains:
   - QickStartMap-withSound.html
-  - The folder "Sounds", which contains the file yell-YELLBisonEating150313.mp3 'Source: NPS/Neal Herbert, <a href="https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm">NPS</a>'
+  - The folder "Sounds", which contains the file yell-YELLBisonEating150313.mp3 'Source: NPS/Neal Herbert, <a href="https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm" target='_blank'>NPS</a>'
 
 2. Review the HTML. Notice it has the standard:
   - `<head> ... </head>` 
@@ -139,7 +139,7 @@ We can concatenate strings with a plus sign:
  
  Let's try with the popup content:
 
-1. Locate the popup for marker 1 and use += to append the iframe embed code from https://www.youtube.com/embed/z1AdmS-LqyA 
+1. Locate the popup for marker 1 and use += to append the iframe embed code from [https://www.youtube.com/embed/z1AdmS-LqyA](https://www.youtube.com/embed/z1AdmS-LqyA){:target="_blank"}  
 
    ```javascript
     // Popup for marker 1  
@@ -169,7 +169,7 @@ We can concatenate strings with a plus sign:
 
 
 1. To make it easier to see your changes, set the map's initial center to the same location as the London popup.
-2. Locate the popup for marker 2 `popup2_content` and use += to append the iframe embed code from https://soundcloud.com/londonstreetnoises/grosvenor-1928 `popup2_content`
+2. Locate the popup for marker 2 `popup2_content` and use += to append the iframe embed code from [https://soundcloud.com/londonstreetnoises/grosvenor-1928]https://soundcloud.com/londonstreetnoises/grosvenor-1928){:target="_blank"}    `popup2_content`
 3. Click the share button, then `Embed`, then copy the code.
     <p align="center">
     <img src= "Images/6-SoundCloud.JPG"> 
@@ -191,7 +191,7 @@ We can concatenate strings with a plus sign:
 ----------
 
 ### VI. Embed a sound file using an html audio player in popup 3
-Now let's add a sound file from a relative location (one that you have stored on your computer).  The National Park Service has a whole library of sounds that you can download: https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm. "They may be downloaded and used without limitation; however, please credit the "National Park Service " where appropriate".  
+Now let's add a sound file from a relative location (one that you have stored on your computer).  The National Park Service has a whole library of sounds that you can download: [https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm](https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm){:target="_blank"}. "They may be downloaded and used without limitation; however, please credit the 'National Park Service' where appropriate".  
 
 The sound file you downloaded from the R drive is a recording a bison eating `yell-YELLBisonEating150313.mp3`. Have a listen to it using the default audio player on your computer.
 
@@ -221,7 +221,7 @@ The sound file you downloaded from the R drive is a recording a bison eating `ye
 ### VII. Add an absolute link to a image to popup3 file
 The audio file of the bison eating is great, but it could use a visual. Let's add the image that the NPS used at https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm. We can use an img tag and set the src to the image URL.
 
-1. Visit the bison sounds clip at https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm and right click on the image > copy image link
+1. Visit the site with the bison sounds clip at [https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm](https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm){:target="_blank"}  and right click on the image > copy image link
    <p align="center">
     <img src= "Images/6-CopyImageLink.JPG"> 
     </p>
