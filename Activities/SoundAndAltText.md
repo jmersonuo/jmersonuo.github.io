@@ -105,13 +105,13 @@ Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then a
   
 
 2. Find where marker one is inialized. and add `.setPopup(popup1)` on a new line between the .setLngLat and .addTo(map). It will look like this:
-  ```javascript
-   // Marker 1 - Portland
-   var marker1 = new mapboxgl.Marker({color:'DarkRed'})    
-     .setLngLat([-122.6788,45.5212]) // Portland 
-     .setPopup(popup1) 
-     .addTo(map);
-  ```
+   ```javascript
+    // Marker 1 - Portland
+    var marker1 = new mapboxgl.Marker({color:'DarkRed'})    
+      .setLngLat([-122.6788,45.5212]) // Portland 
+      .setPopup(popup1) 
+      .addTo(map);
+   ```
 
 3. Add `.setPopup(popup2)` to marker2 on a new line between `setLngLat` and `.addTo(map)`.
 4. Add `.setPopup(popup3)` to marker3.
@@ -127,30 +127,39 @@ Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then a
 
 To embed a YouTube Video, we can add an iframe to the HTML content of `popup1_content`. We will use `+=` to append more html text to the end of the variable.  
 For example:
-  ```javascript
-  var x = "Hello";
-  var y = " World";
+   ```javascript
+   var x = "Hello";
+   var y = " World";
   
-  x += y;
-  ```
+   x += y;
+   ```
  x now equals "Hello World".
  
  Let's try with the popup content:
 
-1. locate the popup for marker 1 and add the iframe emned code from https://www.youtube.com/embed/z1AdmS-LqyA
+1. Locate the popup for marker 1 and use += to append the iframe embed code from https://www.youtube.com/embed/z1AdmS-LqyA 
 
    ```javascript
     // Popup for marker 1  
     var popup1_content = '<h2>Play the video to listen to Portland</h2><br>';
     popup1_content += '<iframe width="300px" src="https://www.youtube.com/embed/z1AdmS-LqyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
    ```
-   
+     The porland popup should now look like this.
      <p align="center">
     <img src= "Images/6-PortlandPopup.JPG"> 
     </p>
 
+2. Let's also add the source and a link ```popup1_content += 'Source: Ian Lind, <a href="https://www.youtube.com/embed/z1AdmS-LqyA">YouTube</a>';```
 
-
+      ```javascript
+    // Popup for marker 1  
+    var popup1_content = '<h2>Play the video to listen to Portland</h2><br>';
+    popup1_content += '<iframe width="300px" src="https://www.youtube.com/embed/z1AdmS-LqyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    popup1_content += 'Source: Ian Lind, <a href="https://www.youtube.com/embed/z1AdmS-LqyA">YouTube</a>';
+   ```
+    <p align="center">
+    <img src= "Images/6-PortlandPopupSource.JPG"> 
+    </p
 
 ----------
 
