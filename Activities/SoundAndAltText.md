@@ -68,7 +68,7 @@ Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then a
   
 ----------
 
-### II. Add popups to each marker
+### III. Add popups to each marker
 
 1. First we need to initialize three variables `var popup1`, `var popup2`, and `var popup3`. Each is paired with a text-string that will be used for the .setHTML() value `var popup1_content` etc. In the past, we have set the content right within `.setHTML()`, but since the content is going to get pretty long, using a variable let's us stay more organized.  
   Copy in this code block:
