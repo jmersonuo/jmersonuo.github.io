@@ -25,10 +25,10 @@ The story map template contains
   - The folder Sounds, which contains the file yell-YELLBisonEating150313.mp3 'Source: NPS/Neal Herbert, <a href="https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm">NPS</a>'
 
 2. Review the HTML. Notice it has the standard:
-  - <head> ... </head>
-  - <style> ... </style>  (nested within the head)
-  - <body> ... </body>
-  - <script> ... </script> (nested within the body
+  - `<head> ... </head>` 
+  - `<style> ... </style>`   (nested within the head)
+  - `<body> ... </body>` 
+  - `<script> ... </script>`  (nested within the body
 
   When you open the map, you should have a mapbox-outdoor style centered on Portland.  
   <p align="center">
@@ -39,7 +39,7 @@ The story map template contains
 
 ### II. Add 3 markers
 
-Let's start by adding 3 markers. Locate
+Let's start by adding 3 markers. Locate thecomment `/***  MARKERS  ***/` 
 
   ```javascript
    /***  MARKERS  ***/
@@ -97,10 +97,25 @@ Let's start by adding 3 markers. Locate
 
    /***  END POPUPS  ***/ 
    ```  
-2. Now we need to edit the markers so that each is linked to one of the popups.
+   The popups aren't linked to the markers yet. So, we need to edit the markers so that each is linked to one of the popups.
   
 
-3. 
+2. Find where marker one is inialized. and add `.setPopup(popup1)` on the line between the .setLngLat and .addTo(map). It will look like this:
+  ```javascript
+   // Marker 1 - Portland
+   var marker1 = new mapboxgl.Marker({color:'DarkRed'})    
+     .setLngLat([-122.6788,45.5212]) // Portland 
+     .setPopup(popup1) 
+     .addTo(map);
+  ```
+
+3. Add `.setPopup(popup2)` to marker2 on the line between `setLngLat` and `.addTo(map)`.
+4. Add `.setPopup(popup3)` to marker3.
+5. Zoom and pan to each marker and check that the popups open.
+
+  <p align="center">
+    <img src= "Images/6-3markers-Wpopup.JPG"> 
+  </p>
 
 ----------
 
