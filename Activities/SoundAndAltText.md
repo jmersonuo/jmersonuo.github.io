@@ -321,4 +321,5 @@ Now let's add some UI to make it easier to get to each location.
     - Add a listener for the Yellowstone button
 2. Make 1 change to the map (if you change the marker color(s), make sure to change the buttons' color(s) to match.
 3. Add the HTML script and image (with the same folder structure) to your Pages space
+4. Answer the questions in the submission
  
