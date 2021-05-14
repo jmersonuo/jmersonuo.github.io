@@ -305,18 +305,20 @@ Now let's add some UI to make it easier to get to each location.
     /***  END LISTENERS  ***/
    ```
    
-  3. Add a listener for the div with the ID 'YellowstonButton', that's the button. Use the same center as the marker and a zoom level of 9.
+3. Add a listener for the div with the ID 'YellowstonButton', that's the button. Use the same center as the marker and a zoom level of 9.
+  
 ----------
 <p align="center">
-      <img src="https://media2.giphy.com/media/lTpme2Po0hkqI/giphy.gif?cid=790b7611e7df5c85dd11452d8b06e0102c02acc014faa891&rid=giphy.gif&ct=g">
+      <img src="https://media2.giphy.com/media/lTpme2Po0hkqI/giphy.gif?cid=790b7611e7df5c85dd11452d8b06e0102c02acc014faa891&rid=giphy.gif&ct=g" alt="That's all folks!">
     </p>
     
 ### What to turn in:
 
 1. Complete all the steps above
   Be sure to:
+    - Embed the soundcloud player
     - Add your own descriptive text to the image's alt tag
-    - Add a lester for the Yellowstone button
+    - Add a listener for the Yellowstone button
 2. Make 1 change to the map (if you change the marker color(s), make sure to change the buttons' color(s) to match.
 3. Add the HTML script and image (with the same folder structure) to your Pages space
  
