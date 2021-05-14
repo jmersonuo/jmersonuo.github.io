@@ -32,7 +32,7 @@ The story map template contains
 
   When you open the map, you should have a mapbox-outdoor style centered on Portland.  
   <p align="center">
-    <img src= "Images/6-PorltnadOutdoors.JPG"> 
+    <img src= "Images/6-PortlandOutdoors.JPG"> 
   </p>
 
 ----------
@@ -65,9 +65,9 @@ Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then a
     /***  END MARKERS  ***/
   ```
 
-  Zoom way out. You should have a mapbox-outdoor style centered on Portland.  
+  Zoom way out. You should have 3 markers.  
   <p align="center">
-    <img src= "Images/6-PorltnadOutdoors.JPG"> 
+    <img src= "Images/6-3markers.JPG"> 
   </p>
   
 ----------
@@ -159,14 +159,30 @@ For example:
    ```
     <p align="center">
     <img src= "Images/6-PortlandPopupSource.JPG"> 
-    </p
+    </p>
 
 ----------
 
 ### V. Embed a Soundcloud player in popup 2
 
 
-1.
+1. Locate the popup for marker 2 `popup2_content` and use += to append the iframe embed code from https://soundcloud.com/londonstreetnoises/grosvenor-1928 `popup2_content`
+2.  Click the share button, then `Embed`, the copy the code.
+    <p align="center">
+    <img src= "Images/6-SoundCloud.JPG"> 
+    </p>
+    
+    It's going to be rather long and look like the image below. Take a look at the HTML code and see what HTML tags you can recognize.
+    <p align="center">
+    <img src= "Images/6-EmbedCode.JPG"> 
+    </p>
+    
+3. Lastly, let's also add the source and a link ```popup2_content += 'Source: LondonStreetNoises.co.uk, <a href="https://soundcloud.com/londonstreetnoises"> SoundCloud </a>';```
+
+
+    <p align="center">
+    <img src= "Images/6-LondonPopup.JPG"> 
+    </p>
 
 
 ----------
