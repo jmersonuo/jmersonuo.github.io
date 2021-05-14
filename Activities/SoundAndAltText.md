@@ -310,6 +310,14 @@ Try all 3 buttons, open all 3 popups, lisen to all 3 recordings. Does everything
 <p align="center">
       <img src="https://media2.giphy.com/media/lTpme2Po0hkqI/giphy.gif?cid=790b7611e7df5c85dd11452d8b06e0102c02acc014faa891&rid=giphy.gif&ct=g" alt="That's all folks!">
     </p>
+
+
+----------  
+### Extra challege task
+
+The hyperlinks for the image sources all open in the same tab as your map. It might be better to open them in a new tab instead. Check out at the [W3Schools target reference](https://www.w3schools.com/tags/att_a_target.asp){:target="_blank"}. Add the target `_blank` to each anchor tag so the links will open in a new tab.
+
+
 ----------    
 ### What to turn in:
 
