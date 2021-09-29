@@ -223,9 +223,9 @@ Having a map is great, but let's add a banner with a title and byline. To do thi
 
 1. Insert the following div into below the map div. Notice that is has the id "title", and the font size of the text is set by using header tags `h1` and `h2`
 	```html
-	<div id='title'>
-        	<h1>My Map of Portland</h1>
-        	<h2>By:Your Name</h2>
+		<div id='title'>
+        		<h1>My Map of Portland</h1>
+        		<h2>By:Your Name</h2>
     	</div>
 	```
 2. Save your document. Unfortunately, the div is under your map. Let's add CSS make changes to the dive with the `id=title`, by adding a css selector `#title`. The code below will move it to front (a really high z-index value), give the selected div a background color, opacity, and center the text.  
