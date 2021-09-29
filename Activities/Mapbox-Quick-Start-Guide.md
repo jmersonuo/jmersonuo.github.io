@@ -225,12 +225,16 @@ Having a map is great, but let's add a banner with a title and byline. To do thi
 	```html
 		<div id='title'>
         		<h1>My Map of Portland</h1>
-        		<h2>By:Your Name</h2>
+        		<h2>By: Your Name</h2>
     	</div>
 	```
-2. Save your document. Unfortunately, the div is under your map. Let's add CSS make changes to the dive with the `id=title`, by adding a css selector `#title`. The code below will move it to front (a really high z-index value), give the selected div a background color, opacity, and center the text.  
+2. Save your document. Unfortunately, the div is under your map. Let's add CSS make changes to the dive with the `id=title`, by adding a css selector `#title`. The code below will move it to front (a really high z-index value), give the selected div a background color, opacity, and center the text.  Note that because this selector has a quite a few properties, I am putting them each on a new line. This is a readability choice, whitespace in CSS is ignored, for the most part.
 	```css
-		#title { z-index: 9999; background-color:white; opacity: 80%; text-align: center }
+		#title { z-index: 9999; 
+			background-color:white; 
+			opacity: 80%; 
+			text-align: center 
+		}
 	```
 
 ### Congratulations! You've completed the tutorial! 
@@ -247,7 +251,8 @@ Following the tutorial, you now have a full page map. Now use what you have lear
 1.  Include at least 1 pin marker with a custom color (use a different color than default blue or the tutorial's red).
 2.  Add a pop-up that has a link (use a different link than the tutorial).
 3.  Change the basemap style to something other than streets-v11. Use any [default style](https://docs.mapbox.com/api/maps/styles/){:target="_blank"} or [gallery style](https://www.mapbox.com/gallery/){:target="_blank"}  
-4.  Upload your map to your UO pages webspace using WinSCP following the steps shown to you in the lecture, and submit your URL e.g. `pages.uoregon.edu/[your user name]/WebMapping/QuickStartMap.html`
+4.  Edit the title and byline text and add change at least 1 CSS property of the title/byline (e.g. color or alignment)
+5.  Upload your map to your UO pages webspace using WinSCP following the steps shown to you in the lecture, and submit your URL e.g. `pages.uoregon.edu/[your user name]/WebMapping/QuickStartMap.html`
 
 
 
