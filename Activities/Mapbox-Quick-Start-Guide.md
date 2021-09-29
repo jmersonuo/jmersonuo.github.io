@@ -175,7 +175,7 @@ Popups are usually used when you want to attach some information to a particular
 	    .setPopup(popup) //add the popup with the variable name 'popup' to the marker 
 	    .addTo(map); // add the open marker to the map
 	```
-3. Once, you added the `.setPopup` function to your marker, refresh your map and click on the marker!
+3. Once, you've added the `.setPopup` function to your marker, refresh your map and click on the marker!
 
 
 4. You can also use popups as layers (when you need something more than attaching a popup to an object). Add this code block after your marker:
@@ -217,6 +217,21 @@ Keep in mind, since you need to add a single string element, you'll have to care
 		.addTo(map);
 	```
 
+### V. Adding a title banner
+
+Having a map is great, but let's add a banner with a title and byline. To do this, we can add more objects to the page by adding another `div` to the `body`.
+
+1. Insert the following div into below the map div. Notice that is has the id "title", and the font size of the text is set by using header tags `h1` and `h2`
+	```html
+	<div id='title'>
+        	<h1>My Map of Portland</h1>
+        	<h2>By:Your Name</h2>
+    	</div>
+	```
+2. Save your document. Unfortunately, the div is under your map. Let's add CSS make changes to the dive with the `id=title`, by adding a css selector `#title`. The code below will move it to front (a really high z-index value), give the selected div a background color, opacity, and center the text.  
+	```css
+		#title { z-index: 9999; background-color:white; opacity: 80%; text-align: center }
+	```
 
 ### Congratulations! You've completed the tutorial! 
 
@@ -232,9 +247,8 @@ Following the tutorial, you now have a full page map. Now use what you have lear
 1.  Include at least 1 pin marker with a custom color (use a different color than default blue or the tutorial's red).
 2.  Add a pop-up that has a link (use a different link than the tutorial).
 3.  Change the basemap style to something other than streets-v11. Use any [default style](https://docs.mapbox.com/api/maps/styles/){:target="_blank"} or [gallery style](https://www.mapbox.com/gallery/){:target="_blank"}  
-4.  
-    * If you are working on your own computer, or WinSCP has been installed in the lab, upload your map to your UO pages webspace following the steps shown to you in the lecture, and submit your URL e.g. `pages.uoregon.edu/[your user name]/WebMapping/QuickStartMap.html`, **OR**
-    * If you are working in the lab and we still don't have WinSCP installed, attach your .html file to this submission
+4.  Upload your map to your UO pages webspace using WinSCP following the steps shown to you in the lecture, and submit your URL e.g. `pages.uoregon.edu/[your user name]/WebMapping/QuickStartMap.html`
+
 
 
 ### Optional advanced:
