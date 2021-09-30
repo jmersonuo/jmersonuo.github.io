@@ -237,7 +237,13 @@ Having a map is great, but let's add a banner with a title and byline. To do thi
 		}
 	```
 
-### Congratulations! You've completed the tutorial! 
+<p align = "center">
+	<img src="Images/01-banner.JPG">
+</p>
+
+
+
+### Congratulations! You've completed the tutorial activity! 
 
 <p align = "center">
 	<img src="https://media.giphy.com/media/11uArCoB4fkRcQ/giphy.gif">
