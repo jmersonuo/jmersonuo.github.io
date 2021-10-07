@@ -6,20 +6,20 @@ Today we are going to make two different types of maps. The first will be fixed 
 
 ### 1. Preparing your fixed map page
 
-Start with the file `Fixed-structure.html` in the R-Drive Class_Data folder. Once again, you need to do the following preparation steps on your page:
+Start with the file `Assignment2\Fixed-structure.html` in the R-Drive Class_Data folder. Once again, you need to do the following preparation steps on your page:
 
-1. Include Mapbox JavaScript file:
+1. Include the path to the Mapbox JavaScript file in the `head`:
 
       ```html
             <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
       ```
-2. Include Mapbox CSS file __after__ Mapbox’s JavaScript:
+2. Include he path to the Mapbox CSS file __after__ Mapbox’s JavaScript:
 
       ```html
            <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
       ```
 
-3. In the body, you'll add the [heading](https://www.w3schools.com/tags/tag_hn.asp) Map 1, a div element with the id "map1" where you want your first map to be, and a line or [horizontal rule](https://www.w3schools.com/tags/tag_hr.asp) below the map. Tip: Click the links to view the HMTL reference for these tags:
+3. In the `body`, you'll add the [heading](https://www.w3schools.com/tags/tag_hn.asp) Map 1, a div element with the id "map1" where you want your first map to be, and a line or [horizontal rule](https://www.w3schools.com/tags/tag_hr.asp) below the map. Tip: Click the links in the instructions to view the HMTL reference for these tags:
 
       ```html
       <h1> Map 1: </h1>
@@ -27,23 +27,23 @@ Start with the file `Fixed-structure.html` in the R-Drive Class_Data folder. Onc
       <hr>
       ```
 
-4. This time we will apply some CSS to specify an exact height and width for the map. This is particularly important for the map div, which *won't* show up on the page until you give it a height. Notice the css class for the map matches the ID of the map DIV (map1):
+4. This time we will use CSS to specify an exact height and relative width for the map. This is particularly important for the map div, which *won't* show up on the page until you give it a height. Notice the css selector for the map matches the ID of the map DIV (#map1):
 
       ```css
               body { margin:50px; padding:0; }
               #map1 { position:relative; height:300px; width:50%;}
       ```
 
-      This means the body div of your web page has a 50px margin around the edge, and the div with the ID "map1", will be 300px tall, and will take 50% of the width of your browser page.
+      This sets the body div of your web page has a 50px [margin](https://www.w3schools.com/css/css_margin.asp) around the edge, and the div with the ID "map1", will be 300px tall, and will take 50% of the width of your browser page.
 
       Now you’re ready to initialize the map and customize it.
 
 ### 2. Setting up the fixed map
 
-Let’s create a map the centered on Portland with the Mapbox Streets style. Note: all the following code should be between script tags.
+Let’s create a map the centered on Portland with the Mapbox Streets style. Note: all the following code should be between `script` tags within the `body`.
 
 1. Add **your** access token, which gives you access to the mapbox API, access to styles associated with your account, and will track how many views your map has. Without this, the map will not work. 
-      Remember, you can find your access tokens, create new ones, or delete existing ones on your [Access Tokens page](https://account.mapbox.com/access-tokens/) 
+      You can find your access tokens, create new ones, or delete existing ones on your [Access Tokens page](https://account.mapbox.com/access-tokens/) 
 
 	```javascript
 	mapboxgl.accessToken = 'pk.a...bunch..of..letters......'; //  Put your access token between the single quotes.
@@ -54,10 +54,10 @@ Let’s create a map the centered on Portland with the Mapbox Streets style. Not
 	    <img src= "Images/01_token.JPG">
 	</p>
 
-2. Next, initialize the map and set its view with specified coordinates and a zoom level.
+2. Next in the `script`, we initialize the map and set its view with specified coordinates and a zoom level.
  
       In the code block below, you will need to replace:
-      1. the style URL, using 'mapbox://styles/mapbox/streets-v11' or check out the map [API](https://docs.mapbox.com/mapbox-gl-js/api/#map) to see more style options 
+      1. the style URL, using 'mapbox://styles/mapbox/streets-v11' or check out the map [API](https://docs.mapbox.com/mapbox-gl-js/api/map/#map) and location `options.style` to see more style options 
       2. the coordinates for the starting position. Use Portland, Oregon: [-122.6788, 45.5212]
 
       ```javascript
@@ -76,13 +76,11 @@ Let’s create a map the centered on Portland with the Mapbox Streets style. Not
 **STOP:** Your map should be ready to take a look at. Open your `.html` file in a browser and take a look.
 No map? There is likely an error in your code. Open your browser's Developer tools or Web Console to look for error messages.
 
-Can you pan and zoom? Yes!? Great. Now, let's take that ability away.
-
 ### 3. Add a marker with a popup
 
-Like last time, let’s add a marker to the same longitude/latitude that we centered our map on. Remember you can look at the [API](https://docs.mapbox.com/mapbox-gl-js/api/#marker) to see what marker options are available.
+Like last time, let’s add a marker to the same longitude/latitude that we centered our map on. Remember you can look at the [API](https://docs.mapbox.com/mapbox-gl-js/api/markers/#marker) to see what marker options are available.
 
-Add the script to inialize the popup and initialize a marker that uses that popup:
+Add the following JS to initialize the popup and initialize a marker that uses that popup:
 
  ```javascript
                   var popup = new mapboxgl.Popup()
@@ -102,7 +100,9 @@ It should look like this:
 
 ### 4. Remove the map interactivity
 
-Let's look at the map API again, specifically at the [interaction handlers](https://docs.mapbox.com/mapbox-gl-js/api/#user%20interaction%20handlers). Map objects have several interactivity handlers. We are going to disable them *all*.
+Can you pan and zoom? Yes!? Great. Now, let's take that ability away.
+
+Let's look at the map API again, specifically at the [interaction handlers](https://docs.mapbox.com/mapbox-gl-js/api/handlers/). Map objects have several interactivity handlers. We are going to disable them *all*.
 1. After the map was initialized, add the following JavaScript code:
 
       ```javascript
@@ -117,7 +117,7 @@ Let's look at the map API again, specifically at the [interaction handlers](http
                   map.touchZoomRotate.disableRotation();
       ```
 
-Notice that each line starts with `map`, which is the variable name used when we initialized the map: `var map = new mapboxgl.Map(...`.
+Notice that each line starts with `map`, which is the **variable** name used when we initialized the map: `var map = new mapboxgl.Map(...`.
 
 **STOP:** Test it out. Can you pan and zoom anymore? Nope. Can you still click on the marker to open the popup? Success, a fixed, interactive map!
 
@@ -130,7 +130,7 @@ To add a second map to your page. You have to add a div to the structure of your
 		<h1> Map 2:</h1>
 		<div id='map2'></div>
 	```
-2. In the head, stlye section, add CSS to stlye the second map:
+2. In the head, style section, add CSS to style the second map:
 	```css
 	#map2 { position:relative; height:300px; width:50%;}
 	```
@@ -178,23 +178,23 @@ To add a second map to your page. You have to add a div to the structure of your
 
 ### 1. Open the fly-to map page
 
-Let's start with the file `Activity2-Fixed-and-Fly-To-Maps\Fly-to-ONCE.html` in the R-Drive Class_Data folder. 
+Let's start with the file `Assignment2\Fly-to-ONCE.html` in the R-Drive Class_Data folder. 
 Open it in a browser. Click on the button and watch as we fly from Los Angeles, CA to Austin, TX.
 
-Now open and examine `Activity2-Fixed-and-Fly-To-Maps\Fly-to-ONCE.html` in your text editor.
+Now open and examine `Assignment2\Fly-to-ONCE.html` in your text editor.
 
-First, notice the usual code for our map:
- - References to the Mapbox CSS and JS are included in the head.
- - A DIV for the map
- - CSS style defiens the map's size
+First, locate the usual sections of code for our map:
+ - References to the Mapbox CSS and JS are included in the head
+ - An empty DIV for the map
+ - CSS style defines the map's size
  - A mapbox access token is included
  - The map is initialized
  - A popup is initialized
  - A marker, using the popup, is added to the map
 
-Notice the CSS that was used to style the button:
+Examine the CSS that was used to style the button:
 ```CSS
-        /* The CSS for the "Fly" button  */
+        /* The CSS for a button with the ID "Fly" */
         #fly {
             display: block; /* displays over the map */
             position: relative; /* displays over the map */
@@ -211,8 +211,11 @@ Notice the CSS that was used to style the button:
             background: DarkRed;
         }
   ```
+  All of these CSS properties can be found in the [CSS Reference](https://www.w3schools.com/cssref/default.asp)
   
   Try changing the button width and color: Make the button only 30% width. Make the button "forestgreen".
+  Try changing the border from `none` to `3px solid black;`.
+  Customize the button color, size, and position to your preference. 
   
   
 ### 2. Examine the flyto script
@@ -220,10 +223,10 @@ Notice the CSS that was used to style the button:
  Look at the bottom of  the JavaScript section. 
  
  First, we search the DOM for an element with the ID 'fly'. That's the button div!
- We added a 'click' listener, so if you click the div, something happens. In this case, we call the function "flyTo" on our map. Open [flyTo in the Mapbox API](https://docs.mapbox.com/mapbox-gl-js/api/#map#flyto).  
+ We added a 'click' listener, so if you click the div, something happens. In this case, we call the function "flyTo" on our map. Open [flyTo in the Mapbox API](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#flyto).  
  
-Notice there are multiple options we can set. Including: center, zoom, speed, curve.
-Right now we only set the center. I have options for the zoom and speed commented out.
+ Notice that to API lists multiple options we can set, including: center, zoom, speed, curve.
+ Right now we only set the center. I have options for the zoom and speed commented out.
 
  ```javascript
          // add a 'Listener' to the div with the ID 'fly', that's the button.
@@ -236,12 +239,11 @@ Right now we only set the center. I have options for the zoom and speed commente
         });
 ```
 
-Try un-commenting the zoom option. See how that changed the effect. Try a few different values. You can see how the final zoom changes.
+Try un-commenting the zoom option. See how that changed the effect. Try a few different values. You can see how the final zoom level changes.
 Try un-commenting the speed option. See how that changed the effect. Try a few different values. You can see how the speed of the "fly" changes.
 
 Comment out the zoom and speed options.
 Now scroll up in the API, there is another function called "jumpTo". Let's try changing the function to "jumpTo" as below:
-
 
  ```javascript
          // add a 'Listener' to the div with the ID 'fly', that's the button.
@@ -258,4 +260,7 @@ What was the difference? You'll have to explain the difference in your assignmen
 
 **Congratulations!** That is it for today's activity. Please proceed to the assignment on canvas for details on what to turn in.
 
-Once you have completed your assignment, open and examine `Activity2-Fixed-and-Fly-To-Maps\Fly-to-many.html` in your text editor and browser. This version uses an array to keep track of multiple locations that we can fly to when the button is clicked. Each click iterates through the lng/lat pairs in the array.
+Optional:
+Was that straightforward for you? Once you have completed your assignment, open and examine `Assignment\Fly-to-many.html` in your text editor and browser. This version uses a JavaScript array to keep track of multiple locations that we can fly to when the button is clicked. Each click iterates through the lng/lat pairs in the array.
+
+Try changing the existing fly-to locations and adding additional locations to the array.
