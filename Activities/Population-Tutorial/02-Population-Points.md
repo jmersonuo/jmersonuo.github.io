@@ -209,14 +209,14 @@ The following code adds the *styling rules* that will be style the DOM elements 
 2. Next, we will need to add a container to display background information about our map and data sources. Add a new DIV container to your DOM by adding this code below the _map_ DIV. It is `HTML` so, don't add in between the `script`tags. That's for JavaScript. 
     
     ```html
-         <div class="descriptionPanel" id="descriptionPanel" style="height: 320px;">
-            <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
-            <hr/>
-            <h4>WHAT AM I LOOKING AT?</h4><br/>
-            <p style="margin-left: 10px; margin-right: 10px;">
-            This is a map showing every single person in the United States as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block, however within each block location is randomized. Points are colored based on the number home owners versus renters on a block.
-            </p>
-         </div>
+      <div class="descriptionPanel" id="descriptionPanel" style="height: 250px;">
+        <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
+        <hr/>
+        <h4>WHAT AM I LOOKING AT?</h4>
+        <p style="margin-left: 10px; margin-right: 10px;">
+          This is a map showing every single person in the Portland Area as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block, however within each block location is randomized. Points are colored based on the number home owners versus renters on a block.
+        </p>
+      </div>
     ```
 4. Add a comment above this div explaining what it is. (e.g. /* map description panel */).
 
@@ -249,12 +249,12 @@ The following code adds the *styling rules* that will be style the DOM elements 
     ```html
       <div class="LegendContainer">
         <div class="legendItem">
-            <div class="colorBox" style="background-color: #00d2e6;"></div>
-            <div class="layerDescription">Owners</div>
+            <span class="owner">&#11044;</span>
+            <span class="layerDescription">Owners</span>
         </div>
         <div class="legendItem">
-            <div class="colorBox" style="background-color: #cc00c2;"></div>
-            <div class="layerDescription">Renters</div>
+            <span class="renter">&#11044;</span>
+            <span class="layerDescription">Renters</span>
         </div>
       </div>
     ```
@@ -264,7 +264,6 @@ The following code adds the *styling rules* that will be style the DOM elements 
     ```css
         .layerDescription {
             color: white;
-            float: left;
             margin-left: 10px;
           }
     ```
@@ -285,7 +284,7 @@ The following code adds the *styling rules* that will be style the DOM elements 
           document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-up";
           state.panelOpen = false;
         } else {
-          document.getElementById('descriptionPanel').style.height = '320px';
+          document.getElementById('descriptionPanel').style.height = '250px';
           document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-down";
           state.panelOpen = true;
         }
@@ -322,7 +321,7 @@ If you don't follow how every line of code works, that's OK! At this point it is
 ----------
 
 ### VI. What to submit
-1. Change the colors of your points in the "style" and in the map *legend*. Note: your legend should match your map your custom colors should be visible on your Pages webspace.
+1. Change the colors of your points in the "style" and in the map *legend*. Note: your legend should match your map's custom colors.
 2. Be sure you added comments above each section of code, as instructed. Use the examples provided, or add something more verbose that would help future you, or another developer know what each section of code is for.
 3. Clean up your alignment. Subsections should be nested (tabbed over). At a minimum, you should be able to draw a line down your screen between the opening and closing `head`,`body`, and `script` tags without running into other lines of code.
 4. Answer the questions in the submission instructions.
