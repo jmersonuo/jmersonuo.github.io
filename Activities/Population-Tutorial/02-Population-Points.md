@@ -33,9 +33,9 @@ To begin, we will be using a sample code to initialize a simple web map.
 2. Create a new file called `index.html` and copy the code below.
 
     Note that is contains the standard sections:  
-        - `HMTL` containing everything else  
-        - `head` containing a title (text in the bowser tab), links to the mapbox JS and CSS libraries, and *new* library we have not used yet called [Boostrap](https://www.w3schools.com/whatis/whatis_bootstrap.asp){:target="_blank"}. Boostrap is a CSS Framework for developing responsive websites and we'll explore it when get more into layout.  
-        - `style` within the `head`  
+        - `html` containing everything else  
+        - `head` containing a title (text in the bowser tab), links to the mapbox JS and CSS libraries, and a *new* library we have not used yet called [Boostrap](https://www.w3schools.com/whatis/whatis_bootstrap.asp){:target="_blank"}. Boostrap is a CSS Framework for developing responsive websites and we'll explore it when more we get into layout.  
+        - `style` tags for CSS within the `head`  
         - `body` which contains a `div` for the map, and a `script` section.  
 
     ```html
