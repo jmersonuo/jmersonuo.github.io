@@ -128,81 +128,81 @@ The following code adds the *styling rules* that will be style the DOM elements 
 1. This is CSS (cascading style sheets) code, so it goes in the `style` section. Copy and paste the following just after the opening ``<style>`` tag in the `<head>` of your code: 
 
     ```css
-          /*  stlye for paragraph tags */
-          p {
-            color: white; 
-          }
+      /*  stlye for paragraph tags */
+      p {
+        color: white;
+      }
 
-          /* style for heading level 4 tags */
-          h4 { 
-            color: white;
-            margin-left: 10px;
-          }
+      /* style for heading level 4 tags */
+      h4 {
+        color: white;
+        margin-left: 10px;
+      }
 
-          /*  style for items with the class "LegendContainer" */
-          .LegendContainer {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            z-index: 2;
-            width: 300px;
-            height: 40px;
-            background: rgba(80, 80, 80, .75);
-            transition: width 2s, height 2s;
-            border-radius: 7px;
-          }
+      /*  style for items with the class "LegendContainer" */
+      .LegendContainer {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        z-index: 2;
+        width: 300px;
+        height: 40px;
+        background: rgba(80, 80, 80, .75);
+        transition: width 2s, height 2s; /* this is the time it takes for the container to transition */
+        border-radius: 7px;
+      }
 
-          /*  style for items with the class "descriptionPanel" */
-          .descriptionPanel {
-            position: absolute;
-            bottom: 65px;
-            left: 20px;
-            z-index: 2;
-            width: 300px;
-            height: 40px;
-            background: rgba(80, 80, 80, .75);
-            transition: width 2s, height 2s;
-            overflow: hidden;
-            border-radius: 7px;
-          }
+      /*  style for items with the class "descriptionPanel" */
+      .descriptionPanel {
+        position: absolute;
+        bottom: 65px;
+        left: 20px;
+        z-index: 2;
+        width: 300px;
+        height: 40px;
+        background: rgba(80, 80, 80, .75);
+        transition: width 2s, height 2s;
+        overflow: hidden;
+        border-radius: 7px;
+      }
 
-          /*  style for items with the class "descriptionPanel" when active */
-          .LegendContainer:active {
-            width: 240px;
-            height: 250px;
-          }
+      /*  style for items with the class "descriptionPanel" when active */
+      .LegendContainer:active {
+        width: 240px;
+        height: 250px;
+      }
 
-          /* style for items with the class "legendItem" */
-          .legendItem {
-            float: left;
-            width: 50%;
-            margin-top: 10px;
-            margin-bottom: 10px;
-          }
+      /* style for items with the class "legendItem" */
+      .legendItem {
+          margin: 0px;
+          padding-left: 10px;
+          display:inline-block;
+          margin:auto;
+          transform: translate(50%, 50%);
+      }
+        
 
-          /* style for items with the class "colorBox" */
-          .colorBox {
-            width: 20px;
-            height: 20px;
-            float: left;
-            border-radius: 10px;
-            margin-left: 10px;
-          }
+      /* style for items with the class "layerDescription" */
+      .layerDescription {
+        color: white;
+        padding-left: 10px;
+      }
 
-          /* style for items with the class "layerDescription" */
-          .layerDescription {
-            color: white;
-            float: left;
-            margin-left: 10px;
-          }
+        
+      .renter {
+            color:#cc00c2;
+      }
+      .owner{
+            color:#00d2e6;;
+      }
 
-          /* style for items with the class "chevron" */
-          .chevron {
-            position: relative;
-            margin-left: 45%;
-            font-size: x-large;
-            color: white;
-          }
+      /* style for items with the class "chevron" */
+      .chevron {
+        position: relative;
+        margin-left: 45%;
+        font-size: x-large;
+        color: white;
+      }
 
     ```
 
