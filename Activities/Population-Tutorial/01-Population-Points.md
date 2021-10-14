@@ -30,13 +30,13 @@ For this first exercise, we will be creating a dot density map that displays the
 
 ### I. Data
 
-  The data are provided as [MBTiles](https://docs.mapbox.com/help/glossary/mbtiles){:target="_blank"}, but you could also upload shapefiles or JSON files.
+  The data are provided as [MBTiles](https://docs.mapbox.com/help/glossary/mbtiles){:target="_blank"}, but you in genreal you could also upload shapefiles or JSON files to stlye in Mapbox Studio.
 
 
 1. Download the following:
   - Portland **renters** by block group 2017: [Download](Data/Renters.mbtiles) 
   - Portland **homeowners** by block group 2017: [Download](Data/Owners.mbtiles)  
-  [Source: US Census](https://data.census.gov){:target="_blank"} 
+  [Original data source: US Census](https://data.census.gov){:target="_blank"}, preprocessed in QGIS to produce randomized points. 
  
  2. Note where it saved (e.g, your downloads folder)
 
@@ -64,9 +64,11 @@ To add the data to a style in Mapbox Studio, you need to upload it to your accou
 
 After you've uploaded your data, it's time to create a new "style" so you can put it on the map!  
 
+Close any popups and notifications about tours and new features. You can view those later if you'd like. *You can always refer to the* [*Mapbox Studio Manual*](https://www.mapbox.com/studio-manual/reference/styles/) *for more information on working with styles.*
+
 1. Go to your **Styles** page. Click the **New style** button. 
-    Notice: the different styles contain both different color schemes, and differnt basemap data 
-2. Select the *Basic* template style and choose the variation called **Galaxy**.
+    Notice: the different styles contain different color schemes and different basemap data 
+2. Select the **Basic**  template style and choose the variation called **Galaxy**.
 3. Click "Customize Basic"
 
     <p align="center">
@@ -79,13 +81,11 @@ After you've uploaded your data, it's time to create a new "style" so you can pu
       <img src="Images/Name_Change-Generic.gif">
     </p>
 
-5. close any popups and notifications about tours and new features. You can view those later if you'd like. *You can always refer to the* [*Mapbox Studio Manual*](https://www.mapbox.com/studio-manual/reference/styles/) *for more information on working with styles.*
-
 ----------
 
 ### IV. Add a new layer
 
-1. To add and symbolize your data, you will need to add it as a new layer to the style. On the **Layers** panel, click the **+** button to add a new layer, from the **Source** menu, and sfind and select the **renter** layer that you uploaded as a tileset. 
+1. To add and symbolize your data, you will need to add it as a new layer to the style. On the **Layers** panel, click the **+** button to add a new layer, from the **Source** menu, and find and select the **renter** layer that you uploaded as a tileset. 
     <p align="center">
       <img src="Images/New Layer.png">
     </p>
@@ -103,7 +103,7 @@ After you've uploaded your data, it's time to create a new "style" so you can pu
 4. Now add the ower data. In the *New layer* panel, look in the list of *Data sources* for the **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
 
 
-5. Click the **Style** tab and the map will switch back to style mode displaying your new layers. You will see the state data on the map with a default style (black with 100% opacity).
+5. Click the **Style** tab and the map will switch back to style mode displaying your new layers. You will see the population point data on the map with a default style (black with 100% opacity, so it might be hard to see on the dark background).
 
     <p align="center">
       <img src="Images/Style-Layers.png">
