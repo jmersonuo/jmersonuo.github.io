@@ -222,7 +222,7 @@ The following code adds the *styling rules* that will be style the DOM elements 
 
     *Notice* that the specification for the div with the `class=descriptionPanel` was defined in the CSS. Classes in CSS start with a `.`:
     
-    FIND THIS CODE AND EXAMINE IT, BUT YOU DON"T NEED TO ADD THIS A SECOND TIME.
+    FIND THIS CODE AND EXAMINE IT, BUT YOU DON'T NEED TO ADD THIS A SECOND TIME.
     ```css
 
       /*  style for items with the class "descriptionPanel" */
@@ -260,7 +260,7 @@ The following code adds the *styling rules* that will be style the DOM elements 
     ```
     *Notice* that the specification for the `class=layerDescription` was defined in the CSS:
     
-    FIND THIS CODE AND EXAMINE IT, BUT YOU DON"T NEED TO ADD THIS A SECOND TIME.
+    FIND THIS CODE AND EXAMINE IT, BUT YOU DON'T NEED TO ADD THIS A SECOND TIME.
     ```css
         .layerDescription {
             color: white;
