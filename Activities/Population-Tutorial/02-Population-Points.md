@@ -32,7 +32,7 @@ To begin, we will be using a sample code to initialize a simple web map.
 1. Create a new folder for this assignment on your *R-drive*. 
 2. Create a new file called `index.html` and copy the code below.
 
-    Note that is contains the standard sections: 
+    Note that is contains the standard sections:  
         - `HMTL` containing everything else  
         - `head` containing a title (text in the bowser tab), links to the mapbox JS and CSS libraries, and *new* library we have not used yet called [Boostrap](https://www.w3schools.com/whatis/whatis_bootstrap.asp){:target="_blank"}. Boostrap is a CSS Framework for developing responsive websites and we'll explore it when get more into layout.  
         - `style` within the `head`  
@@ -69,13 +69,13 @@ To begin, we will be using a sample code to initialize a simple web map.
     ```
 
 
-3. Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/define-access-token/)in the section that says "ACCESS TOKEN GOES HERE". Remember, you can get your access token from your Mapbox [‘Account’ page](https://account.mapbox.com/)).
+3. Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/define-access-token/) in the section that says "ACCESS TOKEN GOES HERE". Remember, you can get your access token from your Mapbox [‘Account’ page](https://account.mapbox.com/)).
 
 ----------
 
 ### II. Adding your custom style
 
-1. To load the style that you created in the part 1, you need to go to go your Mapbox Studio account and copy the Style URL for the map you made last lab:
+1. To load the style that you created in the Part I, you need to go to go your Mapbox Studio account and copy the Style URL:
 
     <p align="center">
         <img src="../Opioid-Tutorial/Images/mapstyle.gif">
@@ -88,7 +88,7 @@ To begin, we will be using a sample code to initialize a simple web map.
     </p>
 
 2. Paste your style URL into your code where the map is initialized in the JavaScript.
-    Now preview it in a browser to view your changes. Is is blank? Did you add _your_ mapbox token and your style?
+    Now preview it in a browser to view your changes. Is is blank? Did you add _your_ mapbox token and __your__ style URL? Any errors in the browser console?
     <p align="center">
         <img src="Images/Initial_Map.png">
     </p>
@@ -99,7 +99,7 @@ To begin, we will be using a sample code to initialize a simple web map.
 
 Let’s try modifying the code to add a new **element** to the map. Currently, you can zoom in and out using your mouse, but we want to add navigation **controls** (zoom in, zoom out, and north arrow) to make the zooming functions more obvious to our end users.
 
-1. For refernce, check out this mapbox example: [https://www.mapbox.com/mapbox-gl-js/example/navigation/](https://www.mapbox.com/mapbox-gl-js/example/navigation/){:target="_blank"}
+1. Look at this mapbox example: [https://www.mapbox.com/mapbox-gl-js/example/navigation/](https://www.mapbox.com/mapbox-gl-js/example/navigation/){:target="_blank"}
 
     What part of the example is missing for your current code? The **NavigationControl**! 
     
@@ -110,11 +110,11 @@ Let’s try modifying the code to add a new **element** to the map. Currently, y
     map.addControl(new mapboxgl.NavigationControl());
     ```
 
-    `map.addControl...` adds the map control to the element with variable name "map" using the "dot operator". If you were to add it a differnt map, you'd have to adjust the name before the period or "dot".
+    `map.addControl...` adds the map control to the element with variable name "map" using the "dot operator". If you were to add it to a different map, you'd have to adjust the name before the period or "dot". e.g. `map2.addControl...`
     
     Preview it in the browser when you have finished. See the nav controls on the top right?
 
-3. Are you an skilled programmer? look in the API reference for [nagivgation control](https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol){:target="_blank"} to see how to move the control to the `top-left`.
+3. Are you a skilled programmer? look in the API reference for [nagivgation control](https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol){:target="_blank"} to see how to move the control to the `top-left`.
 
     _Hint:_ The example in the documentation adds the control in two lines, whereas we had previously added it in one line. 
 
@@ -222,8 +222,9 @@ The following code adds the *styling rules* that will be style the DOM elements 
 
     *Notice* that the specification for the div with the `class=descriptionPanel` was defined in the CSS. Classes in CSS start with a `.`:
     
+    FIND THIS CODE AND EXAMINE IT, BUT YOU DON"T NEED TO ADD THIS A SECOND TIME.
     ```css
-       FIND THIS CODE AND EXAMINE IT, BUT YOU DON"T NEED TO ADD THIS A SECOND TIME.
+
       /*  style for items with the class "descriptionPanel" */
       .descriptionPanel {
         position: absolute;
@@ -259,8 +260,8 @@ The following code adds the *styling rules* that will be style the DOM elements 
     ```
     *Notice* that the specification for the `class=layerDescription` was defined in the CSS:
     
+    FIND THIS CODE AND EXAMINE IT, BUT YOU DON"T NEED TO ADD THIS A SECOND TIME.
     ```css
-     FIND THIS CODE AND EXAMINE IT, BUT YOU DON"T NEED TO ADD THIS A SECOND TIME.
         .layerDescription {
             color: white;
             float: left;
@@ -293,7 +294,8 @@ The following code adds the *styling rules* that will be style the DOM elements 
  ```     
  
 Take a look at your changes in a browser once again! Click on the arrow on the top of the legend. Is it interactive? <br>
-Yes? Nice.
+Yes? Nice.  
+If not, time to debug (look for console errors)!
 
 It should look like this.
 <p align="center">
@@ -308,7 +310,7 @@ It should look like this.
 
 ***Voila! Now you have a live website with a Mapbox map!*** 
 
-If you don't follow how every line of code works, that's OK! At this point it is important to understand that you added several chunks for code. Some for the map, some for the legend, and some for interactivity. You could add your own data to a Mapbox Style, add that style to this map, make a few changes to the legend and you can make this interactive map your own!
+If you don't follow how every line of code works, that's OK! At this point it is important to understand that you added several chunks for code. Some for the map, some for the map controls, some for the legend, and some for interactivity. You could you can make this interactive map your own by adding your own data to a new Mapbox Style, add that style to this map, make a few changes to the legend!
 
 <p align="center">
     <img src="https://media.giphy.com/media/Bj2UZgqqzUxwc/giphy.gif">
