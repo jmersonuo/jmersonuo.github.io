@@ -293,7 +293,7 @@ The following code adds the *styling rules* that will be style the DOM elements 
     
  ```     
  
-Take a look at your changes in a browser once again! Click on the arrow on the top of the legend. Is it interactive? <br>
+Take a look at your changes in a browser once again. Click on the arrow on the top of the legend. Is it interactive? <br>
 Yes? Nice.  
 If not, time to debug (look for console errors)!
 
