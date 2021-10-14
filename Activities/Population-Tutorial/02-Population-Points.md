@@ -313,7 +313,7 @@ It should look like this.
 If you don't follow how every line of code works, that's OK! At this point it is important to understand that you added several chunks for code. Some for the map, some for the map controls, some for the legend, and some for interactivity. You could you can make this interactive map your own by adding your own data to a new Mapbox Style, add that style to this map, make a few changes to the legend!
 
 <p align="center">
-    <img src="https://media.giphy.com/media/Bj2UZgqqzUxwc/giphy.gif">
+    <img src="https://image.shutterstock.com/image-photo/cute-dog-celebrating-red-pary-260nw-1768302275.jpg">
 </p>
 
 
