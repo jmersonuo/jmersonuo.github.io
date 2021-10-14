@@ -110,7 +110,7 @@ Let’s try modifying the code to add a new **element** to the map. Currently, y
     map.addControl(new mapboxgl.NavigationControl());
     ```
 
-    `map.addControl...` adds the map control to the element with variable name "map" using the "dot operator". If you were to add it to a different map, you'd have to adjust the name before the period or "dot". e.g. `map2.addControl...`
+    `map.addControl...` adds the map control to the element with variable name "map" using the "dot operator". If you were to add it to a different map, you'd have to adjust the variable name before the period or "dot". e.g. `map2.addControl...`
     
     Preview it in the browser when you have finished. See the nav controls on the top right?
 
