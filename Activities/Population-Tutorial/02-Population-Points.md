@@ -211,10 +211,10 @@ The following code adds the *styling rules* that will be style the DOM elements 
     ```html
          <div class="descriptionPanel" id="descriptionPanel" style="height: 320px;">
             <span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
-            <hr />
-            <h4>WHAT AM I LOOKING AT?</h4><br />
+            <hr/>
+            <h4>WHAT AM I LOOKING AT?</h4><br/>
             <p style="margin-left: 10px; margin-right: 10px;">
-            This is a map showing every single person in the United States as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block, however within each block location is randomized. Points are colored based on number home owners versus renters on a block.
+            This is a map showing every single person in the United States as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block, however within each block location is randomized. Points are colored based on the number home owners versus renters on a block.
             </p>
          </div>
     ```
@@ -274,7 +274,7 @@ The following code adds the *styling rules* that will be style the DOM elements 
     **Recap:** To create the legend, we added several DOM Objects using DIVs and Spans using HTML. The "style" of these objects was set using CSS. The CSS was used to make legend object float in front of the map. A legend could also be fixed outside the map frame above, below, or beside the map. The colors of the dots in the legend were hard coded to match the colors we used in the map in the HTML above. If you change the colors in your style, you'll _also_ have to change them in the legend.
 
 
-6. Next, let's add interaction to our legend. For this we need to add some *JavaScript*. The following variable `state` and function `panelSelect` will enable the user to show and hide the map description that we added in the last section. Copy and paste the code snippet into the`script` section, after your map variable. Add a comment above to indicate what this is for (e.g. // legend interaction).
+6. Next, let's add interaction to our legend. For interaction, we need to add some *JavaScript*. The variable `state` and the function `panelSelect` will enable the user to show and hide the map description that we added in the last section. Copy and paste the code snippet into the end of the `script` section, after your map variable. Add a comment above to indicate what this is for (e.g. // legend interaction).
 
 ```javascript
       var state = { panelOpen: true };
