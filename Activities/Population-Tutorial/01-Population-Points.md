@@ -203,7 +203,7 @@ We want to apply the same styling rules that we just assigned to our **renters**
     ]
     ```
 
-2. Navigate to your **owners** layer and select **radius**. Paste the styling rules into the JSON editor of this layer. You should see these changes immediately. Zoom in and out to see your handywork! The dots will change size as you zoom in and out. 
+2. Navigate to your **owners** layer and select **radius**. Paste the styling rules into the JSON editor of this layer. You should see these changes immediately. Zoom in and out to see your handywork! The dots' pixel size will adjust as you zoom in and out.
 
     <p align="center">
       <img src="Images/Radius_Size.gif">
@@ -215,9 +215,9 @@ We want to apply the same styling rules that we just assigned to our **renters**
 
 ### VII. Reorder your layers
 
-One of the most powerful things about the Mapbox Studio style editor is that you can reorder any of the elements of the map. Forexample, we can move the basemap lables over our new dat layers. Notice in the image below that we moved the settlement-labels to the top of the layer list. This puts the labels from the basemap on top of the data that you've added to the standard map layers.
+One of the most powerful things about the Mapbox Studio style editor is that you can reorder any of the elements of the map. For example, we can move the basemap lables over our new data layers. Notice in the image below that we moved the settlement-labels to the top of the layer list. This puts the labels from the basemap on top of the data that you've added to the standard map layers.
 
-To make your map match the example above:
+To move the data layers below the labels:
   1. click and drag the **renters** layer to below the **Place labels, place-labels** group
   2. click and drag the **owners** layer to below the **Place labels, place-labels** group
 
@@ -242,7 +242,7 @@ Now that you've got your map looking good, it's time to publish your "Style" so 
 
 Hooray! Your style is now published. If you go back to your Styles page, you will see your new style at the top of the list.
 
-You can use your ‘Share URL’ to open your style in a new browser tab and share it with collaborators for review, or you can use the style URL to embed it using JavaScript.
+You can use your ‘Share URL’ to open your style in a new browser tab and share it with collaborators for review, or you can use the **style URL** to embed it a map using JavaScript.
 
 <p align='center'>
       <img src="Images/share.png">
@@ -252,7 +252,7 @@ You can use your ‘Share URL’ to open your style in a new browser tab and sha
 ----------
 
 ### X. Next steps
-Next lab, we'll complete [part 2](https://jmersonuo.github.io/Activities/Population-Tutorial/02-Population-Points) to add interactive elements to your map and publish it to the web with Mapbox GL JS. 
+Next complete [part 2](https://jmersonuo.github.io/Activities/Population-Tutorial/02-Population-Points) to setup a webmap, add interactive elements to the map, and publish it to the web with Mapbox GL JS. 
 
 
 
