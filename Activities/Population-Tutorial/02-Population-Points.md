@@ -306,7 +306,8 @@ It should look like this.
 
 ### V. Post your webpage
 
-1. Copy the html file to your "Pages" webspace to see it working live.  
+1. Copy the html file to your "Pages" webspace 
+2. Visit the full URL (pages.uoregon.edu/...) to see it working live.  
 
 ***Voila! Now you have a live website with a Mapbox map!*** 
 
