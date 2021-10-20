@@ -57,7 +57,7 @@ Uploading your data as a tileset, rather than directly to a stlye, allows you to
 
 ----------
 
-### III. Initializing the map!
+### III. Initializing a map with a swipe
 
 
 1. To begin, use this sample code created by the documentation team at Mapbox to set up a site with two map divs
@@ -107,10 +107,10 @@ Uploading your data as a tileset, rather than directly to a stlye, allows you to
 	</html>
 	```
 
-2. Notice that there are script and link tags referencing mapbox-gl-compare. This is the Mapbox GL JS [swipe map plugin](https://github.com/mapbox/mapbox-gl-compare).
+2. Notice that in the `<head>` there are script and link tags referencing mapbox-gl-compare JS and  CSS. This are for the Mapbox GL JS [swipe map plugin](https://github.com/mapbox/mapbox-gl-compare).
 
+   **Locate, but don't add again**
 	```html
-	<!-- Locate, but don't add again -->
 	<!-- JS and CSS for the swipe plugin -->
 	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.js'></script>
 	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css'
