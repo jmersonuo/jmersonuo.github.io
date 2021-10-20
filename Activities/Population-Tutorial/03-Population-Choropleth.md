@@ -26,7 +26,7 @@ In the last tutorial we used Studio to dynamically style all of our layers. For 
 
 ----------
 
-### I. Data
+### I. Download the data
 
 Download the data below. 
 1. Clicking on the link below will take you to a github page showing a JSON file
@@ -43,11 +43,12 @@ Download the data below.
 
 ### II. Upload data as a tileset to Mapbox
 
-Uploading your data as a tileset, rather than directly to a stlye, allows you to add it to maps independently from a style. You could add the same tileset to multiple different map, over different basemap "styles". To add the percentage of renters vs owners data to Mapbox as a tileset, you need to upload it to your account. 
+Uploading your data as a tileset, rather than directly to a stlye, allows you to add it to maps independently from a style. You could add the same tileset to multiple different maps, over different basemap "styles". To add the percentage of renters vs owners data to Mapbox as a tileset, you need to upload it to your account. 
 
-1. Go to your [**Tilesets**](https://studio.mapbox.com/tilesets/){:target="_blank"} page in Mapbox Studio to upload your data.
+1. Go to your [**Tilesets page**](https://studio.mapbox.com/tilesets/){:target="_blank"} in Mapbox Studio to upload your data.
 2. On your Tilesets page, click the **New tileset** button. 
-3. Select the geojson data containing your renters and owners data and upload it to your account. 
+3. From your computer, select the geojson data containing your renters and owners data and upload it to your account. 
+4. Once it is uploded, you should see it listed under the "Custom tilesets". Notice that it has a unique ID that starts with your username.
 
 	<p align="center">
 	  <img src="Images/tileset.PNG">
