@@ -10,8 +10,7 @@ The US Census makes owner/renter information readily available for census block 
 2) Viewing the relative incidence of owners to renters using a choropeth map. 
 
 For this exercise, we will be creating two choropleth maps that display 1) the percentage of owners, and 2) the percentage of renters in Portland, Oregon. We will place one map div directly over another map div and use a Mapbox slider JavaScript Plugin to change which map div is visible.
-In the last tutorial we used Studio to dynamically style all of our layers. For this tutorial, we will be writing our styling rules directly in our site's code.
-
+In the last tutorial we used Studio to dynamically style all of our layers. For this tutorial, we will be writing our styling rules directly the JavaScript in our site. Doing so allows you to control the data symbology in Javascript. This skill is useful for symbolizing data from other sources, or to modify/link your symbology to other actions in your map.
 <p align="center">
 <img src="Images/slide.gif">
 </p>
@@ -20,7 +19,8 @@ In the last tutorial we used Studio to dynamically style all of our layers. For 
 ### In this tutorial you will:
 
 - [Add data](https://www.mapbox.com/help/uploads/){:target="_blank"} to Mapbox as a tileset
-- Add a [tileset](https://docs.mapbox.com/help/glossary/tileset/){:target="_blank"} to a map using Mapbox GJLS
+- Add JSON data to mabox, as a [tileset](https://docs.mapbox.com/help/glossary/tileset/){:target="_blank"} 
+- Add the tileset to a map using Mapbox GJLS
 - Add interactivity using a Mapbox plugin to [swipe between maps](https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-compare/){:target="_blank"}
 - Style your layers using Mapbox GL JS (JavaScript)
 
@@ -29,8 +29,8 @@ In the last tutorial we used Studio to dynamically style all of our layers. For 
 ### I. Data
 
 Download the data below. 
-1. Clicking on the link below, will take you to a github page
-2. then click *download* to save it to your computer or R-Drive space. If your browser tries to just preview the data (a lot of coordinates), you can force it to save: right click on the download button and then click "Save As".
+1. Clicking on the link below will take you to a github page showing a JSON file
+2. then click *download* or *save* to save it to your computer or R-Drive space (depends on your browser). If your browser tries to just preview the data (a lot of coordinates), you can force it to save: right click on the download button and then click "Save As".
 
 	- [Percentage of renters, owners and total population by block group 2017](Data/Owner-Renter-Pop.geojson){:target="_blank"} - Source: US Census
 
