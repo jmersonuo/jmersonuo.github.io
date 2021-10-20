@@ -160,7 +160,7 @@ Now that we’ve initialized the webmap, let’s set the approrate extent. Curre
 
 Below your `ownerMap` variable, initialize your renter map by creating a new variable `renterMap`. This second map will display information about the percentage of renters in Portland. 
 
-```JavaScript
+```javascript
 var renterMap = new mapboxgl.Map({
     container: 'renters', // owners map div 
     style: 'mapbox://styles/mapbox/light-v10', // Mapbox light style so we can observe the swipe
@@ -318,24 +318,22 @@ This code is very similar to the process we used in Studio. We are filtering the
   </p>
   
 ----------
-### IV. Adding a second layer 
+### IX. Adding a second layer 
 
 Currently, we have only have information for homeowners displayed. To make a meaningful comparison, we will need to add the data symbolized using the renters attribute. We'll add this layer to the other map, so the user can see it when they swipe between maps. 
 
 1. After the *end* of the `ownerMap.on` function, add a second load event for the renterMap (the renter variable will go inside of this function):
 
 	```javascript 
-
 	renterMap.on('load', function() {
 	  // the rest of the renter data code will go in here
 	});
-
 	```
 
 2. Next, inside this new load function, add your renter data to your renter map as a layer using `renterMap.addLayer`. The tileset ID and the source-layer name will be the _same_ for both layers, since the one dataset has both attributes. We will set a different attribute when styling the data.
 
 	```javascript
-	       renterMap.addLayer({
+	renterMap.addLayer({
 		 id: 'Renter Data',
 		 type: "fill",
 		 source: {
@@ -346,8 +344,7 @@ Currently, we have only have information for homeowners displayed. To make a mea
 		 paint: {
 		   'fill-color': '#0090f5',
 		 }
-
-	       });
+	});
 
 	```
 
@@ -357,7 +354,7 @@ Currently, we have only have information for homeowners displayed. To make a mea
 
 4. Next, copy and paste the name of your [source layer](https://docs.mapbox.com/help/glossary/source-layer/){:target="_blank"} into the code. 
 
-5. Preview your map in a browser to view your changes! You should see your vector layer on your second map. 
+5. Preview your map in a browser to view your changes. You should see your red vector layer on your second map! 
 
 ----------
 ### X. Styling your second layer 
@@ -390,7 +387,7 @@ For the renter map, we want to create a choropleth map that displays the percent
 ----------
 ### XI. Adding a popup that opens on hover
 
-In order to add a popup, we'll need to initialize a popup variable, and then use JS that interacts with each layer in each map.
+The last step is to add a popup to display the data values. The process is similar to adding popups to markers. To do so, we'll need to initialize a popup variable, and then use JS that interacts with each layer in each map. However, the code below updates the location of the popup to match the user's mouse (or cursor) location any time it moves. It also will automatically close the popup when the mouse leaves the map.
 
 1. Add the following code at within your `script` section
 	```javascript
@@ -399,19 +396,20 @@ In order to add a popup, we'll need to initialize a popup variable, and then use
 		closeButton: false,
 		closeOnClick: false
         });
-        renterMap.on('mousemove', 'Renter Data', function (e) {
         
-	// Change the cursor style as a UI indicator.
-        renterMap.getCanvas().style.cursor = 'pointer';
-
-        var coordinates = e.lngLat;
-        var description = e.features[0].properties.Rent;
-
-        // Populate the popup and set its coordinates
-        // based on the feature found.
-        popup.setLngLat(coordinates)
-            .setHTML("Renters: " + description + "%")
-            .addTo(renterMap);
+	renterMap.on('mousemove', 'Renter Data', function (e) {
+        
+            // Change the cursor style as a UI indicator.
+            renterMap.getCanvas().style.cursor = 'pointer';
+    
+            var coordinates = e.lngLat;
+            var description = e.features[0].properties.Rent;
+    
+            // Populate the popup and set its coordinates
+            // based on the feature found.
+            popup.setLngLat(coordinates)
+                .setHTML("Renters: " + description + "%")
+                .addTo(renterMap);
         });
 
         renterMap.on('mouseleave', 'Renter Data', function () {
@@ -423,24 +421,24 @@ In order to add a popup, we'll need to initialize a popup variable, and then use
 2. Use the following for the owner map:
 
 	```javascript
-	        ownerMap.on('mousemove', 'Owner Data', function (e) {
+	ownerMap.on('mousemove', 'Owner Data', function (e) {
         
-	// Change the cursor style as a UI indicator.
-        ownerMap.getCanvas().style.cursor = 'pointer';
+            // Change the cursor style as a UI indicator.
+            ownerMap.getCanvas().style.cursor = 'pointer';
 
-        var coordinates = e.lngLat;
-        var description = e.features[0].properties.Own;
+            var coordinates = e.lngLat;
+            var description = e.features[0].properties.Own;
 
-        // Populate the popup and set its coordinates
-        // based on the feature found.
-        popup.setLngLat(coordinates)
-            .setHTML(" CHANGE THIS " + description + "%")
-            .addTo(ownerMap);
+            // Populate the popup and set its coordinates
+            // based on the feature found.
+            popup.setLngLat(coordinates)
+               .setHTML(" CHANGE THIS " + description + "%")
+               .addTo(ownerMap);
         });
 
         ownerMap.on('mouseleave', 'Owner Data', function () {
-        	ownerMap.getCanvas().style.cursor = '';
-        	popup.remove();
+            ownerMap.getCanvas().style.cursor = '';
+            popup.remove();
         });
 	```
 3. Change the content of the Owner map popup so that is has a label that makes sense.
@@ -452,16 +450,14 @@ In order to add a popup, we'll need to initialize a popup variable, and then use
     <img src="https://media.giphy.com/media/eY1JD4KPG4HMk/giphy.gif">
 </p>
 
-### XII. Extra Advanced Challenge 
+### XII. Advanced Challenge 
 
 Try adding a legend and a title to your map to make it easier for readers to understand the comparison between owners and renters in Portland. 
 
 To add a legend be sure to add each of the chunks of code:
 
-- The HTML for the legend container `<div class="LegendContainer">... </div>`  You don't have to add the description panel container, but you can if you want it, too.
+- The HTML for the legend container `<div class="LegendContainer">... </div>`  You don't have to add a description panel container, but you can if you want it, too.
 - The CSS for styling the chunks
-	- Change the width of each legend item by removing the 50% width from the `.legendItem` class
-	- You can change the width of the whole legend panel by changing the width of it in the `.LegendContainer` class
 - Add the JS for the description panel interaction, if you added it.
 - If you add the description panel and want interaction, also add the link to the Bootstrap library in the HEAD (See the NOTE in I. Setting up your HTML page)
 
