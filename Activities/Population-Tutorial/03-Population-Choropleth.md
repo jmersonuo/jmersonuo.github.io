@@ -141,12 +141,12 @@ Uploading your data as a tileset, rather than directly to a stlye, allows you to
 
 ### IV. Changing the map location and zoom level 
 
-Now that we’ve initialized the webmap, let’s try to make some changes to our code. Currently, your map is zoomed out to see the whole world when it loads. We need to change the location and the zoom level so that we can only view Portland, Oregon. 
+Now that we’ve initialized the webmap, let’s set the approrate extent. Currently, your map is zoomed out to see the whole world when it loads. We need to change the location and the zoom level so that we can only view Portland, Oregon. 
 
-1. Locate the line of code that is telling the map where to center the view.
-2. Try changing the center location to the center of the US by picking a new coordinate finding a coordinate in [google maps](maps.google.com){:target="_blank"} or by placing a marker in [http://geojson.io/](http://geojson.io/#map=2/20.0/0.0){:target="_blank"}.
+1. Locate the line that sets where to center the map view.
+2. For practice, change the map center location to the center of the US by finding a coordinate in [google maps](maps.google.com){:target="_blank"} or by placing a marker in [http://geojson.io/](http://geojson.io/#map=2/20.0/0.0){:target="_blank"}.
 4. Change the coordinates in your code and preview your changes.
-5. Change the zoom level to 10, centered on Portland. 
+5. Now, change the zoom level to 10, centered on Portland. 
 6. Preview your map in a browser to view your changes.
 
 <p align="center">
@@ -158,7 +158,7 @@ Now that we’ve initialized the webmap, let’s try to make some changes to our
 
 ### V. Add a second map variable 
 
-Below your `ownerMap` variable, initialize your renter map by creating a new variable called `renterMap`. This second map will display information about the percentage of renters in Portland. 
+Below your `ownerMap` variable, initialize your renter map by creating a new variable `renterMap`. This second map will display information about the percentage of renters in Portland. 
 
 ```JavaScript
 var renterMap = new mapboxgl.Map({
@@ -169,9 +169,9 @@ var renterMap = new mapboxgl.Map({
 });
 ```
 
-Note: in the CSS, that both maps have their style set via the class "map" or `.map`, so both fill the whole screen. This means that one map will cover the other until we set up the swipe plugin:  
+Note: in the CSS, both maps have their style set via the class "map" or `.map`, so both fill the whole screen. This means that one map will cover the other until we set up the swipe plugin:  
+    **locate this but don't add again **
     ```css
-	/* locate this but don't add again */
 	.map {
              position: absolute;
              top: 0;
@@ -185,7 +185,7 @@ Note: in the CSS, that both maps have their style set via the class "map" or `.m
 ### VI. Comparing maps
 To allow users to compare the two maps by swiping left and right, we can leverage the Mapbox slider JS. 
 
-1. To do this, add the following JS between the `script` tages, code _after_ your two map variables. Notice it uses the names of the two map variables you already created! Check out [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
+1. To do this, add the following JavaScript between the `script` tages, code _after_ your two map variables. Notice it uses the names of the two map variables you already created! Check out [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
 
 	```javascript 
 	// A selector or reference to HTML element
@@ -196,7 +196,7 @@ To allow users to compare the two maps by swiping left and right, we can leverag
 	```
 
 2. Preview your map in a browser to view your changes.
-3. One uses the light background and one uses the dark background, so you can see the swipe in action. Since we want the swipe to look seamless, change the style of the renterMap to also use `dark-v10`
+3. For now, one uses the light background and one uses the dark background, so you can see the swipe in action. Since we want the swipe to look seamless, change the style of the renterMap to also use `dark-v10`
 
 
 <p align="center">
