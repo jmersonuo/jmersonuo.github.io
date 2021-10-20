@@ -170,7 +170,8 @@ var renterMap = new mapboxgl.Map({
 ```
 
 Note: in the CSS, both maps have their style set via the shared class "map" or `.map`, so both fill the whole screen. This means that one map will cover the other until we set up the swipe plugin:  
-    **locate this but don't add again **
+
+**locate this but don't add again **
     ```css
 	.map {
              position: absolute;
