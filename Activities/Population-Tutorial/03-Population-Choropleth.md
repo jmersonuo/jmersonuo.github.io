@@ -187,7 +187,8 @@ Note: in the CSS, both maps have their style set via the shared class "map" or `
 ### VI. Comparing maps
 To allow users to compare the two maps by swiping, we can leverage the Mapbox slider JS plugin. A plugin adds functionality using exsting complementary JS and CSS. 
 
-1. To do this, add the following JavaScript between the `script` tags, code _after_ your two map variables. Notice it uses the names of the two map variables you already created `ownerMap` and `renterMap`! View [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
+1. To do this, add the following JavaScript between the `script` tags, code _after_ your two map variables. Notice it uses the names of the two map variables you already created `ownerMap` and `renterMap`!  
+  View [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
 
 	```javascript 
 	// A selector or reference to HTML element
@@ -245,7 +246,7 @@ For this exercise you will have two load events, one for your owner map and one 
        });
 	```
 
-3. Before you preview your changes, you will need to update this code to use the tileset that is in *your* mapbox account. The steps to follow are below. 
+3. Before you can preview your changes, you will need to update this code to use the tileset that is in *your* mapbox account. The steps to do this are detailed below. 
 
 ----------
 #### VII. Connecting your tileset 
@@ -284,9 +285,9 @@ For this exercise you will have two load events, one for your owner map and one 
 ----------
 ### VIII. Data driven styling 
 
-You can assign a color to each block group based on its field and variables. For the first map, we want to create a choropleth map that displays the percentage of the Portland population that owns a home. In order to style by homeownership, you will need to style our data by the 'Own' field and to change the 'fill-color' parameter of the layer you just added to your map. 
+You can assign a color to each block group based on its field and values. For the first map, we want to create a choropleth map that displays the percentage of the Portland population that owns a home. In order to style by homeownership, you will need to style our data by the "Own" field and to change the "fill-color" parameter of the layer you just added to your map. 
 
-This code is very similar to the process we used in Studio. We are filtering the data from our layer by the data range found in the 'Own' field. Each of the five steps is assigned a color and the fill-opacity is set to 0.7. 
+This code is very similar to the process we used in Studio. We are filtering the data from our layer by the data range found in the "Own" field. Each of the five steps is assigned a color and the fill-opacity is set to 0.7. 
 
 1. In the JS, replace the "paint" from red '#cb1515', to stepped blue bins, with an opacity of 0.7, using the following: 
 
@@ -294,7 +295,7 @@ This code is very similar to the process we used in Studio. We are filtering the
               paint: {
                 'fill-color':
                   ["step",
-                   ["get", "Rent"],
+                   ["get", "Own"],
                    "hsl(225, 100%, 97%)",
                    17.0,
                    "hsl(203, 47%, 82%)",
@@ -319,9 +320,9 @@ This code is very similar to the process we used in Studio. We are filtering the
 ----------
 ### IV. Adding a second layer 
 
-Currently, we have only have information for homeowners displayed on our map. In order to make a meaningful comparison, we will need to add the data symbolized using the renters attribute. We'll add this layer to the other map, so the user can see it when they swipe between maps. 
+Currently, we have only have information for homeowners displayed. To make a meaningful comparison, we will need to add the data symbolized using the renters attribute. We'll add this layer to the other map, so the user can see it when they swipe between maps. 
 
-1. First, add a second load event called renterMap (the renter variable will go inside of this function):
+1. After the *end* of the `ownerMap.on` function, add a second load event for the renterMap (the renter variable will go inside of this function):
 
 	```javascript 
 
@@ -331,7 +332,7 @@ Currently, we have only have information for homeowners displayed on our map. In
 
 	```
 
-2. Next, add your renter data as a layer using `.addLayer`. The tileset ID and the source-layer name will be the same for both layers, since the one dataset has both attributes. We will set a different attribute when styling the data.
+2. Next, inside this new load function, add your renter data to your renter map as a layer using `renterMap.addLayer`. The tileset ID and the source-layer name will be the _same_ for both layers, since the one dataset has both attributes. We will set a different attribute when styling the data.
 
 	```javascript
 	       renterMap.addLayer({
@@ -364,21 +365,21 @@ Currently, we have only have information for homeowners displayed on our map. In
 For the renter map, we want to create a choropleth map that displays the percentage of the Portland population that rents. In order to style by percentage of renters, you will need to style our data by the 'Rent' field. You will also need to change the 'fill-color' parameter of the layer you just added to your map. 
 
 1. Replace `'#0090f5'` with the following: 
-
-```javascript
-   ["step",
-   ["get", "Own"],
-   "hsl(225, 100%, 97%)",
-   17.0,
-   "hsl(203, 47%, 82%)",
-   22.0,
-   "hsl(202, 57%, 63%)",
-   27.0,
-   "#3182bd",
-   32.0,
-    "hsl(210, 90%, 32%)"],
-   "fill-opacity": 0.7          
- ```
+  
+   ```javascript
+      ["step",
+      ["get", "Rent"],
+      "hsl(225, 100%, 97%)",
+      17.0,
+      "hsl(203, 47%, 82%)",
+      22.0,
+      "hsl(202, 57%, 63%)",
+      27.0,
+      "#3182bd",
+      32.0,
+       "hsl(210, 90%, 32%)"],
+      "fill-opacity": 0.7          
+    ```
  
 2. Preview your map in a browser to view your changes.
  
