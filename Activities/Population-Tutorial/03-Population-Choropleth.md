@@ -107,7 +107,7 @@ Uploading your data as a tileset, rather than directly to a stlye, allows you to
 	</html>
 	```
 
-2. Notice that in the `<head>` there are script and link tags referencing mapbox-gl-compare JS and  CSS. This are for the Mapbox GL JS [swipe map plugin](https://github.com/mapbox/mapbox-gl-compare).
+2. Notice that in the `<head>` there are script and link tags referencing mapbox-gl-compare JS and  CSS. These are for the Mapbox GL JS [swipe map plugin](https://github.com/mapbox/mapbox-gl-compare).
 
    **Locate, but don't add again**
 	```html
@@ -116,7 +116,7 @@ Uploading your data as a tileset, rather than directly to a stlye, allows you to
 	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css'
 	```
       
-3. Next, between your script tags (where it says 'add your Mapbox access token and map variable here') add your Mapbox access token and initialize your owner choropleth by creating a ownerMap variable. This first map will eventually display information about the percentage of homeowners in Portland. 
+3. Next, between the `script` tags, where it says "add your Mapbox access token and map variable here", add your Mapbox access token and initialize your owner choropleth by creating a ownerMap variable. This first map will eventually display information about the percentage of homeowners in Portland. 
 
 	```javascript
 	mapboxgl.accessToken = 'YOUR ACCESS TOKEN';
@@ -141,7 +141,7 @@ Uploading your data as a tileset, rather than directly to a stlye, allows you to
 
 ### IV. Changing the map location and zoom level 
 
-Now that we’ve initialized the webmap, let’s set the approrate extent. Currently, your map is zoomed out to see the whole world when it loads. We need to change the location and the zoom level so that we can only view Portland, Oregon. 
+Now that we’ve initialized the webmap, let’s set the approrate extent. Currently, your map is zoomed out to see the whole world when it loads. We need to change the location and the zoom level. 
 
 1. Locate the line that sets where to center the map view.
 2. For practice, change the map center location to the center of the US by finding a coordinate in [google maps](maps.google.com){:target="_blank"} or by placing a marker in [http://geojson.io/](http://geojson.io/#map=2/20.0/0.0){:target="_blank"}.
@@ -169,7 +169,7 @@ var renterMap = new mapboxgl.Map({
 });
 ```
 
-Note: in the CSS, both maps have their style set via the class "map" or `.map`, so both fill the whole screen. This means that one map will cover the other until we set up the swipe plugin:  
+Note: in the CSS, both maps have their style set via the shared class "map" or `.map`, so both fill the whole screen. This means that one map will cover the other until we set up the swipe plugin:  
     **locate this but don't add again **
     ```css
 	.map {
@@ -183,9 +183,9 @@ Note: in the CSS, both maps have their style set via the class "map" or `.map`, 
 ----------
 
 ### VI. Comparing maps
-To allow users to compare the two maps by swiping left and right, we can leverage the Mapbox slider JS. 
+To allow users to compare the two maps by swiping, we can leverage the Mapbox slider JS plugin. A plugin adds functionality using exsting complementary JS and CSS. 
 
-1. To do this, add the following JavaScript between the `script` tages, code _after_ your two map variables. Notice it uses the names of the two map variables you already created! Check out [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
+1. To do this, add the following JavaScript between the `script` tags, code _after_ your two map variables. Notice it uses the names of the two map variables you already created `ownerMap` and `renterMap`! View [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
 
 	```javascript 
 	// A selector or reference to HTML element
@@ -196,7 +196,7 @@ To allow users to compare the two maps by swiping left and right, we can leverag
 	```
 
 2. Preview your map in a browser to view your changes.
-3. For now, one uses the light background and one uses the dark background, so you can see the swipe in action. Since we want the swipe to look seamless, change the style of the renterMap to also use `dark-v10`
+3. So you can see the swipe in action, one uses the light background and one uses the dark background. Since we want the swipe to look seamless, change the style of the renterMap to also use `dark-v10`
 
 
 <p align="center">
@@ -211,9 +211,9 @@ What is a callback?
 
 Initializing the map on the page does more than create a container in the map div. It also tells the browser to request the Mapbox Studio style. This can take variable amounts of time depending on how quickly the Mapbox server can respond to that request, and everything else you're going to add in the code relies on that style being loaded onto the map. As such, it's important to make sure the style is loaded before any more code is executed.
 
-Fortunately, the map object can tell your browser about certain events that occur when the map's state changes. One of these events is _load_, which is emitted when the style has been loaded into the map. Through the map.on method, you can make sure that none of the rest of your code is executed until that event occurs by placing it in a callback function that is called when the load event occurs.
+Fortunately, the map object can tell your browser about certain events that occur when the map's state changes. One of these events is _load_, which is emitted when the style has been loaded into the map. Through the `map.on` method, you can make sure that none of the rest of your code is executed until that event occurs by placing it in a callback function that is called when the load event occurs.
 
-To make sure the rest of the code can execute, it needs to live in a callback function that is executed when the map is finished loading. 
+In summary, to make sure the rest of the JavaScript code can execute, it needs to be placed in a callback function that is executed when the map is finished loading. 
 
 For this exercise you will have two load events, one for your owner map and one for your renter map. 
 
@@ -224,7 +224,7 @@ For this exercise you will have two load events, one for your owner map and one 
 	});
     ```
 
-2. Next, we will add our owner data layer to the map using ownerMap.addLayer(). Remember that this goes *inside* of the load function, after the comment `// the rest of the owner data code will go in here`. 
+2. Next, we will add the owner data layer to the map using `ownerMap.addLayer()`. Remember that this goes *inside* of the load function, after the comment `// the rest of the owner data code will go in here`. 
 
 
 	```javascript
@@ -243,7 +243,7 @@ For this exercise you will have two load events, one for your owner map and one 
        });
 	```
 
-3. Before you preview your changes, you will need to changes this code to use the tileset that is in your mapbox account. The steps to follow are below. 
+3. Before you preview your changes, you will need to update this code to use the tileset that is in *your* mapbox account. The steps to follow are below. 
 
 ----------
 #### VII. Connecting your tileset 
@@ -282,7 +282,7 @@ For this exercise you will have two load events, one for your owner map and one 
 ----------
 ### VIII. Data driven styling 
 
-You can assign a color to each block group based on its field and variables. For our first map, we want to create a choropleth map that displays the percentage of the Portland population that owns a home. In order to style by homeownership, you will need to style our data by our 'Own' field and to change the 'fill-color' parameter of the layer you just added to your map. 
+You can assign a color to each block group based on its field and variables. For the first map, we want to create a choropleth map that displays the percentage of the Portland population that owns a home. In order to style by homeownership, you will need to style our data by the 'Own' field and to change the 'fill-color' parameter of the layer you just added to your map. 
 
 This code is very similar to the process we used in Studio. We are filtering the data from our layer by the data range found in the 'Own' field. Each of the five steps is assigned a color and the fill-opacity is set to 0.7. 
 
@@ -329,7 +329,7 @@ Currently, we have only have information for homeowners displayed on our map. In
 
 	```
 
-2. Next, add your renter data as a layer using .addLayer. Your tileset ID and the source-layer name will be the same for both layers. We will set a different attribute when styling the data.
+2. Next, add your renter data as a layer using `.addLayer`. The tileset ID and the source-layer name will be the same for both layers, since the one dataset has both attributes. We will set a different attribute when styling the data.
 
 	```javascript
 	       renterMap.addLayer({
