@@ -116,7 +116,7 @@ Uploading your data as a tileset, rather than directly to a stlye, allows you to
 	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css'
 	```
       
-3. Next, between your script tags (where it says 'add your Mapbox access toke and map variable here') add your Mapbox access token and initialize your owner choropleth by creating a ownerMap variable. This first map will display information about the percentage of homeowners in Portland. 
+3. Next, between your script tags (where it says 'add your Mapbox access token and map variable here') add your Mapbox access token and initialize your owner choropleth by creating a ownerMap variable. This first map will eventually display information about the percentage of homeowners in Portland. 
 
 	```javascript
 	mapboxgl.accessToken = 'YOUR ACCESS TOKEN';
