@@ -48,7 +48,7 @@ Uploading your data as a tileset, rather than directly to a stlye, allows you to
 1. Go to your [**Tilesets page**](https://studio.mapbox.com/tilesets/){:target="_blank"} in Mapbox Studio to upload your data.
 2. On your Tilesets page, click the **New tileset** button. 
 3. From your computer, select the geojson data containing your renters and owners data and upload it to your account. 
-4. Once it is uploded, you should see it listed under the "Custom tilesets". Notice that it has a unique ID that starts with your username.
+4. Once it is uploded, you should see it listed under the "Custom tilesets". This is your Owner-Renter-Pops tileset that we will refer to later. Notice that it has a unique ID that starts with your username.
 
 	<p align="center">
 	  <img src="Images/tileset.PNG">
