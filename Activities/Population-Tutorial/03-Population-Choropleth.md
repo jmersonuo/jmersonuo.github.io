@@ -43,12 +43,12 @@ Download the data below.
 
 ### II. Upload data as a tileset to Mapbox
 
-Uploading your data as a tileset, rather than directly to a stlye, allows you to add it to maps independently from a style. You could add the same tileset to multiple different maps, over different basemap "styles". To add the percentage of renters vs owners data to Mapbox as a tileset, you need to upload it to your account. 
+Uploading your data as a tileset, rather than directly to a style, allows you to add it to maps independently from a style. You could add the same tileset to multiple different maps, over different basemap "styles". To add the percentage of renters vs owners data to Mapbox as a tileset, you need to upload it to your account. 
 
 1. Go to your [**Tilesets page**](https://studio.mapbox.com/tilesets/){:target="_blank"} in Mapbox Studio to upload your data.
 2. On your Tilesets page, click the **New tileset** button. 
 3. From your computer, select the geojson data containing your renters and owners data and upload it to your account. 
-4. Once it is uploded, you should see it listed under the "Custom tilesets". This is your Owner-Renter-Pops tileset that we will refer to later. Notice that it has a unique ID that starts with your username.
+4. Once it is uploaded, you should see it listed under the "Custom tilesets". This is your Owner-Renter-Pops tileset that we will refer to later. Notice that it has a unique ID that starts with your username.
 
 	<p align="center">
 	  <img src="Images/tileset.PNG">
@@ -141,7 +141,7 @@ Uploading your data as a tileset, rather than directly to a stlye, allows you to
 
 ### IV. Changing the map location and zoom level 
 
-Now that we’ve initialized the webmap, let’s set the approrate extent. Currently, your map is zoomed out to see the whole world when it loads. We need to change the location and the zoom level. 
+Now that we’ve initialized the webmap, let’s set the appropriate extent. Currently, your map is zoomed out to see the whole world when it loads. We need to change the location and the zoom level. 
 
 1. Locate the line that sets where to center the map view.
 2. For practice, change the map center location to the center of the US by finding a coordinate in [google maps](maps.google.com){:target="_blank"} or by placing a marker in [http://geojson.io/](http://geojson.io/#map=2/20.0/0.0){:target="_blank"}.
@@ -185,7 +185,7 @@ Note: in the CSS, both maps have their style set via the shared class "map" or `
 ----------
 
 ### VI. Comparing maps
-To allow users to compare the two maps by swiping, we can leverage the Mapbox slider JS plugin. A plugin adds functionality using exsting complementary JS and CSS. 
+To allow users to compare the two maps by swiping, we can leverage the Mapbox slider JS plugin. A plugin adds functionality using existing complementary JS and CSS. 
 
 1. To do this, add the following JavaScript between the `script` tags, code _after_ your two map variables. Notice it uses the names of the two map variables you already created `ownerMap` and `renterMap`!  
   View [this GitHub repo](https://github.com/mapbox/mapbox-gl-compare){:target="_blank"} for more information about the mapbox-gl-compare plugin.
@@ -208,7 +208,7 @@ To allow users to compare the two maps by swiping, we can leverage the Mapbox sl
 
 
 ----------
-### VI. The load event
+### VII. The load event
 
 What is a callback?
 
@@ -249,11 +249,11 @@ For this exercise you will have two load events, one for your owner map and one 
 3. Before you can preview your changes, you will need to update this code to use the tileset that is in *your* mapbox account. The steps to do this are detailed below. 
 
 ----------
-#### VII. Connecting your tileset 
+#### VIII. Connecting your tileset 
 
 1. In your Mapbox account, navigate to Studio, then Tilesets, then find your **Owner-Renter-Pops** tileset menu. 
 
-	For each tilset, you can either click on the name of the tilset to go to its information page or click the button <img src="Images/Screen%20Shot%202019-10-25%20at%202.20.03%20PM.png"> for more options: 
+	For each tileset, you can either click on the name of the tileset to go to its information page or click the button <img src="Images/Screen%20Shot%202019-10-25%20at%202.20.03%20PM.png"> for more options: 
 
 	**Replace**
 	Replace the current data in your tileset with new data. The tileset ID will stay the same and the new data will be reflected in all styles that reference this tileset.
@@ -283,7 +283,7 @@ For this exercise you will have two load events, one for your owner map and one 
   </p>
 
 ----------
-### VIII. Data driven styling 
+### IX. Data driven styling 
 
 You can assign a color to each block group based on its field and values. For the first map, we want to create a choropleth map that displays the percentage of the Portland population that owns a home. In order to style by homeownership, you will need to style our data by the "Own" field and to change the "fill-color" parameter of the layer you just added to your map. 
 
@@ -318,11 +318,11 @@ This code is very similar to the process we used in Studio. We are filtering the
   </p>
   
 ----------
-### IX. Adding a second layer 
+### X. Adding a second layer 
 
 Currently, we have only have information for homeowners displayed. To make a meaningful comparison, we will need to add the data symbolized using the renters attribute. We'll add this layer to the other map, so the user can see it when they swipe between maps. 
 
-1. After the *end* of the `ownerMap.on` function, add a second load event for the renterMap (the renter variable will go inside of this function):
+1. Add a second load event, `renterMap.on('load'...` for the renterMap. Place this function after *end* of the `ownerMap.on` function:
 
 	```javascript 
 	renterMap.on('load', function() {
@@ -357,7 +357,7 @@ Currently, we have only have information for homeowners displayed. To make a mea
 5. Preview your map in a browser to view your changes. You should see your red vector layer on your second map! 
 
 ----------
-### X. Styling your second layer 
+### XI. Styling your second layer 
 
 For the renter map, we want to create a choropleth map that displays the percentage of the Portland population that rents. In order to style by percentage of renters, you will need to style our data by the 'Rent' field. You will also need to change the 'fill-color' parameter of the layer you just added to your map. 
 
@@ -385,7 +385,7 @@ For the renter map, we want to create a choropleth map that displays the percent
 </p>
   
 ----------
-### XI. Adding a popup that opens on hover
+### XII. Adding a popup that opens on hover
 
 The last step is to add a popup to display the data values. The process is similar to adding popups to markers. To do so, we'll need to initialize a popup variable, and then use JS that interacts with each layer in each map. However, the code below updates the location of the popup to match the user's mouse (or cursor) location any time it moves. It also will automatically close the popup when the mouse leaves the map.
 
@@ -450,7 +450,7 @@ The last step is to add a popup to display the data values. The process is simil
     <img src="https://media.giphy.com/media/eY1JD4KPG4HMk/giphy.gif">
 </p>
 
-### XII. Advanced Challenge 
+### XIII. Advanced Challenge 
 
 Try adding a legend and a title to your map to make it easier for readers to understand the comparison between owners and renters in Portland. 
 
@@ -459,5 +459,5 @@ To add a legend be sure to add each of the chunks of code:
 - The HTML for the legend container `<div class="LegendContainer">... </div>`  You don't have to add a description panel container, but you can if you want it, too.
 - The CSS for styling the chunks
 - Add the JS for the description panel interaction, if you added it.
-- If you add the description panel and want interaction, also add the link to the Bootstrap library in the HEAD (See the NOTE in I. Setting up your HTML page)
+- If you add the description panel and want interaction, also add the link to the Bootstrap library in the `head` (See the NOTE in I. Setting up your HTML page)
 
