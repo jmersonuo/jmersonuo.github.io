@@ -405,7 +405,7 @@ The last step is to add a popup to display the data values. The process is simil
 
 Another note on organization. You should stick with the organization you used earlier. Grouping all variable declarations toegether OR by grouping the owners code and the renter code. What is important, is that the varibale delarations are above the functions that manipulate those variables.
 
-	```javascript
+   ```javascript
 	//var declarations
 	var Owner...
 	var Renter...
@@ -419,9 +419,10 @@ Another note on organization. You should stick with the organization you used ea
 	ownerMap.on('mousemove', ...
 	renterMap.on('mousemove',...
 	
-	```	
-	Or by grouping everything to do with owner, then everything to to with renter:
-	```javascript
+   ```  	
+   Or by grouping everything to do with owner, then everything to to with renter:
+	
+   ```javascript
 
 	var popup = new mapboxgl.Popup...
 	// Owner map
@@ -433,7 +434,7 @@ Another note on organization. You should stick with the organization you used ea
 	var Renter...
 	Renter.onLoad...
 	renterMap.on('mousemove',...
-	```
+   ```
 
 1. Add the following code within your `script` section
 	```javascript
