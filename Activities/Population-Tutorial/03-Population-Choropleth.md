@@ -343,6 +343,8 @@ Currently, we have only have information for homeowners displayed. To make a mea
 	var Renter...
 	Renter.onLoad...
 	```
+   What is important, is that the varibale delarations are above the functions that manipulate those variables. I tend to use the first organization, but you can use either if one makes more sense to you than the other.
+
 2. Next, inside this new load function, add your renter data to your renter map as a layer using `renterMap.addLayer`. The tileset ID and the source-layer name will be the _same_ for both layers, since the one dataset has both attributes. We will set a different attribute when styling the data.
    
 	```javascript
@@ -488,7 +490,7 @@ Another note on organization. You should stick with the organization you used ea
             popup.remove();
         });
 	```
-3. Change the content of the Owner map popup so that is has a label that makes sense. Do this by editing the value of `.setHTML(.setHTML(" CHANGE THIS " + description + "%")`
+3. Change the content of the Owner map popup so that is has a label that makes sense. Do this by editing the value of `.setHTML(" CHANGE THIS " + description + "%")`
 
  
 ### Congratulations! You've completed the exercise! 
