@@ -488,7 +488,7 @@ Another note on organization. You should stick with the organization you used ea
             popup.remove();
         });
 	```
-3. Change the content of the Owner map popup so that is has a label that makes sense.
+3. Change the content of the Owner map popup so that is has a label that makes sense. Do this by editing the value of `.setHTML(.setHTML(" CHANGE THIS " + description + "%")`
 
  
 ### Congratulations! You've completed the exercise! 
