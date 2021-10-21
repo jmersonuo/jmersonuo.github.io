@@ -60,7 +60,7 @@ Uploading your data as a tileset, rather than directly to a stlye, allows you to
 ### III. Initializing a map with a swipe
 
 
-1. To begin, use this sample code created by the documentation team at Mapbox to set up a site with two map divs
+1. To begin, use this sample code created by the documentation team at Mapbox to set up a site with two map divs. Save it in a new `.html` file for this assignment.
 
 	```html
 	<!DOCTYPE html>
