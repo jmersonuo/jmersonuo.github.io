@@ -156,7 +156,7 @@ You will then add the map an HTML template called "versatile layout".
 	<img src= "Images/DC-Squaremarkers.JPG">
 	</p>
   
-4. We are going to change how the data are added. Instead of adding all the points as a single layer, we are going to add each type of point as its own layer. To do that, we will iterate through each record of the data and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style and refer to the images as shown in the symbology lab or add imges at runtime via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-image/){:target="_blank"}.
+4. We are going to change how the data are added. Instead of adding all the points as a single layer, we are going to add each type of point as its own layer. To do that, we will iterate through each record of the data using the `forEach` funtion, and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style and refer to the images as shown in the symbology lab or add imges at runtime via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-image/){:target="_blank"}.
 
     Delete or comment out the following snipii:  
     
@@ -176,10 +176,10 @@ You will then add the map an HTML template called "versatile layout".
   ```Javascript  
 		// add a new layer using the points
 		places.features.forEach(function (feature) {
-		    var symbol = feature.properties['icon'];
+		    var symbol = feature.properties['icon']; // get the value from the 'icon' field in the data
 		    var layerID = 'poi-' + symbol;
 
-		    // Add a layer for this symbol type if it hasn't been added already.
+		    // Add a layer for this symbol type if there is not a layer with this name already.
 		    if (!map.getLayer(layerID)) {
 			map.addLayer({
 			    'id': layerID,
@@ -190,7 +190,7 @@ You will then add the map an HTML template called "versatile layout".
 				'icon-image': symbol + '-15',
 				'icon-allow-overlap': true
 			    },
-			    'filter': ['==', 'icon', symbol]
+			    'filter': ['==', 'icon', symbol] // filter the dataset for all features that have the `icon` value that is the same and the current `symbol` value. 
 			});
 
 		//                // Add checkbox and label elements for the layer.
@@ -213,11 +213,11 @@ You will then add the map an HTML template called "versatile layout".
 		//                        e.target.checked ? 'visible' : 'none'
 		//                    );
 		//                });
-			    }
-			});
+			}
+		});
 
   ``` 
-   Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
+  Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
    
 6. To add the legend, we add checkbox and label elements for each layer. *Uncomment* the following code-block:
     ```Javascript
