@@ -129,7 +129,7 @@ You will then add the map an HTML template called "versatile layout".
 	</p>	 
 
     
-3. To add the data once the map loads, add the following code inside the Map's `On 'load'` function. This 1) defines a Mapbox Source as the data in the `places` var, and specifies that the type is GeoJSON. 2) creates a mapbox Layer of type symbol, from the places Source. Each feature used the icon image `marker-15`
+3. To add the data once the map loads, add the following code inside the Map's `On 'load'` function. This 1) defines a Mapbox Source as the data in the `places` var, and specifies that the type is GeoJSON. 2) creates a mapbox Layer of type symbol, from the places Source. Each feature uses the icon image `marker-15`
 	  
 	```Javascript  
 	// Add a GeoJSON source containing place coordinates and information.
