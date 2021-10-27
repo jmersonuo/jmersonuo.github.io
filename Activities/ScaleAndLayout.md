@@ -123,8 +123,8 @@ You will then add the map an HTML template called "versatile layout".
 	    var places = // put the JSON data here ;
 	```  
 	
-	 It should look something like this:
- <p align="center">
+	It should look something like this:
+ 	<p align="center">
 	    <img src= "Images/05-Data.JPG"> 
 	</p>
     
@@ -150,15 +150,15 @@ You will then add the map an HTML template called "versatile layout".
 	});
 	```    
   
-  The markers should be visible on the map as tiny-little black squares (marker-15).
+	The markers should be visible on the map as tiny-little black squares (marker-15).
   
-  <p align="center">
-    <img src= "Images/DC-Squaremarkers.JPG">
-  </p>
+	<p align="center">
+		<img src= "Images/DC-Squaremarkers.JPG">
+	</p>
   
 4. We are going to change how the data are added. Instead of adding all the points as a single layer, we are going to add each type of point as its own layer. To do that, we will iterate through each record of the data using the `forEach` funtion, and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style and refer to the images as shown in the symbology lab or add imges at runtime via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-image/){:target="_blank"}.
 
-    Delete or comment out the following snipii:  
+    **Delete or comment out** the following snipit:  
     
     ```Javascript         
 	var layerID = 'points';
@@ -172,8 +172,8 @@ You will then add the map an HTML template called "versatile layout".
 		},
 	 });
     ```
-5. Under `// add a new layer using the points` add the following chunk of code  
-  ```Javascript  
+5. Under `// add a new layer using the points` add the following chunk of code:  
+    ```Javascript  
 		// add a new layer using the points
 		places.features.forEach(function (feature) {
 		    var symbol = feature.properties['icon']; // get the value from the 'icon' field in the data
@@ -217,22 +217,22 @@ You will then add the map an HTML template called "versatile layout".
 			}
 		});
 
-  ``` 
-Refresh your map. Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
+	```  
+	Refresh your map. Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
    
 6. To add the legend, we add checkbox and label elements for each layer. *Uncomment* the following code-block:
-    ```Javascript
-	// Add checkbox and label elements for the layer.
-	var input = document.createElement('input');
-	input.type = 'checkbox';
-	input.id = layerID;
-	input.checked = true;
-	filterGroup.appendChild(input);
+	```Javascript
+		// Add checkbox and label elements for the layer.
+		var input = document.createElement('input');
+		input.type = 'checkbox';
+		input.id = layerID;
+		input.checked = true;
+		filterGroup.appendChild(input);
 
-	var label = document.createElement('label');
-	label.setAttribute('for', layerID);
-	label.textContent = symbol;
-	filterGroup.appendChild(label);
+		var label = document.createElement('label');
+		label.setAttribute('for', layerID);
+		label.textContent = symbol;
+		filterGroup.appendChild(label);
     ```
 	
 7. To add interation to the legend, we add a listener to each intupt checkbox. *Uncomment* the following code block:
