@@ -36,89 +36,101 @@ You will then add the map an HTML template called "versatile layout".
 ### II. Adding the GeoJSON data to the map
 
 1. Copy the GeoSJON dat below and paste it into geoJSON.io
+	```Javascript  
+	  {
+        "type": "FeatureCollection",
+        "features": [
+            {
+        	"type": "Feature",
+        	"properties": {
+        	    "icon": "theatre"
+        	},
+        	"geometry": {
+        	    "type": "Point",
+        	    "coordinates": [-77.038659, 38.931567]
+        	}
+            },
+            {
+        	"type": "Feature",
+        	"properties": {
+        	    "icon": "theatre"
+        	},
+        	"geometry": {
+        	    "type": "Point",
+        	    "coordinates": [-77.003168, 38.894651]
+        	}
+            },
+            {
+        	"type": "Feature",
+        	"properties": {
+        	    "icon": "bar"
+        	},
+        	"geometry": {
+        	    "type": "Point",
+        	    "coordinates": [-77.090372, 38.881189]
+        	}
+            },
+            {
+        	"type": "Feature",
+        	"properties": {
+        	    "icon": "bicycle"
+        	},
+        	"geometry": {
+        	    "type": "Point",
+        	    "coordinates": [-77.052477, 38.943951]
+        	}
+            },
+            {
+        	"type": "Feature",
+        	"properties": {
+        	    "icon": "music"
+        	},
+        	"geometry": {
+        	    "type": "Point",
+        	    "coordinates": [-77.031706, 38.914581]
+        	}
+            },
+            {
+        	"type": "Feature",
+        	"properties": {
+        	    "icon": "music"
+        	},
+        	"geometry": {
+        	    "type": "Point",
+        	    "coordinates": [-77.020945, 38.878241]
+        	}
+            },
+            {
+        	"type": "Feature",
+        	"properties": {
+        	    "icon": "music"
+        	},
+        	"geometry": {
+        	    "type": "Point",
+        	    "coordinates": [-77.007481, 38.876516]
+        	}
+            }
+        ]
+      }
+	```  
+	  
+	    // This GeoJSON contains features that include an "icon"
+	    // property. The value of the "icon" property corresponds
+	    // to an image in the Mapbox Light style's sprite. (Note:
+	    // the name of images is the value of the "icon" property
+	    // + "-15".)
+	     var places = 
+2. In the script section of `filter-markers.html`, add the GeoSJON data structure in a variable called `places` where it says `// ADD THE DATA HERE`, and then set the variable euqal to the geoJSON data above. This just loads data into the variable "places", so you won't see a change in the map.  
+
 	  ```Javascript  
 	      // This GeoJSON contains features that include an "icon"
 	    // property. The value of the "icon" property corresponds
 	    // to an image in the Mapbox Light style's sprite. (Note:
 	    // the name of images is the value of the "icon" property
 	    // + "-15".)
-	    var places = {
-		'type': 'FeatureCollection',
-		'features': [
-		    {
-			'type': 'Feature',
-			'properties': {
-			    'icon': 'theatre'
-			},
-			'geometry': {
-			    'type': 'Point',
-			    'coordinates': [-77.038659, 38.931567]
-			}
-		    },
-		    {
-			'type': 'Feature',
-			'properties': {
-			    'icon': 'theatre'
-			},
-			'geometry': {
-			    'type': 'Point',
-			    'coordinates': [-77.003168, 38.894651]
-			}
-		    },
-		    {
-			'type': 'Feature',
-			'properties': {
-			    'icon': 'bar'
-			},
-			'geometry': {
-			    'type': 'Point',
-			    'coordinates': [-77.090372, 38.881189]
-			}
-		    },
-		    {
-			'type': 'Feature',
-			'properties': {
-			    'icon': 'bicycle'
-			},
-			'geometry': {
-			    'type': 'Point',
-			    'coordinates': [-77.052477, 38.943951]
-			}
-		    },
-		    {
-			'type': 'Feature',
-			'properties': {
-			    'icon': 'music'
-			},
-			'geometry': {
-			    'type': 'Point',
-			    'coordinates': [-77.031706, 38.914581]
-			}
-		    },
-		    {
-			'type': 'Feature',
-			'properties': {
-			    'icon': 'music'
-			},
-			'geometry': {
-			    'type': 'Point',
-			    'coordinates': [-77.020945, 38.878241]
-			}
-		    },
-		    {
-			'type': 'Feature',
-			'properties': {
-			    'icon': 'music'
-			},
-			'geometry': {
-			    'type': 'Point',
-			    'coordinates': [-77.007481, 38.876516]
-			}
-		    }
-		]
-	    };
-	  ```  
-2. In the script section of `filter-markers.html`, add the GeoSJON data structure in a variable called "places" where it says `// ADD THE DATA HERE`. This just loads data into the variable "places", so you won't see a change in the map.  
+	    var places = // put the JSON data here
+	    
+	```  
     
 3. Once the map loads, add a GeoJSON source containing place coordinates and the layer using an icon image. This goes inside the `Map's On 'load' function`.
 	  
