@@ -31,7 +31,7 @@ You will then add the map an HTML template called "versatile layout".
 
 ### II. Adding the GeoJSON data to the map
 
-1. Copy the GeoSJON data below and paste it into [geoJSON.io](http://geojson.io/)
+1. Copy the GeoSJON data below and paste it into [geoJSON.io](http://geojson.io/){:target="_blank"}  
 	```Javascript  
 	  {
         "type": "FeatureCollection",
@@ -110,7 +110,7 @@ You will then add the map an HTML template called "versatile layout".
       }
 	```   
 	  
-		Examine the data in the map, in the JSON structure, and in the table view. This GeoJSON contains several features that have an "icon" property. The value of the "icon" property corresponds to an image in the Mapbox Light style's [sprite](https://docs.mapbox.com/help/glossary/sprite/) (image). Note: the name of images is the value of the "icon" property + `-15`.
+		Examine the data in the map, in the JSON structure, and in the table view. This GeoJSON contains several features that have an "icon" property. The value of the "icon" property corresponds to an image in the Mapbox Light style's [sprite](https://docs.mapbox.com/help/glossary/sprite/){:target="_blank"}(image). Note: the name of images is the value of the "icon" property + `-15`.
 	 
 2. In the script section of `filter-markers.html`, add the GeoSJON data structure in a variable called `places` where it says `// ADD THE DATA HERE`, and then set the variable equal to the geoJSON data above (with a semicolon on the end). This just loads data into the variable "places", so you won't see a change in the map.  
 
@@ -221,7 +221,7 @@ You will then add the map an HTML template called "versatile layout".
 	Refresh your map. Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
    
 6. To add the legend, we add checkbox and label elements for each layer. 
-	Above the script, where the HTML elements are defined, lets add an empty `nav` item with the ID `filter-group`. A nav of navigation item is similar to a `div`, but lets the browser know this contains navigation links, which is useful for accessibility functionality. Read the HTML reference [here](https://www.w3schools.com/tags/tag_nav.asp). Under `<!-- add filter group nav here -->` add the following chunk of code:  
+	Above the script, where the HTML elements are defined, lets add an empty `nav` item with the ID `filter-group`. A nav of navigation item is similar to a `div`, but lets the browser know this contains navigation links, which is useful for accessibility functionality. Read the HTML reference [here](https://www.w3schools.com/tags/tag_nav.asp){:target="_blank"}. Under `<!-- add filter group nav here -->` add the following chunk of code:  
     ```html
 	<!-- add filter group nav here -->
 	<nav id="filter-group" class="filter-group"></nav>
@@ -259,15 +259,17 @@ Viola!! An interactive map that filters layers by value!
   <p align="center">
 	    <img src= "Images/DC-WithLegend.JPG">
 	  </p>
-
    
 <hr>
+
 ### III. Adding scale dependency
    
    Find where the map is initialized.  
    
    - Add a min zoom (you pick what the min zoom sould be).  Here is the table of zoom levels: [https://docs.mapbox.com/help/glossary/zoom-level/](https://docs.mapbox.com/help/glossary/zoom-level/){:target="_blank"}  
-   - Prevent users from leaving your this bounding around DC by setting the max bounds, per the code block below. Read about max bounds in the API [https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds){:target="_blank"}  
+   - Prevent users from leaving your this bounding around DC by setting the max bounds, per the code block below. 
+   	- Add the entire `bounds` variable, and add the `maxBounds` option the the map.	
+   - Read about max bounds in the API [https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds){:target="_blank"}  
    	
   ```Javascript
 	// Set bounds to Washington, DC
