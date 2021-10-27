@@ -221,13 +221,13 @@ You will then add the map an HTML template called "versatile layout".
 	Refresh your map. Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
    
 6. To add the legend, we add checkbox and label elements for each layer. 
-	Above the script, where the HTML elements are defined, lets add a `nav` item. A nav of navigation item is similar to a `div`, but lets the browser know this contains navigation links, which is useful for accessibility functionality. Under `<code><!-- add filter group nav here --></code>` add the following chunk of code:  
+	Above the script, where the HTML elements are defined, lets add an empty `nav` item with the ID `filter-group`. A nav of navigation item is similar to a `div`, but lets the browser know this contains navigation links, which is useful for accessibility functionality. Read the HTML reference [here](https://www.w3schools.com/tags/tag_nav.asp). Under `<!-- add filter group nav here -->` add the following chunk of code:  
     ```html
 	<!-- add filter group nav here -->
 	<nav id="filter-group" class="filter-group"></nav>
 	```
 	
-7. To populate the legend, we add checkbox and label elements for each layer. *Uncomment* the following code-block, which is within the `forEach` loop:
+7. To populate the legend, we append checkbox and label elements, for each layer, into the `filter-group` nav. *Uncomment* the following code-block, which is within the `forEach` loop:
 	```Javascript
 		// Add checkbox and label elements for the layer.
 		var input = document.createElement('input');
@@ -241,6 +241,7 @@ You will then add the map an HTML template called "versatile layout".
 		label.textContent = symbol;
 		filterGroup.appendChild(label);
     ```
+	Notice the checkboxes aren't standard plain HTML checkboxes, and the button backgrounds are a pretty blue. This is because the code provided already contains detailed CSS for styling the `.filter-group`. Take a moment to examine the CSS and make an adjustment or two.
 	
 8. To add interation to the legend, we add a listener to each intupt checkbox. *Uncomment* the following code block:
     ```Javascript
