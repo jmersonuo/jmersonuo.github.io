@@ -297,7 +297,7 @@ We are going to go over responsive layouts in class next week, this will get you
 
 2. Add the map via an iFrame using the code block below. Read about [iframes](https://www.w3schools.com/tags/tag_iframe.asp).
   Note that this refers to the filter-markers.html as a relative path, meaning they must be saved in the same folder. If you used a different name for your maps' html file, you'll have to use that file name as the source (src). 
-	```Javascript
+	```html
 		<!--  ADD iframe here, inside the versitle layout's map container   -->
          	<iframe src="filter-markers.html" title="Map"></iframe> 
 	```
