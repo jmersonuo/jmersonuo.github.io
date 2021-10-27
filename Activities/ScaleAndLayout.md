@@ -3,7 +3,7 @@
 
 
 
-For this exercise, you will be adding GeoJSON format points to a map using mapbox GLJS, setting some scale dependency, and
+For this exercise, you will be adding GeoJSON format points to a map using Mapbox GLJS, setting some scale dependency, and
 You will then add the map an HTML template called "versatile layout".
 
 
@@ -20,13 +20,12 @@ You will then add the map an HTML template called "versatile layout".
 
 
 1. From the course R Drive (R:\Class_Data\Activity5), save the following files to your R drive:
-  - filter-markers.html
-  - VersitileLayout.html
-  - VersitileLayout.js
-  - VersitileLayout.css
+  - filter-markers.html  (the map)
+  - VersitileLayout.html  (the website template)
+  - VersitileLayout.js (JS for the website)
+  - VersitileLayout.css (CSS for the website)
 
-
-	When you open the map, you should have a mapbox-light style centered on Washington DC.  
+2. 	When you open the map in a browser, `filter-markers.html`, you should have a mapbox-light style centered on Washington DC.  
 	<p align="center">
 	    <img src= "Images/DC.JPG"> 
 	</p>
@@ -114,23 +113,23 @@ You will then add the map an HTML template called "versatile layout".
       }
 	```  
 	  
+  Examine the point in the map, in the JSON structure and in the table view. This GeoJSON contains several features that have an "icon" property. The value of the   "icon" property corresponds to an image in the Mapbox Light style's sprite (image). (Note: the name of images is the value of the "icon" property + `-15`.)
+	 
+2. In the script section of `filter-markers.html`, add the GeoSJON data structure in a variable called `places` where it says `// ADD THE DATA HERE`, and then set the variable equal to the geoJSON data above (with a semicolon on the end). This just loads data into the variable "places", so you won't see a change in the map.  
+
+	  ```Javascript  
 	    // This GeoJSON contains features that include an "icon"
 	    // property. The value of the "icon" property corresponds
 	    // to an image in the Mapbox Light style's sprite. (Note:
 	    // the name of images is the value of the "icon" property
 	    // + "-15".)
-	     var places = 
-2. In the script section of `filter-markers.html`, add the GeoSJON data structure in a variable called `places` where it says `// ADD THE DATA HERE`, and then set the variable euqal to the geoJSON data above. This just loads data into the variable "places", so you won't see a change in the map.  
+	    var places = // put the JSON data here ;
 
-	  ```Javascript  
-	      // This GeoJSON contains features that include an "icon"
-	    // property. The value of the "icon" property corresponds
-	    // to an image in the Mapbox Light style's sprite. (Note:
-	    // the name of images is the value of the "icon" property
-	    // + "-15".)
-	    var places = // put the JSON data here
-	    
 	```  
+	It should look something like this:
+	<p align="center">
+	    <img src= "Images/05-Data.JPG"> 
+	</p>
     
 3. Once the map loads, add a GeoJSON source containing place coordinates and the layer using an icon image. This goes inside the `Map's On 'load' function`.
 	  
