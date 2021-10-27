@@ -1,7 +1,4 @@
-<h2 align="center"> Working with Scale and</h2>
-<h3 align="center"> Putting a mapbox map into an HTML template</h3>
-
-
+<h2 align="center"> Working with Scale and <br> Putting a mapbox map into an HTML template</h2>
 
 For this exercise, you will be adding GeoJSON format points to a map using Mapbox GLJS, setting some scale dependency, and
 You will then add the map an HTML template called "versatile layout".
@@ -34,7 +31,7 @@ You will then add the map an HTML template called "versatile layout".
 
 ### II. Adding the GeoJSON data to the map
 
-1. Copy the GeoSJON dat below and paste it into geoJSON.io
+1. Copy the GeoSJON data below and paste it into [geoJSON.io](http://geojson.io/)
 	```Javascript  
 	  {
         "type": "FeatureCollection",
@@ -113,7 +110,7 @@ You will then add the map an HTML template called "versatile layout".
       }
 	```  
 	  
-  Examine the point in the map, in the JSON structure and in the table view. This GeoJSON contains several features that have an "icon" property. The value of the   "icon" property corresponds to an image in the Mapbox Light style's sprite (image). (Note: the name of images is the value of the "icon" property + `-15`.)
+  Examine the data in the map, in the JSON structure, and in the table view. This GeoJSON contains several features that have an "icon" property. The value of the "icon" property corresponds to an image in the Mapbox Light style's [sprite](https://docs.mapbox.com/help/glossary/sprite/) (image). Note: the name of images is the value of the "icon" property + `-15`.
 	 
 2. In the script section of `filter-markers.html`, add the GeoSJON data structure in a variable called `places` where it says `// ADD THE DATA HERE`, and then set the variable equal to the geoJSON data above (with a semicolon on the end). This just loads data into the variable "places", so you won't see a change in the map.  
 
@@ -131,7 +128,7 @@ You will then add the map an HTML template called "versatile layout".
 	    <img src= "Images/05-Data.JPG"> 
 	</p>
     
-3. Once the map loads, add a GeoJSON source containing place coordinates and the layer using an icon image. This goes inside the `Map's On 'load' function`.
+3. To add the data once the map loads, add the following code inside the Map's `On 'load'` function. This 1) defines a Mapbox Source as the data in the `places` var, and specifies that the type is GeoJSON. 2) creates a mapbox Layer of type symbol, from the places Source. Each feature used the icon image `marker-15`
 	  
 	```Javascript  
 	// Add a GeoJSON source containing place coordinates and information.
@@ -153,16 +150,15 @@ You will then add the map an HTML template called "versatile layout".
 	});
 	```    
   
-  	The markers should be visible on the map as little black squares.
+  	The markers should be visible on the map as tiny-little black squares (marker-15).
   
-  <p align="center">
+       <p align="center">
 	<img src= "Images/DC-Squaremarkers.JPG">
 	</p>
   
-4. We are going to change how the data are added. Instead of adding all the points as a single layer, we will iterate through each record of the data and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style refer to the images as shown in the symbology lab or add imges at runtime using                        
-via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-image/){:target="_blank"}.
+4. We are going to change how the data are added. Instead of adding all the points as a single layer, we are going to add each type of point as its own layer. To do that, we will iterate through each record of the data and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style and refer to the images as shown in the symbology lab or add imges at runtime via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-image/){:target="_blank"}.
 
-    Delete or comment out  
+    Delete or comment out the following snipii:  
     
     ```Javascript         
 	var layerID = 'points';
@@ -219,7 +215,7 @@ via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-ima
 		//                });
 			    }
 			});
-		    });
+
   ``` 
    Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
    
