@@ -123,7 +123,7 @@ You will then add the map an HTML template called "versatile layout".
 	    var places = // put the JSON data here ;
 	```  
 	
-	 It should look something like this:
+	 It should look something like this:  
  	 <p align="center">
 	    <img src= "Images/05-Data.JPG"> 
 	 </p>  
