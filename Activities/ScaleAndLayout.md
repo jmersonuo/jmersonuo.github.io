@@ -110,7 +110,7 @@ You will then add the map an HTML template called "versatile layout".
       }
 	```   
 	  
- Examine the data in the map, in the JSON structure, and in the table view. This GeoJSON contains several features that have an "icon" property. The value of the "icon" property corresponds to an image in the Mapbox Light style's [sprite](https://docs.mapbox.com/help/glossary/sprite/) (image). Note: the name of images is the value of the "icon" property + `-15`.
+	Examine the data in the map, in the JSON structure, and in the table view. This GeoJSON contains several features that have an "icon" property. The value of the "icon" property corresponds to an image in the Mapbox Light style's [sprite](https://docs.mapbox.com/help/glossary/sprite/) (image). Note: the name of images is the value of the "icon" property + `-15`.
 	 
 2. In the script section of `filter-markers.html`, add the GeoSJON data structure in a variable called `places` where it says `// ADD THE DATA HERE`, and then set the variable equal to the geoJSON data above (with a semicolon on the end). This just loads data into the variable "places", so you won't see a change in the map.  
 
@@ -123,7 +123,7 @@ You will then add the map an HTML template called "versatile layout".
 	    var places = // put the JSON data here ;
 	```  
 	
- It should look something like this:
+	 It should look something like this:
  <p align="center">
 	    <img src= "Images/05-Data.JPG"> 
 	</p>
@@ -152,9 +152,9 @@ You will then add the map an HTML template called "versatile layout".
   
   The markers should be visible on the map as tiny-little black squares (marker-15).
   
-      <p align="center">
-	<img src= "Images/DC-Squaremarkers.JPG">
-	</p>
+  <p align="center">
+    <img src= "Images/DC-Squaremarkers.JPG">
+  </p>
   
 4. We are going to change how the data are added. Instead of adding all the points as a single layer, we are going to add each type of point as its own layer. To do that, we will iterate through each record of the data using the `forEach` funtion, and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style and refer to the images as shown in the symbology lab or add imges at runtime via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-image/){:target="_blank"}.
 
