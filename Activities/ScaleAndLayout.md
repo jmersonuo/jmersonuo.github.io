@@ -108,23 +108,23 @@ You will then add the map an HTML template called "versatile layout".
             }
         ]
       }
-	```  
+	```   
 	  
-  Examine the data in the map, in the JSON structure, and in the table view. This GeoJSON contains several features that have an "icon" property. The value of the "icon" property corresponds to an image in the Mapbox Light style's [sprite](https://docs.mapbox.com/help/glossary/sprite/) (image). Note: the name of images is the value of the "icon" property + `-15`.
+ Examine the data in the map, in the JSON structure, and in the table view. This GeoJSON contains several features that have an "icon" property. The value of the "icon" property corresponds to an image in the Mapbox Light style's [sprite](https://docs.mapbox.com/help/glossary/sprite/) (image). Note: the name of images is the value of the "icon" property + `-15`.
 	 
 2. In the script section of `filter-markers.html`, add the GeoSJON data structure in a variable called `places` where it says `// ADD THE DATA HERE`, and then set the variable equal to the geoJSON data above (with a semicolon on the end). This just loads data into the variable "places", so you won't see a change in the map.  
 
-	  ```Javascript  
+	```Javascript  
 	    // This GeoJSON contains features that include an "icon"
 	    // property. The value of the "icon" property corresponds
 	    // to an image in the Mapbox Light style's sprite. (Note:
 	    // the name of images is the value of the "icon" property
 	    // + "-15".)
 	    var places = // put the JSON data here ;
-
 	```  
-	It should look something like this:
-	<p align="center">
+	
+ It should look something like this:
+ <p align="center">
 	    <img src= "Images/05-Data.JPG"> 
 	</p>
     
@@ -150,9 +150,9 @@ You will then add the map an HTML template called "versatile layout".
 	});
 	```    
   
-  	The markers should be visible on the map as tiny-little black squares (marker-15).
+  The markers should be visible on the map as tiny-little black squares (marker-15).
   
-       <p align="center">
+      <p align="center">
 	<img src= "Images/DC-Squaremarkers.JPG">
 	</p>
   
