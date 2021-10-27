@@ -241,7 +241,7 @@ You will then add the map an HTML template called "versatile layout".
 		label.textContent = symbol;
 		filterGroup.appendChild(label);
     ```
-	Notice the checkboxes aren't standard plain HTML checkboxes, and the button backgrounds are a pretty blue. This is because the code provided already contains detailed CSS for styling the `.filter-group`. Take a moment to examine the CSS and make an adjustment or two.
+	Notice the checkboxes aren't standard plain HTML checkboxes, and the backgrounds are a pretty blue. This is because the code provided already contains detailed CSS for styling the `.filter-group`. Take a moment to examine the CSS and make an adjustment or two.
 	
 8. To add interation to the legend, we add a listener to each intupt checkbox. *Uncomment* the following code block:
     ```Javascript
@@ -288,9 +288,12 @@ Viola!! An interactive map that filters layers by value!
 <hr>
 ### IV. Add the map to the versitile layout 
 	
-Note the lecture code version, added a map directly into the layout. In this version, we will add it as an iFrame.
+We are going to go over responsive layouts in class next week, this will get you started on adding your map into an existing template. 
 	
-1. Open `VersitileLayout.html` in a text editor and add the map via an iFrame using the code block below. Read about [iframes](https://www.w3schools.com/tags/tag_iframe.asp).
+1. Open `VersitileLayout.html` in a text editor. Notice that the `CSS` and `JS` for the layout are _not_ directly in `VersitileLayout.html`, but rather are linked via relative paths. Locate the links to the CSS and JS in the `head`.
+
+
+2. Add the map via an iFrame using the code block below. Read about [iframes](https://www.w3schools.com/tags/tag_iframe.asp).
   Note that this refers to the filter-markers.html as a relative path, meaning they must be saved in the same folder. If you used a different name for your maps' html file, you'll have to use that file name as the source (src). 
 	```Javascript
 		<!--  ADD iframe here, inside the versitle layout's map container   -->
@@ -307,7 +310,7 @@ Note the lecture code version, added a map directly into the layout. In this ver
 
 
 	
-That is all for today. Next lab, we'll explore editing fonts in the map and in the website!
+That is all for today! See the assignment instructions for what to turn in.
 
 <hr>
 ### V. Extra challenge
