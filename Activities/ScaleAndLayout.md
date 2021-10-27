@@ -190,7 +190,8 @@ You will then add the map an HTML template called "versatile layout".
 				'icon-image': symbol + '-15',
 				'icon-allow-overlap': true
 			    },
-			    'filter': ['==', 'icon', symbol] // filter the dataset for all features that have the `icon` value that is the same and the current `symbol` value. 
+			    // filter the dataset for all features that have the `icon` value that is the same and the current `symbol` value. 
+			    'filter': ['==', 'icon', symbol] 
 			});
 
 		//                // Add checkbox and label elements for the layer.
@@ -217,7 +218,7 @@ You will then add the map an HTML template called "versatile layout".
 		});
 
   ``` 
-  Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
+Refresh your map. Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
    
 6. To add the legend, we add checkbox and label elements for each layer. *Uncomment* the following code-block:
     ```Javascript
