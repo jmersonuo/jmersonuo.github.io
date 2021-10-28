@@ -1,4 +1,4 @@
-<h2 align="center"> Working with Scale and <br> yutting a mapbox map into an HTML template</h2>
+<h2 align="center"> Working with Scale and <br> putting a mapbox map into an HTML template</h2>
 
 For this exercise, you will be adding GeoJSON format points to a map using Mapbox GLJS, setting some scale restrictions, and you will then add the map an HTML template called "versatile layout".
 
