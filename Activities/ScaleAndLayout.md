@@ -215,7 +215,7 @@ You will then add the map an HTML template called "versatile layout".
 		//                        e.target.checked ? 'visible' : 'none'
 		//                    );
 		//                });
-				  // add popup code here
+				  // Add popup code here
 				  // Add mouseover code here
 			}
 		});
