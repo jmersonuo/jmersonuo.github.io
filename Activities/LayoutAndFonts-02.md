@@ -61,7 +61,7 @@ In order to add popups we need to specify the popup function for each of the lay
 
 ### III. Changing the mouse symbol over points 
 
-Thinking about accordance, we should let our users know that the points are clickable. To do so, lets change the mouse cursor to a pointer when we roll over a feature in each layer. Just like the previous step, this is within a loop, so it is added for each layer using the variable `layerID`. In past assignments, we had explicitly named the layer for `map.on` functions.
+Thinking about affordance, we should let our users know that the points are clickable. To do so, lets change the mouse cursor to a pointer when we roll over a feature in each layer. Just like the previous step, this is within a loop, so it is added for each layer using the variable `layerID`. In past assignments, we had explicitly named the layer for `map.on` functions.
 
 1. In the same scope as the code above (`if (!map.getLayer(layerID)) {...}`), right after the code block for the popups, add the following code block:
   ```javascript
@@ -76,7 +76,7 @@ Thinking about accordance, we should let our users know that the points are clic
      });
   ```
 
-2. Hover over points in the map. Does your mouse chnage? Yes? hurrah!
+2. Hover over points in the map. Does your mouse change? Yes? hurrah!
 
 ----------
 
