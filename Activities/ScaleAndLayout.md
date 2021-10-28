@@ -216,6 +216,7 @@ You will then add the map an HTML template called "versatile layout".
 		//                    );
 		//                });
 				  // add popup code here
+				  // Add mouseover code here
 			}
 		});
 
@@ -304,9 +305,9 @@ In order to add popups we need to specify the popup function for each of the lay
   
 4. For an extra challenge, edit the value of the `description` variable to modify the text within the popup. 
 
-<hr>
+----------
 
-### IV. Adding scale restrictions
+### V. Adding scale restrictions
    
    Find where the map is initialized.  
    
@@ -331,8 +332,29 @@ In order to add popups we need to specify the popup function for each of the lay
 		});
   ```
 
-<hr>
-### IV. Add the map to the versitile layout 
+### III. Changing the mouse symbol over points 
+
+Thinking about affordance, we should let our users know that the points are clickable. To do so, lets change the mouse cursor to a pointer when we roll over a feature in each layer. Just like the previous step, this is within a loop, so it is added for each layer using the variable `layerID`. In past assignments, we had explicitly named the layer for `map.on` functions.
+
+1. In the same scope as the code above (`if (!map.getLayer(layerID)) {...}`), right after the code block for the popups, add the following code block:
+  ```javascript
+     // Change the cursor to a pointer when the mouse is over the places layer.
+     map.on('mouseenter', layerID, function () {
+          map.getCanvas().style.cursor = 'pointer';
+     });
+
+     // Change it back to a pointer when it leaves.
+     map.on('mouseleave', layerID, function () {
+            map.getCanvas().style.cursor = '';
+     });
+  ```
+
+2. Hover over points in the map. Does your mouse change? Yes? hurrah!
+
+----------
+
+
+### VI. Add the map to the versitile layout 
 	
 We are going to go over responsive layouts in class next week, this will get you started on adding your map into an existing template. 
 	
@@ -359,8 +381,9 @@ We are going to go over responsive layouts in class next week, this will get you
 	
 That is all for today! See the assignment instructions for what to turn in.
 
-<hr>
-### V. Extra challenge
+----------
+
+### VII. Extra challenge
 
 1. If you are interested in trying a bootsrap template, check out the templates at [https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp](https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp)  
 
