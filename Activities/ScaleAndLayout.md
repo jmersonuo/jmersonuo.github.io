@@ -301,7 +301,9 @@ In order to add popups we need to specify the popup function for each of the lay
    </p>
  
   
-4. For an extra challenge, edit the value of the `description` variable to modify the text within the popup.
+4. For an extra challenge, edit the value of the `description` variable to modify the text within the popup. 
+
+<hr>
 
 ### IV. Adding scale restrictions
    
