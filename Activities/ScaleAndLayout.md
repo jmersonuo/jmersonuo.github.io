@@ -262,7 +262,8 @@ Viola!! An interactive map that filters layers by value!
 	    <img src= "Images/DC-WithLegend.JPG">
 	  </p>
    
-<hr>
+----------
+
 
 ### III. Adding popups to the map
 
