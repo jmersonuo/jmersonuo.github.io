@@ -303,6 +303,7 @@ We are going to go over responsive layouts in class next week, this will get you
          	<iframe src="filter-markers.html" title="Map"></iframe> 
 	```
 
+3. To customize the template, you'll need to find the locate and edit various text blocks in VersitileLayout.html
 - Change the title so it relates to the map
 - Add some desctiptive text about the map to the sidebar 
 - Add some descriptive text to the content panel
