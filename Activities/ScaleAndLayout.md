@@ -1,6 +1,6 @@
 <h2 align="center"> Working with Scale and <br> Putting a mapbox map into an HTML template</h2>
 
-For this exercise, you will be adding GeoJSON format points to a map using Mapbox GLJS, setting some scale dependency, and
+For this exercise, you will be adding GeoJSON format points to a map using Mapbox GLJS, setting some scale restrictions, and
 You will then add the map an HTML template called "versatile layout".
 
 
@@ -215,6 +215,7 @@ You will then add the map an HTML template called "versatile layout".
 		//                        e.target.checked ? 'visible' : 'none'
 		//                    );
 		//                });
+				  // add popup code here
 			}
 		});
 
@@ -244,7 +245,7 @@ You will then add the map an HTML template called "versatile layout".
     ```
 	Notice the checkboxes aren't standard plain HTML checkboxes, and the backgrounds are a pretty blue. This is because the code provided already contains detailed CSS for styling the `.filter-group`. Take a moment to examine the CSS and make an adjustment or two.
 	
-8. To add interation to the legend, we add a listener to each intupt checkbox. *Uncomment* the following code block:
+8. To add interaction to the legend, we add a listener to each intupt checkbox. *Uncomment* the following code block:
     ```Javascript
 	// When the checkbox changes, update the visibility of the layer.
 	input.addEventListener('change', function (e) {
@@ -263,7 +264,46 @@ Viola!! An interactive map that filters layers by value!
    
 <hr>
 
-### III. Adding scale dependency
+### III. Adding popups to the map
+
+In order to add popups we need to specify the popup function for each of the layers. We will do this within the forEach function that looks at each record in the geoJSON (` places.features.forEach(function (feature) {... }`), and within the `if` condition that checks the map or new icon types (`if (!map.getLayer(layerID)) {... }`).  
+
+1. *Locate* the last line of within the scope of (`if (!map.getLayer(layerID)) {... }`).  It should be the checkbox's change function:
+   ```javascript
+     // When the checkbox changes, update the visibility of the layer.
+     input.addEventListener('change', function (e) {
+           map.setLayoutProperty(
+               layerID,
+               'visibility',
+               e.target.checked ? 'visible' : 'none'
+           );
+      });
+   ```
+    
+2. After this, add the following code block that will create variable that builds an HTML description for each point, gets the coordinates of each point, and then uses that description for the HTML of the popup that will open at the point's coordinates. Because this is within the same loop, so it is added for each layer using the variable `layerID`. In past assignments, we had explicitly named the layer for `map.on` functions.
+
+   ```javascript
+     // When a click event occurs on a feature in the places layer, 
+     // open a popup at the location of the feature, with description HTML from its properties.
+     map.on('click', layerID, function (e) {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = "This is a map point <br> Type: " + e.features[0].properties.icon;
+
+            new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+     });
+   ```  
+3. Try clicking on a map point, a popup should open!
+   <p align="center">
+	    <img src= "Images/05-popup.JPG"> 
+   </p>
+ 
+  
+4. For an extra challenge, edit the value of the `description` variable to modify the text within the popup.
+
+### IV. Adding scale restrictions
    
    Find where the map is initialized.  
    
