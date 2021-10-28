@@ -9,18 +9,18 @@ You will then add the map an HTML template called "versatile layout".
   - [Mapbox zoom levels](https://docs.mapbox.com/help/glossary/zoom-level/){:target="_blank"}  
   - [Mapbox max bounds](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds){:target="_blank"} 
   - [W3Schools iframes](https://www.w3schools.com/tags/tag_iframe.asp){:target="_blank"} 
-  - [Bootsrap getting started](https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp){:target="_blank"} 
+  - [Bootstrap getting started](https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp){:target="_blank"} 
 
 ----------
 
 ### I. Getting setup  
 
 
-1. From the course R Drive (R:\Class_Data\Activity5), save the following files to your R drive:
+1. From the course R Drive (R:\Class_Data\Assignement5), save the following files to your R drive:
   - filter-markers.html  (the map)
-  - VersitileLayout.html  (the website template)
-  - VersitileLayout.js (JS for the website)
-  - VersitileLayout.css (CSS for the website)
+  - VersatileLayout.html  (the website template)
+  - VersatileLayout.js (JS for the website)
+  - VersatileLayout.css (CSS for the website)
 
 2. 	When you open the map in a browser, `filter-markers.html`, you should have a mapbox-light style centered on Washington DC.  
 	<p align="center">
@@ -157,9 +157,9 @@ You will then add the map an HTML template called "versatile layout".
 		<img src= "Images/DC-Squaremarkers.JPG">
 	</p>
   
-4. We are going to change how the data are added. Instead of adding all the points as a single layer, we are going to add each type of point as its own layer. To do that, we will iterate through each record of the data using the `forEach` funtion, and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style and refer to the images as shown in the symbology lab or add imges at runtime via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-image/){:target="_blank"}.
+4. We are going to change how the data are added. Instead of adding all the points as a single layer, we are going to add each type of point as its own layer. To do that, we will iterate through each record of the data using the `forEach` function, and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style and refer to the images as shown in the symbology lab or add images at runtime via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-image/){:target="_blank"}.
 
-    **Delete or comment out** the following snipit:  
+    **Delete or comment out** the following snippit:  
     
     ```Javascript         
 	var layerID = 'points';
@@ -246,7 +246,7 @@ You will then add the map an HTML template called "versatile layout".
     ```
 	Notice the checkboxes aren't standard plain HTML checkboxes, and the backgrounds are a pretty blue. This is because the code provided already contains detailed CSS for styling the `.filter-group`. Take a moment to examine the CSS and make an adjustment or two.
 	
-8. To add interaction to the legend, we add a listener to each intupt checkbox. *Uncomment* the following code block:
+8. To add interaction to the legend, we add a listener to each input checkbox. *Uncomment* the following code block:
     ```Javascript
 	// When the checkbox changes, update the visibility of the layer.
 	input.addEventListener('change', function (e) {
@@ -293,7 +293,7 @@ In order to add popups we need to specify the popup function for each of the lay
 
             new mapboxgl.Popup()
             .setLngLat(coordinates)
-            .setHTML(description)
+            .setHTML(description) // the string in the description var is added to the popup here
             .addTo(map);
      });
    ```  
@@ -307,13 +307,13 @@ In order to add popups we need to specify the popup function for each of the lay
 
 ----------
 
-### V. Adding scale restrictions
+### IV. Adding scale restrictions
    
    Find where the map is initialized.  
    
-   - Add a min zoom (you pick what the min zoom sould be).  Here is the table of zoom levels: [https://docs.mapbox.com/help/glossary/zoom-level/](https://docs.mapbox.com/help/glossary/zoom-level/){:target="_blank"}  
+   - Add a min zoom (you pick what the min zoom should be).  Here is the table of zoom levels: [https://docs.mapbox.com/help/glossary/zoom-level/](https://docs.mapbox.com/help/glossary/zoom-level/){:target="_blank"}  
    - Prevent users from leaving your this bounding around DC by setting the max bounds, per the code block below. 
-   	- Add the entire `bounds` variable, and add the `maxBounds` option the the map.	
+   	- Add the entire `bounds` variable, and add the `maxBounds` option to the map.	
    - Read about max bounds in the API [https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds){:target="_blank"}  
    	
   ```Javascript
@@ -332,7 +332,7 @@ In order to add popups we need to specify the popup function for each of the lay
 		});
   ```
 
-### III. Changing the mouse symbol over points 
+### V. Changing the mouse symbol over points 
 
 Thinking about affordance, we should let our users know that the points are clickable. To do so, lets change the mouse cursor to a pointer when we roll over a feature in each layer. Just like the previous step, this is within a loop, so it is added for each layer using the variable `layerID`. In past assignments, we had explicitly named the layer for `map.on` functions.
 
@@ -354,21 +354,21 @@ Thinking about affordance, we should let our users know that the points are clic
 ----------
 
 
-### VI. Add the map to the versitile layout 
+### VI. Add the map to the "versatile layout" html template 
 	
 We are going to go over responsive layouts in class next week, this will get you started on adding your map into an existing template. 
 	
-1. Open `VersitileLayout.html` in a text editor. Notice that the `CSS` and `JS` for the layout are _not_ directly in `VersitileLayout.html`, but rather are linked via relative paths. Locate the links to the CSS and JS in the `head`.
+1. Open `VersatileLayout.html` in a text editor. Notice that the `CSS` and `JS` for the layout are _not_ directly in `VersatileLayout.html`, but rather are linked via relative paths. Locate the links to the CSS and JS in the `head`.
 
 
 2. Add the map via an iFrame using the code block below. Read about [iframes](https://www.w3schools.com/tags/tag_iframe.asp).
   Note that this refers to the filter-markers.html (full page map) using a relative path, meaning they must be saved in the same folder. If you used a different name for your map's html file, you'll have to use that file name as the source (src). 
 	```html
-		<!--  ADD iframe here, inside the versitle layout's map container   -->
+		<!--  ADD iframe here, inside the Versatile Layout's map container   -->
          	<iframe src="filter-markers.html" title="Map"></iframe> 
 	```
 
-3. To customize the template, you'll need to find the locate and edit various text blocks in VersitileLayout.html
+3. To customize the template, you'll need to find the locate and edit various text blocks in VersatileLayout.html
 - Change the title so it relates to the map
 - Add some desctiptive text about the map to the sidebar 
 - Add some descriptive text to the content panel
@@ -385,7 +385,7 @@ That is all for today! See the assignment instructions for what to turn in.
 
 ### VII. Extra challenge
 
-1. If you are interested in trying a bootsrap template, check out the templates at [https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp](https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp)  
+1. If you are interested in trying a Bootstrap template, check out the templates at [https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp](https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp)  
 
 2. Go through the following sections of the bootstrap 4 tutorial. [https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp](https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp)
 
