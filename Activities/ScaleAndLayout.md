@@ -19,7 +19,6 @@ You will then add the map an HTML template called "versatile layout".
 1. From the course R Drive (R:\Class_Data\Assignement5), save the following files to your R drive:
   - filter-markers.html  (the map)
   - VersatileLayout.html  (the website template)
-  - VersatileLayout.js (JS for the website)
   - VersatileLayout.css (CSS for the website)
 
 2. 	When you open the map in a browser, `filter-markers.html`, you should have a mapbox-light style centered on Washington DC.  
