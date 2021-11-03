@@ -353,13 +353,12 @@ Assume a client has asked you to find a free to use "fun or whimsical" font for 
           min-width: 325px;
           /*add the css for the popup font here */
           font-family: 'Martel', serif;
-          font-size: 150%;
       } 
     ```
 
 Here is an example with Martel. Yours should use a different font.
    <p align="center">
-	    <img src= "Images/05-popup-font.JPG">
+	    <img src= "Images/6-PortlandPopupWFonts.JPG">
    </p>
 
 
