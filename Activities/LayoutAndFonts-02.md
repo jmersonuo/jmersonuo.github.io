@@ -82,7 +82,7 @@ Thinking about affordance, we should let our users know that the points are clic
 
 ### IV. Adding a font to the map
 
-Assume a client has asked you to find a free to use "fun or whimsical" font for this map of sites in Washington D.C. In this
+Assume a client has asked you to find a free to use "fun or whimsical" font for this map of sites in Washington D.C.
 
 1. Visit https://fonts.google.com/ chose a "fun or whimsical" font, but make sure it is still legible. 
 2. Get the HTML/CSS code by clicking "select this font"
