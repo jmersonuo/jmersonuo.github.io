@@ -1,7 +1,7 @@
-<h2 align="center"> Sound and Alt Text</h2>
+<h2 align="center"> Part A. Sound and Alt Text</h2>
 
 
-For this first exercise, we will be adding sound to marker popups in a Mapbox map:
+For this exercise, we will be adding sound to marker popups in a Mapbox map:
   - in popups using an iframe to share a video via absolute link (on the web)
   - in a pupup to share a sound file via a relative location (on your computer)
   - adding alt-text descriptions to images
@@ -16,7 +16,7 @@ For this first exercise, we will be adding sound to marker popups in a Mapbox ma
 
 ### I. Getting setup  
 
-1. From the course R Drive (R:\Class_Data\Activity6-Sound), downlowd the files to your R drive or local computer. It contains:
+1. From the course R Drive (R:\Class_Data\Assignment6-Sound), download the files to your R drive or local computer. It contains:
   - QickStartMap-withSound.html
   - The folder "Sounds", which contains the file yell-YELLBisonEating150313.mp3 'Source: NPS/Neal Herbert, <a href="https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm" target='_blank'>NPS</a>'
 
@@ -275,7 +275,7 @@ Now let's add some UI to make it easier to get to each location.
    ```html
       <button class='fly' id='PortlandButton'>Jump to Portland</button>
       <button class='fly' id='LondonButton'>Jump to London</button>
-      <button class='fly' id='YellowstonButton'>Jump to Yellowstone</button> 
+      <button class='fly' id='YellowstoneButton'>Jump to Yellowstone</button> 
    ```
    These are all styled by the `.fly` class which was already added.
     <p align="center">
@@ -304,17 +304,56 @@ Now let's add some UI to make it easier to get to each location.
     /***  END LISTENERS  ***/
    ```
    
-3. Add a listener for the div with the ID 'YellowstonButton', that's the button. Use the same center as the marker and a zoom level of 9.
+3. Add a listener for the div with the ID 'YellowstoneButton', that's the button. Use the same center as the marker and a zoom level of 9.
   
+Try all 3 buttons, open all 3 popups, lisen to all 3 recordings. Does everything work? Great. 
+
 ----------
 
-Try all 3 buttons, open all 3 popups, lisen to all 3 recordings. Does everything work?
+<h2 align="center"> Part B. Fonts</h2>
+
+
+### I. Adding a font to the map
+
+Assume a client has asked you to find a free to use "fun or whimsical" font for this map.
+
+1. Visit https://fonts.google.com/ chose a "fun or whimsical" font, but make sure it is still legible. 
+2. Get the HTML/CSS code by clicking "select this font"
+3. Insert the html into the `<head>` of your site.
+   e.g. If I picked Martel, I would insert the following code block. You should pick a different font, and you'll be asked to explain your choice for the assignment submission:
+   ```html
+      <!--   Link to google font-->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Martel&display=swap" rel="stylesheet">
+   ```
+4. Set the font for the html `button` elements:
+   In the `<style>` section, set it with the font-family that you selected.
+   e.g. If I picked Martel, the selector for `button` elements would look like this:
+   ```css
+   button {
+        font-family: 'Martel', serif;
+        font-weight: 600;
+    }
+   ```
+   
+5. Set the font for the popups:
+   In the `<style>` section in the `head`, add a class `.mapboxgl-popup` with the font-family that you selected. Adjust the size of the font if yours feels too big, or too small. If I picked Martel, the new class would look like this:
+   ```css
+    .mapboxgl-popup{
+        font-family: 'Martel', serif;
+        font-size: 150%;
+    }   
+    ```
+
+Here is an example with Martel. Yours should use a different font.
+   <p align="center">
+	    <img src= "Images/05-popup-font.JPG">
+   </p>
+
 
 <p align="center">
       <img src="https://media2.giphy.com/media/lTpme2Po0hkqI/giphy.gif?cid=790b7611e7df5c85dd11452d8b06e0102c02acc014faa891&rid=giphy.gif&ct=g" alt="That's all folks!">
     </p>
-
-
 ----------  
 ### Extra challenge task
 
