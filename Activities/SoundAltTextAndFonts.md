@@ -3,9 +3,11 @@
 
 For this exercise, we will be adding sound to marker popups in a Mapbox map:
   - in popups using an iframe to share a video via absolute link (on the web)
-  - in a pupup to share a sound file via a relative location (on your computer)
+  - in a popup to share a sound file via a relative location (on your computer)
   - adding alt-text descriptions to images
+  - linking a Google font and applying it via css
   
+We will discuss the use sounds and detail how access the embed links in the upcoming "sound" lecture.
 
   Here are some additional resources you can explore:
   - [W3Schools iframes](https://www.w3schools.com/tags/tag_iframe.asp){:target="_blank"} 
@@ -142,7 +144,7 @@ We can concatenate strings with a plus sign:
  
  Let's try with the popup content:
 
-1. Locate the popup for marker 1 and use += to append the iframe embed code from [https://www.youtube.com/embed/z1AdmS-LqyA](https://www.youtube.com/embed/z1AdmS-LqyA){:target="_blank"}    We will discuss how you access this link in the upcoiming "sound" lecture.
+1. Locate the popup for marker 1 and use += to append the iframe embed code from [https://www.youtube.com/embed/z1AdmS-LqyA](https://www.youtube.com/embed/z1AdmS-LqyA){:target="_blank"}      
    ` popup1_content += '<iframe width="300px" src="https://www.youtube.com/embed/z1AdmS-LqyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';`
 
    It should now look like this:
@@ -203,7 +205,7 @@ The National Park Service has a whole library of sounds that you can download: [
 
 The sound file you downloaded from the R drive is a recording a bison eating `yell-YELLBisonEating150313.mp3`. Have a listen to it using the default audio player on your computer.
 
-1. To make it easier to see your changes, set the map's inital center to the same location as the Yellowstone popup.
+1. To make it easier to see your changes, set the map's initial center to the same location as the Yellowstone popup.
 2. Locate the popup for marker 3 `popup3_content` 
 3. Append a string containing an [HTML audio tag](https://www.w3schools.com/tags/tag_audio.asp){:target="_blank"} .
     ```javascript
@@ -244,7 +246,7 @@ The audio file of the bison eating is great, but it could use a visual. Let's ad
    ```javascript
    popup3_content += '<img class="popupImage" src="PATH_TO_FILE">' ;
    ```
-   Note: `<img>` is a self closing tag, so we don't need a second tag to close it.
+   Note: `<img>` is a self-closing tag, so we don't need a second tag to close it.
 4. Replace the `PATH_TO_FILE` with the bison image link `https://www.nps.gov/yell/learn/photosmultimedia/images/ndh-yell-bison-gibbon_2.jpg?maxwidth=1200&maxheight=1200&autorotate=false`
 5. Is the image way too big for the popup? Let use CSS to set it's width to 100% of the parent element. We already gave it a class named `popupImage`, so add the following to the `<style>` section in the `<head>`. 
    ```css
@@ -317,7 +319,7 @@ Now let's add some UI to make it easier to get to each location.
    
 3. Add the listener for the button element with the ID 'YellowstoneButton' on your own. Use the same center as the marker and a zoom level of 9.
   
-Try all 3 buttons, open all 3 popups, lisen to all 3 recordings. Does everything work? Great. 
+Try all 3 buttons, open all 3 popups, listen to all 3 recordings. Does everything work? Great. 
 
 ----------
 
