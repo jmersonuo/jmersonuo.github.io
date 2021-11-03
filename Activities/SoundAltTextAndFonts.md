@@ -204,7 +204,7 @@ The sound file you downloaded from the R drive is a recording a bison eating `ye
 
 1. To make it easier to see your changes, set the map's inital center to the same location as the Yellowstone popup.
 2. Locate the popup for marker 3 `popup3_content` 
-3. Concatenate a string containing an [HTML audio tag](https://www.w3schools.com/tags/tag_audio.asp){:target="_blank"} .
+3. Append a string containing an [HTML audio tag](https://www.w3schools.com/tags/tag_audio.asp){:target="_blank"} .
     ```javascript
     popup3_content += '<audio controls><source src="PATH_TO_FILE" type="audio/mpeg">Your browser does not support the audio element.</audio>';
     ```
@@ -232,18 +232,18 @@ The sound file you downloaded from the R drive is a recording a bison eating `ye
 ----------
 
 ### VII. Add an absolute link to a image to popup3 file
-The audio file of the bison eating is great, but it could use a visual. Let's add the image that the NPS used at https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm. We can use an img tag and set the src to the image URL.
+The audio file of the bison eating is great, but it could use a visual. Let's add the image that the NPS used at https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm. We can use an img tag and set the src to the image URL. The steps below will show you how.
 
 1. Visit the site with the bison sounds clip at [https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm](https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm){:target="_blank"}  and right click on the image > copy image link
    <p align="center">
     <img src= "Images/6-CopyImageLink.JPG"> 
     </p>
-2. Paste the link into the browser. TADA! We can use this URL as the absolute path to this image.
+2. Paste the link into a new tab in browser your browser. TADA! We can use this URL as the absolute path to this image. Don't worry, we'll add the source! 
 3. Append an HTML img tag to `popup3_content`
    ```javascript
    popup3_content += '<img class="popupImage" src="PATH_TO_FILE">' ;
    ```
-   Note 1: `<img>` is a self closing tag, so we don't need a second tag to close it.
+   Note: `<img>` is a self closing tag, so we don't need a second tag to close it.
 4. Replace the `PATH_TO_FILE` with the bison image link `https://www.nps.gov/yell/learn/photosmultimedia/images/ndh-yell-bison-gibbon_2.jpg?maxwidth=1200&maxheight=1200&autorotate=false`
 5. Is the image way too big for the popup? Let use CSS to set it's width to 100% of the parent element. We already gave it a class named `popupImage`, so add the following to the `<style>` section in the `<head>`. 
    ```css
@@ -267,7 +267,7 @@ The audio file of the bison eating is great, but it could use a visual. Let's ad
 ### VIII. Add alt text to the image
 To add a little more accessibility to our page, we should add text that screen readers can read adding an alternate or "alt" attribute to our image tag.
 
-1. Review the HTML reference for the `alt` attribute of an `<img>` tag: https://www.w3schools.com/tags/att_img_alt.asp
+1. Review the HTML reference for the `alt` attribute of an `<img>` tag: [https://www.w3schools.com/tags/att_img_alt.asp](https://www.w3schools.com/tags/att_img_alt.asp){:target="_blank"}
 2. In the img tag add `alt="Description of photo"`, and add your own description of the scene. 
    Here is what I wrote:
    
@@ -281,13 +281,13 @@ To add a little more accessibility to our page, we should add text that screen r
 
 Now let's add some UI to make it easier to get to each location.
 
-1. Near the top of the `<body>` we can add three buttons. One for each marker:
+1. Near the top of the `<body>` we can add three buttons, where it says "Insert the button elements here". One for each marker:
    ```html
       <button class='fly' id='PortlandButton'>Jump to Portland</button>
       <button class='fly' id='LondonButton'>Jump to London</button>
       <button class='fly' id='YellowstoneButton'>Jump to Yellowstone</button> 
    ```
-   These are all styled by the `.fly` class which was already added.
+   These are all styled by the `.fly` class which was already added to the `css` in the `head` for you.
     <p align="center">
     <img src= "Images/6-Buttons.JPG"> 
     </p>
@@ -295,7 +295,7 @@ Now let's add some UI to make it easier to get to each location.
    ```javascript
     /***  LISTENERS  ***/
         
-    // Add a 'Listener' to the div with the ID 'LondonButton', that's the button.
+    // Add a 'Listener' to the button element with the ID 'LondonButton'.
     document.getElementById('LondonButton').addEventListener('click', function () {
             map.jumpTo({
                 center: [-0.1534307, 51.501223], 
@@ -303,7 +303,7 @@ Now let's add some UI to make it easier to get to each location.
             });
     });
         
-    // Add a 'Listener' to the div with the ID 'PortlandButton', that's the button.
+    // Add a 'Listener' to the button element with the ID 'PortlandButton'.
     document.getElementById('PortlandButton').addEventListener('click', function () {
             map.jumpTo({
                 center:[-122.6788,45.5212], 
@@ -314,7 +314,7 @@ Now let's add some UI to make it easier to get to each location.
     /***  END LISTENERS  ***/
    ```
    
-3. Add a listener for the div with the ID 'YellowstoneButton', that's the button. Use the same center as the marker and a zoom level of 9.
+3. Add the listener for the button element with the ID 'YellowstoneButton' on your own. Use the same center as the marker and a zoom level of 9.
   
 Try all 3 buttons, open all 3 popups, lisen to all 3 recordings. Does everything work? Great. 
 
