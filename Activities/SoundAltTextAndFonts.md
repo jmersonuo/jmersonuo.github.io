@@ -100,7 +100,7 @@ Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then a
    The popups aren't linked to the markers yet. So, we need to edit the markers so that each is linked to one of the popups.
   
 
-2. Find where marker one is initialized and add `.setPopup(popup1)` on a new line between the .setLngLat and .addTo(map). It will look like this:
+2. Find where marker one is initialized and add `.setPopup(popup1)` on a new line between the `.setLngLat` and `.addTo(map)`. It will look like this:
    ```javascript
     // Marker 1 - Portland
     var marker1 = new mapboxgl.Marker({color:'DarkRed'})    
@@ -109,7 +109,7 @@ Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then a
       .addTo(map);
    ```
 
-3. Add `.setPopup(popup2)` to marker2 on a new line between `setLngLat` and `.addTo(map)`.
+3. Add `.setPopup(popup2)` to marker2 on a new line between `.setLngLat` and `.addTo(map)`.
 4. Add `.setPopup(popup3)` to marker3.
 5. Zoom and pan to each marker and check that the popups open.
 
@@ -121,7 +121,9 @@ Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then a
 
 ### IV. Embed a YouTube video player in popup 1
 
-To embed a YouTube Video, we can add an iframe to the HTML content of `popup1_content`. To help keep our code organized we can concatenate or "join together" multiple text strings. We will use `+=` to append more html text to the end of the existing variable.  
+To embed a YouTube Video, we can add an iframe to the HTML content of a popup by adding it within the popup's HTML content. To do so, we create a string that contains html into the variable `popup1_content`. To help keep our code organized we can concatenate or "join together" multiple text strings. We will use `+=` to append more html text to the end of the existing variable.  
+
+Quick lesson on string concatenation:
 We can concatenate strings with a plus sign:
    ```javascript
    // the long way
