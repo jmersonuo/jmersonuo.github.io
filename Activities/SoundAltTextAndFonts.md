@@ -141,8 +141,10 @@ We can concatenate strings with a plus sign:
  
  Let's try with the popup content:
 
-1. Locate the popup for marker 1 and use += to append the iframe embed code from [https://www.youtube.com/embed/z1AdmS-LqyA](https://www.youtube.com/embed/z1AdmS-LqyA){:target="_blank"}  
+1. Locate the popup for marker 1 and use += to append the iframe embed code from [https://www.youtube.com/embed/z1AdmS-LqyA](https://www.youtube.com/embed/z1AdmS-LqyA){:target="_blank"}    We will discuss how you access this link in the upcoiming "sound" lecture.
+   ` popup1_content += '<iframe width="300px" src="https://www.youtube.com/embed/z1AdmS-LqyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';`
 
+   It should now look like this:
    ```javascript
     // Popup for marker 1  
     var popup1_content = '<h2>Play the video to listen to Portland</h2><br>';
@@ -155,6 +157,7 @@ We can concatenate strings with a plus sign:
 
 2. Let's also add the source and a link by concatenating another string to the popup 1 content: ```popup1_content += 'Source: Ian Lind, <a href="https://www.youtube.com/embed/z1AdmS-LqyA">YouTube</a>';```
 
+	It should now look like this:
       ```javascript
     // Popup for marker 1  
     var popup1_content = '<h2>Play the video to listen to Portland</h2><br>';
@@ -171,7 +174,7 @@ We can concatenate strings with a plus sign:
 
 
 1. To make it easier to see your changes, set the map's initial center to the same location as the London popup.
-2. Locate the popup for marker 2 `popup2_content` and use += to append the iframe embed code from [https://soundcloud.com/londonstreetnoises/grosvenor-1928]https://soundcloud.com/londonstreetnoises/grosvenor-1928){:target="_blank"}    `popup2_content`
+2. Locate the popup for marker 2 `popup2_content` and use += to append the iframe embed code from [https://soundcloud.com/londonstreetnoises/grosvenor-1928](https://soundcloud.com/londonstreetnoises/grosvenor-1928){:target="_blank"}
 3. Click the share button, then `Embed`, then copy the code.
     <p align="center">
     <img src= "Images/6-SoundCloud.JPG"> 
@@ -201,18 +204,23 @@ The sound file you downloaded from the R drive is a recording a bison eating `ye
 
 1. To make it easier to see your changes, set the map's inital center to the same location as the Yellowstone popup.
 2. Locate the popup for marker 3 `popup3_content` 
-3. Append a string containing an [HTML audio tag](https://www.w3schools.com/tags/tag_audio.asp){:target="_blank"} .
+3. Concatenate a string containing an [HTML audio tag](https://www.w3schools.com/tags/tag_audio.asp){:target="_blank"} .
     ```javascript
     popup3_content += '<audio controls><source src="PATH_TO_FILE" type="audio/mpeg">Your browser does not support the audio element.</audio>';
     ```
 4. Replace the `PATH_TO_FILE` with the path to the file _relative_ to this webpage. If it's in the sounds folder, it is going to be `sounds/yell-YELLBisonEating150313.mp3`  
-   **VERY IMPORATANT NOTE:** The path and file name are not case sensitive locally, but the Pages server is!! For this to work on the web, make sure your path and file name use the same case for all characters as the src as the folder and file.
+
+   **VERY IMPORATANT NOTE:** The path and file name are not case sensitive locally, but the Pages server is!! For this to work on the web, make sure your path and file name use the same case for all characters as the src as the folder and file. 
    ```javascript
+   It should look like this:
    // Popup for marker 3  
     var popup3_content = '<h2>Press play to listen to a bison eating</h2><br>';   
     popup3_content += '<audio controls><source src="sounds/yell-YELLBisonEating150313.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>';
     ```
-     
+    <p align="center">
+    <img src= "Images/6-YellowstonePopup.JPG"> 
+    </p>
+
 5. And of course, let's add linked attribution ```popup3_content += 'Source: NPS/Jennifer Jerret, <a href="https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm">NPS</a>';```
 
     <p align="center">
