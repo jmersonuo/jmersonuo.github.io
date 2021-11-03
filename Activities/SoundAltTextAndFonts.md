@@ -45,7 +45,7 @@ Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then a
       // Marker 1 - Portland
      var marker1 = new mapboxgl.Marker({color:'DarkRed'})
         .setLngLat([-122.6788,45.5212]) // Portland 
-	//add .setPopup here
+	   //add .setPopup here
         .addTo(map);
 
         
