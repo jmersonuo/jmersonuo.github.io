@@ -327,12 +327,12 @@ Try all 3 buttons, open all 3 popups, lisen to all 3 recordings. Does everything
 
 Assume a client has asked you to find a free to use "fun or whimsical" font for this map.
 
-1. Visit https://fonts.google.com/ chose a "fun or whimsical" font, but make sure it is still legible. 
+1. Visit [https://fonts.google.com/](https://fonts.google.com/){:target="_blank"} chose a "fun or whimsical" font, but make sure it is still legible. 
 2. Get the HTML/CSS code by clicking "select this font"
 3. Insert the html into the `<head>` of your site.
    e.g. If I picked Martel, I would insert the following code block. You should pick a different font, and you'll be asked to explain your choice for the assignment submission:
    ```html
-      <!--   Link to google font-->
+      <!--   Link to Google font-->
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Martel&display=swap" rel="stylesheet">
    ```
@@ -347,12 +347,14 @@ Assume a client has asked you to find a free to use "fun or whimsical" font for 
    ```
    
 5. Set the font for the popups:
-   In the `<style>` section in the `head`, add a class `.mapboxgl-popup` with the font-family that you selected. Adjust the size of the font if yours feels too big, or too small. If I picked Martel, the new class would look like this:
+   In the `<style>` section in the `head`, add in the existing selector for the class `.mapboxgl-popup` add the font-family that you selected. Adjust the size of the font if yours feels too big, or too small. If I picked Martel, the new class would look like this:
    ```css
-    .mapboxgl-popup{
-        font-family: 'Martel', serif;
-        font-size: 150%;
-    }   
+      .mapboxgl-popup {
+          min-width: 325px;
+          /*add the css for the popup font here */
+          font-family: 'Martel', serif;
+          font-size: 150%;
+      } 
     ```
 
 Here is an example with Martel. Yours should use a different font.
