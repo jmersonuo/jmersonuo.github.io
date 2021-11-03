@@ -45,6 +45,7 @@ Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then a
       // Marker 1 - Portland
      var marker1 = new mapboxgl.Marker({color:'DarkRed'})
         .setLngLat([-122.6788,45.5212]) // Portland 
+	//add .setPopup here
         .addTo(map);
 
         
@@ -70,7 +71,7 @@ Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then a
 
 ### III. Add popups to each marker
 
-1. First we need to initialize three variables `var popup1`, `var popup2`, and `var popup3`. Each is paired with a text-string that will be used for the .setHTML() value `var popup1_content` etc. In the past, we have set the content right within `.setHTML()`, but since the content is going to get pretty long, using a variable let's us stay more organized.  
+1. First we need to initialize three variables `var popup1`, `var popup2`, and `var popup3`. Each is paired with a text-string that will be used for the .setHTML() value `var popup1_content` etc. In the past, we have set the content right within `.setHTML()`, but since the content is going to get pretty long, using a variable lets us stay more organized.  
   Copy in this code block:
 
    ```javascript
