@@ -145,7 +145,9 @@ We can concatenate strings with a plus sign:
  Let's try with the popup content:
 
 1. Locate the popup for marker 1 and use += to append the iframe embed code from [https://www.youtube.com/embed/z1AdmS-LqyA](https://www.youtube.com/embed/z1AdmS-LqyA){:target="_blank"}      
-   ` popup1_content += '<iframe width="300px" src="https://www.youtube.com/embed/z1AdmS-LqyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';`
+   ```javascript
+   popup1_content += '<iframe width="300px" src="https://www.youtube.com/embed/z1AdmS-LqyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+   ```
 
    It should now look like this:
    ```javascript
