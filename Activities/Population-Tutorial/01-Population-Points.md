@@ -69,7 +69,7 @@ Close any popups and notifications about tours and new features. You can view th
 1. Go to your **Styles** page. Click the **New style** button. 
     Notice: the different styles contain different color schemes and different basemap data 
 2. Select the **Monochrome**  template style and choose the variation called **Dark**.
-3. Click "Customize Basic"
+3. Click "Customize Monochrome"
 
     <p align="center">
       <img src="Images/Dark_style.png">
