@@ -68,14 +68,14 @@ Close any popups and notifications about tours and new features. You can view th
 
 1. Go to your **Styles** page. Click the **New style** button. 
     Notice: the different styles contain different color schemes and different basemap data 
-2. Select the **Basic**  template style and choose the variation called **Galaxy**.
+2. Select the **Monochrome**  template style and choose the variation called **Dark**.
 3. Click "Customize Basic"
 
     <p align="center">
       <img src="Images/Dark_style.png">
     </p>
 
-4. Rename the style so that you can find and use it later: click into the title field in the upper left side of the screen to change the title from "Basic" to ‘Renters vs Owners’.
+4. Rename the style so that you can find and use it later: click into the title field in the upper left side of the screen to change the title from "Monochrome" to ‘Renters vs Owners’.
 
     <p align="center">
       <img src="Images/Name_Change-Generic.gif">
