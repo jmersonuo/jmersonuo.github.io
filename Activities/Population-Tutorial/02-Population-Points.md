@@ -305,12 +305,12 @@ It should look like this.
 
 ### V. Post your webpage
 
-1. Copy the html file to your "Pages" webspace 
-2. Visit the full URL (pages.uoregon.edu/...) to see it working live.  
+1. Copy the html file to your GitHub webspace 
+2. Visit the full URL e.g. `github.io/[your user name]/WebMapping/Assignment3.html` to see it working live.  
 
 ***Voila! Now you have a live website with a Mapbox map!*** 
 
-If you don't follow how every line of code works, that's OK! At this point it is important to understand that you added several chunks for code. Some for the map, some for the map controls, some for the legend, and some for interactivity. You could you can make this interactive map your own by adding your own data to a new Mapbox Style, add that style to this map, make a few changes to the legend!
+If you don't follow how every line of code works, that's OK! At this point it is important to understand that you added several chunks for code. Some for the a div for map, a div for the map controls, a div and CSS the legend, and some JavaScript for interactivity. You could you can customize your own version of this interactive map by adding your own data to a new Mapbox Style, add that style to this map, make a few changes to the legend!
 
 <p align="center">
     <img src="https://image.shutterstock.com/image-photo/cute-dog-celebrating-red-pary-260nw-1768302275.jpg">
