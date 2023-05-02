@@ -316,8 +316,10 @@ In order to add popups we need to specify the popup function for each of the lay
    	- Add the entire `bounds` variable, and add the `maxBounds` option to the map.	
    - Read about max bounds in the API [https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds){:target="_blank"}  
    	
-	Is should end up looking something like this:
-  ```Javascript
+   It should end up looking something like this:
+
+
+   ```Javascript
 	// Set bounds to Washington, DC
 		var bounds = [
 		    [-77.26383, 38.73854], // Southwest coordinates
@@ -332,7 +334,8 @@ In order to add popups we need to specify the popup function for each of the lay
 			minZoom: 12, // pick your own
 			maxBounds: bounds // Sets bounds from variable above
 		});
-  ```
+
+   ```
 
 ### V. Changing the mouse symbol over points 
 
