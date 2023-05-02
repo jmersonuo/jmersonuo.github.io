@@ -372,7 +372,7 @@ We are going to go over responsive layouts in class next week, this will get you
 
 3. To customize the template, you'll need to find the locate and edit various text blocks in VersatileLayout.html
 - Change the title so it relates to the map
-- Add some desctiptive text about the map to the sidebar 
+- Add some descriptive text about the map to the sidebar 
 - Add some descriptive text to the content panel
   	
 	<p align="center">
