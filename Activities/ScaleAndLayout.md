@@ -108,9 +108,9 @@ For this exercise, you will be adding GeoJSON format points to a map using Mapbo
       }
 	```   
 	  
-	Examine the data in the map, in the JSON structure, and in the table view. This GeoJSON contains several features that have an "icon" property. The value of the "icon" property corresponds to an image in the Mapbox Light style's [sprite](https://docs.mapbox.com/help/glossary/sprite/){:target="_blank"}(image). Note: the name of images is the value of the "icon" property + `-15`.
+	Take some time to examine the data in the map, how that relates to the JSON structure, and in the table view. Notice, this GeoJSON contains several features that have an "icon" property. The value of the "icon" property corresponds to an image in the Mapbox Light style's [sprite](https://docs.mapbox.com/help/glossary/sprite/){:target="_blank"}(image). Note: the name of images is the value of the "icon" property + `-15`.
 	 
-2. In the script section of `filter-markers.html`, add the GeoJSON data structure in a variable called `places` where it says `// ADD THE DATA HERE`, and then set the variable equal to the geoJSON data above (with a semicolon on the end). This just loads data into the variable "places", so you won't see a change in the map.  
+2. To add the GeoJSON data into your map, you'll add it to `filter-markers.html`. In the `script` section, locate where it says `// ADD THE DATA HERE`. Use the code block beow to create a variable called `places`, and then set the variable equal to the geoJSON data structure above (with a semicolon on the end). This just loads data into the variable "places", so you won't see a change in the map.  
 
 	```Javascript  
 	    // This GeoJSON contains features that include an "icon"
