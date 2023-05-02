@@ -214,8 +214,8 @@ Note: To add different, more cutom, icon images you'd need to create your own st
 		//                        e.target.checked ? 'visible' : 'none'
 		//                    );
 		//                });
-				  // Add popup code here
-				  // Add mouseover code here
+				  // Add popup code here (III.2)
+				  // Add mouseover code here (V.1)
 			}
 		});
 
