@@ -309,13 +309,14 @@ In order to add popups we need to specify the popup function for each of the lay
 
 ### IV. Adding scale restrictions
    
-   Find where the map is initialized.  
+   Find where the map is initialized `var map = new mapboxgl.Map...`.  
    
    - Add a min zoom (you pick what the min zoom should be).  Here is the table of zoom levels: [https://docs.mapbox.com/help/glossary/zoom-level/](https://docs.mapbox.com/help/glossary/zoom-level/){:target="_blank"}  
    - Prevent users from leaving your this bounding around DC by setting the max bounds, per the code block below. 
    	- Add the entire `bounds` variable, and add the `maxBounds` option to the map.	
    - Read about max bounds in the API [https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setmaxbounds){:target="_blank"}  
    	
+	Is should end up looking something like this:
   ```Javascript
 	// Set bounds to Washington, DC
 		var bounds = [
@@ -328,6 +329,7 @@ In order to add popups we need to specify the popup function for each of the lay
 			style: 'mapbox://styles/mapbox/light-v10',
 			center: [-77.04, 38.907],
 			zoom: 11.15,
+			minZoom: 12, // pick your own
 			maxBounds: bounds // Sets bounds from variable above
 		});
   ```
