@@ -155,9 +155,10 @@ For this exercise, you will be adding GeoJSON format points to a map using Mapbo
 		<img src= "Images/DC-Squaremarkers.JPG">
 	</p>
   
-4. We are going to change how the data are added. Instead of adding all the points as a single layer, we are going to add each type of point as its own layer. To do that, we will iterate through each record of the data using the `forEach` function, and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. To add different icon images, you'd need to create your own style and refer to the images as shown in the symbology lab or add images at runtime via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-image/){:target="_blank"}.
+4. We are going to change how the data are added. Instead of adding all the points as a single layer, we are going to add each type of point as its own layer. To do that, we will iterate through each record of the data using the `forEach` function, and add a new layer if we find a new value in the symbol field. The symbols are from the Style for this map from the [Maki icons](https://labs.mapbox.com/maki-icons/){:target="_blank"}. 
+Note: To add different, more cutom, icon images you'd need to create your own style and refer to the images as shown in the symbology lab or add images at runtime via this [add image method](https://docs.mapbox.com/mapbox-gl-js/example/add-image/){:target="_blank"}.
 
-    **Delete or comment out** the following snippit:  
+   Under `// add a new layer using the points` **Delete or comment out** the following snippit, that you added moments ago:  
     
     ```Javascript         
 	var layerID = 'points';
@@ -171,7 +172,7 @@ For this exercise, you will be adding GeoJSON format points to a map using Mapbo
 		},
 	 });
     ```
-5. Under `// add a new layer using the points` add the following chunk of code:  
+5. Now under `// add a new layer using the points` add this more complex chunk of code instead:  
     ```Javascript  
 		// add a new layer using the points
 		places.features.forEach(function (feature) {
