@@ -223,12 +223,13 @@ Note: To add different, more cutom, icon images you'd need to create your own st
 	Refresh your map. Notice the symbols on the map correspond to the `icon` field of each record in the geoJSON dataset.
    
 6. To add the legend, we add checkbox and label elements for each layer. 
-	Above the script, where the HTML elements are defined, lets add an empty `nav` item with the ID `filter-group`. A "nav" or navigation item is similar to a `div`, but lets the browser know this contains navigation links, which is useful for accessibility functionality. Read the HTML reference [here](https://www.w3schools.com/tags/tag_nav.asp){:target="_blank"}. Under `<!-- add filter group nav here -->` add the following chunk of code (note: the nav will be empty, so you should not see a change in your map yet):  
+	Above the script, where the HTML elements are defined, lets add an empty `nav` item with the ID `filter-group`. A "nav" or navigation item is similar to a `div`, but lets the browser know this contains navigation links, which is useful for accessibility functionality. Read the HTML reference [here](https://www.w3schools.com/tags/tag_nav.asp){:target="_blank"}. Under `<!-- add filter group nav here -->` add the following chunk of code:  
     ```html
 	<!-- add filter group nav here -->
 	<nav id="filter-group" class="filter-group"></nav>
-	```
-	
+    ```
+   Note: the nav will be empty, so you should not see a change in your map yet
+   
 7. To populate the legend, we append checkbox and label elements, for each layer, into the `filter-group` nav. *Uncomment* the following code-block, which is within the `forEach` loop:
 	```Javascript
 		// Add checkbox and label elements for the layer.
