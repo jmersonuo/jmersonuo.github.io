@@ -377,17 +377,4 @@ Here is an example with Martel. Yours should use a different font.
 
 The hyperlinks for the image sources all open in the same tab as your map. It might be better to open them in a new tab instead. Check out at the [W3Schools target reference](https://www.w3schools.com/tags/att_a_target.asp){:target="_blank"}. Add the target `_blank` to each anchor tag so the links will open in a new tab.
 
-
-----------    
-### What to turn in:
-
-1. Complete all the steps above.  
-   Be sure to:
-    - Embed the soundcloud player
-    - Add your own descriptive text to the image's alt tag
-    - Add a listener for the Yellowstone button
-    - Change the font for both button elements and the popup class
-2. Make 1 change to the map. e.g. change the marker color(s) and make sure to change the buttons’ color(s) to match, change the cursor when items are rolled over, add a 4th marker with a button and a popup, etc.
-3. Add the HTML script and image (with the same folder structure) to your Pages space. In the submission, provide the link to your site and zip and upload the files (maintain your folder structure so that the relatively linked sound life will play).
-4. Answer the questions in the submission.
  
