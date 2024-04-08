@@ -1,4 +1,4 @@
-## Mapbox Quick Start Guide
+## Assignment 1: Mapbox Quick Start Guide
 
 You should have already signed up for a mapbox account. If you have not, do so [here](https://account.mapbox.com/auth/signup/){:target="_blank"}.
 
@@ -6,7 +6,7 @@ This step-by-step guide will quickly get you started on Mapbox basics, including
 
 Begin by copying the files for Assignment 1 from the R Drive "Class_Data" folder to your personal workspace on the "R" drive or to your personal computer. Open and edit the QuickStartMap.html using a text editor, such as Brackets. 
 
-If you aren't sure how to access the course R Drive, use the instructions on Canvas and get help from the the class GEs.
+If you aren't sure how to access the course R Drive, use the instructions on Canvas and get help from the class GE.
 
 ### I. Preparing your page
 
@@ -206,7 +206,7 @@ Popups are usually used when you want to attach some information to a particular
 	```
 
 7. Notice that you can put any HTML tags, as a single string element, within the `setHTML` functions. For example, you could add an [image](https://www.w3schools.com/html/html_images.asp){:target="_blank"} or a [hyperlink](https://www.w3schools.com/html/html_links.asp){:target="_blank"}.
-Keep in mind, since you need to add a single string element, you'll have to carefully nest any quotation marks.
+Keep in mind, that since you need to add a single string element, you'll have to carefully nest any quotation marks. That means you have to close the double-quotes before the single-quotes, as shown in the example below.
 
 	```javascript
 	var popup_layer_voodoo = new mapboxgl.Popup({
@@ -228,7 +228,7 @@ Having a map is great, but let's add a banner with a title and byline. To do thi
         		<h2>By: Your Name</h2>
     	</div>
 	```
-2. Save your document. Unfortunately, the div is under your map. Let's add CSS make changes to the dive with the `id=title`, by adding a css selector `#title`. The code below will move it to front (a really high z-index value), give the selected div a background color, opacity, and center the text.  Note that because this selector has a quite a few properties, I am putting them each on a new line. This is a readability choice, whitespace in CSS is ignored, for the most part.
+2. Save your document. Unfortunately, the div is under your map. Let's add CSS to make changes to the dive with the `id=title`, by adding a css selector `#title`. The code below will move it to the front (a really high z-index value), give the selected div a background color, opacity, and center the text.  Note that because this selector has quite a few properties, I am putting them each on a new line. This is a readability choice, whitespace in CSS is ignored, for the most part.
 	```css
 		#title { z-index: 9999; 
 			background-color:white; 
@@ -252,9 +252,9 @@ Having a map is great, but let's add a banner with a title and byline. To do thi
 
 ### Assignment submission
 
-Following the tutorial, you now have a full page map. Now use what you have learned to make the following customizations:
+Following the tutorial, you now have a full-page map. Now use what you have learned to make the following customizations:
 
-1.  Include at least 1 pin marker with a custom color (use a different color than default blue or the tutorial's red).
+1.  Include at least 1 pin marker with a custom color (use a different color than the default blue or the tutorial's red).
 2.  Add a pop-up that has a link (use a different link than the tutorial).
 3.  Change the basemap style to something other than streets-v11. Use any [default style](https://docs.mapbox.com/api/maps/styles/){:target="_blank"} or [gallery style](https://www.mapbox.com/gallery/){:target="_blank"}  
 4.  Edit the title and byline text and add change at least 1 CSS property of the title/byline (e.g. color or alignment)
@@ -271,7 +271,7 @@ zoom: 8,
 center: [-74.5447, 40.6892] 
 ```
 
-After the map has been initialized, still withing the `script` section, use map.addSource and map.addLayer to add a connection to your WMS service, and add it as a layer to the map.
+After the map has been initialized, still within the `script` section, use map.addSource and map.addLayer to add a connection to your WMS service, and add it as a layer to the map.
 
 ```
 	map.on('load', function () {
