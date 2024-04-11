@@ -175,7 +175,7 @@ Since the user can't If the user can't click and drag the map, we should change 
 Look at the CSS reference for available cursors: https://www.w3schools.com/cssref/pr_class_cursor.asp Links to an external site. and click on "try it yourself" to see the different options available.
 
 ```javascript        
-	// 5 Change the map pointers
+	// Change the map pointers
 	map.getCanvas().style.cursor = 'auto';
 	map2.getCanvas().style.cursor = 'auto';
 ```
