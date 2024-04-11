@@ -40,7 +40,7 @@ Start with the file `Assignment2\Fixed-structure.html` in the R-Drive Class_Data
 
 ### 2. Setting up the fixed map
 
-Let’s create a map the centered on Portland with the Mapbox Streets style. Note: all the following code should be between `script` tags within the `body`.
+Let’s create a map centered on Portland with the Mapbox Streets style. Note: all the following code should be between `script` tags within the `body`.
 
 1. Add **your** access token, which gives you access to the mapbox API, access to styles associated with your account, and will track how many views your map has. Without this, the map will not work. 
       You can find your access tokens, create new ones, or delete existing ones on your [Access Tokens page](https://account.mapbox.com/access-tokens/) 
@@ -103,7 +103,7 @@ It should look like this:
 Can you pan and zoom? Yes!? Great. Now, let's take that ability away.
 
 Let's look at the map API again, specifically at the [interaction handlers](https://docs.mapbox.com/mapbox-gl-js/api/handlers/). Map objects have several interactivity handlers. We are going to disable them *all*.
-1. After the map was initialized, add the following JavaScript code:
+1. After the map is initialized, add the following JavaScript code:
 
       ```javascript
                   // Disable drag and zoom handlers.
@@ -170,9 +170,19 @@ To add a second map to your page. You have to add a div to the structure of your
     <img src="Images/02_TwoMaps.JPG" height="80%">
  </p>
 
+### 6. Change the pointer
+Since the user can't If the user can't click and drag the map, we should change the cursor symbol so that it does not imply that the map can be panned. 
+Look at the CSS reference for available cursors: https://www.w3schools.com/cssref/pr_class_cursor.asp Links to an external site. and click on "try it yourself" to see the different options available.
+
+	```javascript        
+		// 5 Change the map pointers
+		map.getCanvas().style.cursor = 'auto';
+            	map2.getCanvas().style.cursor = 'auto';
+	```
+
+
 **Congratulations!** You've made a webpage with two fixed maps! 
 **_For your assignment, you'll have to add a third map on your own._**
-
 
 ### B. Fly-To Maps
 
@@ -225,7 +235,7 @@ Examine the CSS that was used to style the button:
  First, we search the DOM for an element with the ID 'fly'. That's the button div!
  We added a 'click' listener, so if you click the div, something happens. In this case, we call the function "flyTo" on our map. Open [flyTo in the Mapbox API](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#flyto).  
  
- Notice that to API lists multiple options we can set, including: center, zoom, speed, curve.
+ Notice that the API lists multiple options we can set, including: center, zoom, speed, and curve.
  Right now we only set the center. I have options for the zoom and speed commented out.
 
  ```javascript
