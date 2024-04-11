@@ -255,7 +255,7 @@ Try un-commenting the speed option. See how that changed the effect. Try a few d
 Comment out the zoom and speed options.
 Now scroll up in the API, there is another function called "jumpTo". Let's try changing the function to "jumpTo" as below:
 
- ```javascript
+```javascript
          // add a 'Listener' to the div with the ID 'fly', that's the button.
        document.getElementById('fly').addEventListener('click', function () {
             map.jumpTo({
