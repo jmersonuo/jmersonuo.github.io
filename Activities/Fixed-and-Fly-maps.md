@@ -174,11 +174,11 @@ To add a second map to your page. You have to add a div to the structure of your
 Since the user can't If the user can't click and drag the map, we should change the cursor symbol so that it does not imply that the map can be panned. 
 Look at the CSS reference for available cursors: https://www.w3schools.com/cssref/pr_class_cursor.asp Links to an external site. and click on "try it yourself" to see the different options available.
 
-	```javascript        
-		// 5 Change the map pointers
-		map.getCanvas().style.cursor = 'auto';
-            	map2.getCanvas().style.cursor = 'auto';
-	```
+```javascript        
+	// 5 Change the map pointers
+	map.getCanvas().style.cursor = 'auto';
+	map2.getCanvas().style.cursor = 'auto';
+```
 
 
 **Congratulations!** You've made a webpage with two fixed maps! 
@@ -249,8 +249,8 @@ Examine the CSS that was used to style the button:
         });
 ```
 
-Try un-commenting the zoom option. See how that changed the effect. Try a few different values. You can see how the final zoom level changes.
-Try un-commenting the speed option. See how that changed the effect. Try a few different values. You can see how the speed of the "fly" changes.
+Try un-commenting the **zoom** option. See how that changed the effect. Try a few different values. You can see how the final zoom level changes.
+Try un-commenting the **speed** option. See how that changed the effect. Try a few different values. You can see how the speed of the "fly" changes.
 
 Comment out the zoom and speed options.
 Now scroll up in the API, there is another function called "jumpTo". Let's try changing the function to "jumpTo" as below:
