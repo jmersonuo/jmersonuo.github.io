@@ -11,12 +11,12 @@ Start with the file `Assignment2\Fixed-structure.html` in the R-Drive Class_Data
 1. Include the path to the Mapbox JavaScript file in the `head`:
 
       ```html
-            <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+            <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js'></script>
       ```
 2. Include he path to the Mapbox CSS file __after__ Mapbox’s JavaScript:
 
       ```html
-           <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+           <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css' rel='stylesheet' />
       ```
 
 3. In the `body`, you'll add the [heading](https://www.w3schools.com/tags/tag_hn.asp) Map 1, a div element with the id "map1" where you want your first map to be, and a line or [horizontal rule](https://www.w3schools.com/tags/tag_hr.asp) below the map. Tip: Click the links in the instructions to view the HMTL reference for these tags:
