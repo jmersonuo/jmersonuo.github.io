@@ -21,7 +21,7 @@ For this first exercise, we will be creating a dot density map that displays the
 
   Here are some additional resources you can explore:
   - [How map styles work](https://www.mapbox.com/help/how-map-design-works/#how-map-styles-work){:target="_blank"} 
-  - [How we apps work](https://www.mapbox.com/help/how-web-apps-work/){:target="_blank"}
+  - [How web apps work](https://www.mapbox.com/help/how-web-apps-work/){:target="_blank"}
   - [Style editor](https://www.mapbox.com/studio-manual/reference/styles/#style-editor){:target="_blank"} in your style
   - [Uploading data](https://www.mapbox.com/help/uploads/){:target="_blank"}
   - [More powerful styling in Studio](https://blog.mapbox.com/studio-expressions-design-81012e2dab55){:target="_blank"} (e.g. based on zoom level, based on field in the data etc.)
