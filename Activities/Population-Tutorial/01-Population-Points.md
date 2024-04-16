@@ -126,7 +126,7 @@ Each layer in Studio can be styled individually by clicking on the name of the l
 2. Click **color** and change the hex color value (after the '#') to #cc00c2 (bright pink).
 
     <p align="center">
-      <img src="Images/Color-picker.png">
+      <img src="Images/Color-picker.PNG">
     </p>
 
  3. Next, click the Style link in the **owners** layer and change the hex color value (after the '#') to a  #00d2e6 (bright blue). 
@@ -139,20 +139,15 @@ In the Mapbox Studio style editor, you can assign a radius size value to each la
 
 1. Click the Style tab in the **renters** layer and click on **Radius** Next, click **Style across zoom range**. We'll talk more about why we do this during the upcoming Scale lecture.
 
-2. The rate of change is set to **Linear**. Click **Edit** and select **Exponential** instead. Click **Done**. Since you have set the rate of change to step, the colors for each range of density between stops will be uniform.
+2. The rate of change is set to **Linear**. Click it and select **Exponential** instead. Now it's time to start adding stops and radius sizes! You will create several stops in order to make your layers visible at multiple zoom levels. 
+ 
+3. Change zoom value of the first stop to 12, and change the radius size to **1.5px**.
 
-    Now it's time to start adding stops and radius sizes! You will create several stops in order to make your layers visible at multiple zoom levels. 
-  
-3. Click on **Edit** in the first zoom level stop. 
-4. Change zoom value of the first stop to 12, and change the radius size to **1.5**.  Click **Done**.
-
-    <p align="center">
-      <img src="Images/Style-Zoom-Range.gif">
+4. Assign the zoom level ofthe second stop to 15, and change the radius size to **1.58**.
+<p align="center">
+      <img src="Images/zoom-levels.PNG">
     </p>
-  
-
-5. Click **+ Add another stop**. Assign the zoom level to 15, and change the radius size to **1.58**. Click **Done**. 
-  Create the following additional stops:
+5. Click Add another stop and one-by-one create the following additional stops:
 
     | Zoom Level | Value   |
     |------------|---------|
