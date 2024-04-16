@@ -66,16 +66,17 @@ After you've uploaded your data, it's time to create a new "style" so you can pu
 
 Close any popups and notifications about tours and new features. You can view those later if you'd like. *You can always refer to the* [*Mapbox Studio Manual*](https://www.mapbox.com/studio-manual/reference/styles/) *for more information on working with styles.*
 
-1. Go to your **Styles** page. Click the **New style** button. 
-    Notice: the different styles contain different color schemes and different basemap data 
-2. Select the **Monochrome**  template style and choose the variation called **Dark**.
-3. Click "Customize Monochrome"
+1. Go to your **Styles** page. Click the **New style** button.
+2. Under "More options" choose **Classic template**
+    
+3. Notice: the different styles contain different color schemes and different basemap data. Select the **Monochrome**  template style and choose the variation called **Dark**.
+4. Click "Customize Monochrome"
 
     <p align="center">
       <img src="Images/Dark_style.png">
     </p>
 
-4. Rename the style so that you can find and use it later: click into the title field in the upper left side of the screen to change the title from "Monochrome" to ‘Renters vs Owners’.
+5. Rename the style so that you can find and use it later: click into the title field in the upper left side of the screen to change the title from "Monochrome" to ‘Renters vs Owners’.
 
     <p align="center">
       <img src="Images/Name_Change-Generic.gif">
@@ -85,14 +86,15 @@ Close any popups and notifications about tours and new features. You can view th
 
 ### IV. Add a new layer
 
-1. To add and symbolize your data, you will need to add it as a new layer to the style. On the **Layers** panel, click the **+** button to add a new layer, from the **Source** menu, and find and select the **renter** layer that you uploaded as a tileset. 
+1. To add and symbolize your data, you will need to add it as a new layer to the style. On the **Layers** panel, click the **+** button then **Custom layer** to add a new layer.
+2. From the **Source** menu, and find and select the **renter** layer that you uploaded as a tileset. 
     <p align="center">
       <img src="Images/New Layer.png">
     </p>
 
-2. A popup may tell you the data isn't visible in your current view. click **Go to data** to quicky pan from Boston to Portland.  
+3. A popup may tell you the data isn't visible in your current view. click **Go to data** to quicky pan from Boston to the data in Portland.  
 
-3. The editor is now showing your map in “x-ray mode.” X-ray mode shows all the data in the sources added to the style, regardless of whether there is a layer to style it.
+4. The editor is now showing your map in “x-ray mode.” X-ray mode shows all the data in the sources added to the style, regardless of whether there is a layer to style it.
 
     Your new layer will be highlighted on the x-ray map. If it doesn't look like the image below, you may need to change the "Type" to "Circle".
 
@@ -100,17 +102,17 @@ Close any popups and notifications about tours and new features. You can view th
       <img src="Images/zray.png">
     </p>
 
-4. Now add the ower data. In the *New layer* panel, look in the list of *Data sources* for the **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
+5. Now add the ower data. In the *New layer* panel, look in the list of *Data sources* for the **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
 
 
-5. Click the **Style** tab and the map will switch back to style mode displaying your new layers. You will see the population point data on the map with a default style (black with 100% opacity, so it might be hard to see on the dark background).
+6. Click the **Style** tab and the map will switch back to style mode displaying your new layers. You will see the population point data on the map with a default style (black with 100% opacity, so it might be hard to see on the dark background).
 
     <p align="center">
       <img src="Images/Style-Layers.png">
     </p>
 
 
-6. Rename the layers "Owners" and "Renters" by clicking on the name of each layer at the top of the panel. 
+7. Rename the layers "Owners" and "Renters" by clicking on the name of each layer at the top of the panel. 
 
 STOP: At this point you should have added both the renter-occupued and owner-occupied tilesets to your "Owners vs Renters" styles and both should have the "type" circle.
 
