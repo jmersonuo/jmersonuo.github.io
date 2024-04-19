@@ -30,9 +30,9 @@ A few additional resources for Mapbox GL JS:
 
 To begin, we will be using a sample code to initialize a simple web map. 
 1. Create a new folder for this assignment on your *R-drive*. 
-2. Create a new file called `index.html` and copy the code below.
+2. Open your text editor (Brackets or Visual Studio) and create a new file blank file using `File > New` and save it with the name `index.html` in your new folder. Then copy the code below into your new blank file.
 
-    Note that is contains the standard sections:  
+    Note that it contains the standard sections:  
         - `html` containing everything else  
         - `head` containing a title (text in the browser tab), links to the Mapbox JS and CSS libraries, and a *new* library we have not used yet called [Boostrap](https://www.w3schools.com/whatis/whatis_bootstrap.asp){:target="_blank"}. Bootstrap is a CSS Framework for developing responsive websites and we'll explore it when we get into layout.  
         - `style` tags for CSS within the `head`  
