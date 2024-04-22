@@ -60,7 +60,7 @@ To begin, we will be using a sample code to initialize a simple web map.
         mapboxgl.accessToken = 'ACCESS TOKEN GOES HERE'; 
         var map = new mapboxgl.Map({
             container: 'map', // container id
-            style: 'STYLE URL GOES HERE', // stylesheet location
+            style: 'STYLE URL GOES HERE' // stylesheet location
         });
       </script>
 
@@ -268,7 +268,7 @@ The following code adds the *styling rules* that will style the DOM elements tha
           }
     ```
 
-5. Take a look at your changes! Blank? Check your bowser's console for errors. Click on the arrow on the top of the legend. Is it interactive? No, not yet.
+5. Take a look at your changes! Blank? Check your browser's console for errors. Click on the arrow on the top of the legend. Is it interactive? No, not yet.
 
     **Recap:** To create the legend, we added several DOM Objects using DIVs and Spans using HTML. The "style" of these objects was set using CSS. The CSS was used to make the legend object float in front of the map. A legend could also be fixed outside the map frame above, below, or beside the map. The colors of the dots in the legend were hard-coded to match the colors we used in the map in the HTML above. If you change the colors in your style, you'll _also_ have to change them in the legend.
 
@@ -310,7 +310,7 @@ It should look like this.
 
 ***Voila! Now you have a live website with a Mapbox map!*** 
 
-If you don't follow how every line of code works, that's OK! At this point it is important to understand that you added several chunks for code. Some for a div for map, a div for the map controls, a div and CSS for the legend, and some JavaScript for interactivity. You can customize your own version of this interactive map by adding your own data to a new Mapbox Style, add that style to this map, and make a few changes to the legend!
+If you don't follow how every line of code works, that's OK! At this point, it is important to understand that you added several chunks for code. Some for a div for map, a div for the map controls, a div and CSS for the legend, and some JavaScript for interactivity. You can customize your own version of this interactive map by adding your own data to a new Mapbox Style, add that style to this map, and make a few changes to the legend!
 
 <p align="center">
     <img src="https://image.shutterstock.com/image-photo/cute-dog-celebrating-red-pary-260nw-1768302275.jpg">
