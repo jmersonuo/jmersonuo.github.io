@@ -4,13 +4,8 @@
 <h2 align="center"> Mapping renters vs owners in Portland </h2>
 <h3 align="center"> Part III: Creating a comparative choropleth map </h3>
 
-The US Census makes owner/renter information readily available for census block geometries, in this lab series we are going to view the owner/renter information in different ways: 
-
-1) Mapping the per-person level information, and 
-2) Viewing the relative incidence of owners to renters using a choropeth map. 
-
-For this exercise, we will be creating two choropleth maps that display 1) the percentage of owners, and 2) the percentage of renters in Portland, Oregon. We will place one map div directly over another map div and use a Mapbox slider JavaScript Plugin to change which map div is visible.
-In the last tutorial we used Studio to dynamically style all of our layers. For this tutorial, we will be writing our styling rules directly the JavaScript in our site. Doing so allows you to control the data symbology in Javascript. This skill is useful for symbolizing data from other sources, or to modify/link your symbology to other actions in your map.
+The US Census makes owner/renter information readily available for census block geometries. For this exercise, we will be creating two choropleth maps that display 1) the percentage of owners, and 2) the percentage of renters in Portland, Oregon. We will place one map div directly over another map div and use a Mapbox slider JavaScript Plugin to change which map div is visible.
+In the last tutorial, we used Studio to dynamically style all of our layers. For this tutorial, we will be writing our styling rules directly the JavaScript in our site. Doing so allows you to control the data symbology in Javascript. This skill is useful for symbolizing data from other sources, or to modify/link your symbology to other actions in your map.
 <p align="center">
 <img src="Images/slide.gif">
 </p>
@@ -30,7 +25,7 @@ In the last tutorial we used Studio to dynamically style all of our layers. For 
 
 Download the data below. 
 1. Clicking on the link below will take you to a github page showing a JSON file
-2. then click *download* or *save* to save it to your computer or R-Drive space (depends on your browser). If your browser tries to just preview the data (a lot of coordinates), you can force it to save: right click on the download button and then click "Save As".
+2. then click *download* or *save* to save it to your computer or R-Drive space (depends on your browser). If your browser tries to just preview the data (a lot of coordinates), you can force it to save: right-click on the download button and then click "Save As".
 
 	- [Percentage of renters, owners and total population by block group 2017](Data/Owner-Renter-Pop.geojson){:target="_blank"} - Source: US Census
 
@@ -116,7 +111,7 @@ Uploading your data as a tileset, rather than directly to a style, allows you to
 	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css'
 	```
       
-3. Next, between the `script` tags, where it says "add your Mapbox access token and map variable here", add your Mapbox access token and initialize your owner choropleth by creating a ownerMap variable. This first map will eventually display information about the percentage of homeowners in Portland. 
+3. Next, between the `script` tags, where it says "add your Mapbox access token and map variable here", add your Mapbox access token and initialize your owner choropleth by creating an ownerMap variable. This first map will eventually display information about the percentage of homeowners in Portland. 
 
 	```javascript
 	mapboxgl.accessToken = 'YOUR ACCESS TOKEN';
@@ -130,7 +125,7 @@ Uploading your data as a tileset, rather than directly to a style, allows you to
 
 4. Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/define-access-token/){:target="_blank"} in the section that says "ACCESS TOKEN GOES HERE" (get your access token from your Mapbox [‘Account’ page](https://account.mapbox.com/){:target="_blank"}).
 
-	The Mapbox style has already been chosen for you. In this exercise we are using the Mapbox dark style.  
+	The Mapbox style has already been chosen for you. In this exercise, we are using the Mapbox dark style.  
 
 	<p align="center">
 	  <img src="Images/full-mapp.png">
@@ -283,9 +278,9 @@ For this exercise you will have two load events, one for your owner map and one 
   </p>
 
 ----------
-### IX. Data driven styling 
+### IX. Data-driven styling 
 
-You can assign a color to each block group based on its field and values. For the first map, we want to create a choropleth map that displays the percentage of the Portland population that owns a home. In order to style by homeownership, you will need to style our data by the "Own" field and to change the "fill-color" parameter of the layer you just added to your map. 
+You can assign a color to each block group based on its field and values. For the first map, we want to create a choropleth map that displays the percentage of the Portland population that owns a home. To style by homeownership, you will need to style our data by the "Own" field and change the "fill-color" parameter of the layer you just added to your map. 
 
 This code is very similar to the process we used in Studio. We are filtering the data from our layer by the data range found in the "Own" field. Each of the five steps is assigned a color and the fill-opacity is set to 0.7. 
 
@@ -320,7 +315,7 @@ This code is very similar to the process we used in Studio. We are filtering the
 ----------
 ### X. Adding a second layer 
 
-Currently, we have only have information for homeowners displayed. To make a meaningful comparison, we will need to add the data symbolized using the renters attribute. We'll add this layer to the other map, so the user can see it when they swipe between maps. 
+Currently, we only have information for homeowners displayed. To make a meaningful comparison, we will need to add the data symbolized using the renters attribute. We'll add this layer to the other map, so the user can see it when they swipe between maps. 
 
 1. Add a second load event, `renterMap.on('load'...` for the renterMap. Place this function after *end* of the `ownerMap.on` function:
 
@@ -344,7 +339,7 @@ Currently, we have only have information for homeowners displayed. To make a mea
 	var RenterMap...
 	RenterMap.onLoad...
 	```
-   What is important, is that the varibale delarations are above (before) the functions that manipulate those variables. I tend to use the first organization, but you can use either if one makes more sense to you than the other.
+   What is important, is that the variable declarations are above (before) the functions that manipulate those variables. I tend to use the first organization, but you can use either if one makes more sense to you than the other.
 
 2. Next, inside this new load function, add your renter data to your renter map as a layer using `renterMap.addLayer`. The tileset ID and the source-layer name will be the _same_ for both layers, since the one dataset has both attributes. We will set a different attribute when styling the data.
    
@@ -375,7 +370,7 @@ Currently, we have only have information for homeowners displayed. To make a mea
 ----------
 ### XI. Styling your second layer 
 
-For the renter map, we want to create a choropleth map that displays the percentage of the Portland population that rents. In order to style by percentage of renters, you will need to style our data by the 'Rent' field. You will also need to change the 'fill-color' parameter of the layer you just added to your map. 
+For the renter map, we want to create a choropleth map that displays the percentage of the Portland population that rents. To style by the percentage of renters, you will need to style our data by the 'Rent' field. You will also need to change the 'fill-color' parameter of the layer you just added to your map. 
 
 1. Replace `'#0090f5'` with the following: 
   
@@ -406,7 +401,7 @@ For the renter map, we want to create a choropleth map that displays the percent
 The last step is to add a popup to display the data values. The process is similar to adding popups to markers. To do so, we'll need to initialize a popup variable, and then use JS that interacts with each layer in each map. However, the code below updates the location of the popup to match the user's mouse (or cursor) location any time it moves. It also will automatically close the popup when the mouse leaves the map.
 
 
-Another note on organization. You should stick with the organization you used earlier. Grouping all variable declarations toegether OR by grouping the owners code and the renter code. What is important, is that the varibale delarations are above the functions that manipulate those variables.
+Another note on organization: You should stick with the organization you used earlier. Grouping all variable declarations together OR by grouping the owners code and the renters code. What is important, is that the variable declarations are above the functions that manipulate those variables.
 
    ```javascript
 	//var declarations
@@ -512,9 +507,9 @@ Another note on organization. You should stick with the organization you used ea
     <img src="https://media.giphy.com/media/eY1JD4KPG4HMk/giphy.gif">
 </p>
 
-### XIII. Advanced Challenge 
+### XIII. Challenge tasks
 
-Try adding a legend and a title to your map to make it easier for readers to understand the comparison between owners and renters in Portland. 
+Add a legend and a title to your map to make it easier for readers to understand the comparison between owners and renters in Portland. 
 
 To add a legend be sure to add each of the chunks of code:
 
