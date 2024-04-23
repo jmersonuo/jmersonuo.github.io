@@ -144,8 +144,9 @@ Now that we’ve initialized the webmap, let’s set the appropriate extent. Cur
 1. Locate the line that sets where to center the map view.
 2. For practice, change the map center location to the center of the US by finding a coordinate in [google maps](maps.google.com){:target="_blank"} or by placing a marker in [http://geojson.io/](http://geojson.io/#map=2/20.0/0.0){:target="_blank"}.
 4. Change the coordinates in your code and preview your changes.
-5. Now, change the zoom level to 10, centered on Portland. 
-6. Preview your map in a browser to view your changes.
+   Did it work? No? Is there an error visible in the console? Do you have your coordinates ordered as x,y or lat/long?
+6. Now, change the zoom level to 10, centered on Portland. 
+7. Preview your map in a browser to view your changes.
 
 <p align="center">
   <img src="Images/Portland.png">
