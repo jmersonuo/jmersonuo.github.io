@@ -33,7 +33,7 @@ Download the data below.
 	- [Percentage of renters, owners and total population by block group 2017](Data/Owner-Renter-Pop.geojson){:target="_blank"} - Source: US Census
 
 <p align="center">
-<img src="Images/download.PNG">
+<img src="Images/04-DownloadData.jpg">
 </p>
  
 
