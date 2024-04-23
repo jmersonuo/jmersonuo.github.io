@@ -58,7 +58,8 @@ Uploading your data as a tileset, rather than directly to a style, allows you to
 ### III. Initializing a map with a swipe
 
 
-1. To begin, use this sample code created by the documentation team at Mapbox to set up a site with two map divs. To keep organized, create a new folder for this assignment on your class folder on the R drive. Open your text editor (Brackets or Visual Studio) and create a new file blank file using File > New and save it with the name index.html in your folder for this assignment. Then copy the code below into your new blank file.
+1. To begin, use this sample code created by the documentation team at Mapbox to set up a site with two map divs.
+   To keep organized, create a new folder for this assignment on your class folder on the R drive. Open your text editor (Brackets or Visual Studio) and create a new file blank file using File > New and save it with the name index.html in your folder for this assignment. Then copy the code below into your new blank file.
 
 	```html
 	<!DOCTYPE html>
@@ -105,7 +106,7 @@ Uploading your data as a tileset, rather than directly to a style, allows you to
 	</html>
 	```
 
-2. Notice that in the `<head>` there are script and link tags referencing mapbox-gl-compare JS and  CSS. These are for the Mapbox GL JS [swipe map plugin](https://github.com/mapbox/mapbox-gl-compare).
+3. Notice that in the `<head>` there are script and link tags referencing mapbox-gl-compare JS and  CSS. These are for the Mapbox GL JS [swipe map plugin](https://github.com/mapbox/mapbox-gl-compare).
 
    **Locate, but don't add again**
 	```html
@@ -114,7 +115,7 @@ Uploading your data as a tileset, rather than directly to a style, allows you to
 	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css'
 	```
       
-3. Next, between the `script` tags, where it says "add your Mapbox access token and map variable here", add your Mapbox access token and initialize your owner choropleth by creating an ownerMap variable. This first map will eventually display information about the percentage of homeowners in Portland. 
+4. Next, between the `script` tags, where it says "add your Mapbox access token and map variable here", add your Mapbox access token and initialize your owner choropleth by creating an ownerMap variable. This first map will eventually display information about the percentage of homeowners in Portland. 
 
 	```javascript
 	mapboxgl.accessToken = 'YOUR ACCESS TOKEN';
@@ -126,7 +127,7 @@ Uploading your data as a tileset, rather than directly to a style, allows you to
 	});
 	```
 
-4. Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/define-access-token/){:target="_blank"} in the section that says "ACCESS TOKEN GOES HERE" (get your access token from your Mapbox [‘Account’ page](https://account.mapbox.com/){:target="_blank"}).
+5. Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/define-access-token/){:target="_blank"} in the section that says "ACCESS TOKEN GOES HERE" (get your access token from your Mapbox [‘Account’ page](https://account.mapbox.com/){:target="_blank"}).
 
 	The Mapbox style has already been chosen for you. In this exercise, we are using the Mapbox dark style.  
 
