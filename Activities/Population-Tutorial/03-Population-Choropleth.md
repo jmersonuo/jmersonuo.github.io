@@ -67,8 +67,8 @@ Uploading your data as a tileset, rather than directly to a style, allows you to
 	    <meta charset='utf-8' />
 	    <title>Swipe between maps</title>
 	    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-	    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
-	    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+	    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js'></script>
+	    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css' rel='stylesheet' />
 		
 	    <!-- JS and CSS for the swipe plugin -->
 	    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js'></script>
