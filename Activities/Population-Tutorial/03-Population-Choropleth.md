@@ -4,7 +4,10 @@
 <h2 align="center"> Mapping renters vs owners in Portland </h2>
 <h3 align="center"> Part III: Creating a comparative choropleth map </h3>
 
-The US Census makes owner/renter information readily available for census block geometries. For this exercise, we will be creating two choropleth maps that display 1) the percentage of owners, and 2) the percentage of renters in Portland, Oregon. We will place one map div directly over another map div and use a Mapbox slider JavaScript Plugin to change which map div is visible.
+The US Census makes owner/renter information readily available for census block geometries. 
+
+For this exercise, we will be creating two choropleth maps that display 1) the percentage of owners, and 2) the percentage of renters in Portland, Oregon. We will place one map div directly over another map div and use a Mapbox slider JavaScript Plugin to change which map div is visible.
+
 In the last tutorial, we used Studio to dynamically style all of our layers. For this tutorial, we will be writing our styling rules directly the JavaScript in our site. Doing so allows you to control the data symbology in Javascript. This skill is useful for symbolizing data from other sources, or to modify/link your symbology to other actions in your map.
 <p align="center">
 <img src="Images/slide.gif">
