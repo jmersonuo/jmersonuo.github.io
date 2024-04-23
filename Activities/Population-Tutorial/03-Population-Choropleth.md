@@ -287,7 +287,7 @@ You can assign a color to each block group based on its field and values. For th
 
 This code is very similar to the process we used in Studio. We are filtering the data from our layer by the data range found in the "Own" field. Each of the five steps is assigned a color and the fill-opacity is set to 0.7. 
 
-1. In the JS, replace the "paint" from red '#cb1515', to stepped blue bins, with an opacity of 0.7, using the following: 
+1. In the JS, **replace** the "paint" from red '#cb1515', to stepped blue bins, with an opacity of 0.7, using the following: 
 
 	```javascript
               paint: {
@@ -335,7 +335,7 @@ Currently, we only have information for homeowners displayed. To make a meaningf
 	RenterMap.onLoad...
 	
 	```	
-	Or by everything to do with owner, then everything to to with renter:
+	Or by everything to do with owner, then everything to do with renter:
 	```javascript
 	var OwnerMap...
 	OwnerMap.onLoad...
@@ -373,9 +373,9 @@ Currently, we only have information for homeowners displayed. To make a meaningf
 ----------
 ### XI. Styling your second layer 
 
-For the renter map, we want to create a choropleth map that displays the percentage of the Portland population that rents. To style by the percentage of renters, you will need to style our data by the 'Rent' field. You will also need to change the 'fill-color' parameter of the layer you just added to your map. 
+For the renter map, we want to create a choropleth map that displays the percentage of the Portland population that rents. To style by the percentage of renters, you will need to style our data by the 'Rent' field. You will also need to **change** the 'fill-color' parameter of the layer you just added to your map. 
 
-1. Replace `'#0090f5'` with the following: 
+1. Replace the solid color `'#0090f5'` with the following classed color scheme: 
   
    ```javascript
       ["step",
@@ -425,7 +425,7 @@ Another note on organization: You should stick with the organization you used ea
 	
 	
    ```  	
-   Or by grouping everything to do with owner, then everything to to with renter:
+   Or by grouping everything to do with owner, then everything to do with renter:
 	
    ```javascript
 	// shared vars
@@ -501,7 +501,7 @@ Another note on organization: You should stick with the organization you used ea
             popup.remove();
         });
 	```
-3. Change the content of the Owner map popup so that is has a label that makes sense. Do this by editing the value of `.setHTML(" CHANGE THIS " + description + "%")`
+3. Change the content of the Owner map popup so that it has a label that makes sense. Do this by editing the value of `.setHTML(" CHANGE THIS " + description + "%")`
 
  
 ### Congratulations! You've completed the exercise! 
