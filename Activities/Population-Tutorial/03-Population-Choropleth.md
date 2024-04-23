@@ -58,7 +58,7 @@ Uploading your data as a tileset, rather than directly to a style, allows you to
 ### III. Initializing a map with a swipe
 
 
-1. To begin, use this sample code created by the documentation team at Mapbox to set up a site with two map divs. Save it in a new `.html` file for this assignment.
+1. To begin, use this sample code created by the documentation team at Mapbox to set up a site with two map divs. To keep organized, create a new folder for this assignment on your class folder on the R drive. Open your text editor (Brackets or Visual Studio) and create a new file blank file using File > New and save it with the name index.html in your folder for this assignment. Then copy the code below into your new blank file.
 
 	```html
 	<!DOCTYPE html>
