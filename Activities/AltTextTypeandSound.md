@@ -217,7 +217,7 @@ The sound file you downloaded from the R drive is a recording of a bison eating 
     ```javascript
     popup3_content += '<audio controls><source src="PATH_TO_FILE" type="audio/mpeg">Your browser does not support the audio element.</audio>';
     ```
-4. Replace the `PATH_TO_FILE` with the path to the file _relative_ to this webpage. If it's in the sounds folder, it is going to be `sounds/yell-YELLBisonEating150313.mp3`  
+4. Replace the `PATH_TO_FILE` with the path to the file _relative_ to path to this html file. If it's in the sounds folder, it is going to be `sounds/yell-YELLBisonEating150313.mp3`  
 
    **VERY IMPORTANT NOTE:** The path and file name are not case-sensitive locally, but the Pages server is!! For this to work on the web, make sure your path and file name use the same case for all characters as the src as the folder and file. 
    ```javascript
