@@ -381,5 +381,6 @@ Here is an example with Martel. Yours should use a different font.
 ### Extra challenge tasks
 
 1. The hyperlinks for the image sources all open in the same tab as your map. It might be better to open them in a new tab instead. Check out at the [W3Schools target reference](https://www.w3schools.com/tags/att_a_target.asp){:target="_blank"}. Add the target `_blank` to each anchor tag so the links will open in a new tab.
-2. Add a "next" button somewhere static on the page _or_ to each popup. Set that button to call a function that opens the popup for the next marker and jumps or flies to it. Use the buttons to cycle through all your markers.
+2. Use a different font for the sources. 
+3. Add a "next" button somewhere static on the page _or_ to each popup. Set that button to call a function that opens the popup for the next marker and jumps or flies to it. Use the buttons to cycle through all your markers.
 
