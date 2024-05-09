@@ -338,7 +338,7 @@ If not, check that console for errors and follow the thread. Do you use the corr
 Assume a client has asked you to find a free-to-use "fun or whimsical" font for this map.
 
 1. Visit [https://fonts.google.com/](https://fonts.google.com/){:target="_blank"} choose a "fun or whimsical" font, but make sure it is still legible. 
-2. Get the HTML/CSS code by clicking "select this font"
+2. Get the HTML/CSS code by clicking "get font" > "Get embed code"
 3. Insert the html into the `<head>` of your site.
    e.g. If I picked Martel, I would insert the following code block. You should pick a different font, and you'll be asked to explain your choice for the assignment submission:
    ```html
