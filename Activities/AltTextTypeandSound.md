@@ -1,13 +1,12 @@
 <h2 align="center"> Part A. Sound and Alt Text</h2>
 
-
 For this exercise, we will be adding sound to marker popups in a Mapbox map:
   - in popups using an iframe to share a video via absolute link (on the web)
   - in a popup to share a sound file via a relative location (on your computer)
   - adding alt-text descriptions to images
   - linking a Google font and applying it via css
   
-We will discuss the use sounds and detail how access the embed links in the upcoming "sound" lecture.
+We will discuss the use of sounds in detail and how to access the embed links in more detail in the upcoming "sound" lecture.
 
   Here are some additional resources you can explore:
   - [W3Schools iframes](https://www.w3schools.com/tags/tag_iframe.asp){:target="_blank"} 
@@ -18,7 +17,7 @@ We will discuss the use sounds and detail how access the embed links in the upco
 
 ### I. Getting setup  
 
-1. From the course R Drive (R:\Class_Data\Assignment6-Sound), download the files to your R drive or local computer. It contains:
+1. From the course R Drive (R:\...Class_Data\Assignment6), download the files to your R drive or local computer. It contains:
   - QickStartMap-withSound.html
   - The folder "Sounds", which contains the file yell-YELLBisonEating150313.mp3 'Source: NPS/Neal Herbert, <a href="https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm" target='_blank'>NPS</a>'
 
@@ -28,7 +27,7 @@ We will discuss the use sounds and detail how access the embed links in the upco
   - `<body> ... </body>` 
   - `<script> ... </script>`  (nested within the body
 
-  When you open the map, you should have a mapbox-outdoor style centered on Portland.  
+  When you open the map, and add your Mapbox access token, you should have a mapbox-outdoor style centered on Portland.  
   <p align="center">
     <img src= "Images/6-PortlandOutdoors.JPG"> 
   </p>
