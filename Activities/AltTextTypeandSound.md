@@ -178,13 +178,13 @@ We can concatenate strings with a plus sign:
 
 
 1. To make it easier to see your changes, set the map's initial center to the same location as the London popup.
-2. Locate the popup for marker 2 `popup2_content` To get an iframe embed code for a Sound Cloud video from London, go to [https://soundcloud.com/londonstreetnoises/grosvenor-1928](https://soundcloud.com/londonstreetnoises/grosvenor-1928){:target="_blank"}
+2. Locate the popup for marker 2 `popup2_content` To get an iframe embed code for a Sound Cloud video from London, go to [https://soundcloud.com/londonstreetnoises/cromwell-1928](https://soundcloud.com/londonstreetnoises/cromwell-1928){:target="_blank"}
 3. Click the share button, then `Embed`, then copy the code.
     <p align="center">
     <img src= "Images/6-SoundCloud.JPG"> 
     </p>
     
-    It's going to be rather long and look like the image below. Take a look at the HTML code and see what HTML tags you can recognize.
+    It's going to be rather long and look similar to the image below. Take a look at the HTML code and see what HTML tags you can recognize.
     <p align="center">
     <img src= "Images/6-EmbedCode.JPG"> 
     </p>
