@@ -6,7 +6,7 @@ For this exercise, we will be adding sound to marker popups in a Mapbox map:
   - adding alt-text descriptions to images
   - linking a Google font and applying it via css
   
-We will discuss the use of sounds in detail and how to access the embed links in more detail in the upcoming "sound" lecture.
+We will discuss the use of sounds in detail and how to access the embedded links in more detail in the upcoming "sound" lecture.
 
   Here are some additional resources you can explore:
   - [W3Schools iframes](https://www.w3schools.com/tags/tag_iframe.asp){:target="_blank"} 
@@ -125,7 +125,7 @@ Let's start by adding 3 markers. Locate the comment `/***  MARKERS  ***/` then a
 
 To embed a YouTube Video, we can add an iframe to the HTML content of a popup by adding it within the popup's HTML content. To do so, we create a string that contains html into the variable `popup1_content`. To help keep our code organized we can concatenate or "join together" multiple text strings. We will use `+=` to append more html text to the end of the existing variable.  
 
-Quick lesson on string concatenation:
+A quick lesson on string concatenation:
 We can concatenate strings with a plus sign:
    ```javascript
    // the long way
@@ -204,17 +204,17 @@ Now let's add a sound file from a relative location (one that you have stored on
   
 The National Park Service has a whole library of sounds that you can download: [https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm](https://www.nps.gov/yell/learn/photosmultimedia/soundlibrary.htm){:target="_blank"}. "They may be downloaded and used without limitation; however, please credit the 'National Park Service' where appropriate".  
 
-The sound file you downloaded from the R drive is a recording a bison eating `yell-YELLBisonEating150313.mp3`. Have a listen to it using the default audio player on your computer.
+The sound file you downloaded from the R drive is a recording of a bison eating `yell-YELLBisonEating150313.mp3`. Have a listen to it using the default audio player on your computer.
 
 1. To make it easier to see your changes, set the map's initial center to the same location as the Yellowstone popup.
 2. Locate the popup for marker 3 `popup3_content` 
-3. Append a string containing an [HTML audio tag](https://www.w3schools.com/tags/tag_audio.asp){:target="_blank"} .
+3. Append a string containing an [HTML audio tag](https://www.w3schools.com/tags/tag_audio.asp){:target="_blank"}.
     ```javascript
     popup3_content += '<audio controls><source src="PATH_TO_FILE" type="audio/mpeg">Your browser does not support the audio element.</audio>';
     ```
 4. Replace the `PATH_TO_FILE` with the path to the file _relative_ to this webpage. If it's in the sounds folder, it is going to be `sounds/yell-YELLBisonEating150313.mp3`  
 
-   **VERY IMPORATANT NOTE:** The path and file name are not case sensitive locally, but the Pages server is!! For this to work on the web, make sure your path and file name use the same case for all characters as the src as the folder and file. 
+   **VERY IMPORTANT NOTE:** The path and file name are not case-sensitive locally, but the Pages server is!! For this to work on the web, make sure your path and file name use the same case for all characters as the src as the folder and file. 
    ```javascript
    It should look like this:
    // Popup for marker 3  
@@ -235,7 +235,7 @@ The sound file you downloaded from the R drive is a recording a bison eating `ye
 
 ----------
 
-### VII. Add an absolute link to a image to popup3 file
+### VII. Add an absolute link to an image to popup3 file
 The audio file of the bison eating is great, but it could use a visual. Let's add the image that the NPS used at https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm. We can use an img tag and set the src to the image URL. The steps below will show you how.
 
 1. Visit the site with the bison sounds clip at [https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm](https://www.nps.gov/yell/learn/photosmultimedia/sounds-bisoneating.htm){:target="_blank"}  and right click on the image > copy image link
@@ -249,7 +249,7 @@ The audio file of the bison eating is great, but it could use a visual. Let's ad
    ```
    Note: `<img>` is a self-closing tag, so we don't need a second tag to close it.
 4. Replace the `PATH_TO_FILE` with the bison image link `https://www.nps.gov/yell/learn/photosmultimedia/images/ndh-yell-bison-gibbon_2.jpg?maxwidth=1200&maxheight=1200&autorotate=false`
-5. Is the image way too big for the popup? Let use CSS to set it's width to 100% of the parent element. We already gave it a class named `popupImage`, so add the following to the `<style>` section in the `<head>`. 
+5. Is the image way too big for the popup? Let's use CSS to set its width to 100% of the parent element. We already gave it a class named `popupImage`, so add the following to the `<style>` section in the `<head>`. 
    ```css
    .popupImage{
        width:100%;
@@ -272,7 +272,7 @@ The audio file of the bison eating is great, but it could use a visual. Let's ad
 To add a little more accessibility to our page, we should add text that screen readers can read adding an alternate or "alt" attribute to our image tag.
 
 1. Review the HTML reference for the `alt` attribute of an `<img>` tag: [https://www.w3schools.com/tags/att_img_alt.asp](https://www.w3schools.com/tags/att_img_alt.asp){:target="_blank"}
-2. In the img tag add `alt="Description of photo"`, and add your own description of the scene. 
+2. In the img tag add `alt=" Description of photo"`, and add your own description of the scene. 
    Here is what I wrote:
    
  <p align="center">
@@ -320,7 +320,7 @@ Now let's add some UI to make it easier to get to each location.
    
 3. Add the listener for the button element with the ID 'YellowstoneButton' on your own. Use the same center as the marker and a zoom level of 9.
   
-Try all 3 buttons, open all 3 popups, listen to all 3 recordings. Does everything work? Great. 
+Try all 3 buttons, open all 3 popups, and listen to all 3 recordings. Does everything work? Great. 
 
 ----------
 
@@ -329,9 +329,9 @@ Try all 3 buttons, open all 3 popups, listen to all 3 recordings. Does everythin
 
 ### I. Adding a font to the map
 
-Assume a client has asked you to find a free to use "fun or whimsical" font for this map.
+Assume a client has asked you to find a free-to-use "fun or whimsical" font for this map.
 
-1. Visit [https://fonts.google.com/](https://fonts.google.com/){:target="_blank"} chose a "fun or whimsical" font, but make sure it is still legible. 
+1. Visit [https://fonts.google.com/](https://fonts.google.com/){:target="_blank"} choose a "fun or whimsical" font, but make sure it is still legible. 
 2. Get the HTML/CSS code by clicking "select this font"
 3. Insert the html into the `<head>` of your site.
    e.g. If I picked Martel, I would insert the following code block. You should pick a different font, and you'll be asked to explain your choice for the assignment submission:
@@ -351,7 +351,7 @@ Assume a client has asked you to find a free to use "fun or whimsical" font for 
    ```
    
 5. Set the font for the popups:
-   In the `<style>` section in the `head`, add in the existing selector for the class `.mapboxgl-popup` add the font-family that you selected. Adjust the size of the font if yours feels too big, or too small. If I picked Martel, the new class would look like this:
+   In the `<style>` section in the `head`, add in the existing selector for the class `.mapboxgl-popup` and add the font-family that you selected. Adjust the size of the font if yours feels too big, or too small. If I picked Martel, the new class would look like this:
    ```css
       .mapboxgl-popup {
           min-width: 325px;
@@ -372,7 +372,8 @@ Here is an example with Martel. Yours should use a different font.
 
 ----------  
 
-### Extra challenge task
+### Extra challenge tasks
 
-The hyperlinks for the image sources all open in the same tab as your map. It might be better to open them in a new tab instead. Check out at the [W3Schools target reference](https://www.w3schools.com/tags/att_a_target.asp){:target="_blank"}. Add the target `_blank` to each anchor tag so the links will open in a new tab.
+1. The hyperlinks for the image sources all open in the same tab as your map. It might be better to open them in a new tab instead. Check out at the [W3Schools target reference](https://www.w3schools.com/tags/att_a_target.asp){:target="_blank"}. Add the target `_blank` to each anchor tag so the links will open in a new tab.
+2. Add a "next" button somewhere static on the page _or_ to each popup. Set that button to call a function that opens the popup for the next marker and jumps or flies to it. Use the buttons to cycle through all your markers.
 
