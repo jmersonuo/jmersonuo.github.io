@@ -325,7 +325,8 @@ Now let's add some UI to make it easier to get to each location.
    
 3. Add the listener for the button element with the ID 'YellowstoneButton' on your own. Use the same center as the marker and a zoom level of 9.
   
-Try all 3 buttons, open all 3 popups, and listen to all 3 recordings. Does everything work? Great. 
+Try all 3 buttons, open all 3 popups, and listen to all 3 recordings. Does everything work? Great. <br>
+If not, check that console for errors and follow the thread. Do you use the correct ID for each element and corresponding function? What line number has an error? Do you close all strings using balanced quotation marks? 
 
 ----------
 
