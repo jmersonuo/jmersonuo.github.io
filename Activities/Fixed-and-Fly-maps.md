@@ -34,7 +34,7 @@ Start with the file `Assignment2\Fixed-structure.html` in the R-Drive Class_Data
               #map1 { position:relative; height:300px; width:100%;}
       ```
 
-      This sets the body div of your web page has a 50px [margin](https://www.w3schools.com/css/css_margin.asp) around the edge, and the div with the ID "map1", will be 300px tall, and will take 100% of the width of your browser page.
+      This sets the body div of your web page to have a 50px [margin](https://www.w3schools.com/css/css_margin.asp) around the edge.  The div with the ID "map1", will be 300px tall, and will take 100% of the width of your browser page.
 
       Now you’re ready to initialize the map and customize it.
 
