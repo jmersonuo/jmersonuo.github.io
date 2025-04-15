@@ -54,9 +54,10 @@ To add the data to a style in Mapbox Studio, you need to upload it to your accou
 2. Click **Data manager** then you should be on the **Tilesets** page
 3. Upload your **owner** data to Mapbox, by clicking "New tileset"
 4. Drag and drop the Owners.mbtiles file into the site or click "Select a file" and browse to it  
-  *Note*: you are limited to 20 uploads / month via this drag and drop method. If you need to upload more than that, you can do so via methods that we won't be covering in class. 
-5. Upload your **renter** data to Mapbox, by clicking "New tileset"
-6. Drag and drop the Renters.mbtiles file into the site or click "Select a file" and browse to it
+  *Note 1*: you are limited to 20 uploads / month via this drag and drop method. If you need to upload more than that, you can do so via methods that we won't be covering in class.
+  *Note 2*: these are pretty big files, so depending on your internet connection this may take a min or two.
+6. Upload your **renter** data to Mapbox, by clicking "New tileset"
+7. Drag and drop the Renters.mbtiles file into the site or click "Select a file" and browse to it
 
 ----------
 
