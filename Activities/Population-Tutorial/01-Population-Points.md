@@ -116,9 +116,13 @@ Close any popups and notifications about tours and new features. You can view th
     </p>
 
 
-7. Rename the layers "Owners" and "Renters" by clicking on the name of each layer at the top of the panel. 
+7. Rename the layers "Owners" and "Renters" by clicking on the name of each layer at the top of the panel.
+    <p align="center">
+      <img src="Images/rename.png">
+    </p>
 
-STOP: At this point you should have added both the renter-occupued and owner-occupied tilesets to your "Owners vs Renters" styles and both should have the "type" circle.
+   
+STOP: Okay... let's review. At this point you should have added both the renter-occupued and owner-occupied tilesets to your "Owners vs Renters" styles and both should have the "type" circle and should be renamed.
 
 ----------
 
