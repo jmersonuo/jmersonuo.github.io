@@ -67,17 +67,20 @@ After you've uploaded your data, it's time to create a new "style" so you can pu
 
 Close any popups and notifications about tours and new features. You can view those later if you'd like. *You can always refer to the* [*Mapbox Studio Manual*](https://www.mapbox.com/studio-manual/reference/styles/) *for more information on working with styles.*
 
-1. Go to your **Style Editor** page (menu button on the left). Then click the blue **New style** button.
-2. Under "More options" choose **Classic template**
+1. Go to your **Style Editor** page (menu button on the left). Then click the down arrow beside the blue **New style** button.
+2. Choose **Classic template**
+    <p align="center">
+      <img src="Images/classicTemplate.JPG">
+    </p>
     
-3. Notice: the different styles contain different color schemes and different basemap data. Select the **Monochrome**  template style and choose the variation called **Dark**.
-4. Click "Customize Monochrome"
+4. Notice: the different styles contain different color schemes and different basemap data. Select the **Monochrome** template style and choose the variation called **Dark**.
+5. Click "Customize Monochrome"
 
     <p align="center">
       <img src="Images/Dark_style.png">
     </p>
 
-5. Rename the style so that you can find and use it later: click into the title field in the upper left side of the screen to change the title from "Monochrome" to ‘Renters vs Owners’.
+6. Rename the style so that you can find and use it later: click into the title field in the upper left side of the screen to change the title from "Monochrome" to ‘Renters vs Owners’.
 
     <p align="center">
       <img src="Images/Name_Change-Generic.gif">
