@@ -96,11 +96,11 @@ Close any popups and notifications about tours and new features. You can view th
       <img src="Images/New Layer.png">
     </p>
 
-3. A popup may tell you the data isn't visible in your current view. click **Go to data** to quicky pan from Boston to the data in Portland.  
+3. A popup may tell you the data isn't visible in your current view. click **Go to data** to quicky pan to the data in Portland.  
 
 4. The editor is now showing your map in “x-ray mode.” X-ray mode shows all the data in the sources added to the style, regardless of whether there is a layer to style it.
 
-    Your new layer will be highlighted on the x-ray map. If it doesn't look like the image below, you may need to change the "Type" to "Circle".
+    Your new layer will be highlighted on the x-ray map. If you don't see tiny green dots like the image below, you may need to change the "Type" to "Circle".
 
     <p align="center">
       <img src="Images/zray.png">
