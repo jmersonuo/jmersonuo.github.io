@@ -38,7 +38,7 @@ For this first exercise, we will be creating a dot density map that displays the
   - Portland **homeowners** by block group 2017: [Download](Data/Owners.mbtiles)  
   [Original data source: US Census](https://data.census.gov){:target="_blank"}, preprocessed in QGIS to produce randomized points. 
  
- 2. Note where it saved (e.g, your downloads folder)
+ 2. Note where it saved (e.g. your downloads folder)
 
 ----------
 
@@ -46,12 +46,12 @@ For this first exercise, we will be creating a dot density map that displays the
 
 To add the data to a style in Mapbox Studio, you need to upload it to your account. 
 1. Login to [mapbox studio](https://studio.mapbox.com/){:target="_blank"}
-    Notice the buttons on the top right "Styles", "Tilesets", "Datasets", you'll be navigating throught each of these.
+    Notice the buttons on the left "Style Editor", "Data Manager", you'll be navigating throught each of these.
     <p align="center">
       <img src="Images/tilesets.png">
     </p>
 
-2. Go to your **Tilesets** page
+2. Click Data manager Go then you should be on the **Tilesets** page
 3. Upload your **owner** data to Mapbox, by clicking "New tileset"
 4. Drag and drop the Owners.mbtiles file into the site or click "Select a file" and browse to it  
   *Note*: you are limited to 20 uploads / month via this drag and drop method. If you need to upload more than that, you can do so via methods that we won't be covering in class. 
