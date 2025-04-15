@@ -52,7 +52,7 @@ To add the data to a style in Mapbox Studio, you need to upload it to your accou
     </p>
 
 2. Click **Data manager** then you should be on the **Tilesets** page
-3. Upload your **owner** data to Mapbox, by clicking "New tileset"
+3. Upload your **owner** data to Mapbox, by clicking blue **New tileset**
 4. Drag and drop the Owners.mbtiles file into the site or click "Select a file" and browse to it  
   *Note 1*: you are limited to 20 uploads / month via this drag and drop method. If you need to upload more than that, you can do so via methods that we won't be covering in class.
   *Note 2*: these are pretty big files, so depending on your internet connection this may take a min or two.
@@ -67,7 +67,7 @@ After you've uploaded your data, it's time to create a new "style" so you can pu
 
 Close any popups and notifications about tours and new features. You can view those later if you'd like. *You can always refer to the* [*Mapbox Studio Manual*](https://www.mapbox.com/studio-manual/reference/styles/) *for more information on working with styles.*
 
-1. Go to your **Styles** page. Click the **New style** button.
+1. Go to your **Style Editor** page (menu button on the left). Then click the blue **New style** button.
 2. Under "More options" choose **Classic template**
     
 3. Notice: the different styles contain different color schemes and different basemap data. Select the **Monochrome**  template style and choose the variation called **Dark**.
