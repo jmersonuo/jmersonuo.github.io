@@ -90,7 +90,7 @@ Close any popups and notifications about tours and new features. You can view th
 
 ### IV. Add a new layer
 
-1. To add and symbolize your data, you will need to add it as a new layer to the style. On the **Layers** panel, click the **+** button then **Custom layer** to add a new layer.
+1. To add and symbolize your data, you will need to add it as a new layer to the style. On the **Layers** panel, click the blue **+** button then **Custom layer** to add a new layer.
 2. From the **Source** menu, and find and select the **renter** layer that you uploaded as a tileset. 
     <p align="center">
       <img src="Images/New Layer.png">
@@ -106,7 +106,7 @@ Close any popups and notifications about tours and new features. You can view th
       <img src="Images/zray.png">
     </p>
 
-5. Now add the ower data. In the *New layer* panel, look in the list of *Data sources* for the **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
+5. Now repeat 2-4 to add the owner data: Use the "Add layer" button (blue plus), click custom layer. In the *New layer* panel, use "Source" ">" to look in the list of *Sources* for your **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
 
 
 6. Click the **Style** tab and the map will switch back to style mode displaying your new layers. You will see the population point data on the map with a default style (black with 100% opacity, so it might be hard to see on the dark background).
