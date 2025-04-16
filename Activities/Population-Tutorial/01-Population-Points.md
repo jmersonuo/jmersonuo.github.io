@@ -106,7 +106,7 @@ Close any popups and notifications about tours and new features. You can view th
       <img src="Images/zray.png">
     </p>
 
-5. Now repeat 2-4 to add the owner data: Use the "Add layer" button (blue plus), click custom layer. In the *New layer* panel, use "Source" ">" to look in the list of *Sources* for your **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
+5. Now repeat 2-4 to add the owner data: Use the Add layer button blue **+**, click custom layer. In the *New layer* panel, use "Source" ">" to look in the list of sources for your **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
 
 
 6. Click the **Style** tab and the map will switch back to style mode displaying your new layers. You will see the population point data on the map with a default style (black with 100% opacity, so it might be hard to see on the dark background).
@@ -126,7 +126,7 @@ STOP: Okay... let's review. At this point you should have added both the renter-
 
 ----------
 
-### V. Symbolize or "style" the layer
+### V. Symbolize or "style" a layer
 
 Each layer in Studio can be styled individually by clicking on the name of the layer in the Layer list. There are several layer types to choose from. Each layer type has a unique set of layer properties that can be specified. There are a few options for specifying property values. You can pick values individually, based on a data attribute, based on the zoom level, or the value of another property. For more information on layer types and their styling rules check out this [reference guide](https://docs.mapbox.com/studio-manual/reference/styles/).
 
