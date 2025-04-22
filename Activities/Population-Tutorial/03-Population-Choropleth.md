@@ -100,7 +100,9 @@ Uploading your data as a tileset, rather than directly to a style, allows you to
      		</div>
 
 		<script>
-		  //add your Mapbox access token and map variable here!
+		  // III.3. add your Mapbox access token and map variable here!
+
+ 		  // VI.1. add your compare container variables here!
 		</script>
 
 		</body>
