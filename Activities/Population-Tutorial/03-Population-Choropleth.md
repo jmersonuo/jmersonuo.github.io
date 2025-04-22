@@ -35,7 +35,8 @@ Download the data below.
 <p align="center">
 <img src="Images/04-DownloadData.jpg">
 </p>
- 
+
+ 3. Explore the data by uploading it to [geojson.io ](geojson.io ){:target="_blank"} to look at the json code and the polygons on a map.
 
 ----------
 
@@ -68,8 +69,8 @@ Uploading your data as a tileset, rather than directly to a style, allows you to
 	    <meta charset='utf-8' />
 	    <title>Swipe between maps</title>
 	    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-	    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js'></script>
-	    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css' rel='stylesheet' />
+	    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.11.0/mapbox-gl.js'></script>
+	    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.11.0/mapbox-gl.css' rel='stylesheet' />
 		
 	    <!-- JS and CSS for the swipe plugin -->
 	    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js'></script>
