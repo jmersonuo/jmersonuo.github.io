@@ -36,7 +36,7 @@ Download the data below.
 <img src="Images/04-DownloadData.jpg">
 </p>
 
- 3. Explore the data by uploading it to [geojson.io ](geojson.io ){:target="_blank"} to look at the json code and the polygons on a map.
+ 3. Explore the data by uploading it to [geojson.io ](https://geojson.io ){:target="_blank"} to look at the json code and the polygons on a map.
 
 ----------
 
