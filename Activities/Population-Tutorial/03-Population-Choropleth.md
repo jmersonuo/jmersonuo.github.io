@@ -76,7 +76,8 @@ Uploading your data as a tileset, rather than directly to a style, allows you to
 	    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js'></script>
 	    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css' type='text/css' />
 	     <style>
-		 body { margin:0; padding:0;overflow: hidden;}
+		/* body { margin:0; padding:0;overflow: hidden;} */
+		body { margin:0; padding:0;} */
 		 body * {
 			-webkit-touch-callout: none;
 			  -webkit-user-select: none;
