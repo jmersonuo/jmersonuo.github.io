@@ -62,7 +62,7 @@ Uploading your data as a tileset, rather than directly to a style, allows you to
 1. To begin, use this sample code created by the documentation team at Mapbox to set up a site with two map divs.
    To keep organized, create a new folder for this assignment on your class folder on the R drive. Open your text editor (Brackets or Visual Studio) and create a new file blank file using File > New and save it with the name index.html in your folder for this assignment. Then copy the code below into your new blank file.
 
-	```html
+```html
 	<!DOCTYPE html>
 	<html>
 	<head>
@@ -107,7 +107,7 @@ Uploading your data as a tileset, rather than directly to a style, allows you to
 
 		</body>
 	</html>
-	```
+```
 
 3. Notice that in the `<head>` there are script and link tags referencing mapbox-gl-compare JS and  CSS. These are for the Mapbox GL JS [swipe map plugin](https://github.com/mapbox/mapbox-gl-compare).
 
