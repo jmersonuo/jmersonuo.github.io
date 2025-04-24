@@ -161,7 +161,8 @@ Now that we’ve initialized the webmap, let’s set the appropriate extent. Cur
 
 ### V. Add a second map variable 
 
-Below your `ownerMap` variable, initialize your renter map by creating a new variable `renterMap`. This second map will display information about the percentage of renters in Portland. 
+You will now add a second map that will display information about the percentage of renters in Portland. 
+Below your `ownerMap` variable, initialize your renter map by creating a new variable `renterMap`. Be sure to set the center.
 
 ```javascript
 var renterMap = new mapboxgl.Map({
