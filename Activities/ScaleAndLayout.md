@@ -390,6 +390,10 @@ That is all for today! See the assignment instructions for what to turn in.
 
 ### VII. Extra challenge
 
+A. Change the locations
+Change the locations in the geojon to other points by setting different coordinates. Can you use points in Portland instead? To reuse the code we have, please keep the icon types to: music, theatre, bicycle, or bar.
+
+B. Embed your map in a boostrap layout instead
 1. If you are interested in trying a Bootstrap template, check out the templates at [https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp](https://www.w3schools.com/bootstrap/bootstrap_theme_me.asp)  
 
 2. Go through the following sections of the bootstrap 4 tutorial. [https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp](https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp)
