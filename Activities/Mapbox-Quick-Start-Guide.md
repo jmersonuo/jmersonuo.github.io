@@ -16,13 +16,13 @@ First, let's add references to the Mapbox JavaScript and CSS, which will allow u
 1. In the `head` section, indicate the path to the Mapbox JavaScript file:
 
 	```html
-	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+	<script src="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.js"></script>
 	```
 
 2. Indicate the path to Mapbox CSS file __after__ Mapbox’s JavaScript:
 
     ```html
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.css" rel="stylesheet">
     ```
 
 3. Put a div element with a certain id where you want your map to be:
@@ -41,7 +41,7 @@ First, let's add references to the Mapbox JavaScript and CSS, which will allow u
 	```
 
 
-	<a title="Felix.leg [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Css_box_model.svg"><img width="512" alt="Css box model" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Css_box_model.svg/512px-Css_box_model.svg.png"></a>
+	<a title="Felix.leg, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Css_box_model.svg"><img width="330" alt="Css box model" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Css_box_model.svg/330px-Css_box_model.svg.png"></a>
 	
 	You can read about each specific CSS property at the W3Schools CSS reference: [margin](https://www.w3schools.com/cssref/pr_margin.asp){:target="_blank"}, [padding](https://www.w3schools.com/cssref/pr_padding.asp){:target="_blank"}, [position](https://www.w3schools.com/cssref/pr_position.asp){:target="_blank"}
 
@@ -84,7 +84,7 @@ Tip: all the following code should be between `script` tags.
 	```javascript
 	var map = new mapboxgl.Map({
 	    container: 'map', // id of a div on your page, where the map will be inserted
-	    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+	    style: 'mapbox://styles/mapbox/streets-v12', // stylesheet location
 	    center: [lng, lat], // starting position [lng, lat] eg. [-122.6788, 45.5212]
 	    zoom: 11 // starting zoom 
 	});
