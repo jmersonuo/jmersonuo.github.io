@@ -4,9 +4,9 @@ You should have already signed up for a mapbox account. If you have not, do so [
 
 This step-by-step guide will quickly get you started on Mapbox basics, including setting up a Mapbox map, working with markers and popups and setting up events!
 
-Begin by copying the files for Assignment 1 from the R Drive "Class_Data" folder to your personal workspace on the "R" drive or to your personal computer. Open and edit the QuickStartMap.html using a text editor, such as Brackets. 
+Begin by copying the files for Assignment 1 from the R Drive "Class_Data" folder to your personal workspace on the "R" drive or to your personal computer. Open and edit the QuickStartMap.html using a text editor, such as Visual Studio Code or Brackets. 
 
-If you aren't sure how to access the course R Drive, use the instructions on Canvas and get help from the class GE.
+If you aren't sure how to access the course R Drive, use the instructions on Canvas and get help from the class TA.
 
 ### I. Preparing your page
 
@@ -172,10 +172,10 @@ Popups are usually used when you want to attach some information to a particular
 	```javascript
 	var marker = new mapboxgl.Marker()
 	    .setLngLat([-122.6788, 45.5212])
-	    .setPopup(popup) //add the popup with the variable name 'popup' to the marker 
+	    .setPopup(popup) //add the popup with the variable name 'popup' to this marker 
 	    .addTo(map); // add the open marker to the map
 	```
-3. Once, you've added the `.setPopup` function to your marker, refresh your map and click on the marker!
+3. Once, you've added the `.setPopup` function to your marker, save to refresh your map, and click on the marker. The popup should open when you click on the marker.
 
 
 4. You can also use popups as layers (when you need something more than attaching a popup to an object). Add this code block after your marker:
@@ -187,14 +187,13 @@ Popups are usually used when you want to attach some information to a particular
 	    .addTo(map); //add this popup to the map!
 	```
 
-5. Try changing the `closeOnClick` argument to 'true' and refresh your map. What happens when you click anywhere in the map?
+5. Try changing the `closeOnClick` argument to 'true' and refresh your map. Q: What happens when you click anywhere in the map? A: Now it closes when you click anywhere, not just on the close (x) button.
 
 	```javascript
 	var popup_layer = new mapboxgl.Popup({closeOnClick: true}) 
 	```
 
-6. Take a look at the API [popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup){:target="_blank"} documentation to learn more about the parameters associated with Mapbox popups. Try adjusting one or more parameters - for instance, try changing the anchor position. 
-
+6. Take a look at the API [popup](https://docs.mapbox.com/mapbox-gl-js/api/#popup){:target="_blank"} documentation to learn more about the parameters associated with Mapbox popups. Try adjusting one or more parameters - for instance, try changing the anchor position. You can add more parameters between the first set of braces, which initializes this popup.
 
 	```javascript
 	var popup_layer = new mapboxgl.Popup({
@@ -205,7 +204,7 @@ Popups are usually used when you want to attach some information to a particular
 		.addTo(map);
 	```
 
-7. Notice that you can put any HTML tags, as a single string element, within the `setHTML` functions. For example, you could add an [image](https://www.w3schools.com/html/html_images.asp){:target="_blank"} or a [hyperlink](https://www.w3schools.com/html/html_links.asp){:target="_blank"}.
+7. Now let's focus on the text in the popup. Notice that you can put any HTML tags, as a single string element, within the `setHTML` functions. For example, you could add an [image](https://www.w3schools.com/html/html_images.asp){:target="_blank"} or a [hyperlink](https://www.w3schools.com/html/html_links.asp){:target="_blank"}.
 Keep in mind, that since you need to add a single string element, you'll have to carefully nest any quotation marks. That means you have to close the double-quotes before the single-quotes, as shown in the example below.
 
 	```javascript
@@ -219,18 +218,18 @@ Keep in mind, that since you need to add a single string element, you'll have to
 
 ### V. Adding a title banner
 
-Having a map is great, but let's add a banner with a title and byline. To do this, we can add more objects to the page by adding another `div` to the `body`.
+Having a full page, immersive map is great, but to add some context, let's add a banner with a title and byline. To do this, we can add more objects to the page by adding another `div` to the `body`.
 
-1. Insert the following div into below the map div. Notice that is has the id "title", and the font size of the text is set by using header tags `h1` and `h2`
+1. Below the map div, insert the following codeblock. This adds another div. Notice that is has the id "banner", and the font size of the text is set by using header tags `h1` and `h2`
 	```html
-		<div id='title'>
+		<div id='banner'>
         		<h1>My Map of Portland</h1>
         		<h2>By: Your Name</h2>
     	</div>
 	```
-2. Save your document. Unfortunately, the div is under your map. Let's add CSS to make changes to the dive with the `id=title`, by adding a css selector `#title`. The code below will move it to the front (a really high z-index value), give the selected div a background color, opacity, and center the text.  Note that because this selector has quite a few properties, I am putting them each on a new line. This is a readability choice, whitespace in CSS is ignored, for the most part.
+2. Save your document. Unfortunately, the div is under your map. Let's add CSS to make changes to the div with the `id=banner`, by adding a css selector `#banner`. The code below will move it to the front (a really high z-index value), give the selected div a background color, opacity, and center the text.  Note that because this selector has a few properties, I am putting them each on a new line. This is a readability choice, whitespace in CSS is ignored, for the most part.
 	```css
-		#title { z-index: 9999; 
+		#banner { z-index: 9999; 
 			background-color:white; 
 			opacity: 80%; 
 			text-align: center 
@@ -240,7 +239,6 @@ Having a map is great, but let's add a banner with a title and byline. To do thi
 <p align = "center">
 	<img src="Images/01-banner.JPG">
 </p>
-
 
 
 ### Congratulations! You've completed the tutorial activity! 
@@ -254,10 +252,11 @@ Having a map is great, but let's add a banner with a title and byline. To do thi
 
 Following the tutorial, you now have a full-page map. Now use what you have learned to make the following customizations:
 
+Come up with a 
 1.  Include at least 1 pin marker with a custom color (use a different color than the default blue or the tutorial's red).
-2.  Add a pop-up that has a link (use a different link than the tutorial).
+2.  Add a pop-up to you marker with a link (use a different link than the tutorial).
 3.  Change the basemap style to something other than streets-v11. Use any [default style](https://docs.mapbox.com/api/maps/styles/){:target="_blank"} or [gallery style](https://www.mapbox.com/gallery/){:target="_blank"}  
-4.  Edit the title and byline text and add change at least 1 CSS property of the title/byline (e.g. color or alignment)
+4.  Edit the banner title and byline text and add change at least 1 CSS property of the title/byline (e.g. color or alignment)
 5.  Upload your map to GitHUB following the steps shown to you in the lecture, and submit your URL e.g. `github.io/[your user name]/WebMapping/QuickStartMap.html`
 
 
