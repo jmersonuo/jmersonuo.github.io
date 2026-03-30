@@ -216,7 +216,24 @@ Keep in mind, that since you need to add a single string element, you'll have to
 		.addTo(map);
 	```
 
-### V. Adding a title banner
+### V. Adding zoom controls
+We can adjust the zoom level of the map using the mouse scroll wheel or  double click, but it is also useful to add buttons to the map to make zooming in and out more accessible.
+
+1. Below the map initialization, insert the following code block  Note that by default, Mapbox will place the navigation control in the top-right of the map, but we would like to customize this to appear in the bottom-left. We will also set the showCompass property to false so that we only see the +/- buttons.
+	```javascript
+	map.addControl(new mapboxgl.NavigationControl());
+	```
+
+2. Note that by default, the navigation control includes the compass button, and is placed in the top-right of the map.  We would like to customize this to appear in the bottom-left. We will also set the showCompass property to false so that we only see the +/- buttons. **Change** your control to include the following properties.
+	```javascript
+	map.addControl(new mapboxgl.NavigationControl({
+		showCompass: false
+	}), 'bottom-left');
+	```
+
+
+
+### VI. Adding a title banner
 
 Having a full page, immersive map is great, but to add some context, let's add a banner with a title and byline. To do this, we can add more objects to the page by adding another `div` to the `body`.
 
