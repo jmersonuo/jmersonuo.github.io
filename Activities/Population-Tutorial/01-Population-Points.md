@@ -33,7 +33,7 @@ For this first exercise, we will be creating a dot density map that displays the
   The data are provided as [MBTiles](https://docs.mapbox.com/help/glossary/mbtiles){:target="_blank"}, but you in genreal you could also upload shapefiles or JSON files to stlye in Mapbox Studio.
 
 
-1. Download the following:
+1. Download the following 2 tilesets:
   - Portland **renters** by block group 2017: [Download](Data/Renters.mbtiles) 
   - Portland **homeowners** by block group 2017: [Download](Data/Owners.mbtiles)  
     Source: [US Census](https://data.census.gov){:target="_blank"}, then processed in QGIS to produce randomized points per tract. 
@@ -52,11 +52,13 @@ To add the data to a style in Mapbox Studio, you need to upload it to your accou
     </p>
 
 2. Click **Data manager** then you should be on the **Tilesets** page
-3. Upload your **owner** data to Mapbox, by clicking blue **New tileset**
+3. Upload your **owner** data to Mapbox, by clicking the blue button **New tileset**
 4. Drag and drop the Owners.mbtiles file into the site or click "Select a file" and browse to it  
-  *Note 1*: you are limited to 20 uploads / month via this drag and drop method. If you need to upload more than that, you can do so via methods that we won't be covering in class.
-  *Note 2*: these are pretty big files, so depending on your internet connection this may take a min or two.
-6. Upload your **renter** data to Mapbox, by clicking "New tileset"
+
+   *Note 1*: you are limited to 20 uploads / month via this drag and drop method. If you need to upload more than that, you can do so via methods that we won't be covering in class.
+   
+   *Note 2*: these are pretty big files, so depending on your internet connection this may take a min or two.
+6. Upload your **renter** data to Mapbox, by again clicking the blue button **New tileset**
 7. Drag and drop the Renters.mbtiles file into the site or click "Select a file" and browse to it
 
 ----------
@@ -67,20 +69,15 @@ After you've uploaded your data, it's time to create a new "style" so you can pu
 
 Close any popups and notifications about tours and new features. You can view those later if you'd like. *You can always refer to the* [*Mapbox Studio Manual*](https://www.mapbox.com/studio-manual/reference/styles/) *for more information on working with styles.*
 
-1. Go to your **Style Editor** page (menu button on the left). Then click the down arrow beside the blue **New style** button.
-2. Choose **Classic template**
-    <p align="center">
-      <img src="Images/classicTemplate.JPG">
+1. Go to your **Style Editor** page (menu button on the left).
+   <p align="center">
+      <img src="Images/createAStyle.png">
     </p>
-    
-4. Notice: the different styles contain different color schemes and different basemap data. Select the **Monochrome** template style and choose the variation called **Dark**.
-5. Click "Customize Monochrome"
+3. Then click the down arrow beside the blue **New style** button.
+4. The different styles contain different color presents. Select Basemap: **Standard**, Color theme: **Monochrome**, and Light process **Night**.
+5. Click "Monochrome"
 
-    <p align="center">
-      <img src="Images/Dark_style.png">
-    </p>
-
-6. Rename the style so that you can find and use it later: click into the title field in the upper left side of the screen to change the title from "Monochrome" to ‘Renters vs Owners’.
+6. Rename the style so that you can find and use it later: click into the title field in the upper left side of the screen to change the title from "Untitled" to ‘Renters vs Owners’.
 
     <p align="center">
       <img src="Images/Name_Change-Generic.gif">
