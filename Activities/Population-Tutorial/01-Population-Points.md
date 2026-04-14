@@ -20,10 +20,10 @@ For this first exercise, we will be creating a dot density map that displays the
 
 
   Here are some additional resources you can explore:
-  - [How map styles work](https://www.mapbox.com/help/how-map-design-works/#how-map-styles-work){:target="_blank"} 
-  - [How web apps work](https://www.mapbox.com/help/how-web-apps-work/){:target="_blank"}
+  - [Map design and styles](https://docs.mapbox.com/help/dive-deeper/map-design/){:target="_blank"} 
+  - [Web applications](https://docs.mapbox.com/help/dive-deeper/web-apps/){:target="_blank"}
   - [Style editor](https://www.mapbox.com/studio-manual/reference/styles/#style-editor){:target="_blank"} in your style
-  - [Uploading data](https://www.mapbox.com/help/uploads/){:target="_blank"}
+  - [Uploading data](https://docs.mapbox.com/help/troubleshooting/uploads/){:target="_blank"}
   - [More powerful styling in Studio](https://blog.mapbox.com/studio-expressions-design-81012e2dab55){:target="_blank"} (e.g. based on zoom level, based on field in the data etc.)
 
 ----------
@@ -36,7 +36,7 @@ For this first exercise, we will be creating a dot density map that displays the
 1. Download the following:
   - Portland **renters** by block group 2017: [Download](Data/Renters.mbtiles) 
   - Portland **homeowners** by block group 2017: [Download](Data/Owners.mbtiles)  
-  [Original data source: US Census](https://data.census.gov){:target="_blank"}, preprocessed in QGIS to produce randomized points. 
+    Source: [US Census](https://data.census.gov){:target="_blank"}, then processed in QGIS to produce randomized points per tract. 
  
  2. Note where it saved (e.g. your downloads folder)
 
