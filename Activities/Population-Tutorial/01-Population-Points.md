@@ -71,12 +71,14 @@ Close any popups and notifications about tours and new features. You can view th
 
 1. Go to your **Style Editor** page (menu button on the left).
    <p align="center">
-      <img src="Images/createAStyle.png">
+      <img src="Images/StyleEditor.png">
     </p>
 3. Then click the down arrow beside the blue **New style** button.
 4. The different styles contain different color presents. Select Basemap: **Standard**, Color theme: **Monochrome**, and Light process **Night**.
 5. Click "Monochrome"
-
+   <p align="center">
+      <img src="Images/createAStyle.png">
+    </p>
 6. Rename the style so that you can find and use it later: click into the title field in the upper left side of the screen to change the title from "Untitled" to ‘Renters vs Owners’.
 
     <p align="center">
