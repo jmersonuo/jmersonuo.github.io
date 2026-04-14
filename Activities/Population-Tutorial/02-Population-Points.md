@@ -34,7 +34,7 @@ To begin, we will be using a sample code to initialize a simple web map.
 
     Note that it contains the standard sections:  
         - `html` containing everything else  
-        - `head` containing a title (text in the browser tab), links to the Mapbox JS and CSS libraries, and a *new* library we have not used yet called [Boostrap](https://www.w3schools.com/whatis/whatis_bootstrap.asp){:target="_blank"}. Bootstrap is a CSS Framework for developing responsive websites and we'll explore it when we get into layout.  
+        - `head` containing a title (text in the browser tab), links to the Mapbox JS and CSS libraries, and a *new* library we have not used yet called [Bootstrap](https://www.w3schools.com/whatis/whatis_bootstrap.asp){:target="_blank"}. Bootstrap is a CSS Framework for developing responsive websites and we'll explore it when we get into layout.  
         - `style` tags for CSS within the `head`  
         - `body` which contains a `div` for the map, and a `script` section.  
 
