@@ -76,7 +76,7 @@ Close any popups and notifications about tours and new features. You can view th
       <img src="Images/StyleEditor.png">
     </p>
 3. Then click the blue **New style** button.
-4. You can choose from different styles which contain different color presets. For this "dark mode" map, select Basemap: **Standard**, Color theme: **Monochrome**, and Light process: **Night**.
+4. You can choose from different styles which contain different color presets. For this "dark mode" map, select Basemap: **Standard**, Color theme: **Monochrome**, and Light presets: **Night**.
 5. Click "Monochrome"
    <p align="center">
       <img src="Images/createAStyle.png">
@@ -184,31 +184,22 @@ Now, scroll in and out on the map. Notice the size of the **renters** layer circ
 
 We want to apply the same styling rules that we just assigned to our **renters** layer to our **owners** layer. Entering the stops manually was tedious. Instead we just added to our **renters** layer, we can simply copy the rules that we created into our **owners** layer. It is stored as "JSON" code.
 
-1. Click the Style link in the **renters** layer. Next, click on **radius** and find the JSON editor symbol ***</>***. Select the JSON editor and copy the code OR copy the code written below. 
+1. Click the Style link in the **renters** layer. Next, click on **radius** and find the JSON editor symbol `</>`. Select the JSON editor and copy the code OR copy the code written below. 
 
     ```javascript
     [
       "interpolate",
       ["exponential", 1],
       ["zoom"],
-      12,
-      1.5,
-      15,
-      1.58,
-      16,
-      2.5,
-      17,
-      3.95,
-      18,
-      6.25,
-      19,
-      9.88,
-      20,
-      15.63,
-      21,
-      24.71,
-      22,
-      39.06
+      12, 1.5,
+      15, 1.58,
+      16, 2.5,  
+      17, 3.95,  
+      18, 6.25,  
+      19, 9.88,  
+      20, 15.63, 
+      21, 24.71,
+      22, 39.06
     ]
     ```
 
