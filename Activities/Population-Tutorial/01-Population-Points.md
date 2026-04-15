@@ -18,6 +18,8 @@ For this first exercise, we will be creating a dot density map that displays the
   - Set dynamic styling rules (e.g. based on zoom level, based on field in the data etc.)
   - Manage and edit layers in your style
 
+**Important note - Spring 2026:** in many of the screenshots below, you may have fewer layers visible. Mapbox recently hid more of the basemap layer styling away from us. That's okay. We are going to focus on the data-driven symbology of the two thematic layers and will get more into basemap symbology later in the term.
+
 
   Here are some additional resources you can explore:
   - [Map design and styles](https://docs.mapbox.com/help/dive-deeper/map-design/){:target="_blank"} 
@@ -100,28 +102,29 @@ Close any popups and notifications about tours and new features. You can view th
 4. The editor is now showing your map in “x-ray mode.” X-ray mode shows all the data in the sources added to the style, regardless of whether there is a layer to style it.
 
     Your new layer will be highlighted on the x-ray map. If you don't see tiny green dots like the image below, you may need to change the "Type" to "Circle".
+    Note: your dots may apear larger, and you may have fewer layers in your layer-list. That's okay.
 
     <p align="center">
       <img src="Images/zray.png">
     </p>
 
-5. Now repeat 2-4 to add the owner data: Use the Add layer button blue **+**, click custom layer. In the *New layer* panel, use "Source" ">" to look in the list of sources for your **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
+6. Now repeat 2-4 to add the owner data: Use the Add layer button blue **+**, click custom layer. In the *New layer* panel, use "Source" ">" to look in the list of sources for your **owner** source. Click the tileset and then select the source layer as the source for this new style layer.
 
 
-6. Click the **Style** tab and the map will switch back to style mode displaying your new layers. You will see the population point data on the map with a default style (black with 100% opacity, so it might be hard to see on the dark background).
+7. Click the **Style** tab and the map will switch back to style mode displaying your new layers. You will see the population point data on the map with a default style (black with 100% opacity, so it might be hard to see on the dark background).
 
     <p align="center">
       <img src="Images/Style-Layers.png">
     </p>
 
 
-7. Rename the layers "Owners" and "Renters" by clicking on the name of each layer at the top of the panel.
+8. Rename the layers "Owners" and "Renters" by clicking on the name of each layer at the top of the panel.
     <p align="center">
       <img src="Images/rename.png">
     </p>
 
    
-STOP: Okay... let's review. At this point you should have added both the renter-occupued and owner-occupied tilesets to your "Owners vs Renters" styles and both should have the "type" circle and should be renamed.
+STOP: Okay... let's review. At this point you should have added both the renter-occupued and owner-occupied tilesets to your "Owners vs Renters" style and both should have the "type" circle and should be renamed.
 
 ----------
 
