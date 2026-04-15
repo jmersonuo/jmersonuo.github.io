@@ -133,13 +133,14 @@ STOP: Okay... let's review. At this point you should have added both the renter-
 Each layer in Studio can be styled individually by clicking on the name of the layer in the Layer list. There are several layer types to choose from. Each layer type has a unique set of layer properties that can be specified. There are a few options for specifying property values. You can pick values individually, based on a data attribute, based on the zoom level, or the value of another property. For more information on layer types and their styling rules check out this [reference guide](https://docs.mapbox.com/studio-manual/reference/styles/).
 
 1. Here in the Mapbox Studio style editor, you can assign a color to each of your layers. Click the Style tab in the **renters** layer. 
-2. Click **color** and change the hex color value (after the '#') to #cc00c2 (bright pink).
+2. Click **Color** and change the color mode to **HEX**, then set the hex color value (after the '#') to #cc00c2 (bright pink).
+3. Change the **Emmisive strength** to 1
 
     <p align="center">
       <img src="Images/Color-picker.PNG">
     </p>
 
- 3. Next, click the Style link in the **owners** layer and change the hex color value (after the '#') to a  #00d2e6 (bright blue). 
+ 4. Next, click the Style link in the **owners** layer and change the hex color value (after the '#') to a  #00d2e6 (bright blue), and the **Emmisive strength** to 1. 
 
 ----------
 
@@ -170,19 +171,20 @@ In the Mapbox Studio style editor, you can assign a radius size value to each la
     | 22         | 39.06   |
 
 
-As you start adding stops, you will see the map change on the right to reflect the new stops. In this case, you will notice the size of the **renters** layer changing as you zoom in and out of the map. This is what the radius setting will look like when you are done:
+As you start adding stops, you will see the map change on the right to reflect the new stops. This is what the radius setting will look like when you are done:
 
 
   <p align="center">
     <img src="Images/Style-Zoom-Range.png">
   </p>
- 
+
+Now, scroll in and out on the map. Notice the size of the **renters** layer circle symbols change pixel size as you zoom in and out of the map. The current zoom level is shown in the bottom left of your window AND in the dynamic graph at the top of the circle radius Style panel. 
 
 ### VII. Style your owner data layer
 
-We want to apply the same styling rules that we just assigned to our **renters** layer to our **owners** layer. Instead of inputting all of the values that we just added to our **renters** layer, we can simply copy the rules that wecreated into our **owners** layer. It is stored as "JSON" code.
+We want to apply the same styling rules that we just assigned to our **renters** layer to our **owners** layer. Entering the stops manually was tedious. Instead we just added to our **renters** layer, we can simply copy the rules that we created into our **owners** layer. It is stored as "JSON" code.
 
-1. Click the Style link in the **renters** layer. Next, click on **radius** and find the JSON editor symbol ```</>```. Select the JSON editor and copy the code OR copy the code written below. 
+1. Click the Style link in the **renters** layer. Next, click on **radius** and find the JSON editor symbol ***</>***. Select the JSON editor and copy the code OR copy the code written below. 
 
     ```javascript
     [
@@ -222,11 +224,17 @@ We want to apply the same styling rules that we just assigned to our **renters**
 
 ### VII. Reorder your layers
 
-One of the most powerful things about the Mapbox Studio style editor is that you can reorder any of the elements of the map. For example, we can move the basemap lables over our new data layers. Notice in the image below that we moved the settlement-labels to the top of the layer list. This puts the labels from the basemap on top of the data that you've added to the standard map layers.
+One of the most powerful things about the Mapbox Studio style editor is that you can reorder any of the elements of the map. Mapox uses three "slots" to help with layer organization.
+ 
+ 1. not specified: If there is no identifier, the new layer will be placed above all existing layers in the style
+ 2. top: Above POI labels and behind Place and Transit labels. Note that the top slot is designed to be used with the symbol layers
+ 3. middle: Above lines (roads, etc.) and behind 3D buildings
+ 4. bottom: Above polygons (land, landuse, water, etc.)
 
-To move the data layers below the labels:
-  1. click and drag the **renters** layer to below the **Place labels, place-labels** group
-  2. click and drag the **owners** layer to below the **Place labels, place-labels** group
+
+To move the data layers below labels:
+  1. click and drag the **renters** layer into the middle slot
+  2. click and drag the **owners** layer into the middle slot
 
 
   <p align="center">
