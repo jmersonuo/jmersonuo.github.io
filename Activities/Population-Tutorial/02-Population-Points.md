@@ -1,13 +1,13 @@
 <img src="Images/logo.png" width="150px">
 
 <h2 align="center"> Mapping renters vs owners in Portland </h2>
-<h3 align="center"> Part II: Adding interactivity to web maps through GL-JS </h3>
+<h3 align="center"> Part II: Adding interactivity to web maps through GL JS </h3>
 
 
 ### In this tutorial you will:
 
-- Learn about GL-JS and adding interactivity
-- Add map elements using mapbox  GL-JS
+- Learn about GL JS and adding interactivity
+- Add map elements using mapbox GL JS
 - Style page elements using CSS
 - Add interactivity using JavaScript
 
@@ -28,13 +28,13 @@ A few additional resources for Mapbox GL JS:
 ### I. Setting up your HTML page
 
 
-To begin, we will be using a sample code to initialize a simple web map. 
+To begin, we will use sample code to initialize a simple web map. 
 1. Create a new folder for this assignment on your *R-drive*. 
-2. Open your text editor (Brackets or Visual Studio) and create a new file blank file using `File > New` and save it with the name `index.html` in your new folder. Then copy the code below into your new blank file.
+2. Open your text editor (Brackets or Visual Studio) and create a new blank file using `File > New` and save it with the name `index.html` in your new folder. Then copy the code below into your new blank file.
 
     Note that it contains the standard sections:  
         - `html` containing everything else  
-        - `head` containing a title (text in the browser tab), links to the Mapbox JS and CSS libraries, and a *new* library we have not used yet called [Bootstrap](https://www.w3schools.com/whatis/whatis_bootstrap.asp){:target="_blank"}. Bootstrap is a CSS Framework for developing responsive websites and we'll explore it when we get into layout.  
+        - `head` containing a title (text in the browser tab), links to the Mapbox JS and CSS libraries, and a *new* library we have not used yet called [Bootstrap](https://www.w3schools.com/whatis/whatis_bootstrap.asp){:target="_blank"}. Bootstrap is a CSS framework for developing responsive websites, and we’ll explore it more when we get into layout.  
         - `style` tags for CSS within the `head`  
         - `body` which contains a `div` for the map, and a `script` section.  
 
@@ -69,7 +69,7 @@ To begin, we will be using a sample code to initialize a simple web map.
     ```
 
 
-3. Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/define-access-token/) in the section that says "ACCESS TOKEN GOES HERE". Remember, you can get your access token from your Mapbox [‘Account’ page](https://account.mapbox.com/)).
+3. Edit the code to add your Mapbox [access token](https://www.mapbox.com/help/define-access-token/) in the section that says "ACCESS TOKEN GOES HERE". Remember, you can get your access token from your Mapbox [‘Account’ page](https://account.mapbox.com/).
 
 ----------
 
@@ -101,9 +101,9 @@ Let’s try modifying the code to add a new **element** to the map. Currently, y
 
 1. Look at this Mapbox example: [https://www.mapbox.com/mapbox-gl-js/example/navigation/](https://www.mapbox.com/mapbox-gl-js/example/navigation/){:target="_blank"}
 
-    What part of the example is missing from your current code? The **NavigationControl**! 
+    What part of the example is missing from your current code? The **NavigationControl** component! 
     
-2. Add the navigation control function into your code below your map variable. This goes before the closing `</script>` tag. Pay attention to the whitespace as you add new code. Keep the whitespace and alignment neat!
+2. Add the navigation control function into your code below your map variable. This goes before the closing `</script>` tag. Pay attention to indentation and whitespace as you add new code. Keep the whitespace and alignment neat!
 
     ```javascript
     // Add zoom and rotation controls to the map.
@@ -114,7 +114,7 @@ Let’s try modifying the code to add a new **element** to the map. Currently, y
     
     Preview it in the browser when you have finished. See the nav controls on the top right?
 
-3. Are you a skilled programmer? look in the API reference for [nagivgation control](https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol){:target="_blank"} to see how to move the control to the `top-left`.
+3. Are you a skilled programmer? Look in the API reference for [navigation control](https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol){:target="_blank"} to see how to move the control to the `top-left`.
 
     _Hint:_ The example in the documentation adds the control in two lines, whereas we had previously added it in one line. 
 
@@ -128,7 +128,7 @@ The following code adds the *styling rules* that will style the DOM elements tha
 1. This is CSS (cascading style sheets) code, so it goes in the `style` section. Copy and paste the following just after the opening ``<style>`` tag in the `<head>` of your code: 
 
     ```css
-      /*  stlye for paragraph tags */
+      /*  style for paragraph tags */
       p {
         color: white;
       }
@@ -206,7 +206,7 @@ The following code adds the *styling rules* that will style the DOM elements tha
 
     ```
 
-2. Next, we will need a container to display information about our map and data sources. Add a new DIV container to your DOM by adding this code below the _map_ DIV. It is `HTML` so, don't add in between the `script`tags. That's for JavaScript. 
+2. Next, we will need a container to display information about our map and data sources. Add a new DIV container to your DOM by adding this code below the _map_ DIV. It is `HTML` so, don't add it inbetween the `script` tags. That's for JavaScript. 
     
     ```html
       <div class="descriptionPanel" id="descriptionPanel" style="height: 250px;">
@@ -214,7 +214,7 @@ The following code adds the *styling rules* that will style the DOM elements tha
         <hr/>
         <h4>WHAT AM I LOOKING AT?</h4>
         <p style="margin-left: 10px; margin-right: 10px;">
-          This is a map showing every single person in the Portland Area as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block; however, within each block location is randomized. Points are colored based on the number of home owners versus renters on a block.
+          This is a map showing every single person in the Portland Area as a dot. Data is taken from the 2017 US Census, and is accurate at the level of a block; however, within each block location is randomized. Points are colored based on the number of homeowners versus renters on a block.
         </p>
       </div>
     ```
@@ -268,9 +268,9 @@ The following code adds the *styling rules* that will style the DOM elements tha
           }
     ```
 
-5. Take a look at your changes! Blank? Check your browser's console for errors. Click on the arrow on the top of the legend. Is it interactive? No, not yet.
+5. Take a look at your changes! Blank? Check your browser's console for errors. Click on the arrow at the top of the legend. Is it interactive? No, not yet.
 
-    **Recap:** To create the legend, we added several DOM Objects using DIVs and Spans using HTML. The "style" of these objects was set using CSS. The CSS was used to make the legend object float in front of the map. A legend could also be fixed outside the map frame above, below, or beside the map. The colors of the dots in the legend were hard-coded to match the colors we used in the map in the HTML above. If you change the colors in your style, you'll _also_ have to change them in the legend.
+    **Recap:** To create the legend, we added several DOM objects using `<div>` and `<span>` HTML elements. The "style" of these objects was set using CSS. The CSS was used to make the legend object float in front of the map. A legend could also be fixed outside the map frame above, below, or beside the map. The colors of the dots in the legend were hard-coded to match the colors we used in the map in the HTML above. If you change the colors in your style, you'll _also_ have to change them in the legend.
 
 
 6. Next, let's add interaction to our legend. For interaction, we need to add some *JavaScript*. The variable `state` and the function `panelSelect` will enable the user to show and hide the map description that we added in the last section. Copy and paste the code snippet into the end of the `script` section. Add a comment above to indicate what this is for (e.g. // legend interaction).
@@ -296,7 +296,7 @@ Take a look at your changes in a browser once again. Click on the arrow on the t
 Yes? Nice.  
 If not, time to debug (look for console errors)!
 
-It should look like this.
+It should look like this:
 <p align="center">
     <img src="../Population-Tutorial/Images/finalmap.png">
 </p>
@@ -306,11 +306,11 @@ It should look like this.
 ### V. Post your webpage
 
 1. Copy the html file to your GitHub webspace 
-2. Visit the full URL e.g. `github.io/[your user name]/WebMapping/Assignment3.html` to see it working live.  
+2. Visit the full URL e.g. `github.io/[your username]/WebMapping/Assignment3.html` to see it working live.  
 
 ***Voila! Now you have a live website with a Mapbox map!*** 
 
-If you don't follow how every line of code works, that's OK! At this point, it is important to understand that you added several chunks for code. Some for a div for map, a div for the map controls, a div and CSS for the legend, and some JavaScript for interactivity. You can customize your own version of this interactive map by adding your own data to a new Mapbox Style, add that style to this map, and make a few changes to the legend!
+If you don't follow how every line of code works, that's OK! At this point, it is important to understand that you added several chunks of code. Some for a `<div>` for the map, a `<div>` for the map controls, a `<div>` and CSS for the legend, and some JavaScript for interactivity. You can customize your own version of this interactive map by adding your own data to a new Mapbox Style, add that style to this map, and make a few changes to the legend!
 
 <p align="center">
     <img src="https://image.shutterstock.com/image-photo/cute-dog-celebrating-red-pary-260nw-1768302275.jpg">
@@ -322,6 +322,6 @@ If you don't follow how every line of code works, that's OK! At this point, it i
 
 ### VI. What to submit
 1. Change the colors of your points in the "style" and in the map *legend*. Note: your legend should match your map's custom colors.
-2. Be sure you added comments above each section of code, as instructed. Use the examples provided, or add something more verbose that would help future you, or another developer know what each section of code is for.
-3. Clean up your alignment. Subsections should be nested (tabbed over). At a minimum, you should be able to draw a line down your screen between the opening and closing `head`,`body`, and `script` tags without running into other lines of code.
+2. Be sure you added comments above each section of code, as instructed. Use the examples provided, or add something more verbose that would help future you, or another developer, know what each section of code is for.
+3. Clean up your alignment. Subsections should be nested (tabbed over). At a minimum, you should be able to draw a line down your screen between the opening and closing `head`, `body`, and `script` tags without running into other lines of code.
 4. Answer the questions in the submission instructions.
