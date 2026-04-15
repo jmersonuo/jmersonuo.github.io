@@ -182,7 +182,7 @@ Now, scroll in and out on the map. Notice the size of the **renters** layer circ
 
 ### VII. Style your owner data layer
 
-We want to apply the same styling rules that we just assigned to our **renters** layer to our **owners** layer. Entering the stops manually was tedious. Instead we just added to our **renters** layer, we can simply copy the rules that we created into our **owners** layer. It is stored as "JSON" code.
+We want to apply the same styling rules that we just assigned to our **renters** layer to our **owners** layer. Entering the stops manually was tedious. Instead we can simply copy the rules that we created from the **renters** layer into our **owners** layer, as it is stored as "JSON" code.
 
 1. Click the Style link in the **renters** layer. Next, click on **radius** and find the JSON editor symbol `</>`. Select the JSON editor and copy the code OR copy the code written below. 
 
