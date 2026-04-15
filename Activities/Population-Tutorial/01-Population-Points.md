@@ -7,9 +7,9 @@
 The US Census makes owner/renter information readily available for census block geometries, in this lab series we are going to view the owner/renter information in different ways: 
 
 1) Mapping the per-person level information as a dot density map, and 
-2) Viewing the relative incidence of owners to renters using a choropeth map. 
+2) Viewing the relative incidence of owners to renters using a choropleth map. 
 
-For this first exercise, we will be creating a dot density map that displays the each individual renter and owner in Portland by block group. 
+For this first exercise, we will be creating a dot density map that represents each individual renter and owner in Portland by block group. 
 
 ### In this tutorial you will:
 
@@ -32,7 +32,7 @@ For this first exercise, we will be creating a dot density map that displays the
 
 ### I. Data
 
-  The data are provided as [MBTiles](https://docs.mapbox.com/help/glossary/mbtiles){:target="_blank"}, but you in genreal you could also upload shapefiles or JSON files to stlye in Mapbox Studio.
+  The data are provided as [MBTiles](https://docs.mapbox.com/help/glossary/mbtiles){:target="_blank"}, but you in general could also upload shapefiles or JSON files to style in Mapbox Studio.
 
 
 1. Download the following 2 tilesets:
@@ -48,7 +48,7 @@ For this first exercise, we will be creating a dot density map that displays the
 
 To add the data to a style in Mapbox Studio, you need to upload it to your account. 
 1. Login to [mapbox studio](https://studio.mapbox.com/){:target="_blank"}
-    Notice the buttons on the left "Style Editor", "Data Manager", you'll be navigating throught each of these.
+    Notice the buttons on the left "Style Editor", "Data Manager", you'll be navigating through each of these.
     <p align="center">
       <img src="Images/tilesets.png">
     </p>
@@ -59,7 +59,7 @@ To add the data to a style in Mapbox Studio, you need to upload it to your accou
 
    *Note 1*: you are limited to 20 uploads / month via this drag and drop method. If you need to upload more than that, you can do so via methods that we won't be covering in class.
    
-   *Note 2*: these are pretty big files, so depending on your internet connection this may take a min or two.
+   *Note 2*: these are pretty big files, so depending on your internet connection this may take a minute or two.
 6. Upload your **renter** data to Mapbox, by again clicking the blue button **New tileset**
 7. Drag and drop the Renters.mbtiles file into the site or click "Select a file" and browse to it
 
@@ -76,7 +76,7 @@ Close any popups and notifications about tours and new features. You can view th
       <img src="Images/StyleEditor.png">
     </p>
 3. Then click the blue **New style** button.
-4. You can choose from different styles which contain different color presents. For this "dark mode" map, select Basemap: **Standard**, Color theme: **Monochrome**, and Light process **Night**.
+4. You can choose from different styles which contain different color presets. For this "dark mode" map, select Basemap: **Standard**, Color theme: **Monochrome**, and Light process: **Night**.
 5. Click "Monochrome"
    <p align="center">
       <img src="Images/createAStyle.png">
@@ -97,12 +97,12 @@ Close any popups and notifications about tours and new features. You can view th
       <img src="Images/New Layer.png">
     </p>
 
-3. A popup may tell you the data isn't visible in your current view. click **Go to data** to quicky pan to the data in Portland.  
+3. A popup may tell you the data isn't visible in your current view. click **Go to data** to quickly pan to the data in Portland.  
 
 4. The editor is now showing your map in “x-ray mode.” X-ray mode shows all the data in the sources added to the style, regardless of whether there is a layer to style it.
 
     Your new layer will be highlighted on the x-ray map. If you don't see tiny green dots like the image below, you may need to change the "Type" to "Circle".
-    Note: your dots may apear larger, and you may have fewer layers in your layer-list. That's okay.
+    Note: your dots may appear larger, and you may have fewer layers in your layer-list. That's okay.
 
     <p align="center">
       <img src="Images/zray.png">
@@ -124,7 +124,7 @@ Close any popups and notifications about tours and new features. You can view th
     </p>
 
    
-STOP: Okay... let's review. At this point you should have added both the renter-occupued and owner-occupied tilesets to your "Owners vs Renters" style and both should have the "type" circle and should be renamed.
+STOP: Okay... let's review. At this point you should have added both the renter‑occupied and owner‑occupied tilesets to your "Owners vs Renters" style and both should have the "type" circle and should be renamed.
 
 ----------
 
@@ -134,13 +134,13 @@ Each layer in Studio can be styled individually by clicking on the name of the l
 
 1. Here in the Mapbox Studio style editor, you can assign a color to each of your layers. Click the Style tab in the **renters** layer. 
 2. Click **Color** and change the color mode to **HEX**, then set the hex color value (after the '#') to #cc00c2 (bright pink).
-3. Change the **Emmisive strength** to 1
+3. Change the **Emissive strength** to 1
 
     <p align="center">
       <img src="Images/Color-picker.PNG">
     </p>
 
- 4. Next, click the Style link in the **owners** layer and change the hex color value (after the '#') to a  #00d2e6 (bright blue), and the **Emmisive strength** to 1. 
+ 4. Next, click the Style link in the **owners** layer and change the hex color value (after the '#') to a  #00d2e6 (bright blue), and the **Emissive strength** to 1. 
 
 ----------
 
@@ -154,7 +154,7 @@ In the Mapbox Studio style editor, you can assign a radius size value to each la
  
 3. Change zoom value of the first stop to 12, and change the radius size to **1.5px**.
 
-4. Assign the zoom level ofthe second stop to 15, and change the radius size to **1.58**.
+4. Assign the zoom level of the second stop to 15, and change the radius size to **1.58**.
 <p align="center">
       <img src="Images/zoom-levels.PNG">
     </p>
@@ -224,7 +224,7 @@ We want to apply the same styling rules that we just assigned to our **renters**
 
 ### VII. Reorder your layers
 
-One of the most powerful things about the Mapbox Studio style editor is that you can reorder any of the elements of the map. Mapox uses three "slots" to help with layer organization.
+One of the most powerful things about the Mapbox Studio style editor is that you can reorder any of the elements of the map. Mapbox uses three "slots" to help with layer organization.
  
  1. not specified: If there is no identifier, the new layer will be placed above all existing layers in the style
  2. top: Above POI labels and behind Place and Transit labels. Note that the top slot is designed to be used with the symbol layers
@@ -257,7 +257,7 @@ Now that you've got your map looking good, it's time to publish your "Style" so 
 
 Hooray! Your style is now published. If you go back to your Styles page, you will see your new style at the top of the list.
 
-You can use your ‘Share URL’ to open your style in a new browser tab and share it with collaborators for review, or you can use the **style URL** to embed it a map using JavaScript.
+You can use your ‘Share URL’ to open your style in a new browser tab and share it with collaborators for review, or you can use the **style URL** to embed it in a map using JavaScript.
 
 <p align='center'>
       <img src="Images/share.png">
@@ -267,7 +267,7 @@ You can use your ‘Share URL’ to open your style in a new browser tab and sha
 ----------
 
 ### X. Next steps
-Next complete [Part II](https://jmersonuo.github.io/Activities/Population-Tutorial/02-Population-Points) to setup a webmap, add interactive elements to the map, and publish it to the web with Mapbox GL JS. 
+Next, complete [Part II](https://jmersonuo.github.io/Activities/Population-Tutorial/02-Population-Points) to set up a webmap, add interactive elements to the map, and publish it to the web with Mapbox GL JS. 
 
 
 
