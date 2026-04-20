@@ -77,7 +77,7 @@ Close any popups and notifications about tours and new features. You can view th
     </p>
 3. Then click the blue **New style** button.
 4. You can choose from different styles which contain different color presets. For this "dark mode" map, select Basemap: **Standard**, Color theme: **Monochrome**, and Light presets: **Night**.
-5. Click "Monochrome"
+5. Click "Customize"
    <p align="center">
       <img src="Images/createAStyle.png">
     </p>

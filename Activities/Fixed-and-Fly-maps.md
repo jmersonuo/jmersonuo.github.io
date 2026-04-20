@@ -171,7 +171,7 @@ To add a second map to your page. You have to add a div to the structure of your
  </p>
 
 ### 6. Change the pointer
-Since the user can't If the user can't click and drag the map, we should change the cursor symbol so that it does not imply that the map can be panned. 
+Since the user can't click and drag the map, we should change the cursor symbol so that it does not imply that the map can be panned. 
 Look at the CSS reference for available cursors: https://www.w3schools.com/cssref/pr_class_cursor.asp Links to an external site. and click on "try it yourself" to see the different options available.
 
 ```javascript        
