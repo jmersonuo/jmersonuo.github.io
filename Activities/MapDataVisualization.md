@@ -27,15 +27,14 @@ To set up your style, follow these steps:
 
 **Create a new style in the style editor**
 
-1. Go to your [Styles]("https://console.mapbox.com/studio/") page.
-2. Click the dropdown next to the **New style** button.
+1. Go to your [Styles]("https://console.mapbox.com/studio/") page https://console.mapbox.com/studio/
+2. Click the **New style** button.
 3. Select the `Start from scratch` option.
 4. Click `Customize`.
 
 <p align="center">
     <img src= "Images\datavis_createstyle.png" alt="mapbox studio create style page">
 </p>
-
 
 The *Studio style* editor will open, and now you can start prepping your data in the next step.
 
@@ -63,11 +62,6 @@ You should now see a blue map with a mercator projection.
 To create a data visualization with the Data visualization component in Studio, you need some geospatial data in a Mapbox-hosted vector [tileset](https://docs.mapbox.com/studio-manual/reference/tilesets/#what-is-a-tileset). You could upload data as shapefiles, which would be converted into a tileset. For ease of use, and to focus on data-driven-styling, we will use Mapbox supplied, hosted tilesets below.
 
 **Optional:** If you want to preview these tilesets in the Mapbox Studio [Tileset explorer](https://docs.mapbox.com/studio-manual/reference/tilesets/#tileset-explorer), log into your Mapbox account and click on each dataset to view more information. 
-
-
-- To create a **Data-driven circles** visualization, you can use [global earthquake data for 2021](https://console.mapbox.com/studio/tilesets/mapbox.5sq1s796/#2.73/44.9/-136.77), which contains point features.
-
-- To create a **Symbols** visualization, you can use [point data of individual summits](https://console.mapbox.com/studio/tilesets/mapbox.0xjxguyu/#9.95/40.3011/-105.7093) in Rocky Mountain National Park in Colorado.
 
 <br>
 
@@ -164,12 +158,23 @@ Remember you'll have to:
 
 
 <br>
+<br>
 
-### **_C. Create a data-driven circles map_**
+
+#Assignment task:# Pick **ONE** from the following (Data driven circles or Symbols map)
+
+
+### **_III. Create a data-driven circles map_**
 
 In this section, we are going to create a data-driven circles visualization using data from the [USGS' Earthquake Hazards Program](https://earthquake.usgs.gov/fdsnws/event/1/). Your data-driven circles map will visualize all reported earthquakes in 2021, using different circle sizes and colors depending on the magnitude of each earthquake.
 
-### Step 1: Add the Data visualization Component
+### Step 1: Explore the data in the tileset editor
+- To create a **Data-driven circles** visualization, you can use the tileset [global earthquake data for 2021](https://console.mapbox.com/studio/tilesets/mapbox.5sq1s796/#2.73/44.9/-136.77), which contains point features.
+
+### Step 2: Create a new style
+Create a new style and name it accordingly.
+
+### Step 3: Add the Data visualization Component
 To add the _Data visualization_ component to your style:
 
 1. In the Components panel, click the plus icon (**+**) and select Data visualization.
@@ -182,7 +187,7 @@ The component will select and style a field from the `2021-earthquakes-1vushc` t
 
 By default, the component will select the field `dmin` to style **circle size** and a single color from the palette `Polar` for all circles.
 
-### Step 2: Style another data-driven property
+### Step 4: Style another data-driven property
 In this step, you will use the data in your tileset to control the style of an additional paint property in your style.
 
 By default, all features in data-driven circles are the same color. You will change your visualization to color each circle according to the magnitude of the earthquake it represents.
@@ -209,17 +214,43 @@ Below is an example of how your data-driven circles visualization should look:
     <img src= "Images\dataviz_circles.png" alt="map with circles showcasing earthquake locations near Alaska">
 </p>
 
-### Step 3: Publish your style
+### Step 5: Publish your style
 
 When you have finished editing your map style, publish your changes by clicking the **Publish** button in the upper right side of the screen. When you click the publish button, a window will display the difference between the previous and current version of this style. If you're happy with the changes, click **Publish**. Your style will now be available to share from a variety of tools and applications.
 
+
+### Step 6: Add your style to a map
+
+In assignment 1, you made your first map. Using the quickstart code, create a fullpage map using this Style.
+Remember you'll have to:
+1. Click *Share to get the Style URL for this map
+<p align="center">
+    <img src= "Images\04-sharestyle.png">
+</p>
+   
+2. In the quickstart HTML, add the Mapbox CSS and JS references to the header.
+3. Insert a map div
+4. Use JS to initialize the map
+5. Optionally add zoom controls
+6. You do NOT need to add markers or popups
 <br>
 
-### **_D. Create a symbols map_**
+### Step 7: Add your style to a map
+
+Upload your map to Github so it can be viewed live.
+
+### **_IV. Create a symbols map_**
 
 In this section we are going to create a Symbols visualization of mountain summits in Rocky Mountain National Park in Colorado, using unique symbols for each summit depending on which county it is in.
 
-### Step 1: Add the Data visualization Component
+
+### Step 1: Explore the data in the tileset editor
+- To create a **Symbols** visualization, you can use [point data of individual summits](https://console.mapbox.com/studio/tilesets/mapbox.0xjxguyu/#9.95/40.3011/-105.7093) in Rocky Mountain National Park in Colorado.
+
+### Step 2: Create a new style
+Create a new style and name it accordingly.
+
+### Step 3: Add the Data visualization Component
 You will use data from the freely available `mapbox.0xjxguyu` tileset, which contains point data for summits in this region.
 
 To add the _Data visualization component_ to your style:
@@ -233,7 +264,7 @@ To add the _Data visualization component_ to your style:
 7. Zoom out to `z10` to preview your visualization. To see your current zoom level, check the last three values in your browser URL (`/#{zoom}/{lng}/{lat}`) as you edit your style in Mapbox Studio.
 
 
-### Step 2: Customize your data-driven values
+### Step 4: Customize your data-driven values
 Now you will choose which field from your data set will control the style of your symbols.
 
 In this tutorial, you will use a unique symbol for each county:
@@ -269,6 +300,26 @@ Below is an example of how your data-driven symbols visualization should look:
 </p>
 
 <br>
+
+### Step 4: Add your style to a map
+
+In assignment 1, you made your first map. Using the quickstart code, create a fullpage map using this Style.
+Remember you'll have to:
+1. Click *Share to get the Style URL for this map
+<p align="center">
+    <img src= "Images\04-sharestyle.png">
+</p>
+   
+2. In the quickstart HTML, add the Mapbox CSS and JS references to the header.
+3. Insert a map div
+4. Use JS to initialize the map
+5. Optionally add zoom controls
+6. You do NOT need to add markers or popups
+<br>
+
+### Step 5: Add your style to a map
+
+Upload your map to Github so it can be viewed live.
 
 **Congratulations!** That is it for today's activity. Please proceed to the assignment on canvas for details on what to turn in.
 <br>
