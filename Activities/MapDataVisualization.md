@@ -1,25 +1,25 @@
 ## Creating map-based data visualizations
 
-This tutorial shows you how to create various map data visualizations using the Data visualization component in the Mapbox Studio style editor.  This has been adapted from a tutorial published by Mapbox: [https://docs.mapbox.com/help/tutorials/create-a-map-with-data-visualization-component/](https://docs.mapbox.com/help/tutorials/create-a-map-with-data-visualization-component/)
+This tutorial shows you how to create various map data visualizations using the Data visualization component in the Mapbox Studio style editor. This has been adapted from a tutorial published by Mapbox: [https://docs.mapbox.com/help/tutorials/create-a-map-with-data-visualization-component/](https://docs.mapbox.com/help/tutorials/create-a-map-with-data-visualization-component/)
 
 The **Data visualization component** is a style component that smart-styles a map layer based on the geospatial data in the layer's source. The component creates an initial data visualization, and you can then customize the appearance of the visualization by changing its component style properties.
 
-
 <p align="center">
-    <img src= "Images\dataviz_all.jpg" alt="six examples of mab based data visualization">
+    <img src= "Images\dataviz_all.jpg" alt="six examples of map based data visualization">
 </p>
 
-In this tutorial you will:
+For each map in this tutorial you will:
 
 - Create a new style
 - Choose some custom data to visualize
 - Select a visualization type
 - Use built-in component controls to adjust the appearance of your visualization
 - Publish your style
+- Create a full page map using skills acquired earlier in the course
 
 <br>
 
-### **_A. GETTING STARTED_**
+### **_I. GETTING STARTED_**
 
 ### Step 1: Create a new style
 
@@ -27,54 +27,57 @@ To set up your style, follow these steps:
 
 **Create a new style in the style editor**
 
-1. Go to your [Styles]("https://console.mapbox.com/studio/") page.
-2. Click the dropdown next to the **New style** button.
+1. Go to your [Styles]("https://console.mapbox.com/studio/") page https://console.mapbox.com/studio/
+2. Click the **New style** button.
 3. Select the `Start from scratch` option.
 4. Click `Customize`.
-
-**Add components to style your blank map**
-
-Once the style editor you'll see a blank map, which you will need to add components to get the map to render:
-
-5. Switch the map projection to use Mercator projection:
-    - Open the Global tab
-    - Click Projection
-    - Under the Projection Name dropdown, select Mercator
-6. Color the basemap:
-    - You will need to add the land and water to the style, as follows:
-    - Click Layers > Components > Land & water.
-    - Click any of the landuse layers and set the Base color to #2c2a92.
-You should now see a blue map with a mercator projection.
 
 <p align="center">
     <img src= "Images\datavis_createstyle.png" alt="mapbox studio create style page">
 </p>
 
-
 The *Studio style* editor will open, and now you can start prepping your data in the next step.
 
+**Add components to style your blank map**
 
-### Step 2: Prepare your data
+In the style editor you'll see a blank map, which you will need to add components to get the map to render:
 
-To create a data visualization with the Data visualization component in Studio, you need some geospatial data in a Mapbox-hosted vector [tileset](https://docs.mapbox.com/studio-manual/reference/tilesets/#what-is-a-tileset).
+5. Switch the map projection to use Mercator projection:
+    - Open the **Global** tab
+    - Click Projection
+    - Under the Projection Name dropdown, select Mercator
+6. Color the basemap:
+    - You will need to add the land and water to the style, as follows:
+    - Click **Layers** > Add Layer (+) > Components > Land & water.
+    - Click any of the landuse layers and set the Base color to #2c2a92.
+You should now see a blue map with a mercator projection.
 
-For this tutorial, you can use existing data in the freely available tilesets below.
 
-**Optional:** If you want to preview these tilesets in the Mapbox Studio [Tileset explorer](https://docs.mapbox.com/studio-manual/reference/tilesets/#tileset-explorer), log into your Mapbox account and click on each dataset to view more information: 
+<p align="center">
+    <img src= "Images\04_BlueMercator.png">
+</p>
 
-- To create a **Choropleth** visualization, you can use [data on annual temperature changes for U.S. counties](https://console.mapbox.com/studio/tilesets/mapbox.brt3djy1/#3.44/35.82/-100.67), which contains polygon features.
+### Step 2: Investigate and prepare your data
 
-- To create a **Data-driven circles** visualization, you can use [global earthquake data for 2021](https://console.mapbox.com/studio/tilesets/mapbox.5sq1s796/#2.73/44.9/-136.77), which contains point features.
+To create a data visualization with the Data visualization component in Studio, you need some geospatial data in a Mapbox-hosted vector [tileset](https://docs.mapbox.com/studio-manual/reference/tilesets/#what-is-a-tileset). You could upload data as shapefiles, which would be converted into a tileset. For ease of use, and to focus on data-driven-styling, we will use Mapbox supplied, hosted tilesets below.
 
-- To create a **Symbols** visualization, you can use [point data of individual summits](https://console.mapbox.com/studio/tilesets/mapbox.0xjxguyu/#9.95/40.3011/-105.7093) in Rocky Mountain National Park in Colorado.
+**Optional:** If you want to preview these tilesets in the Mapbox Studio [Tileset explorer](https://docs.mapbox.com/studio-manual/reference/tilesets/#tileset-explorer), log into your Mapbox account and click on each dataset to view more information. 
 
 <br>
 
-### **_B. Create a choropleth map_**
+### **_II. Create a choropleth map_**
 
-If you have created a new style and prepared your data, you can follow the steps in this section to create a choropleth map to visualize the change in average annual temperatures in the United States.
+To create a **Choropleth** visualization, we can use [data on annual temperature changes for U.S. counties](https://console.mapbox.com/studio/tilesets/mapbox.brt3djy1/#3.44/35.82/-100.67), which contains polygon features.
 
-You will use the county temperature change data from the [The Washington Post's "2ºC: Beyond the Limit" series](https://github.com/washingtonpost/data-2C-beyond-the-limit-usa) to set the colors of regional polygons:
+Open the link to view the data in the Tileset editor. 
+   - Notice on the left, there is a list of 14 fields (a.k.a. attributes) for this layer. Click on the map to see information about a given feature.
+   - Use the **Share** button on the right to find the Tileset ID which is used to add this data, as map tiles, to a Mapbox Style (via Mapbox Studio or using JS).
+
+<p align="center">
+    <img src= "Images\04_WaPoCounties.png">
+</p>
+
+This tileset includes county temperature change data from the [The Washington Post's "2ºC: Beyond the Limit" series](https://github.com/washingtonpost/data-2C-beyond-the-limit-usa).  to set the colors of regional polygons:
 
 - Yellow polygons <div style="background-color: #EDF51C; height: 1rem; width: 1rem; border-radius: 4px; display: inline-block; margin: .3rem; margin-bottom: 0;"></div>`#EDF51C` will represent counties with warmer temperatures.
 - Purple polygons <div style="background-color: #67009E; height: 1rem; width: 1rem; border-radius: 4px; display: inline-block; margin: .3rem; margin-bottom: 0"></div>`#67009E` will represent counties with cooler temperatures.
@@ -83,15 +86,26 @@ You will use the county temperature change data from the [The Washington Post's 
 ### Step 1: Add the Data visualization Component
 To add the _Data visualization component_ to your style, follow these steps:
 
-1. In the Components panel, click the plus icon + and select Data visualization.
-2. Select your data source by clicking the Source field, then click the Add source by ID tab.
-3. Copy the tileset ID: `mapbox.brt3djy1`, paste it into the search box, and click Find.
-4. Click Select data visualization type to continue.
-5. Click Select Choropleth to add the component to your style.
+1. Return to your "blue marble" style and rename it "County Temp Change" or another name that makes sense to you.
+2. Add the tileset as a map component: Add new layer (+) >  Components > Data visualization.
+3. Select the data source under **Source**, where it says "None selected", then click the Add source by ID tab.
+
+<p align="center">
+    <img src= "Images\04-AddSourceByID.png">
+</p>
+   
+4. Copy the tileset ID: `mapbox.brt3djy1`, paste it into the search box, and click Find.
+   You could add your own uploaded, hosted data using this method as well.
+6. Click Select data visualization type to continue.
+7. Click Select Choropleth to add the component to your style!
 
 The component will select and style a field from the `wapo-county-temp-change-c168xj` tileset automatically when you add it to the map. Zoom to the contiguous United States to get a better sense of the data on your map.
 
 By default, the component will select the field `tempchg` to style _Color_ from the palette `Polar`.
+
+<p align="center">
+    <img src= "Images\04-initalTempChange.png">
+</p>
 
 
 ### Step 2: Refine your visualization
@@ -107,7 +121,7 @@ For this data, higher values indicate warmer temperatures and lower values indic
 
 To make your map reflect the temperature visually, you will need to flip the colors.
 
-5. To flip the colors, click the down arrow button, named **Reverse Palette Order**.
+5. To flip the colors, click the u-turn arrow button, named **Reverse Palette Order**.
      - The button name will appear when you hover over the button.
 6. If you want to experiment with additional styling options for your choropleth map, adjust the following settings in the component controls:
      - To add more stops to your color palette, click **+ Add stop** and enter a value.
@@ -115,7 +129,9 @@ To make your map reflect the temperature visually, you will need to flip the col
      - To show or hide labels on your map, toggle the control for _Labels_.
      - To apply transparency to your polygons, drag the slider for _Opacity_.
 
-Below is an example of how your choropleth visualization should look:
+    *Assignment task*: change at least 2 of these settings, and tell us 1) *what* you changed and 2) provide and explanation for *why* you changed them, based on lecture material or readings.
+   
+Below is an example of how your choropleth visualization could look:
 
 <p align="center">
     <img src= "Images\dataviz_choropleth.png" alt="choropleth map of temperature change in the US" by county>
@@ -123,17 +139,42 @@ Below is an example of how your choropleth visualization should look:
 
 ### Step 3: Publish your style
 
-When you have finished editing your map style, publish your changes by clicking the **Publish** button in the upper right side of the screen. When you click the publish button, a window will display the difference between the previous and current version of this style. If you're happy with the changes, click **Publish**. Your style will now be available to share from a variety of tools and applications.
+When you have finished editing your map style, publish your changes by clicking the **Publish** button in the upper right side of the screen. When you click the publish button, a window will display the difference between the previous and current version of this style. If you're happy with the changes, click **Publish**. 
 
+### Step 4: Add your style to a map
+
+In assignment 1, you made your first map. Using the quickstart code, create a fullpage map using this Style.
+Remember you'll have to:
+1. Click *Share to get the Style URL for this map
+<p align="center">
+    <img src= "Images\04-sharestyle.png">
+</p>
+   
+2. In the quickstart HTML, add the Mapbox CSS and JS references to the header.
+3. Insert a map div
+4. Use JS to initialize the map
+5. Optionally add zoom controls
+6. You do NOT need to add markers or popups
 
 
 <br>
+<br>
 
-### **_C. Create a data-driven circles map_**
 
-In this section, we are going to to create a data-driven circles visualization using data from the [USGS' Earthquake Hazards Program](https://earthquake.usgs.gov/fdsnws/event/1/). Your data-driven circles map will visualize all reported earthquakes in 2021, using different circle sizes and colors depending on the magnitude of each earthquake.
+#Assignment task:# Pick **ONE** from the following (Data driven circles or Symbols map)
 
-### Step 1: Add the Data visualization Component
+
+### **_III. Create a data-driven circles map_**
+
+In this section, we are going to create a data-driven circles visualization using data from the [USGS' Earthquake Hazards Program](https://earthquake.usgs.gov/fdsnws/event/1/). Your data-driven circles map will visualize all reported earthquakes in 2021, using different circle sizes and colors depending on the magnitude of each earthquake.
+
+### Step 1: Explore the data in the tileset editor
+- To create a **Data-driven circles** visualization, you can use the tileset [global earthquake data for 2021](https://console.mapbox.com/studio/tilesets/mapbox.5sq1s796/#2.73/44.9/-136.77), which contains point features.
+
+### Step 2: Create a new style
+Create a new style and name it accordingly.
+
+### Step 3: Add the Data visualization Component
 To add the _Data visualization_ component to your style:
 
 1. In the Components panel, click the plus icon (**+**) and select Data visualization.
@@ -146,7 +187,7 @@ The component will select and style a field from the `2021-earthquakes-1vushc` t
 
 By default, the component will select the field `dmin` to style **circle size** and a single color from the palette `Polar` for all circles.
 
-### Step 2: Style another data-driven property
+### Step 4: Style another data-driven property
 In this step, you will use the data in your tileset to control the style of an additional paint property in your style.
 
 By default, all features in data-driven circles are the same color. You will change your visualization to color each circle according to the magnitude of the earthquake it represents.
@@ -173,17 +214,43 @@ Below is an example of how your data-driven circles visualization should look:
     <img src= "Images\dataviz_circles.png" alt="map with circles showcasing earthquake locations near Alaska">
 </p>
 
-### Step 3: Publish your style
+### Step 5: Publish your style
 
 When you have finished editing your map style, publish your changes by clicking the **Publish** button in the upper right side of the screen. When you click the publish button, a window will display the difference between the previous and current version of this style. If you're happy with the changes, click **Publish**. Your style will now be available to share from a variety of tools and applications.
 
+
+### Step 6: Add your style to a map
+
+In assignment 1, you made your first map. Using the quickstart code, create a fullpage map using this Style.
+Remember you'll have to:
+1. Click *Share to get the Style URL for this map
+<p align="center">
+    <img src= "Images\04-sharestyle.png">
+</p>
+   
+2. In the quickstart HTML, add the Mapbox CSS and JS references to the header.
+3. Insert a map div
+4. Use JS to initialize the map
+5. Optionally add zoom controls
+6. You do NOT need to add markers or popups
 <br>
 
-### **_D. Create a symbols map_**
+### Step 7: Add your style to a map
+
+Upload your map to Github so it can be viewed live.
+
+### **_IV. Create a symbols map_**
 
 In this section we are going to create a Symbols visualization of mountain summits in Rocky Mountain National Park in Colorado, using unique symbols for each summit depending on which county it is in.
 
-### Step 1: Add the Data visualization Component
+
+### Step 1: Explore the data in the tileset editor
+- To create a **Symbols** visualization, you can use [point data of individual summits](https://console.mapbox.com/studio/tilesets/mapbox.0xjxguyu/#9.95/40.3011/-105.7093) in Rocky Mountain National Park in Colorado.
+
+### Step 2: Create a new style
+Create a new style and name it accordingly.
+
+### Step 3: Add the Data visualization Component
 You will use data from the freely available `mapbox.0xjxguyu` tileset, which contains point data for summits in this region.
 
 To add the _Data visualization component_ to your style:
@@ -197,7 +264,7 @@ To add the _Data visualization component_ to your style:
 7. Zoom out to `z10` to preview your visualization. To see your current zoom level, check the last three values in your browser URL (`/#{zoom}/{lng}/{lat}`) as you edit your style in Mapbox Studio.
 
 
-### Step 2: Customize your data-driven values
+### Step 4: Customize your data-driven values
 Now you will choose which field from your data set will control the style of your symbols.
 
 In this tutorial, you will use a unique symbol for each county:
@@ -233,6 +300,26 @@ Below is an example of how your data-driven symbols visualization should look:
 </p>
 
 <br>
+
+### Step 4: Add your style to a map
+
+In assignment 1, you made your first map. Using the quickstart code, create a fullpage map using this Style.
+Remember you'll have to:
+1. Click *Share to get the Style URL for this map
+<p align="center">
+    <img src= "Images\04-sharestyle.png">
+</p>
+   
+2. In the quickstart HTML, add the Mapbox CSS and JS references to the header.
+3. Insert a map div
+4. Use JS to initialize the map
+5. Optionally add zoom controls
+6. You do NOT need to add markers or popups
+<br>
+
+### Step 5: Add your style to a map
+
+Upload your map to Github so it can be viewed live.
 
 **Congratulations!** That is it for today's activity. Please proceed to the assignment on canvas for details on what to turn in.
 <br>
