@@ -129,7 +129,7 @@ To make your map reflect the temperature visually, you will need to flip the col
      - To show or hide labels on your map, toggle the control for _Labels_.
      - To apply transparency to your polygons, drag the slider for _Opacity_.
 
-    *Assignment task*: change at least 2 of these settings, and tell us 1) *what* you changed and 2) provide and explanation for *why* you changed them, based on lecture material or readings.
+    ##Assignment task##: change at least 2 of these settings, and tell us 1) *what* you changed and 2) provide an explanation for *why* you changed them, based on lecture material or readings. This should be at least 2 sentences per setting.
    
 Below is an example of how your choropleth visualization could look:
 
@@ -157,8 +157,9 @@ Remember you'll have to:
    - set the initial center
    - set the initial zoom
 5. Add CSS to style the map div
-6. Optionally add zoom controls
-7. You do NOT need to add markers or popups
+6. Optionally add zoom controls and a title header
+7. You do **NOT** need to add markers or popups
+8. Add descriptive comments to major codeblocks and clean up your whitespace
 <br>
 
 ### Step 5: Upload your map to GitHub
@@ -170,7 +171,7 @@ Upload your map to GitHub so it can be viewed publicly.
 <br>
 
 
-#Assignment task:# Pick **ONE** from the following (Data driven circles or Symbols map)
+##Assignment task:## Pick **ONE** from the following (Data driven circles or Symbols map)
 
 
 ### **_III. Create a data-driven circles map_**
@@ -223,6 +224,8 @@ Below is an example of how your data-driven circles visualization should look:
     <img src= "Images\dataviz_circles.png" alt="map with circles showcasing earthquake locations near Alaska">
 </p>
 
+##Assignment task##: change at least 2 settings related to the symbolization, and tell us 1) *what* you changed and 2) provide an explanation for *why* you changed them, based on lecture material or readings. This should be at least 2 sentences per setting.
+
 ### Step 5: Publish your style
 
 When you have finished editing your map style, publish your changes by clicking the **Publish** button in the upper right side of the screen. When you click the publish button, a window will display the difference between the previous and current version of this style. If you're happy with the changes, click **Publish**. Your style will now be available to share from a variety of tools and applications.
@@ -236,15 +239,16 @@ Remember you'll have to:
     <img src= "Images\04-sharestyle.png">
 </p>
    
-2. In the quickstart HTML, add the Mapbox CSS and JS references to the header.
-3. Insert a map div
-4. Use JS to initialize the map
+2. In the quickstart HTML, add the Mapbox CSS and JS references to the header
+3. Add descriptive comments to major codeblocks and clean up your whitespace
+4. Insert a map div
+5. Use JS to initialize the map
    - set the style
    - set the initial center
    - set the initial zoom
-5. Add CSS to style the map div
-6. Optionally add zoom controls
-7. You do NOT need to add markers or popups
+6. Add CSS to style the map div
+7. Optionally add zoom controls
+8. You do NOT need to add markers or popups
 <br>
 
 ### Step 7: Upload your map to GitHub
@@ -311,6 +315,8 @@ Below is an example of how your data-driven symbols visualization should look:
     <img src= "Images\dataviz_symbols.png" alt="map of summits in Rocky Mountain National Park symbolized by county">
 </p>
 
+##Assignment task##: Focus on 2 aspects of the symbolization (colors, shapes chosen, etc) and tell us 1) *what* you set and 2) provide an explanation for *why* you set it, based on lecture material or readings. This should be at least 2 sentences per setting.
+
 <br>
 
 ### Step 4: Add your style to a map
@@ -329,8 +335,9 @@ Remember you'll have to:
    - set the initial center
    - set the initial zoom
 5. Add CSS to style the map div
-6. Optionally add zoom controls
-7. You do NOT need to add markers or popups
+6. Optionally add zoom controls and a title header
+7. You do **NOT** need to add markers or popups
+8. Add descriptive comments to major codeblocks and clean up your whitespace
 <br>
 
 ### Step 5: Upload your map to GitHub
