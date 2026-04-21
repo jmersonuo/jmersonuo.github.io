@@ -86,7 +86,7 @@ This tileset includes county temperature change data from the [The Washington Po
 ### Step 1: Add the Data visualization Component
 To add the _Data visualization component_ to your style, follow these steps:
 
-1. Return to your "blue marble" style and rename it "County Temp Change" or another name that makes sense to you.
+1. Return to your "Blank" style and rename it "County Temp Change" or another name that clearly communicates the topic.
 2. Add the tileset as a map component: Add new layer (+) >  Components > Data visualization.
 3. Select the data source under **Source**, where it says "None selected", then click the Add source by ID tab.
 
@@ -143,9 +143,9 @@ When you have finished editing your map style, publish your changes by clicking 
 
 ### Step 4: Add your style to a map
 
-In assignment 1, you made your first map. Using the quickstart code, create a fullpage map using this Style.
+In assignment 1, you made your first map. Using the quickstart code, create a full-page map using this Style.
 Remember you'll have to:
-1. Click *Share to get the Style URL for this map
+1. Click *Share* to get the Style URL for this map
 <p align="center">
     <img src= "Images\04-sharestyle.png">
 </p>
@@ -153,8 +153,17 @@ Remember you'll have to:
 2. In the quickstart HTML, add the Mapbox CSS and JS references to the header.
 3. Insert a map div
 4. Use JS to initialize the map
-5. Optionally add zoom controls
-6. You do NOT need to add markers or popups
+   - set the style
+   - set the initial center
+   - set the initial zoom
+5. Add CSS to style the map div
+6. Optionally add zoom controls
+7. You do NOT need to add markers or popups
+<br>
+
+### Step 5: Upload your map to GitHub
+
+Upload your map to GitHub so it can be viewed publicly.
 
 
 <br>
@@ -218,12 +227,11 @@ Below is an example of how your data-driven circles visualization should look:
 
 When you have finished editing your map style, publish your changes by clicking the **Publish** button in the upper right side of the screen. When you click the publish button, a window will display the difference between the previous and current version of this style. If you're happy with the changes, click **Publish**. Your style will now be available to share from a variety of tools and applications.
 
-
 ### Step 6: Add your style to a map
 
-In assignment 1, you made your first map. Using the quickstart code, create a fullpage map using this Style.
+In assignment 1, you made your first map. Using the quickstart code, create a full-page map using this Style.
 Remember you'll have to:
-1. Click *Share to get the Style URL for this map
+1. Click *Share* to get the Style URL for this map
 <p align="center">
     <img src= "Images\04-sharestyle.png">
 </p>
@@ -231,13 +239,17 @@ Remember you'll have to:
 2. In the quickstart HTML, add the Mapbox CSS and JS references to the header.
 3. Insert a map div
 4. Use JS to initialize the map
-5. Optionally add zoom controls
-6. You do NOT need to add markers or popups
+   - set the style
+   - set the initial center
+   - set the initial zoom
+5. Add CSS to style the map div
+6. Optionally add zoom controls
+7. You do NOT need to add markers or popups
 <br>
 
-### Step 7: Add your style to a map
+### Step 7: Upload your map to GitHub
 
-Upload your map to Github so it can be viewed live.
+Upload your map to GitHub so it can be viewed publicly.
 
 ### **_IV. Create a symbols map_**
 
@@ -303,9 +315,9 @@ Below is an example of how your data-driven symbols visualization should look:
 
 ### Step 4: Add your style to a map
 
-In assignment 1, you made your first map. Using the quickstart code, create a fullpage map using this Style.
+In assignment 1, you made your first map. Using the quickstart code, create a full-page map using this Style.
 Remember you'll have to:
-1. Click *Share to get the Style URL for this map
+1. Click *Share* to get the Style URL for this map
 <p align="center">
     <img src= "Images\04-sharestyle.png">
 </p>
@@ -313,13 +325,17 @@ Remember you'll have to:
 2. In the quickstart HTML, add the Mapbox CSS and JS references to the header.
 3. Insert a map div
 4. Use JS to initialize the map
-5. Optionally add zoom controls
-6. You do NOT need to add markers or popups
+   - set the style
+   - set the initial center
+   - set the initial zoom
+5. Add CSS to style the map div
+6. Optionally add zoom controls
+7. You do NOT need to add markers or popups
 <br>
 
-### Step 5: Add your style to a map
+### Step 5: Upload your map to GitHub
 
-Upload your map to Github so it can be viewed live.
+Upload your map to GitHub so it can be viewed publicly.
 
 **Congratulations!** That is it for today's activity. Please proceed to the assignment on canvas for details on what to turn in.
 <br>
