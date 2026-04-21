@@ -1,21 +1,21 @@
 ## Creating map-based data visualizations
 
-This tutorial shows you how to create various map data visualizations using the Data visualization component in the Mapbox Studio style editor.  This has been adapted from a tutorial published by Mapbox: [https://docs.mapbox.com/help/tutorials/create-a-map-with-data-visualization-component/](https://docs.mapbox.com/help/tutorials/create-a-map-with-data-visualization-component/)
+This tutorial shows you how to create various map data visualizations using the Data visualization component in the Mapbox Studio style editor. This has been adapted from a tutorial published by Mapbox: [https://docs.mapbox.com/help/tutorials/create-a-map-with-data-visualization-component/](https://docs.mapbox.com/help/tutorials/create-a-map-with-data-visualization-component/)
 
 The **Data visualization component** is a style component that smart-styles a map layer based on the geospatial data in the layer's source. The component creates an initial data visualization, and you can then customize the appearance of the visualization by changing its component style properties.
 
-
 <p align="center">
-    <img src= "Images\dataviz_all.jpg" alt="six examples of mab based data visualization">
+    <img src= "Images\dataviz_all.jpg" alt="six examples of map based data visualization">
 </p>
 
-In this tutorial you will:
+For each map in this tutorial you will:
 
 - Create a new style
 - Choose some custom data to visualize
 - Select a visualization type
 - Use built-in component controls to adjust the appearance of your visualization
 - Publish your style
+- Create a full page map using skills acquired earlier in the course
 
 <br>
 
@@ -41,7 +41,7 @@ The *Studio style* editor will open, and now you can start prepping your data in
 
 **Add components to style your blank map**
 
-Once the style editor you'll see a blank map, which you will need to add components to get the map to render:
+In the style editor you'll see a blank map, which you will need to add components to get the map to render:
 
 5. Switch the map projection to use Mercator projection:
     - Open the **Global** tab
@@ -94,7 +94,7 @@ To add the _Data visualization component_ to your style, follow these steps:
 
 1. Return to your "blue marble" style and rename it "County Temp Change" or another name that makes sense to you.
 2. Add the tileset as a map component: Add new layer (+) >  Components > Data visualization.
-3. Select the data sounrce under **Source**, where it says "None selected", then click the Add source by ID tab.
+3. Select the data source under **Source**, where it says "None selected", then click the Add source by ID tab.
 
 <p align="center">
     <img src= "Images\04-AddSourceByID.png">
@@ -127,7 +127,7 @@ For this data, higher values indicate warmer temperatures and lower values indic
 
 To make your map reflect the temperature visually, you will need to flip the colors.
 
-5. To flip the colors, click the down arrow button, named **Reverse Palette Order**.
+5. To flip the colors, click the u-turn arrow button, named **Reverse Palette Order**.
      - The button name will appear when you hover over the button.
 6. If you want to experiment with additional styling options for your choropleth map, adjust the following settings in the component controls:
      - To add more stops to your color palette, click **+ Add stop** and enter a value.
@@ -135,7 +135,9 @@ To make your map reflect the temperature visually, you will need to flip the col
      - To show or hide labels on your map, toggle the control for _Labels_.
      - To apply transparency to your polygons, drag the slider for _Opacity_.
 
-Below is an example of how your choropleth visualization should look:
+    *Assignment task*: change at least 2 of these settings, and tell us 1) *what* you changed and 2) provide and explanation for *why* you changed them, based on lecture material or readings.
+   
+Below is an example of how your choropleth visualization could look:
 
 <p align="center">
     <img src= "Images\dataviz_choropleth.png" alt="choropleth map of temperature change in the US" by county>
@@ -143,15 +145,29 @@ Below is an example of how your choropleth visualization should look:
 
 ### Step 3: Publish your style
 
-When you have finished editing your map style, publish your changes by clicking the **Publish** button in the upper right side of the screen. When you click the publish button, a window will display the difference between the previous and current version of this style. If you're happy with the changes, click **Publish**. Your style will now be available to share from a variety of tools and applications.
+When you have finished editing your map style, publish your changes by clicking the **Publish** button in the upper right side of the screen. When you click the publish button, a window will display the difference between the previous and current version of this style. If you're happy with the changes, click **Publish**. 
 
+### Step 4: Add your style to a map
+
+In assignment 1, you made your first map. Using the quickstart code, create a fullpage map using this Style.
+Remember you'll have to:
+1. Click *Share to get the Style URL for this map
+<p align="center">
+    <img src= "Images\04-sharestyle.png">
+</p>
+   
+2. In the quickstart HTML, add the Mapbox CSS and JS references to the header.
+3. Insert a map div
+4. Use JS to initialize the map
+5. Optionally add zoom controls
+6. You do NOT need to add markers or popups
 
 
 <br>
 
 ### **_C. Create a data-driven circles map_**
 
-In this section, we are going to to create a data-driven circles visualization using data from the [USGS' Earthquake Hazards Program](https://earthquake.usgs.gov/fdsnws/event/1/). Your data-driven circles map will visualize all reported earthquakes in 2021, using different circle sizes and colors depending on the magnitude of each earthquake.
+In this section, we are going to create a data-driven circles visualization using data from the [USGS' Earthquake Hazards Program](https://earthquake.usgs.gov/fdsnws/event/1/). Your data-driven circles map will visualize all reported earthquakes in 2021, using different circle sizes and colors depending on the magnitude of each earthquake.
 
 ### Step 1: Add the Data visualization Component
 To add the _Data visualization_ component to your style:
