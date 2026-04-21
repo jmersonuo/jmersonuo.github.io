@@ -19,7 +19,7 @@ In this tutorial you will:
 
 <br>
 
-### **_A. GETTING STARTED_**
+### **_I. GETTING STARTED_**
 
 ### Step 1: Create a new style
 
@@ -32,20 +32,6 @@ To set up your style, follow these steps:
 3. Select the `Start from scratch` option.
 4. Click `Customize`.
 
-**Add components to style your blank map**
-
-Once the style editor you'll see a blank map, which you will need to add components to get the map to render:
-
-5. Switch the map projection to use Mercator projection:
-    - Open the Global tab
-    - Click Projection
-    - Under the Projection Name dropdown, select Mercator
-6. Color the basemap:
-    - You will need to add the land and water to the style, as follows:
-    - Click Layers > Components > Land & water.
-    - Click any of the landuse layers and set the Base color to #2c2a92.
-You should now see a blue map with a mercator projection.
-
 <p align="center">
     <img src= "Images\datavis_createstyle.png" alt="mapbox studio create style page">
 </p>
@@ -53,16 +39,31 @@ You should now see a blue map with a mercator projection.
 
 The *Studio style* editor will open, and now you can start prepping your data in the next step.
 
+**Add components to style your blank map**
 
-### Step 2: Prepare your data
+Once the style editor you'll see a blank map, which you will need to add components to get the map to render:
 
-To create a data visualization with the Data visualization component in Studio, you need some geospatial data in a Mapbox-hosted vector [tileset](https://docs.mapbox.com/studio-manual/reference/tilesets/#what-is-a-tileset).
+5. Switch the map projection to use Mercator projection:
+    - Open the **Global** tab
+    - Click Projection
+    - Under the Projection Name dropdown, select Mercator
+6. Color the basemap:
+    - You will need to add the land and water to the style, as follows:
+    - Click **Layers** > Add Layer (+) > Components > Land & water.
+    - Click any of the landuse layers and set the Base color to #2c2a92.
+You should now see a blue map with a mercator projection.
 
-For this tutorial, you can use existing data in the freely available tilesets below.
 
-**Optional:** If you want to preview these tilesets in the Mapbox Studio [Tileset explorer](https://docs.mapbox.com/studio-manual/reference/tilesets/#tileset-explorer), log into your Mapbox account and click on each dataset to view more information: 
+<p align="center">
+    <img src= "Images\04_BlueMercator.png">
+</p>
 
-- To create a **Choropleth** visualization, you can use [data on annual temperature changes for U.S. counties](https://console.mapbox.com/studio/tilesets/mapbox.brt3djy1/#3.44/35.82/-100.67), which contains polygon features.
+### Step 2: Investigate and prepare your data
+
+To create a data visualization with the Data visualization component in Studio, you need some geospatial data in a Mapbox-hosted vector [tileset](https://docs.mapbox.com/studio-manual/reference/tilesets/#what-is-a-tileset). You could upload data as shapefiles, which would be converted into a tileset. For ease of use, and to focus on data-driven-styling, we will use Mapbox supplied, hosted tilesets below.
+
+**Optional:** If you want to preview these tilesets in the Mapbox Studio [Tileset explorer](https://docs.mapbox.com/studio-manual/reference/tilesets/#tileset-explorer), log into your Mapbox account and click on each dataset to view more information. 
+
 
 - To create a **Data-driven circles** visualization, you can use [global earthquake data for 2021](https://console.mapbox.com/studio/tilesets/mapbox.5sq1s796/#2.73/44.9/-136.77), which contains point features.
 
@@ -70,11 +71,19 @@ For this tutorial, you can use existing data in the freely available tilesets be
 
 <br>
 
-### **_B. Create a choropleth map_**
+### **_II. Create a choropleth map_**
 
-If you have created a new style and prepared your data, you can follow the steps in this section to create a choropleth map to visualize the change in average annual temperatures in the United States.
+To create a **Choropleth** visualization, we can use [data on annual temperature changes for U.S. counties](https://console.mapbox.com/studio/tilesets/mapbox.brt3djy1/#3.44/35.82/-100.67), which contains polygon features.
 
-You will use the county temperature change data from the [The Washington Post's "2ºC: Beyond the Limit" series](https://github.com/washingtonpost/data-2C-beyond-the-limit-usa) to set the colors of regional polygons:
+Open the link to view the data in the Tileset editor. 
+   - Notice on the left, there is a list of 14 fields (a.k.a. attributes) for this layer. Click on the map to see information about a given feature.
+   - Use the **Share** button on the right to find the Tileset ID which is used to add this data, as map tiles, to a Mapbox Style (via Mapbox Studio or using JS).
+
+<p align="center">
+    <img src= "Images\04_WaPoCounties.png">
+</p>
+
+This tileset includes county temperature change data from the [The Washington Post's "2ºC: Beyond the Limit" series](https://github.com/washingtonpost/data-2C-beyond-the-limit-usa).  to set the colors of regional polygons:
 
 - Yellow polygons <div style="background-color: #EDF51C; height: 1rem; width: 1rem; border-radius: 4px; display: inline-block; margin: .3rem; margin-bottom: 0;"></div>`#EDF51C` will represent counties with warmer temperatures.
 - Purple polygons <div style="background-color: #67009E; height: 1rem; width: 1rem; border-radius: 4px; display: inline-block; margin: .3rem; margin-bottom: 0"></div>`#67009E` will represent counties with cooler temperatures.
@@ -83,15 +92,26 @@ You will use the county temperature change data from the [The Washington Post's 
 ### Step 1: Add the Data visualization Component
 To add the _Data visualization component_ to your style, follow these steps:
 
-1. In the Components panel, click the plus icon + and select Data visualization.
-2. Select your data source by clicking the Source field, then click the Add source by ID tab.
-3. Copy the tileset ID: `mapbox.brt3djy1`, paste it into the search box, and click Find.
-4. Click Select data visualization type to continue.
-5. Click Select Choropleth to add the component to your style.
+1. Return to your "blue marble" style and rename it "County Temp Change" or another name that makes sense to you.
+2. Add the tileset as a map component: Add new layer (+) >  Components > Data visualization.
+3. Select the data sounrce under **Source**, where it says "None selected", then click the Add source by ID tab.
+
+<p align="center">
+    <img src= "Images\04-AddSourceByID.png">
+</p>
+   
+4. Copy the tileset ID: `mapbox.brt3djy1`, paste it into the search box, and click Find.
+   You could add your own uploaded, hosted data using this method as well.
+6. Click Select data visualization type to continue.
+7. Click Select Choropleth to add the component to your style!
 
 The component will select and style a field from the `wapo-county-temp-change-c168xj` tileset automatically when you add it to the map. Zoom to the contiguous United States to get a better sense of the data on your map.
 
 By default, the component will select the field `tempchg` to style _Color_ from the palette `Polar`.
+
+<p align="center">
+    <img src= "Images\04-initalTempChange.png">
+</p>
 
 
 ### Step 2: Refine your visualization
