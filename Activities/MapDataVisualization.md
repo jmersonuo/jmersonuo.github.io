@@ -129,7 +129,9 @@ To make your map reflect the temperature visually, you will need to flip the col
      - To show or hide labels on your map, toggle the control for _Labels_.
      - To apply transparency to your polygons, drag the slider for _Opacity_.
 
-**Assignment task:** change at least 2 of these settings, and tell us 1) *what* you changed and 2) provide an explanation for *why* you changed them, based on lecture material or readings. This should be at least 2 sentences per setting.
+**Assignment task:** change at least 2 of these settings (e.g. color palette, number of stops, value of stops), and tell us 1) *what* you changed and 2) provide an explanation for *why* you changed them, based on lecture material or readings. This should be at least 2 sentences per setting.
+
+
    
 Below is an example of how your choropleth visualization could look:
 
