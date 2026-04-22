@@ -129,7 +129,7 @@ To make your map reflect the temperature visually, you will need to flip the col
      - To show or hide labels on your map, toggle the control for _Labels_.
      - To apply transparency to your polygons, drag the slider for _Opacity_.
 
-##Assignment task: change at least 2 of these settings, and tell us 1) *what* you changed and 2) provide an explanation for *why* you changed them, based on lecture material or readings. This should be at least 2 sentences per setting.
+**Assignment task:** change at least 2 of these settings, and tell us 1) *what* you changed and 2) provide an explanation for *why* you changed them, based on lecture material or readings. This should be at least 2 sentences per setting.
    
 Below is an example of how your choropleth visualization could look:
 
@@ -171,7 +171,7 @@ Upload your map to GitHub so it can be viewed publicly.
 <br>
 
 
-##Assignment task: Pick **ONE** from the following (Data driven circles or Symbols map)
+**Assignment task:** : Pick **ONE** from the following (Data driven circles or Symbols map)
 
 
 ### **_III. Create a data-driven circles map_**
@@ -229,6 +229,7 @@ Below is an example of how your data-driven circles visualization should look:
 ### Step 5: Publish your style
 
 When you have finished editing your map style, publish your changes by clicking the **Publish** button in the upper right side of the screen. When you click the publish button, a window will display the difference between the previous and current version of this style. If you're happy with the changes, click **Publish**. Your style will now be available to share from a variety of tools and applications.
+
 
 ### Step 6: Add your style to a map
 
