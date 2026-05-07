@@ -12,6 +12,7 @@ We will discuss the use of sounds in detail and how to access the embedded links
   - [W3Schools iframes](https://www.w3schools.com/tags/tag_iframe.asp){:target="_blank"} 
   - [W3Schools image alt attribute](https://www.w3schools.com/tags/att_img_alt.asp){:target="_blank"} 
   - [W3Schools audio tag](https://www.w3schools.com/tags/tag_audio.asp){:target="_blank"} 
+  - [W3Schools CSS Google Fonts](https://www.w3schools.com/css/css_font_google.asp){:target="_blank"} 
 
 ----------
 
@@ -25,7 +26,7 @@ We will discuss the use of sounds in detail and how to access the embedded links
   - `<head> ... </head>` 
   - `<style> ... </style>`   (nested within the head)
   - `<body> ... </body>` 
-  - `<script> ... </script>`  (nested within the body
+  - `<script> ... </script>`  (nested within the body)
 
   When you open the map, and add your Mapbox access token, you should have a mapbox-outdoor style centered on Portland.  
   <p align="center">
@@ -179,6 +180,9 @@ We can concatenate strings with a plus sign:
 
 1. To make it easier to see your changes, set the map's initial center to the same location as the London popup.
 2. Locate the popup for marker 2 `popup2_content` To get an iframe embed code for a Sound Cloud video from London, go to [https://soundcloud.com/londonstreetnoises/cromwell-1928](https://soundcloud.com/londonstreetnoises/cromwell-1928){:target="_blank"}
+
+Note: If you are asked to create and account, you can close the window and proceed without one.
+
 3. Click the share button, then `Embed`, then copy the code.
     <p align="center">
     <img src= "Images/6-SoundCloud.JPG"> 
