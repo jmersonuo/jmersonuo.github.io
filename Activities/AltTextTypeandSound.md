@@ -194,9 +194,6 @@ Note: If you are asked to create and account, you can close the window and proce
     </p>
     
 4. Locate the popup for marker 2 and use += to append the iframe embed code to the popup content string.
-    <p align="center">
-    <img src= "Images/6-SoundCloud.JPG"> 
-    </p>
 
 5. Lastly, let's also add the source and a link using an anchor tag ```popup2_content += 'Source: LondonStreetNoises.co.uk, <a href="https://soundcloud.com/londonstreetnoises"> SoundCloud </a>';```
 
