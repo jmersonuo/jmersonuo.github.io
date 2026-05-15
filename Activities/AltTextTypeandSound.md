@@ -245,8 +245,9 @@ The sound file you downloaded from the R drive is a recording of a bison eating 
     ```
 4. Replace the `PATH_TO_FILE` with the path to the file _relative_ to path to this html file. If it's in the sounds folder, it is going to be `sounds/yell-YELLBisonEating150313.mp3`  
 
-   **VERY IMPORTANT NOTE:** The path and file name are not case-sensitive locally, but the Pages server is!! For this to work on the web, make sure your path and file name use the same case for all characters as the src as the folder and file. 
+   **VERY IMPORTANT NOTE:** The path and file name are not case-sensitive locally, but the GitHub Pages server is!! Because GitHub Pages runs on Linux-based servers, it treats file and directory paths with strict case sensitivity. For your files to work on the web via GitHub Pages, make sure your path and file name use the same case for all characters as the src as the folder and file. 
    ```javascript
+
    It should look like this:
    // Popup for marker 3  
     var popup3_content = '<h2>Press play to listen to a bison eating</h2><br>';   
@@ -280,7 +281,9 @@ The audio file of the bison eating is great, but it could use a visual. Let's ad
    ```
    Note: `<img>` is a self-closing tag, so we don't need a second tag to close it.
 4. Replace the `PATH_TO_FILE` with the bison image link `https://www.nps.gov/yell/learn/photosmultimedia/images/ndh-yell-bison-gibbon_2.jpg?maxwidth=1200&maxheight=1200&autorotate=false`
-5. Is the image way too big for the popup? Let's use CSS to set its width to 100% of the parent element. We already gave it a class named `popupImage`, so add the following to the `<style>` section in the `<head>`. 
+5. Is the image way too big for the popup? Let's use CSS to set its width to 100% of the parent element. We gave the img element a class named `popupImage`, so we can add a matching selector to the `<style>` section in the `<head>`.
+
+Any image with this class will be sized to 100% width of it's partent div, and the image height will be reized propotionally to the image's aspect ratio.
    ```css
    .popupImage{
        width:100%;
@@ -308,7 +311,8 @@ To add a little more accessibility to our page, we should add text that screen r
    
  <p align="center">
     <img src= "Images/6-AltText.JPG"> 
-    </p>
+</p>
+
 
 ----------
 
