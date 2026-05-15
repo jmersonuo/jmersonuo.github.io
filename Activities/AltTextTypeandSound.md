@@ -171,15 +171,15 @@ We can concatenate strings with a plus sign:
    What can you do? 
    1) ignore the error for now, and upload your work to GitHub. Viewing your .HTML file from GitHub will resolve to a secure origin and the vidwo will play.
    2) To avoid these restrictions during development, we can use the Live Server extension in Visual Studio Code. The extension will create a temporary mini-server that is only visible on the computer you are working on, with with a local IP that tells the browser everything is okay. 
-      i. in visual studio code, search for the Live Server extension and install it.
+      1) in visual studio code, search for the Live Server extension and install it.
 
          <p align="center">
          <img src= "Images/6-live server.png"> 
          </p>
-      ii. in visual studio code, open the *folder* for Assignment 6 (the *folder* not just the HTML) 
-      iii. in the bottom right corner, click `Go Live`. Your website should launch in a browser with an URLthat starts with an IP, instead of a drive letter. It will look like `http://127.0.0.1:5501/YourMap.html`
+      2) in visual studio code, open the *folder* for Assignment 6 (the *folder* not just the HTML) 
+      3) in the bottom right corner, click `Go Live`. Your website should launch in a browser with an URLthat starts with an IP, instead of a drive letter. It will look like `http://127.0.0.1:5501/YourMap.html`
 
-               <p align="center">
+          <p align="center">
          <img src= "Images/6-go live.png"> 
          </p>
    
