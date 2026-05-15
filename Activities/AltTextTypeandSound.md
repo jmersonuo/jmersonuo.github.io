@@ -177,7 +177,11 @@ We can concatenate strings with a plus sign:
          <img src= "Images/6-live server.png"> 
          </p>
       ii. in visual studio code, open the *folder* for Assignment 6 (the *folder* not just the HTML) 
-      iii. in the bottom right corner, click `Go Live`. Your website should launch in a browser with an IP like `http://127.0.0.1:5501/YourMap.html`
+      iii. in the bottom right corner, click `Go Live`. Your website should launch in a browser with an URLthat starts with an IP, instead of a drive letter. It will look like `http://127.0.0.1:5501/YourMap.html`
+
+               <p align="center">
+         <img src= "Images/6-go live.png"> 
+         </p>
    
 
 
