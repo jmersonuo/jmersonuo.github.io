@@ -274,7 +274,9 @@ Come up with a
 2.  Add a pop-up to you marker with a link (use a different link than the tutorial).
 3.  Change the basemap style to something other than streets-v11. Use any [default style](https://docs.mapbox.com/api/maps/styles/){:target="_blank"} or [gallery style](https://www.mapbox.com/gallery/){:target="_blank"}  
 4.  Edit the banner title and byline text and add change at least 1 CSS property of the title/byline (e.g. color or alignment)
-5.  Upload your map to GitHUB following the steps shown to you in the lecture, and submit your URL e.g. `github.io/[your user name]/WebMapping/QuickStartMap.html`
+5.  Upload your map to GitHUB following the steps shown to you in the lecture, and submit **TWO URLs** 
+	 - URL #1: your map html site, e.g. `github.io/[your user name]/WebMapping/QuickStartMap.html`
+	 - URL #2: your github repository, e.g. `https://github.com/[your user name]`
 
 
 
