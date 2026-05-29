@@ -129,7 +129,8 @@ To make your map reflect the temperature visually, you will need to flip the col
      - To show or hide labels on your map, toggle the control for _Labels_.
      - To apply transparency to your polygons, drag the slider for _Opacity_.
 
-**Assignment task:** change at least 2 of these settings (e.g. color palette, number of stops, value of stops), and tell us 1) *what* you changed and 2) provide an explanation for *why* you changed them, based on lecture material or readings. This should be at least 2 sentences per setting.
+**Assignment task:** change at least 2 of these settings (e.g. color palette, number of stops, value of stops), and tell us 1) *what* you changed and 2) provide an explanation for *why* you changed them, based on lecture material or readings. This should be at least 2 sentences per setting.<br>
+*Color palette note: sequential color scheme (like the demo) is acceptable, but a divergent scheme will better highlight the positive/negative differences.*
 
 
    
@@ -230,7 +231,8 @@ Below is an example of how your data-driven circles visualization should look:
     <img src= "Images\dataviz_circles.png" alt="map with circles showcasing earthquake locations near Alaska">
 </p>
 
-##Assignment task##: change at least 2 settings related to the symbolization, and tell us 1) *what* you changed and 2) provide an explanation for *why* you changed them, based on lecture material or readings. This should be at least 2 sentences per setting.
+**Assignment task**: change at least 2 settings related to the symbolization, and tell us 1) *what* you changed and 2) provide an explanation for *why* you changed them, based on lecture material or readings. This should be at least 2 sentences per setting.<br>
+*Color palette note: Consider the "firefly" guideline on a dark basemap. Typically it's best to assign the light/bright color to the high magnitude values.  Try it out and decide for yourself.*
 
 ### Step 5: Publish your style
 
