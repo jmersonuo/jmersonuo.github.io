@@ -16,13 +16,13 @@ First, let's add references to the Mapbox JavaScript and CSS, which will allow u
 1. In the `head` section, indicate the path to the Mapbox JavaScript file:
 
 	```html
-	<script src="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.js"></script>
+	<script src="https://api.mapbox.com/mapbox-gl-js/v4.0/mapbox-gl.js"></script>
 	```
 
 2. Indicate the path to Mapbox CSS file __after__ Mapbox’s JavaScript:
 
     ```html
-    <link href="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.24.0/mapbox-gl.css" rel="stylesheet">
     ```
 
 3. Put a div element with a certain id where you want your map to be:

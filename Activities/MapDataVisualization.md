@@ -155,8 +155,8 @@ Remember you'll have to:
    
 2. In `QuickStartMap.html` (the file used to build the assignment 1 map), add the Mapbox CSS and JS references to the header.
     ```html
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.css' rel='stylesheet' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.24.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.24.0/mapbox-gl.js'></script>
     ```
 3. Insert a map div
 4. Use JS to initialize the map
